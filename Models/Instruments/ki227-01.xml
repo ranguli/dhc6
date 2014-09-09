@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+KI-227-01 ADF indicator
+compass card slaved to compass system
+Syd Adams
+-->
+<PropertyList>
+
+<path>ki227.ac</path>
+
+<animation>
+    <type>material</type>
+    <object-name>ADFface</object-name>
+    <object-name>ADFneedle</object-name>
+    <emission>
+        <red>0.028</red>
+        <green>0.014</green>
+        <blue>0.007</blue>
+        <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>ADFface</object-name>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+    <factor>-1</factor>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>ADFneedle</object-name>
+    <property>instrumentation/adf/indicated-bearing-deg</property>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+</PropertyList>
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- torque pressure
+Syd Adams
+-->
+<PropertyList>
+
+    <path>gg-rpm.ac</path>
+    
+    <animation>
+        <type>material</type>
+        <object-name>ggRPM.face</object-name>
+        <object-name>ggRPMneedle</object-name>
+        <object-name>ggRpm</object-name>
+        <object-name>gg.ind1</object-name>
+        <emission>
+            <red>0.028</red>
+            <green>0.014</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ggRPMneedle</object-name>
+        <property>engines/engine[1]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>100</ind><dep>270.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

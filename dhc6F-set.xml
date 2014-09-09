@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+de Havilland Twin Otter
+Jan 2008 Syd Adams
+************************************************************************
+-->
+
+<PropertyList include="dhc6-base.xml">
+    <sim>
+    <model>
+        <path>Aircraft/dhc6/Models/DHC6F.xml</path>
+    </model>
+    
+        <description>de Havilland Twin Otter (floats)</description>
+        <status>developement</status>
+        <author>Syd Adams</author>
+        <flight-model>yasim</flight-model>
+        <aero>dhc6F</aero>
+        <type type="string">seaplane</type>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/dhc6/splash1.png</splash-texture>
+        </startup>
+        
+    
+    <hitches>
+        <aerotow>
+            <tow>
+                <length type="float">60</length>
+                <elastic-constant type="float">10000</elastic-constant>
+                <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+                <dist type="float">1</dist>
+                <connected-to-property-node type="bool"></connected-to-property-node>
+                <brake-force type="float">100000</brake-force>
+                <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+                <end-force-x type ="float">0</end-force-x>
+                <end-force-y type ="float">0</end-force-y>
+                <end-force-z type ="float">0</end-force-z>
+            </tow>
+            <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+            <open type="bool">true</open>
+            <local-pos-x type="float">0</local-pos-x>
+            <local-pos-y type="float">0</local-pos-y>
+            <local-pos-z type="float">0</local-pos-z>
+            <is-slave type="bool">false</is-slave>
+        </aerotow>
+    </hitches>
+
+</sim>
+
+<controls>
+        <gear>
+            <brake-parking>1</brake-parking>
+            <water-rudder-pos type="double">0</water-rudder-pos>
+            <water-rudder-down type="bool">0</water-rudder-down>
+        </gear>
+</controls>
+
+
+  <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
+  <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+  <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+</hitch>
+
+</PropertyList>

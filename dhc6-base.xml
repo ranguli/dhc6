@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+de Havilland Twin Otter
+Jan 2008 Syd Adams
+************************************************************************
+-->
+
+<PropertyList>
+    <sim>
+
+    <model>
+        <autostart type="bool">0</autostart>
+        <blunt-nose type="bool">1</blunt-nose>
+        <livery>
+            <file type="string">Blue2</file>
+        </livery>
+        <floats>
+            <file type="string">Blue2</file>
+        </floats>
+        <display-callsign type="bool">0</display-callsign>
+        <remove-doors type="bool">0</remove-doors>
+    </model>
+
+    <view n="0">
+        <internal>true</internal>
+        <name>Cockpit</name>
+        <type>lookfrom</type>
+        <config>
+            <default-field-of-view-deg>60</default-field-of-view-deg>
+            <x-offset-m type="double">-0.48</x-offset-m>
+            <y-offset-m type="double">0.72</y-offset-m>
+            <z-offset-m type="double">-3.15</z-offset-m>
+            <pitch-offset-deg>-15</pitch-offset-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">100</heading-max-deg>
+                  <x-offset-max-m type="double">0.22</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">40</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">160</heading-max-deg>
+                    <x-offset-max-m type="double">0.22</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+   <view n="100">
+        <name>Overhead Panel</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">85</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">false</dynamic-view>
+            <x-offset-m type="double">-0.02</x-offset-m>
+            <y-offset-m type="double">0.55</y-offset-m>
+            <z-offset-m type="double">-2.97</z-offset-m>
+            <pitch-offset-deg>85</pitch-offset-deg>
+        </config>
+    </view>
+
+    <view n="101">
+        <name>CoPilot View</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">0</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double">0.48</x-offset-m>
+            <y-offset-m type="double">0.72</y-offset-m>
+            <z-offset-m type="double">-3.26</z-offset-m>
+            <pitch-offset-deg>-12</pitch-offset-deg>
+             <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">160</heading-max-deg>
+                  <x-offset-max-m type="double">0.25</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">100</heading-max-deg>
+                    <x-offset-max-m type="double">0.25</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <airport>
+        <runways>
+            <start-offset-m>20</start-offset-m>
+        </runways>
+    </airport>
+
+    <systems>
+        <electrical>
+            <path></path>
+        </electrical>
+        <autopilot>
+            <path>Aircraft/dhc6/systems/autopilot.xml</path>
+        </autopilot>
+    </systems>
+
+        <instrumentation>
+            <path>Aircraft/dhc6/systems/instrumentation.xml</path>
+        </instrumentation>
+
+    <sound>
+        <path>Aircraft/dhc6/Sounds/dhc6-sound.xml</path>
+    </sound>
+
+    <flaps>
+        <setting>0.000</setting>
+        <setting>0.125</setting>
+        <setting>0.250</setting>
+        <setting>0.375</setting>
+        <setting>0.500</setting>
+        <setting>0.625</setting>
+        <setting>0.750</setting>
+        <setting>0.875</setting>
+        <setting>1.000</setting>
+    </flaps>
+
+    <virtual-cockpit>true</virtual-cockpit>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <help>
+        <title>Twin Otter</title>
+        <line></line>
+    </help>
+
+    <weight n="0">
+        <name>Crew</name>
+        <weight-lb>360</weight-lb>
+        <max-lb>400</max-lb>
+        <min-lb>180</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Pax/Baggage</name>
+        <weight-lb>1898</weight-lb>
+        <max-lb>4000</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <yokes-visible type="bool">1</yokes-visible>
+    
+    <multiplay>
+        <generic>
+            <string n="0" alias="/sim/aero"/>
+            <string n="1" alias="/sim/multiplay/callsign"/>
+            <int n="0" alias="/sim/model/blunt-nose"/>
+            <int n="1" alias="/sim/model/display-callsign"/>
+        </generic>
+    </multiplay>
+
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>DHC-6</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/autostart</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Options</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>dialogs.options.open()</script>
+                    </binding>
+                </item>
+                <item>
+                    <label>Throttles</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>dialogs.throttles.open()</script>
+                    </binding>
+                </item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+</sim>
+
+<input>
+    <keyboard>
+        <key n="127">
+            <name>Delete</name>
+            <desc>Toggle Reversers</desc>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[0]/throttle</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[0]/reverser</property>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[1]/throttle</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[1]/reverser</property>
+            </binding>
+        </key>
+        <key n="79">
+            <name>O</name>
+            <desc>Open aerotow hook</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>sim/hitches/aerotow/open</property>
+                <value type="bool">true</value>
+            </binding>
+        </key>
+        <key n="111">
+            <name>o</name>
+            <desc>Lock aerotow hook</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>sim/hitches/aerotow/open</property>
+                <value type="bool">false</value>
+            </binding>
+        </key>
+    </keyboard>
+</input>
+
+<controls>
+        <electric>
+            <battery-switch type = "bool">0</battery-switch>
+            <avionics-switch type = "bool">0</avionics-switch>
+            <external-power type = "bool">0</external-power>
+            <power-source type = "int">0</power-source>
+            <caution-test type="bool">0</caution-test>
+            <engine n="0">
+                <generator>false</generator>
+            </engine>
+            <engine n="1">
+                <generator>false</generator>
+            </engine>
+        </electric>
+
+        <lighting>
+            <instrument-lights>0</instrument-lights>
+        </lighting>
+ 
+        <engines>
+        <fire-test type="bool">0</fire-test>
+            <engine n="0">
+                <condition>0</condition>
+                <cutoff>0</cutoff>
+                <mixture>0</mixture>
+                <propeller-pitch>0</propeller-pitch>
+                <throttle-fwd type="double">0</throttle-fwd>
+                <throttle-rvrs type="double">0</throttle-rvrs>
+                </engine>
+            <engine n="1">
+                <condition>0</condition>
+                <cutoff>0</cutoff>
+                <mixture>0</mixture>
+                <propeller-pitch>0</propeller-pitch>
+                <throttle-fwd type="double">0</throttle-fwd>
+                <throttle-rvrs type="double">0</throttle-rvrs>  
+            </engine>
+        </engines>
+        <throttle-coupled type="bool">1</throttle-coupled>
+        <mixture-coupled type="bool">1</mixture-coupled>
+        <prop-coupled type="bool">1</prop-coupled>
+        <movement-scale>0.025</movement-scale>
+        <doors>
+            <LF-door>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </LF-door>
+            <RF-door>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </RF-door>
+            <RR-door>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </RR-door>
+            <LR-door>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </LR-door>
+        </doors>
+        <fuel>
+            <tank-selector type="int">0</tank-selector>
+        </fuel>
+</controls>
+
+<consumables>
+    <fuel>
+        <tank n="0">
+            <name>Front Tank</name>
+        </tank>
+        <tank n="1">
+            <name>Rear Tank</name>
+        </tank>
+    </fuel>
+</consumables>
+
+    <instrumentation>
+        <flightdirector>
+            <serviceable>true</serviceable>
+            </flightdirector>
+    <altimeter n="0">
+        <serviceable>true</serviceable>
+    </altimeter>
+    <altimeter n="1">
+        <serviceable>true</serviceable>
+    </altimeter>
+    <transponder>
+        <inputs>
+            <serviceable type="bool">true</serviceable>
+        </inputs>
+    </transponder>
+    <nav n="0">
+        <serviceable type="bool">1</serviceable>
+    </nav>
+    <nav n="1">
+        <serviceable type="bool">1</serviceable>
+    </nav>
+    <comm n="0">
+        <serviceable type="bool">1</serviceable>
+    </comm>
+    <comm n="1">
+        <serviceable type="bool">1</serviceable>
+    </comm>
+    </instrumentation>
+
+    <engines>
+        <engine n="0">
+            <running>0</running>
+            <rpm>0</rpm>
+            <fuel-flow-pph type="float">0</fuel-flow-pph>
+        </engine>
+        <engine n="1">
+            <running>0</running>
+            <rpm>0</rpm>
+            <fuel-flow-pph type="float">0</fuel-flow-pph>
+        </engine>
+    </engines>
+
+    <autopilot>
+        <hide-menu type="bool">true</hide-menu> <!-- AP is disabled -->
+        <locks>
+            <passive-mode type="bool">true</passive-mode>
+        </locks>
+    </autopilot>
+
+
+    <nasal>
+        <dhc6>
+            <file>Aircraft/dhc6/Nasal/Electrical.nas</file>
+            <file>Aircraft/dhc6/Nasal/systems.nas</file>
+        </dhc6>
+    <dialogs><file>Aircraft/dhc6/Nasal/dialogs.nas</file></dialogs>
+        <m877>
+            <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
+        </m877>
+    </nasal>
+
+</PropertyList>

@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<!-- CTL 62 ADF Control for ADF-60A
+Active and preset displayed +
+6 frequency memory storage
+2.375"W x 2.625"H
+Freq. range 190.000 - 1749.5 (normal) @ 0.5 khz spacing
+Syd Adams
+ -->
+
+<PropertyList>
+
+    <path>ctl62.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.005</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/adf</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>freq.001</object-name>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>systems/electrical/outputs/adf</property>
+                    <value>1</value>
+                </greater-than>
+                <greater-than>
+                    <property>instrumentation/adf/frequencies/selected-khz</property>
+                    <value>999.5</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>stby.005</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/adf</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>stby.001</object-name>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>systems/electrical/outputs/adf</property>
+                    <value>1</value>
+                </greater-than>
+                <greater-than>
+                    <property>instrumentation/adf/frequencies/standby-khz</property>
+                    <value>999.5</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>mem.annun</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/adf</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CTL-62.pwr</object-name>
+        <property>instrumentation/adf/serviceable</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>1.0</ind><dep>30</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>-0.014</y-m>
+            <z-m>-0.018</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--    Active Frequency   -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.001</object-name>
+        <property>instrumentation/adf/frequencies/selected-khz</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.002</object-name>
+        <property>instrumentation/adf/frequencies/selected-khz</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.003</object-name>
+        <property>instrumentation/adf/frequencies/selected-khz</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.004</object-name>
+        <property>instrumentation/adf/frequencies/selected-khz</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.005</object-name>
+        <property>instrumentation/adf/frequencies/selected-khz</property>
+        <factor>1.0</factor>
+        <step>0.1</step>
+        <bias>0.05</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--    Preselected Frequency     -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.001</object-name>
+        <property>instrumentation/adf/frequencies/standby-khz</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.002</object-name>
+        <property>instrumentation/adf/frequencies/standby-khz</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.003</object-name>
+        <property>instrumentation/adf/frequencies/standby-khz</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.004</object-name>
+        <property>instrumentation/adf/frequencies/standby-khz</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.005</object-name>
+        <property>instrumentation/adf/frequencies/standby-khz</property>
+        <factor>1.0</factor>
+        <step>0.1</step>
+        <bias>0.05</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-62.xfr</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-swap</command>
+            <property>instrumentation/adf/frequencies/selected-khz</property>
+            <property>instrumentation/adf/frequencies/standby-khz</property>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>pwr.off</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-assign</command>
+            <property>instrumentation/adf/serviceable</property>
+            <value>false</value>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>pwr.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/adf/serviceable</property>
+                <value>true</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.dwn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/frequencies/standby-khz</property>
+                <step>-0.5</step>
+                <min>190.0</min>
+                <max>1750.0</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.up</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/frequencies/standby-khz</property>
+                <step>0.5</step>
+                <min>190.0</min>
+                <max>1750.0</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.dwn</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/frequencies/standby-khz</property>
+                <step>-10.0</step>
+                <min>190.0</min>
+                <max>1750.0</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.up</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/frequencies/standby-khz</property>
+                <step>10.0</step>
+                <min>190.0</min>
+                <max>1750.0</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+ 
+</PropertyList>

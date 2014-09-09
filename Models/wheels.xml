@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>wheels.ac</path>
+
+
+<!--    GEAR    -->
+
+    <animation>
+        <type>select</type>
+        <object-name>FrtSki</object-name>
+        <object-name>Lski</object-name>
+        <object-name>Rski</object-name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6S</value>
+            </equals>
+        </condition>
+    </animation>
+
+	<animation>
+        <type>select</type>
+        <object-name>taxilight.flare</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/taxi-lights</property>
+                <value>5</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FrtStrut</object-name>
+        <object-name>FrtWheel</object-name>
+        <object-name>FrtSki</object-name>
+        <object-name>frt.d1</object-name>
+        <object-name>taxilight.flare</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <factor>1.0</factor>
+        <axis>
+            <x>0.087</x>
+            <y>0</y>
+            <z>0.996</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>frt.d1</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <factor>189.65</factor>
+        <center>
+            <x-m>-4.480</x-m>
+            <y-m>0</y-m>
+            <z-m>-1.036</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+<animation>
+        <type>rotate</type>
+        <object-name>frt.d2</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <factor>119.25</factor>
+		<center>
+            <x-m>-4.394</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.734</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Lwheel</object-name>
+        <object-name>Lski</object-name>
+        <object-name>LHstrut</object-name>
+        <property>gear/gear[1]/compression-m</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.5</ind><dep>25.0</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>-0.134</x-m>
+            <y-m>-0.923</y-m>
+            <z-m>-0.810</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Rwheel</object-name>
+        <object-name>Rski</object-name>
+        <object-name>RHstrut</object-name>
+        <property>gear/gear[2]/compression-m</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.5</ind><dep>25.0</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>-0.134</x-m>
+            <y-m>0.923</y-m>
+            <z-m>-0.810</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>FrtStrut</object-name>
+        <object-name>FrtWheel</object-name>
+		<object-name>frt.d1</object-name>
+		<object-name>frt.d2</object-name>
+        <object-name>FrtSki</object-name>
+        <object-name>taxilight.flare</object-name>
+        <property>controls/flight/rudder</property>
+        <factor>-30.0</factor>
+        <center>
+            <x-m>-4.410</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.744</z-m>
+        </center>
+        <axis>
+            <x>0.087</x>
+            <y>0</y>
+            <z>0.996</z>
+        </axis>
+    </animation>
+
+</PropertyList>

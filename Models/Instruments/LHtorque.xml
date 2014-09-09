@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- torque pressure
+Syd Adams
+-->
+<PropertyList>
+
+    <path>torque.ac</path>
+    
+    <animation>
+        <type>material</type>
+        <object-name>TQface</object-name>
+        <object-name>TQneedle</object-name>
+        <object-name>TQneedle.001</object-name>
+        <emission>
+            <red>0.028</red>
+            <green>0.014</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>TQneedle</object-name>
+        <property>engines/engine[0]/torque-ftlb</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>3000</ind><dep>245.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

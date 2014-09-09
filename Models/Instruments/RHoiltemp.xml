@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- oil temp
+Syd Adams
+-->
+<PropertyList>
+
+    <path>oiltemp.ac</path>
+    
+    <animation>
+        <type>material</type>
+        <object-name>OTface</object-name>
+        <object-name>OTneedle</object-name>
+        <emission>
+            <red>0.028</red>
+            <green>0.014</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>OTneedle</object-name>
+        <property>engines/engine[1]/oil-temp-c</property>
+        <interpolation>
+            <entry><ind>-70.0</ind><dep>0.0</dep></entry>
+            <entry><ind>150</ind><dep>264.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

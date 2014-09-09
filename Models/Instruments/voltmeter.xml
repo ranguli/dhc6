@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>voltmeter.ac</path>
+
+<animation>
+    <type>material</type>
+    <object-name>volt.face</object-name>
+    <object-name>voltneedle</object-name>
+    <object-name>voltneedle.001</object-name>
+    <object-name>voltneedle.002</object-name>
+    <emission>
+        <red>0.028</red>
+        <green>0.014</green>
+        <blue>0.007</blue>
+        <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>voltneedle</object-name>
+    <property>engines/engine[0]/amp-v</property>
+    <interpolation>
+        <entry><ind>0.0</ind><dep>0.0</dep></entry>
+        <entry><ind>30</ind><dep>88.2</dep></entry>
+    </interpolation>
+    <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.007</z-m>
+    </center>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>voltneedle.002</object-name>
+    <property>engines/engine[1]/amp-v</property>
+    <interpolation>
+        <entry><ind>0.0</ind><dep>0.0</dep></entry>
+        <entry><ind>30</ind><dep>88.2</dep></entry>
+    </interpolation>
+    <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.007</z-m>
+    </center>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>voltneedle.001</object-name>
+    <property>systems/electrical/batt-volts</property>
+    <interpolation>
+        <entry><ind>0.0</ind><dep>0.0</dep></entry>
+        <entry><ind>30</ind><dep>88.2</dep></entry>
+    </interpolation>
+    <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.007</z-m>
+    </center>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>voltneedle</object-name>
+    <condition>
+        <equals>
+            <property>controls/electric/ammeter-switch</property>
+            <value>-1</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>voltneedle.001</object-name>
+    <condition>
+        <equals>
+            <property>controls/electric/ammeter-switch</property>
+            <value>0</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>voltneedle.002</object-name>
+    <condition>
+        <equals>
+            <property>controls/electric/ammeter-switch</property>
+            <value>1</value>
+        </equals>
+    </condition>
+</animation>
+
+</PropertyList>
