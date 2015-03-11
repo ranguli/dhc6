@@ -11,7 +11,7 @@ Jan 2008 Syd Adams
     <model>
         <path>Aircraft/dhc6/Models/DHC6F.xml</path>
     </model>
-    
+
         <description>de Havilland Twin Otter (floats)</description>
         <status>developement</status>
         <author>Syd Adams</author>
@@ -22,8 +22,9 @@ Jan 2008 Syd Adams
         <startup>
             <splash-texture>Aircraft/dhc6/splash1.png</splash-texture>
         </startup>
-        
-    
+
+        <variant-of>dhc6</variant-of>
+
     <hitches>
         <aerotow>
             <tow>

@@ -21,7 +21,9 @@ Jan 2008 Syd Adams
             <path>Aircraft/dhc6/Models/DHC6S.xml</path>
             <blunt-nose type="bool">0</blunt-nose>
         </model>
-    
+
+        <variant-of>dhc6</variant-of>
+
     <hitches>
         <aerotow>
             <tow>
