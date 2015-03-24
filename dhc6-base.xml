@@ -9,6 +9,13 @@ Jan 2008 Syd Adams
 <PropertyList>
     <sim>
 
+    <rating>
+        <FDM type="int">3</FDM>
+        <systems type="int">2</systems>
+        <cockpit type="int">4</cockpit>
+        <model type="int">4</model>
+    </rating>
+
     <model>
         <autostart type="bool">0</autostart>
         <blunt-nose type="bool">1</blunt-nose>
