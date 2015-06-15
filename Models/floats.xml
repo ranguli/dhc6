@@ -1,9 +1,17 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
 <path>floats.ac</path>
 
+ <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
+      <object-name>Floats</object-name>
+      <object-name>LHfloat.stut</object-name>
+      <object-name>RHfloat.stut</object-name>
+      <object-name>RHupRam</object-name>
+      <object-name>LHupRam</object-name>
+    </effect>
 
 <model>
     <path>Aircraft/dhc6/Models/Effects/left-spray.xml</path>

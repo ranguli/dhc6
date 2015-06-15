@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 ************************************************************************
 de Havilland Twin Otter
@@ -9,25 +9,20 @@ Jan 2008 Syd Adams
 <PropertyList>
     <sim>
 
-    <rating>
-        <FDM type="int">3</FDM>
-        <systems type="int">2</systems>
-        <cockpit type="int">4</cockpit>
-        <model type="int">4</model>
-    </rating>
-
     <model>
         <autostart type="bool">0</autostart>
         <blunt-nose type="bool">1</blunt-nose>
-        <livery>
-            <file type="string">Blue2</file>
-        </livery>
-        <floats>
-            <file type="string">Blue2</file>
-        </floats>
         <display-callsign type="bool">0</display-callsign>
         <remove-doors type="bool">0</remove-doors>
     </model>
+
+	<status>production</status>
+	<rating>
+ 		<FDM type="int">4</FDM>
+		<systems type="int">4</systems>
+		<cockpit type="int">4</cockpit>
+		<model type="int">4</model>
+	</rating>
 
     <view n="0">
         <internal>true</internal>
@@ -42,7 +37,7 @@ Jan 2008 Syd Adams
             <limits>
                 <enabled type="bool">true</enabled>
                 <left>
-                  <heading-max-deg type="double">100</heading-max-deg>
+                  <heading-max-deg type="double">160</heading-max-deg>
                   <x-offset-max-m type="double">0.22</x-offset-max-m>
                   <x-offset-threshold-deg type="double">40</x-offset-threshold-deg>
                 </left>
@@ -55,8 +50,8 @@ Jan 2008 Syd Adams
         </config>
     </view>
 
-   <view n="100">
-        <name>Overhead Panel</name>
+    <view n="100">
+        <name>Cabin</name>
         <enabled type="bool">true</enabled>
         <type>lookfrom</type>
         <internal type="bool">true</internal>
@@ -64,8 +59,8 @@ Jan 2008 Syd Adams
             <from-model type="bool">true</from-model>
             <from-model-idx type="int">0</from-model-idx>
             <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
-            <default-pitch-deg type="double">85</default-pitch-deg>
+            <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+            <default-pitch-deg type="double">-5</default-pitch-deg>
             <default-heading-deg type="double">0</default-heading-deg>
             <front-direction-deg type="double">0</front-direction-deg>
             <front-left-direction-deg type="double">45</front-left-direction-deg>
@@ -75,15 +70,129 @@ Jan 2008 Syd Adams
             <back-right-direction-deg type="double">225</back-right-direction-deg>
             <right-direction-deg type="double">270</right-direction-deg>
             <front-right-direction-deg type="double">315</front-right-direction-deg>
-            <dynamic-view type="bool">false</dynamic-view>
-            <x-offset-m type="double">-0.02</x-offset-m>
-            <y-offset-m type="double">0.55</y-offset-m>
-            <z-offset-m type="double">-2.97</z-offset-m>
-            <pitch-offset-deg>85</pitch-offset-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double">-0.1</x-offset-m>
+            <y-offset-m type="double"> 0.7</y-offset-m>
+            <z-offset-m type="double"> 2.3</z-offset-m>
+            <pitch-offset-deg>-5</pitch-offset-deg>
         </config>
     </view>
 
     <view n="101">
+        <name>Tail Camera</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">false</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">90</default-field-of-view-deg>
+            <default-pitch-deg type="double">-15</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double"> 0</x-offset-m>
+            <y-offset-m type="double"> 4</y-offset-m>
+            <z-offset-m type="double"> 8</z-offset-m>
+            <pitch-offset-deg>-15</pitch-offset-deg>
+        </config>
+    </view>
+
+    <view n="102">
+        <name>Right Wing</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">false</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+            <default-pitch-deg type="double">-4</default-pitch-deg>
+            <default-heading-deg type="double">40</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double"> 9.2</x-offset-m>
+            <y-offset-m type="double"> 1</y-offset-m>
+            <z-offset-m type="double"> 1</z-offset-m>
+            <pitch-offset-deg>-4</pitch-offset-deg>
+            <heading-offset-deg>40</heading-offset-deg>
+        </config>
+    </view>
+
+    <view n="103">
+        <name>Left Wing</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">false</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+            <default-pitch-deg type="double">-4</default-pitch-deg>
+            <default-heading-deg type="double">320</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double">-9.2</x-offset-m>
+            <y-offset-m type="double"> 1</y-offset-m>
+            <z-offset-m type="double"> 1</z-offset-m>
+            <pitch-offset-deg>-4</pitch-offset-deg>
+            <heading-offset-deg>320</heading-offset-deg>
+        </config>
+    </view>
+
+    <view n="104">
+        <name>Nose Gear</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">false</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">70</default-field-of-view-deg>
+            <default-pitch-deg type="double">0</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <x-offset-m type="double"> 0</x-offset-m>
+            <y-offset-m type="double">-1</y-offset-m>
+            <z-offset-m type="double"> 1</z-offset-m>
+            <pitch-offset-deg>0</pitch-offset-deg>
+        </config>
+    </view>
+
+    <view n="105">
         <name>CoPilot View</name>
         <enabled type="bool">true</enabled>
         <type>lookfrom</type>
@@ -92,7 +201,7 @@ Jan 2008 Syd Adams
             <from-model type="bool">true</from-model>
             <from-model-idx type="int">0</from-model-idx>
             <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+            <default-field-of-view-deg type="double">85</default-field-of-view-deg>
             <default-pitch-deg type="double">0</default-pitch-deg>
             <default-heading-deg type="double">0</default-heading-deg>
             <front-direction-deg type="double">0</front-direction-deg>
@@ -124,6 +233,34 @@ Jan 2008 Syd Adams
         </config>
     </view>
 
+   <view n="106">
+        <name>Overhead Panel</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">85</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">false</dynamic-view>
+            <x-offset-m type="double">-0.02</x-offset-m>
+            <y-offset-m type="double">0.55</y-offset-m>
+            <z-offset-m type="double">-2.97</z-offset-m>
+            <pitch-offset-deg>85</pitch-offset-deg>
+        </config>
+    </view>
+
     <airport>
         <runways>
             <start-offset-m>20</start-offset-m>
@@ -137,6 +274,10 @@ Jan 2008 Syd Adams
         <autopilot>
             <path>Aircraft/dhc6/systems/autopilot.xml</path>
         </autopilot>
+        <!--ALS Landing Lights-->
+        <property-rule n="101">
+            <path>Aircraft/dhc6/systems/als-lights.xml</path>
+        </property-rule>
     </systems>
 
         <instrumentation>
@@ -164,8 +305,88 @@ Jan 2008 Syd Adams
 
     <help>
         <title>Twin Otter</title>
-        <line></line>
+		<key>
+			<name>Del</name>
+			<desc>Toggle thrust reverse</desc>
+		</key>
+		<key>
+			<name>c</name>
+			<desc>Hide/show cockpit</desc>
+		</key>
+		<key>
+			<name>Ctrl-c</name>
+			<desc>Toggle clickable hotspots</desc>
+		</key>
+		<key>
+			<name>!</name>
+			<desc>Select left engine</desc>
+		</key>
+		<key>
+			<name>@</name>
+			<desc>Select right engine</desc>
+		</key>
+		<key>
+			<name>~</name>
+			<desc>Select both engines</desc>
+		</key>
+		<key>
+			<name>n/N</name>
+			<desc>Increase/decrease propeller</desc>
+		</key>
+		<key>
+			<name>j/J</name>
+			<desc>Increase/decrease left condition</desc>
+		</key>
+		<key>
+			<name>k/K</name>
+			<desc>Increase/decrease right condition</desc>
+		</key>
+		<line>Tiller steering is controlled via rudder</line>
+		<line></line>
+		<line>To open/close the doors, just click on it</line>
+		<line></line>
+		<line>When not starting up the engines on asphalt,</line>
+		<line>you have to switch on the intake deflectors.</line>
+		<line>Otherwise the engines will fail.</line>
+		<line></line>
+		<line>If the outside temperature is below 0 dec C,</line>
+		<line>you have to switch on the pitot heat and the prop deice!</line>
+		<line></line>
+		<line>______________________________________________________________</line>
+		<line/>
+		<line/>
+		<line>Technical data (DHC-6-300):</line>
+		<line>Length: 15.77 m/51 ft 9 in</line>
+		<line>Wingspan: 19.81 m/65 ft 0 in</line>
+		<line>Height: 5.91 m/19 ft 4 in</line>
+		<line>Service ceiling: 7620 m/25000 ft</line>
+		<line>Range with max fuel, no payload: aprox. 1430 km/775 nm</line>
+		<line>MTOW: 5,670 kg/12,500 lb</line>
+		<line>Maximum landing weight: 5,579 kg/12300 lb</line>
+		<line>Powerplant: 2x Pratt and Whitney Canada PT6A-27</line>
+		<line>Power: 2x 463 kW</line>
+		<line>Stall speed in landing config (Vs0): 58 kts</line>
+		<line>Stall speed in cruise config (Vs1): 80 kts</line>
+		<line>Max Speed (Vne): 172 kts</line>
+		<line>Cruise Speed: 150-165 kts</line>
+		<text>
+Some information about the Twin Otter:
+The DHC-6 Twin Otter is a Canadian 19-passanger STOL aircraft developed by de Havilland Canada.
+It's first flight was on May 20th, 1965 and it was produced until 1988. Since 2008 Viking Air produces the Twin Otter in License as DHC-6-400 Series.
+Till today there were built more than 900 Twin Otters.
+It's STOL abilities and high rate of climb have made it ideal for regional cargo/passenger transport and for MEDEVAC flights. In USA and in Europe it is a popular aircraft in the commercial skydiving sector.
+The aircraft's powerful engines make the DHC-6 a suitable bush plane for inaccessible and remote terrain in many development countries.
+The version of the Twin Otter in FlightGear is the DHC-6-300 Series
+
+---
+From Wikipedia, the free encyclopedia
+en.wikipedia.org/wiki/De_Havilland_Canada_DHC_6_Twin_Otter (Oct 31th, 2014)
+de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
+		</text>
     </help>
+	<checklists include="Tutorials/dhc6-checklists.xml"/>
+	
+	<tutorials include="Tutorials/dhc6-tutorials.xml"/>
 
     <weight n="0">
         <name>Crew</name>
@@ -189,12 +410,27 @@ Jan 2008 Syd Adams
             <string n="1" alias="/sim/multiplay/callsign"/>
             <int n="0" alias="/sim/model/blunt-nose"/>
             <int n="1" alias="/sim/model/display-callsign"/>
+
+            <int n="9" alias="/sim/model/lights/nav-lights/state"/>
+            <int n="10" alias="/sim/model/lights/landing-light[0]/state"/>
+            <int n="11" alias="/sim/model/lights/landing-light[1]/state"/>
+            <int n="12" alias="/sim/model/lights/taxi-lights/state"/>
+            <int n="13" alias="/sim/model/lights/strobe/state"/>
+            <int n="14" alias="/sim/model/lights/beacon/state"/>
+
+            <float n="3" alias="/systems/electrical/outputs/nav-lights">       0 </float>
+            <float n="4" alias="/systems/electrical/outputs/landing-light[0]"> 0 </float>
+            <float n="5" alias="/systems/electrical/outputs/landing-light[1]"> 0 </float>
+            <float n="6" alias="/systems/electrical/outputs/taxi-lights">      0 </float>
+            <float n="7" alias="/systems/electrical/outputs/strobe">           0 </float>
+            <float n="8" alias="/systems/electrical/outputs/beacon">           0 </float>
+            <float n="9" alias="/systems/electrical/volts">                    0 </float>
         </generic>
     </multiplay>
 
     <menubar>
         <default>
-            <menu n="10">
+            <menu n="100">
                 <label>DHC-6</label>
                 <enabled type="bool">true</enabled>
                 <item>
@@ -222,12 +458,19 @@ Jan 2008 Syd Adams
                     <label>Select Livery</label>
                     <binding>
                         <command>nasal</command>
-                        <script>aircraft.livery.dialog.toggle()</script>
+                        <script>aircraft.livery.dialog.open()</script>
                     </binding>
                 </item>
             </menu>
         </default>
     </menubar>
+
+    <rendering>
+        <als-secondary-lights>
+            <landing-light1-offset-deg type="float">-5</landing-light1-offset-deg>
+            <landing-light2-offset-deg type="float">5</landing-light2-offset-deg>
+        </als-secondary-lights>
+    </rendering>
 
 </sim>
 
@@ -273,6 +516,50 @@ Jan 2008 Syd Adams
                 <command>property-assign</command>
                 <property>sim/hitches/aerotow/open</property>
                 <value type="bool">false</value>
+            </binding>
+        </key>
+	<key n="106">
+            <name>j</name>
+            <desc>Push the left condition</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+              <command>property-adjust</command>
+              <property>controls/engines/engine[0]/condition</property>            <step>0.05</step>
+	      <min>0</min>
+	      <max>1</max>
+            </binding>
+        </key>
+	<key n="107">
+            <name>k</name>
+            <desc>Push the right condition</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+              <command>property-adjust</command>
+              <property>controls/engines/engine[1]/condition</property>            <step>0.05</step>
+	      <min>0</min>
+	      <max>1</max>
+            </binding>
+        </key>
+	<key n="74">
+            <name>J</name>
+            <desc>Pull the left condition</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+              <command>property-adjust</command>
+              <property>controls/engines/engine[0]/condition</property>            <step>-0.05</step>
+	      <min>0</min>
+	      <max>1</max>
+            </binding>
+        </key>
+	<key n="75">
+            <name>K</name>
+            <desc>Pull the right condition</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+              <command>property-adjust</command>
+              <property>controls/engines/engine[1]/condition</property>            <step>-0.05</step>
+	      <min>0</min>
+	      <max>1</max>
             </binding>
         </key>
     </keyboard>
@@ -333,15 +620,48 @@ Jan 2008 Syd Adams
                 <open type="bool">0</open>
                 <position-norm type="double">0</position-norm>
             </RR-door>
-            <LR-door>
+            <LR-door-F>
                 <open type="bool">0</open>
                 <position-norm type="double">0</position-norm>
-            </LR-door>
+            </LR-door-F>
+	    <LR-door-R>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </LR-door-R>
+            <Baggage.door>
+                <open type="bool">0</open>
+                <position-norm type="double">0</position-norm>
+            </Baggage.door>	    
         </doors>
         <fuel>
             <tank-selector type="int">0</tank-selector>
         </fuel>
 </controls>
+
+
+    <gear>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+			<position-norm type="double">1</position-norm>
+		</gear>
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+			<position-norm type="double">1</position-norm>
+		</gear>
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+			<position-norm type="double">1</position-norm>
+		</gear>
+	</gear>
 
 <consumables>
     <fuel>
@@ -397,7 +717,6 @@ Jan 2008 Syd Adams
     </engines>
 
     <autopilot>
-        <hide-menu type="bool">true</hide-menu> <!-- AP is disabled -->
         <locks>
             <passive-mode type="bool">true</passive-mode>
         </locks>
@@ -406,13 +725,31 @@ Jan 2008 Syd Adams
 
     <nasal>
         <dhc6>
+        
+            <file>Aircraft/dhc6/Nasal/convert.nas</file>
             <file>Aircraft/dhc6/Nasal/Electrical.nas</file>
             <file>Aircraft/dhc6/Nasal/systems.nas</file>
+	    <file>Aircraft/dhc6/Nasal/printGforce.nas</file>
+	    <file>Aircraft/dhc6/Nasal/t5.nas</file>
+	    <file>Aircraft/dhc6/Nasal/torque.nas</file>
+	    <file>Aircraft/dhc6/Nasal/failures.nas</file>
+	    <file>Aircraft/dhc6/Nasal/direction-gyro.nas</file>
+	    <file>Aircraft/dhc6/Nasal/earth-rate.nas</file>
+	    <file>Aircraft/dhc6/Nasal/smoothAnimate.nas</file>
+	    <file>Aircraft/dhc6/Nasal/beta-range.nas</file>
+	    <file>Aircraft/dhc6/Nasal/auto-feather.nas</file>
+	    <file>Aircraft/dhc6/Nasal/spool-downgrader.nas</file>
         </dhc6>
     <dialogs><file>Aircraft/dhc6/Nasal/dialogs.nas</file></dialogs>
         <m877>
             <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
         </m877>
+	<tyresmoke>
+            <file>Aircraft/dhc6/Nasal/tyresmoke.nas</file>
+        </tyresmoke>
+	   <!--    <garmin196>
+          <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+        </garmin196>-->
     </nasal>
 
 </PropertyList>

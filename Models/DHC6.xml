@@ -1,8 +1,8 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
-<path>dhc-6.ac</path>
+  <path>dhc-6.ac</path>
 
     <nasal>
         <load>
@@ -22,13 +22,13 @@
       <object-name>fuselage.004</object-name>
       <object-name>longnose</object-name>
       <object-name>bluntnose</object-name>
-      <object-name>Spinners</object-name>
       <object-name>RFdoor</object-name>
       <object-name>LFdoor</object-name>
       <object-name>RRdoor</object-name>
       <object-name>Lrdoor-rear</object-name>
       <object-name>Lrdoor-frt</object-name>
       <object-name>Baggage.door</object-name>
+      <object-name>fuel.caps</object-name>
       <object-name>wings</object-name>
       <object-name>wingbrace</object-name>
       <object-name>R.aileron</object-name>
@@ -51,11 +51,20 @@
       <object-name>Lprop.1</object-name>
       <object-name>Lprop.2</object-name>
       <object-name>Lprop.3</object-name>
+	  <object-name>SpinnerL</object-name>
+	  <object-name>SpinnerR</object-name>
+	  <object-name>SpinnerLRot</object-name>
+	  <object-name>SpinnerRRot</object-name>
+      <object-name>Exhaust</object-name>
     </animation>
 
     <model>
+      <path>Models/Aircraft/marker.xml</path>
+    </model>
+
+    <model>
         <name>cabin</name>
-        <path>Aircraft/dhc6/Models/cabin.xml</path>
+        <path>Aircraft/dhc6/Models/Cabin/cabin.xml</path>
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -66,7 +75,7 @@
 
     <model>
         <name>flightdeck</name>
-        <path>Aircraft/dhc6/Models/flightdeck.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/flightdeck.xml</path>
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -134,19 +143,80 @@
         </condition>
     </animation>
 
+    <model>
+        <path>Aircraft/dhc6/Models/Effects/exhaustL_LEng.xml</path>
+        <offsets>
+            <x-m>-2.135</x-m>
+            <y-m>-3.211</y-m>
+            <z-m> 1.033</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dhc6/Models/Effects/exhaustR_LEng.xml</path>
+        <offsets>
+            <x-m>-2.135</x-m>
+            <y-m>-2.471</y-m>
+            <z-m> 1.033</z-m>
+        </offsets>
+    </model>
+
+
+    <model>
+        <path>Aircraft/dhc6/Models/Effects/exhaustL_REng.xml</path>
+        <offsets>
+            <x-m>-2.135</x-m>
+            <y-m> 2.471</y-m>
+            <z-m> 1.033</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dhc6/Models/Effects/exhaustR_REng.xml</path>
+        <offsets>
+            <x-m>-2.135</x-m>
+            <y-m> 3.211</y-m>
+            <z-m> 1.033</z-m>
+        </offsets>
+    </model>
+
+                       <!--  LHWIPER  -->
+    <model>
+        <path>Aircraft/dhc6/Models/Equipment/Wiper/LHwiper.xml</path>
+        <offsets>
+            <x-m>0.00</x-m>
+            <y-m>0.00</y-m>
+            <z-m>0.00</z-m>
+        </offsets>
+    </model>
+                       <!--  RHWIPER  -->
+
+    <model>
+        <path>Aircraft/dhc6/Models/Equipment/Wiper/RHwiper.xml</path>
+        <offsets>
+            <x-m>0.00</x-m>
+            <y-m>0.00</y-m>
+            <z-m>0.00</z-m>
+        </offsets>
+    </model>
+
 <effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
       <object-name>fuselage</object-name>
       <object-name>fuselage.004</object-name>
       <object-name>longnose</object-name>
       <object-name>bluntnose</object-name>
-      <object-name>Spinners</object-name>
+      <object-name>SpinnerL</object-name>
+	  <object-name>SpinnerR</object-name>
+	  <object-name>SpinnerLRot</object-name>
+	  <object-name>SpinnerRRot</object-name>
       <object-name>RFdoor</object-name>
       <object-name>LFdoor</object-name>
       <object-name>RRdoor</object-name>
       <object-name>Lrdoor-rear</object-name>
       <object-name>Lrdoor-frt</object-name>
       <object-name>Baggage.door</object-name>
+      <object-name>fuel.caps</object-name>
       <object-name>wings</object-name>
       <object-name>wingbrace</object-name>
       <object-name>R.aileron</object-name>
@@ -159,14 +229,12 @@
       <object-name>rudder</object-name>
       <object-name>Elevator</object-name>
       <object-name>Engine</object-name>
-      <object-name>Lrdoor.glass</object-name>
-      <object-name>glass</object-name>
-      <object-name>LHdoor.glass</object-name>
-      <object-name>RHdoor.glass</object-name>
-      <object-name>RRdoor.glass</object-name>
       <object-name>float.fairing</object-name>
       <object-name>wheel.fairing</object-name>
       <object-name>FrrtStrut</object-name>
+      <object-name>LHstrut</object-name>
+      <object-name>RHstrut</object-name>
+      <object-name>FrtStrut</object-name>
     </effect>
 
     <effect>
@@ -182,17 +250,32 @@
         <object-name>LHLNDlight</object-name>
         <object-name>Lprop.disk</object-name>
         <object-name>Rprop.disk</object-name>
+        <object-name>landing_light_cover</object-name>
+    <condition>
+          <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
     </effect>
+
+      <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/dhc6/Models/Effects/chrome2.png</texture>
+        <object-name>SpinnerL</object-name>
+		<object-name>SpinnerR</object-name>
+		<object-name>SpinnerLRot</object-name>
+		<object-name>SpinnerRRot</object-name>
+    </animation>
 
     <animation>
         <type>shader</type>
         <shader>chrome</shader>
-        <texture>chrome1.png</texture>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
         <object-name>Lrdoor.glass</object-name>
         <object-name>glass</object-name>
         <object-name>LHdoor.glass</object-name>
         <object-name>RHdoor.glass</object-name>
-        <object-name>RRdoor.glass</object-name>
+        <object-name>RRdoor.glass</object-name>        
+        <object-name>landing_light_cover</object-name>
     </animation>
 
     <animation>
@@ -255,12 +338,20 @@
 
     <animation>
         <type>select</type>
+        <object-name>strobe.1</object-name>
+        <object-name>strobe.2</object-name>
+        <object-name>beacon</object-name>
+    </animation>
+
+<!--
+    <animation>
+        <type>select</type>
         <object-name>navlights</object-name>
         <condition>
-            <not-equals>
-            <property>systems/electrical/outputs/nav-lights</property>
-            <value>0</value>
-            </not-equals>
+            <greater-than>
+            <property>sim/multiplay/generic/float[3]</property>
+            <value>8</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -268,10 +359,13 @@
         <type>select</type>
         <object-name>beacon</object-name>
         <condition>
-            <not-equals>
-            <property>systems/electrical/outputs/beacon</property>
-            <value>0</value>
-            </not-equals>
+          <and>
+            <greater-than>
+            <property>sim/multiplay/generic/float[8]</property>
+            <value>8</value>
+            </greater-than>
+            <property>sim/multiplay/generic/int[14]</property>
+          </and>
         </condition>
     </animation>
 
@@ -280,10 +374,13 @@
         <object-name>strobe.1</object-name>
         <object-name>strobe.2</object-name>
         <condition>
+          <and>
             <greater-than>
-                <property>systems/electrical/outputs/strobe</property>
-                <value>5</value>
+                <property>sim/multiplay/generic/float[7]</property>
+                <value>8</value>
             </greater-than>
+            <property>sim/multiplay/generic/int[13]</property>
+          </and>
         </condition>
     </animation>
 
@@ -337,16 +434,102 @@
         <entry><ind>500</ind><dep>2.5</dep></entry>
         <entry><ind>16000</ind><dep>10</dep></entry>
         </interpolation>
-    </animation>
+    </animation>-->
+
+<!-- Cones Rembrandt -->
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/StrobeLight-rembrandt.xml</path>
+      <offsets>
+         <x-m>-0.6158</x-m>
+         <y-m>-9.7998</y-m>
+         <z-m>1.4547</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>0</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/StrobeLight-rembrandt.xml</path>
+      <offsets>
+         <x-m>-0.6158</x-m>
+         <y-m>9.7998</y-m>
+         <z-m>1.4547</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>0</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/BeaconLight-rembrandt.xml</path>
+      <offsets>
+         <x-m>8.1327</x-m>
+         <y-m>0.0000</y-m>
+         <z-m>3.9350</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>0</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/NavLightL-rembrandt.xml</path>
+      <offsets>
+         <x-m>-0.6158</x-m>
+         <y-m>-9.7698</y-m>
+         <z-m>1.4547</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>0</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/NavLightR-rembrandt.xml</path>
+      <offsets>
+         <x-m>-0.6158</x-m>
+         <y-m>9.7698</y-m>
+         <z-m>1.4547</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>0</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/L-LandingLight-rembrandt.xml</path>
+      <offsets>
+         <x-m>-1.0473</x-m>
+         <y-m>-3.7436</y-m>
+         <z-m>1.1280</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>-8</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/dhc6/Models/Lights/R-LandingLight-rembrandt.xml</path>
+      <offsets>
+        <x-m>-1.0473</x-m>
+         <y-m>3.7436</y-m>
+         <z-m>1.1280</z-m>
+         <roll-deg>0</roll-deg>
+         <pitch-deg>-8</pitch-deg>
+         <heading-deg>0</heading-deg>
+      </offsets>
+    </model>
 
     <animation>
         <type>select</type>
         <object-name>LHLNDlight</object-name>
         <condition>
-            <not-equals>
-            <property>systems/electrical/outputs/landing-light[0]</property>
-            <value>0</value>
-            </not-equals>
+            <greater-than>
+            <property>sim/multiplay/generic/float[4]</property>
+            <value>8</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -354,10 +537,10 @@
         <type>select</type>
         <object-name>RHLNDlight</object-name>
         <condition>
-            <not-equals>
-            <property>systems/electrical/outputs/landing-light[1]</property>
-            <value>0</value>
-            </not-equals>
+            <greater-than>
+            <property>sim/multiplay/generic/float[5]</property>
+            <value>8</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -402,114 +585,6 @@
         <min>0.5</min>
         <max>2</max>
     </animation>
-<!--    Wipers   -->
-
-    <animation>
-        <type>rotate</type>
-        <object-name>RHwiper</object-name>
-        <object-name>RHwiper.blade</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>90.0</factor>
-        <center>
-            <x-m>-4.122</x-m>
-            <y-m>0.400</y-m>
-            <z-m>0.5225</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>RHwiper.arm</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>90.0</factor>
-        <center>
-            <x-m>-4.140</x-m>
-            <y-m>0.360</y-m>
-            <z-m>0.540</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>RHwiper.blade</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>-90.0</factor>
-        <center>
-            <x-m>-3.939</x-m>
-            <y-m>0.171</y-m>
-            <z-m>0.737</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>LHwiper</object-name>
-        <object-name>LHwiper.blade</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>-90.0</factor>
-        <center>
-            <x-m>-4.122</x-m>
-            <y-m>-0.400</y-m>
-            <z-m>0.5225</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>-0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>LHwiper.arm</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>-90.0</factor>
-        <center>
-            <x-m>-4.140</x-m>
-            <y-m>-0.360</y-m>
-            <z-m>0.540</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>-0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>LHwiper.blade</object-name>
-        <property>controls/electric/wipers/position-norm</property>
-        <factor>90.0</factor>
-        <center>
-            <x-m>-3.939</x-m>
-            <y-m>-0.171</y-m>
-            <z-m>0.737</z-m>
-        </center>
-        <axis>
-            <x>-0.688</x>
-            <y>-0.235</y>
-            <z>0.687</z>
-        </axis>
-    </animation>
-
-<!--    Controls Surfaces    -->
 
     <animation>
         <type>rotate</type>
@@ -568,7 +643,7 @@
         <type>rotate</type>
         <object-name>R.flap</object-name>
         <property>surface-positions/flap-pos-norm</property>
-        <factor>20.0</factor>
+        <factor>40.0</factor>
         <center>
             <x-m>0.594</x-m>
             <y-m>0.913</y-m>
@@ -652,12 +727,163 @@
     </animation>
 
 <!-- Props -->
-
-    <animation>
-        <type>select</type>
-        <object-name>Lprop.1</object-name>
+<animation>
+        <name>LpropParent</name>
         <object-name>Lprop.2</object-name>
         <object-name>Lprop.3</object-name>
+        <object-name>Lprop.1</object-name>
+</animation>
+
+	<animation>
+          <object-name>Lprop.1</object-name>
+          <type>rotate</type>
+          <property>engines/engine[0]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-2.8529</y2-m>
+          <z2-m>2.2496</z2-m>
+	  </axis>
+	</animation>
+
+	<animation>
+          <object-name>Lprop.1</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-2.8529</y2-m>
+          <z2-m>2.2496</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Lprop.2</object-name>
+          <type>rotate</type>
+          <property>engines/engine[0]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-1.7868</y2-m>
+          <z2-m>0.390561</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Lprop.2</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-1.7868</y2-m>
+          <z2-m>0.390561</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Lprop.3</object-name>
+          <type>rotate</type>
+          <property>engines/engine[0]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-3.9301</y2-m>
+          <z2-m>0.396365</z2-m>
+	  </axis>
+	</animation>
+
+	<animation>
+          <object-name>Lprop.3</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[0]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>-2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>-3.9301</y2-m>
+          <z2-m>0.396365</z2-m>
+	  </axis>
+	</animation>
+
+	
+    <animation>
+        <type>select</type>
+        <object-name>LpropParent</object-name>
+		<object-name>SpinnerL</object-name>
+		<object-name>SpinnerInteriorL</object-name>
         <condition>
             <less-than> 
             <property>engines/engine[0]/n2</property>
@@ -669,6 +895,7 @@
     <animation>
         <type>select</type>
         <object-name>Lprop.disk</object-name>
+		<object-name>SpinnerLRot</object-name>
         <condition>
             <greater-than> 
             <property>engines/engine[0]/n2</property>
@@ -679,9 +906,8 @@
 
     <animation>
         <type>spin</type>
-        <object-name>Lprop.1</object-name>
-        <object-name>Lprop.2</object-name>
-        <object-name>Lprop.3</object-name>
+        <object-name>LpropParent</object-name>
+	<object-name>SpinnerL</object-name>
         <property>engines/engine[0]/n2</property>
         <factor>10.0</factor>
         <center>
@@ -696,11 +922,162 @@
         </axis>
     </animation>
 
-    <animation>
-        <type>select</type>
+<animation>
+        <name>RpropParent</name>
         <object-name>Rprop.1</object-name>
         <object-name>Rprop.2</object-name>
         <object-name>Rprop.3</object-name>
+</animation>
+
+	<animation>
+          <object-name>Rprop.1</object-name>
+          <type>rotate</type>
+          <property>engines/engine[1]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>2.85019</y2-m>
+          <z2-m>2.25</z2-m>
+	  </axis>
+	</animation>
+
+		<animation>
+          <object-name>Rprop.1</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>2.85019</y2-m>
+          <z2-m>2.25</z2-m>
+	  </axis>
+	</animation>
+
+	<animation>
+          <object-name>Rprop.2</object-name>
+          <type>rotate</type>
+          <property>engines/engine[1]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>3.9266</y2-m>
+          <z2-m>0.390466</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Rprop.2</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>3.9266</y2-m>
+          <z2-m>0.390466</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Rprop.3</object-name>
+          <type>rotate</type>
+          <property>engines/engine[1]/n2</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>50</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>1.7836</y2-m>
+          <z2-m>0.396336</z2-m>
+	  </axis>
+	</animation>
+	
+	<animation>
+          <object-name>Rprop.3</object-name>
+          <type>rotate</type>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+	  <condition>
+            <less-than> 
+              <property>engines/engine[1]/n2</property>
+              <value>50.0001</value>
+            </less-than>
+          </condition>
+	  <interpolation>
+            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>1</ind><dep>0</dep></entry>
+        </interpolation>
+	  <axis>
+	  <x1-m>-2.660</x1-m>
+          <y1-m>2.857</y1-m>
+          <z1-m>1.012</z1-m>
+          <x2-m>-2.660</x2-m>
+          <y2-m>1.7836</y2-m>
+          <z2-m>0.396336</z2-m>
+	  </axis>
+	</animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>RpropParent</object-name>
+		<object-name>SpinnerR</object-name>
+		<object-name>SpinnerInteriorR</object-name>
         <condition>
             <less-than> 
             <property>engines/engine[1]/n2</property>
@@ -712,6 +1089,7 @@
     <animation>
         <type>select</type>
         <object-name>Rprop.disk</object-name>
+		<object-name>SpinnerRRot</object-name>
         <condition>
             <greater-than> 
             <property>engines/engine[1]/n2</property>
@@ -722,9 +1100,8 @@
 
     <animation>
         <type>spin</type>
-        <object-name>Rprop.1</object-name>
-        <object-name>Rprop.2</object-name>
-        <object-name>Rprop.3</object-name>
+        <object-name>RpropParent</object-name>
+	<object-name>SpinnerR</object-name>
         <property>engines/engine[1]/n2</property>
         <factor>10.0</factor>
         <center>
@@ -804,17 +1181,17 @@
         <type>rotate</type>
         <object-name>Lrdoor-frt</object-name>
         <object-name>Lrdoor-frt.001</object-name>
-        <property>controls/doors/LR-door/position-norm</property>
-        <factor>-160</factor>
+        <property>controls/doors/LR-door-F/position-norm</property>
+        <factor>130</factor>
         <center>
-            <x-m>1.061</x-m>
-            <y-m>-0.862</y-m>
-            <z-m>0.003</z-m>
+            <x-m>1.44602</x-m>
+            <y-m>-0.7063</y-m>
+            <z-m>-0.53175</z-m>
         </center>
         <axis>
-            <x>0</x>
+            <x>1</x>
             <y>0</y>
-            <z>1</z>
+            <z>0</z>
         </axis>
     </animation>
 
@@ -823,8 +1200,8 @@
         <object-name>Lrdoor-rear</object-name>
         <object-name>Lrdoor-rear.001</object-name>
         <object-name>Lrdoor.glass</object-name>
-        <property>controls/doors/LR-door/position-norm</property>
-        <factor>-160</factor>
+        <property>controls/doors/LR-door-R/position-norm</property>
+        <factor>-130</factor>
         <center>
             <x-m>2.546</x-m>
             <y-m>-0.758</y-m>
@@ -837,6 +1214,22 @@
         </axis>
     </animation>
 
+   <animation>
+      <type>rotate</type>
+      <object-name>Baggage.door</object-name>
+      <object-name>Baggage.door.inn</object-name>
+      <property>controls/doors/Baggage.door/position-norm</property>
+      <factor>-140</factor>
+      <axis>
+	<x1-m>2.96806</x1-m>
+	<y1-m>-0.71051</y1-m>
+	<z1-m>0.41084</z1-m>
+	<x2-m>3.68778</x2-m>
+	<y2-m>-0.62539</y2-m>
+	<z2-m>0.41084</z2-m>
+      </axis>
+      </animation> 
+    
     <animation>
         <type>pick</type>
         <object-name>Lrdoor-frt</object-name>
@@ -845,7 +1238,7 @@
             <button>0</button>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/doors/LR-door/open</property>
+                <property>controls/doors/LR-door-F/open</property>
             </binding>
         </action>
     </animation>
@@ -858,7 +1251,7 @@
             <button>0</button>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/doors/LR-door/open</property>
+                <property>controls/doors/LR-door-R/open</property>
             </binding>
         </action>
     </animation>
@@ -898,6 +1291,18 @@
             <binding>
                 <command>property-toggle</command>
                 <property>controls/doors/RR-door/open</property>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>Baggage.door</object-name>
+	<object-name>Baggage.door.inn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/doors/Baggage.door/open</property>
             </binding>
         </action>
     </animation>

@@ -8,6 +8,8 @@ var E2_volume = props.globals.initNode("sim/sound/engine[1]",0.0);
 var ctn_counter=0;
 Wiper=[];
 
+
+
 var mousex =0;
 var msx = 0;
 var msxa = 0;
@@ -18,29 +20,81 @@ var lever_scale = getprop("controls/movement-scale");
 
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10);
 
+### Set initial custom property ###
+props.globals.initNode("controls/electric/aft-boost-pump", 0);
+props.globals.initNode("controls/electric/fwd-boost-pump", 0);
+props.globals.initNode("controls/engines/engine[0]/condition", 0.0);
+props.globals.initNode("controls/engines/engine[1]/condition", 0.0);
+props.globals.initNode("controls/engines/internal-engine-starter", 0.0);
+props.globals.initNode("controls/electric/power-source",0);
+props.globals.initNode("controls/switches/dme", 0);
+props.globals.initNode("controls/switches/dme-gps-slave", 0);
+
 ###################################
 
 var Startup = func{
-setprop("controls/electric/engine[0]/generator",1);
-setprop("controls/electric/engine[1]/generator",1);
 setprop("controls/electric/avionics-switch",1);
 setprop("controls/electric/battery-switch",1);
+setprop("controls/electric/power-source",1);
 setprop("controls/electric/inverter-switch",1);
+setprop("controls/electric/ammeter-switch",0);
 setprop("controls/lighting/instrument-lights",1);
 setprop("controls/lighting/instruments-norm",0.8);
-setprop("controls/lighting/nav-lights",1);
+setprop("controls/lighting/cabin-lights",1);
 setprop("controls/lighting/beacon",1);
-setprop("controls/lighting/strobe",1);
-setprop("controls/engines/engine[0]/mixture",1);
-setprop("controls/engines/engine[1]/mixture",1);
+setprop("controls/electric/aft-boost-pump",1);
+setprop("controls/electric/fwd-boost-pump",1);
 setprop("controls/engines/engine[0]/cutoff",0);
 setprop("controls/engines/engine[1]/cutoff",0);
-setprop("controls/engines/engine[0]/propeller-pitch",1);
-setprop("controls/engines/engine[1]/propeller-pitch",1);
-setprop("controls/engines/engine[0]/condition",1);
-setprop("controls/engines/engine[1]/condition",1);
-setprop("engines/engine[0]/running",1);
-setprop("engines/engine[1]/running",1);
+setprop("controls/engines/engine[0]/intake-deflector",1);
+setprop("controls/engines/engine[1]/intake-deflector",1);
+setprop("controls/engines/internal-engine-starter",1);
+setprop("controls/engines/engine[0]/throttle",0);
+setprop("controls/engines/engine[1]/throttle",0);
+setprop("controls/anti-ice/pitot-heat",1);
+setprop("controls/anti-ice/prop-heat",1);
+
+var check_loop1 = func {
+
+    if (getprop("controls/engines/internal-engine-starter") != 0) {
+
+    if (getprop("engines/engine[0]/running") == 0 and getprop("engines/engine[1]/running") == 0) {
+    }
+    
+    if (getprop("engines/engine[0]/n2") > 12.0) {
+        setprop("controls/engines/engine[0]/condition",1);
+        setprop("controls/engines/engine[0]/mixture",1);
+        
+    }
+
+    if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 0) {
+    setprop("controls/engines/internal-engine-starter",-1);
+    }    
+    if (getprop("engines/engine[1]/n2") > 12.0) {
+        setprop("controls/engines/engine[1]/condition",1);
+        setprop("controls/engines/engine[1]/mixture",1);
+        
+    }
+    if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1) {
+        setprop("controls/engines/internal-engine-starter",0);
+        setprop("controls/electric/ammeter-switch",1);
+        setprop("controls/engines/engine[0]/propeller-pitch",1);
+        setprop("controls/engines/engine[1]/propeller-pitch",1);
+		setprop("controls/lighting/no-smoking",1);
+		setprop("controls/lighting/seat-belt",1);
+		setprop("controls/electric/engine[0]/generator",1);
+		setprop("controls/electric/engine[1]/generator",1);
+		setprop("controls/lighting/landing-light[0]",1);
+		setprop("controls/lighting/landing-light[1]",1);
+		setprop("controls/lighting/nav-lights",1);
+		setprop("controls/lighting/strobe",1);
+		setprop("controls/engines/auto-feather",1);
+    }
+    settimer(check_loop1, 1);
+    }
+}
+check_loop1();
+
 }
 
 var Shutdown = func{
@@ -50,20 +104,35 @@ setprop("controls/electric/avionics-switch",0);
 setprop("controls/electric/battery-switch",0);
 setprop("controls/electric/inverter-switch",0);
 setprop("controls/lighting/instrument-lights",0);
-setprop("controls/lighting/instruments-norm",0.8);
+setprop("controls/lighting/instruments-norm",0);
 setprop("controls/lighting/nav-lights",0);
 setprop("controls/lighting/beacon",0);
 setprop("controls/lighting/strobe",0);
+setprop("controls/engines/engine[0]/throttle",0);
+setprop("controls/engines/engine[1]/throttle",0);
 setprop("controls/engines/engine[0]/mixture",0);
 setprop("controls/engines/engine[1]/mixture",0);
 setprop("controls/engines/engine[0]/propeller-pitch",0);
 setprop("controls/engines/engine[1]/propeller-pitch",0);
 setprop("controls/engines/engine[0]/condition",0);
 setprop("controls/engines/engine[1]/condition",0);
+setprop("controls/engines/engine[0]/internal-condition",0);
+setprop("controls/engines/engine[1]/internal-condition",0);
 setprop("controls/engines/engine[0]/cutoff",0);
 setprop("controls/engines/engine[1]/cutoff",0);
 setprop("engines/engine[0]/running",0);
 setprop("engines/engine[1]/running",0);
+setprop("controls/electric/aft-boost-pump",0);
+setprop("controls/electric/fwd-boost-pump",0);
+setprop("controls/electric/power-source",0);
+setprop("controls/engines/internal-engine-starter",0);
+setprop("controls/lighting/landing-light[0]",0);
+setprop("controls/lighting/landing-light[1]",0);
+setprop("controls/flight/flaps",0);
+setprop("controls/gear/brake-parking",1);
+setprop("controls/engines/engine[0]/intake-deflector",0);
+setprop("controls/engines/engine[1]/intake-deflector",0);
+setprop("controls/lighting/cabin-lights",0);
 }
 
 
@@ -151,15 +220,18 @@ var Caution_panel = {
         me.duct.setValue(0);
         if(getprop("engines/engine[0]/n2")<30){
             me.l_oil_psi.setValue(me.volts);
-            me.fwd_boost1.setValue(me.volts);
-            me.fwd_boost2.setValue(me.volts);
             me.hydr_press.setValue(me.volts);
             
         }else{
             me.l_oil_psi.setValue(0);
-            me.fwd_boost1.setValue(0);
-            me.fwd_boost2.setValue(0);
             me.hydr_press.setValue(0);
+        }
+        if(getprop("engines/engine[0]/n2")<30 and getprop("controls/electric/fwd-boost-pump") == 0) {
+            me.fwd_boost1.setValue(me.volts);
+            me.fwd_boost2.setValue(me.volts);
+        } else {
+            me.fwd_boost1.setValue(0);
+            me.fwd_boost2.setValue(0);	    
         }
         if(getprop("consumables/fuel/tank/level-lbs")<75)me.fwd_fuel.setValue(me.volts) else me.fwd_fuel.setValue(0);
         var lfdoor=getprop("controls/doors/LF-door/position-norm");
@@ -177,14 +249,17 @@ var Caution_panel = {
     me.prop_reset.setValue(0);
         if(getprop("engines/engine[1]/n2")<30){
             me.r_oil_psi.setValue(me.volts);
-            me.aft_boost1.setValue(me.volts);
-            me.aft_boost2.setValue(me.volts);
             me.hydr_press.setValue(me.volts);
         }else{
             me.r_oil_psi.setValue(0);
-            me.aft_boost1.setValue(0);
-            me.aft_boost2.setValue(0);
             me.hydr_press.setValue(0);
+        }
+        if(getprop("engines/engine[1]/n2")<30 and getprop("controls/electric/aft-boost-pump") == 0) {
+            me.aft_boost1.setValue(me.volts);
+            me.aft_boost2.setValue(me.volts);
+        } else {
+            me.aft_boost1.setValue(0);
+            me.aft_boost2.setValue(0);	    
         }
         if(getprop("consumables/fuel/tank[1]/level-lbs")<75)me.aft_fuel.setValue(me.volts) else me.aft_fuel.setValue(0);
         
@@ -272,11 +347,11 @@ setlistener("/sim/model/autostart", func(idle){
 },0,0);
 
 setlistener("controls/engines/engine[0]/cutoff", func(c1){
-      setprop("controls/engines/engine[0]/condition",1-c1.getValue());
+      setprop("controls/engines/engine[0]/internal-condition",1-c1.getValue());
 },0,0);
 
 setlistener("controls/engines/engine[1]/cutoff", func(c1){
-      setprop("controls/engines/engine[1]/condition",1-c1.getValue());
+      setprop("controls/engines/engine[1]/internal-condition",1-c1.getValue());
 },0,0);
 
 setlistener("/gear/gear[1]/wow", func(gr){
@@ -315,16 +390,34 @@ var update_throttles = func {
     var LHrvr=getprop("controls/engines/engine[0]/reverser");
     var RHrvr=getprop("controls/engines/engine[1]/reverser");
     var THR1 =getprop("controls/engines/engine[0]/throttle");
-     var THR2 =getprop("controls/engines/engine[1]/throttle");
-    if(LHrvr)setprop("controls/engines/engine[0]/throttle-rvrs",THR1) else setprop("controls/engines/engine[0]/throttle-fwd",THR1);
-    if(RHrvr)setprop("controls/engines/engine[1]/throttle-rvrs",THR2) else setprop("controls/engines/engine[1]/throttle-fwd",THR2);
+    var THR2 =getprop("controls/engines/engine[1]/throttle");
+    var running1 = getprop("engines/engine[0]/running");
+    var running2 = getprop("engines/engine[1]/running");
+    if(LHrvr==1 and running1==0) {
+        setprop("controls/engines/engine[0]/throttle-rvrs-norunning",THR1);
+    } else if (LHrvr==1 and running1==1) {
+        setprop("controls/engines/engine[0]/throttle-rvrs",THR1);
+    } else {
+        setprop("controls/engines/engine[0]/throttle-fwd",THR1);
     }
+
+    if(RHrvr==1 and running2==0) {
+        setprop("controls/engines/engine[1]/throttle-rvrs-norunning",THR2);
+    } else if (LHrvr==1 and running2==1) {
+        setprop("controls/engines/engine[1]/throttle-rvrs",THR2);
+    } else {
+        setprop("controls/engines/engine[1]/throttle-fwd",THR2);
+    }
+    
+}
 
 var update_systems = func {
     var lfdoor_pos = getprop("controls/doors/LF-door/position-norm");
     var rfdoor_pos = getprop("controls/doors/RF-door/position-norm");
     var rrdoor_pos = getprop("controls/doors/RR-door/position-norm");
-     lrdoor_pos = getprop("controls/doors/LR-door/position-norm");
+    var lrdoorf_pos = getprop("controls/doors/LR-door-F/position-norm");
+    var lrdoorr_pos = getprop("controls/doors/LR-door-R/position-norm");
+    var baggdoor_pos = getprop("controls/doors/Baggage.door/position-norm");
     var power = getprop("/controls/switches/master-panel");
     flight_meter();
     wiper.active();
@@ -332,8 +425,10 @@ var update_systems = func {
     if(wind>40){
         if(getprop("controls/doors/LF-door/open"))setprop("controls/doors/LF-door/open",0);
         if(getprop("controls/doors/RF-door/open"))setprop("controls/doors/RF-door/open",0);
-        if(getprop("controls/doors/LR-door/open"))setprop("controls/doors/LR-door/open",0);
+        if(getprop("controls/doors/LR-door-F/open"))setprop("controls/doors/LR-door-F/open",0);
+        if(getprop("controls/doors/LR-door-R/open"))setprop("controls/doors/LR-door-R/open",0);
         if(getprop("controls/doors/RR-door/open"))setprop("controls/doors/RR-door/open",0);
+        if(getprop("controls/doors/Baggage.door/open"))setprop("controls/doors/Baggage.door/",0);
     }
     update_throttles();
     update_eng_sound();

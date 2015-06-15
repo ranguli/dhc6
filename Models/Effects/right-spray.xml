@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -16,11 +16,20 @@
 
 		<condition>
             <and>
-                <property>/gear/gear[3]/wow</property>
+            	<not>
+            		<property>gear/gear[3]/ground-is-solid</property>
+            	</not>
                 <greater-than>
                     <property>velocities/airspeed-kt</property>
-                    <value>30</value>
+                    <value>15</value>
                 </greater-than>
+                <less-than>
+                	<property>position/altitude-agl-ft</property>
+                	<value>8</value>
+                </less-than>
+                <not>
+                	<property>sim/crashed</property>
+                </not>
             </and>
 		</condition>
 
@@ -31,13 +40,13 @@
 		</placer>
 
 		<shooter>
-			<theta-min-deg>45</theta-min-deg>
-			<theta-max-deg>85</theta-max-deg>
-			<phi-min-deg>-60</phi-min-deg>
-			<phi-max-deg>60</phi-max-deg>
+			<theta-min-deg>60</theta-min-deg>
+			<theta-max-deg>80</theta-max-deg>
+			<phi-min-deg>-100</phi-min-deg>
+			<phi-max-deg>100</phi-max-deg>
 			<speed-mps>
-				<value>0</value>
-				<spread>5</spread>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.5</factor>
 			</speed-mps>
 			<rotation-speed>
 				<x-max-deg-sec>15</x-max-deg-sec>
@@ -51,8 +60,8 @@
 
 		<counter>
 			<particles-per-sec>
-				<value>30</value>
-				<spread>100</spread>
+				<property>velocities/airspeed-kt</property>
+				<factor>5</factor>
 			</particles-per-sec>
 		</counter>
 
@@ -98,14 +107,14 @@
 				</size>
 			</end>
 			<life-sec>
-				<value>1.5</value>
+				<value>2</value>
 			</life-sec>
-			<mass-kg>0.15</mass-kg>
+			<mass-kg>0.1</mass-kg>
 			<radius-m>0.175</radius-m>
 		</particle>
 
 		<program>
-			<fluid>air</fluid>
+			<fluid>water</fluid>
 			<gravity>true</gravity>
 			<wind>false</wind>
 		</program>

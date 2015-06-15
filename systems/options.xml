@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
     <name>options</name>
@@ -26,6 +26,16 @@
             <command>dialog-apply</command>
         </binding>
     </checkbox>
+
+    <!--
+	<checkbox>
+        <halign>left</halign>
+        <label>Advanced avionics</label>
+        <property>sim/model/show-hide-advanced-avionics</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+      </checkbox>-->
 
   <button>
     <legend>Close</legend>

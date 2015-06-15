@@ -1,16 +1,17 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 ************************************************************************
-de Havilland Twin Otter
+De Havilland Twin Otter
 Jan 2008 Syd Adams
+Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#21949
+2014-2015 developers work in various countries around the world.
 ************************************************************************
 -->
 
 <PropertyList include="dhc6-base.xml">
     <sim>
         <description>de Havilland Twin Otter (wheels)</description>
-        <status>developement</status>
-        <author>Syd Adams</author>
+        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505), CaptB... </author>
         <flight-model>yasim</flight-model>
         <aero>dhc6</aero>
         <fuel-fraction>0.5</fuel-fraction>

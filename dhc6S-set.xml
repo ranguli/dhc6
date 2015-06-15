@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 ************************************************************************
 de Havilland Twin Otter
@@ -9,8 +9,7 @@ Jan 2008 Syd Adams
 <PropertyList include="dhc6-base.xml">
     <sim>
         <description>de Havilland Twin Otter (skis)</description>
-        <status>developement</status>
-        <author>Syd Adams</author>
+        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505)... </author>
         <flight-model>yasim</flight-model>
         <aero>dhc6S</aero>
         <fuel-fraction>0.5</fuel-fraction>
@@ -21,9 +20,7 @@ Jan 2008 Syd Adams
             <path>Aircraft/dhc6/Models/DHC6S.xml</path>
             <blunt-nose type="bool">0</blunt-nose>
         </model>
-
-        <variant-of>dhc6</variant-of>
-
+    
     <hitches>
         <aerotow>
             <tow>
@@ -49,6 +46,12 @@ Jan 2008 Syd Adams
 
 
 </sim>
+
+   <nasal>
+        <m877>
+            <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
+        </m877>
+  </nasal>
 
 <controls>
         <gear>

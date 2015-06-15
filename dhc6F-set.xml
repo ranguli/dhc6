@@ -1,20 +1,16 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 ************************************************************************
-de Havilland Twin Otter
+De Havilland Twin Otter
 Jan 2008 Syd Adams
+Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#21949
 ************************************************************************
 -->
 
 <PropertyList include="dhc6-base.xml">
     <sim>
-    <model>
-        <path>Aircraft/dhc6/Models/DHC6F.xml</path>
-    </model>
-
         <description>de Havilland Twin Otter (floats)</description>
-        <status>developement</status>
-        <author>Syd Adams</author>
+        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505)... </author>
         <flight-model>yasim</flight-model>
         <aero>dhc6F</aero>
         <type type="string">seaplane</type>
@@ -22,9 +18,11 @@ Jan 2008 Syd Adams
         <startup>
             <splash-texture>Aircraft/dhc6/splash1.png</splash-texture>
         </startup>
-
-        <variant-of>dhc6</variant-of>
-
+         <model>
+            <path>Aircraft/dhc6/Models/DHC6F.xml</path>
+            <blunt-nose type="bool">0</blunt-nose>
+        </model>
+    
     <hitches>
         <aerotow>
             <tow>
