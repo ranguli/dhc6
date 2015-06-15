@@ -1,8 +1,290 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- created by ??
+   January 2015:Modified By PAF Team Christian Thiriot "PATTEN") -->
  
 <PropertyList>
 
-    <fx>
+  <fx>
+   <stall>
+      <name>fire-test</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-alarm.wav</path>
+      <mode>looped</mode>
+      <property>controls/engines/fire-test</property>
+      <condition>
+	<and>
+	  <equals>
+	    <property>controls/engines/fire-test</property>
+	    <value>1</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>1</factor>
+      </volume>
+    </stall>
+<!-- Cabin Alarms -->
+   <stall>
+      <name>seat-belt</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+      <mode>once</mode>
+                <property>controls/lighting/seat-belt</property>
+      <condition>
+	<and>
+	  <equals>
+                <property>controls/lighting/seat-belt</property>
+	    <value>1</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>1</factor>
+      </volume>
+    </stall>
+
+   <stall>
+      <name>seat-belt-off</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+      <mode>once</mode>
+                <property>controls/lighting/seat-belt</property>
+      <condition>
+	<and>
+	  <equals>
+                <property>controls/lighting/seat-belt</property>
+	    <value>0</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>1</factor>
+      </volume>
+    </stall>
+
+   <stall>
+      <name>no-smoking</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+      <mode>once</mode>
+        <property>controls/lighting/no-smoking</property>
+      <condition>
+	<and>
+	  <equals>
+        <property>controls/lighting/no-smoking</property>
+	    <value>1</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>1</factor>
+      </volume>
+    </stall>
+
+   <stall>
+      <name>no-smoking-off</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+      <mode>once</mode>
+        <property>controls/lighting/no-smoking</property>
+      <condition>
+	<and>
+	  <equals>
+        <property>controls/lighting/no-smoking</property>
+	    <value>0</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>1</factor>
+      </volume>
+    </stall>
+
+<!-- WIPERS -->
+
+   <wipers>
+      <name>wiper</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-wipers.wav</path>
+      <mode>looped</mode>
+                <property>controls/electric/wipers/switch</property>
+      <condition>
+	<and>
+	  <equals>
+                <property>controls/electric/wipers/switch</property>
+	    <value>1</value>
+	  </equals>
+          <equals>
+                <property>sim/current-view/internal</property>
+             <value>1</value>
+          </equals>
+	  <greater-than>
+	        <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.5</factor>
+      </volume>
+    </wipers>
+
+    <prop>
+      <name>aft-boost-pump</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
+      <mode>looped</mode>
+      <property>sim/sound/aft-boost-pump</property>
+      <condition>
+	<and>
+	  <equals>
+	    <property>controls/electric/aft-boost-pump</property>
+	    <value>1</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.16</factor>
+      </volume>
+    </prop>
+
+    <prop>
+      <name>fwd-boost-pump</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
+      <mode>looped</mode>
+      <property>sim/sound/fwd-boost-pump</property>
+      <condition>
+	<and>
+	  <equals>
+	    <property>controls/electric/fwd-boost-pump</property>
+	    <value>1</value>
+	  </equals>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.16</factor>
+      </volume>
+    </prop>
+    
+    <prop>
+      <name>starter</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter.wav</path>
+      <mode>once</mode>
+      <property>sim/sound/engine-starter</property>
+      <condition>
+	<and>
+	  <not>
+	    <equals>
+	      <property>controls/engines/internal-engine-starter</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <not>
+	    <equals>
+	      <property>controls/electric/power-source</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.3</factor>
+      </volume>
+    </prop>
+
+    <prop>
+      <name>starter-loop-0</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter-loop.wav</path>
+      <mode>looped</mode>
+      <property>sim/sound/engine-starter-loop[0]</property>
+      <condition>
+	<and>
+	  <not>
+	    <equals>
+	      <property>controls/engines/internal-engine-starter</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <not>
+	    <equals>
+	      <property>controls/electric/power-source</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	  <greater-than>
+	    <property>engines/engine[0]/n2</property>
+	    <value>15</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.16</factor>
+      </volume>
+    </prop>
+
+    <prop>
+      <name>starter-loop-1</name>
+      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter-loop.wav</path>
+      <mode>looped</mode>
+      <property>sim/sound/engine-starter-loop[1]</property>
+      <condition>
+	<and>
+	  <not>
+	    <equals>
+	      <property>controls/engines/internal-engine-starter</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <not>
+	    <equals>
+	      <property>controls/electric/power-source</property>
+	      <value>0</value>
+	    </equals>
+	  </not>
+	  <greater-than>
+	    <property>systems/electrical/volts</property>
+	    <value>0</value>
+	  </greater-than>
+	  <greater-than>
+	    <property>engines/engine[1]/n2</property>
+	    <value>15</value>
+	  </greater-than>
+	</and>
+      </condition>
+      <volume>
+	<factor>0.16</factor>
+      </volume>
+    </prop>
 
 <!-- Engine 1 exterior-->
 
@@ -53,6 +335,13 @@
                         <property>controls/engines/engine[0]/condition</property>
                         <value>0.001</value>
                     </greater-than>
+                    <greater-than>
+                        <property>engines/engine[0]/n2</property>
+                        <value>10</value>
+                    </greater-than>
+                    <not>
+                        <property>controls/engines/engine[0]/cutoff</property>
+                    </not>
                     <property>sim/current-view/internal</property>
                  </and>
             </condition>
@@ -123,6 +412,13 @@
                         <property>controls/engines/engine[1]/condition</property>
                         <value>0.001</value>
                     </greater-than>
+                    <greater-than>
+                        <property>engines/engine[1]/n2</property>
+                        <value>10</value>
+                    </greater-than>
+                    <not>
+                        <property>controls/engines/engine[1]/cutoff</property>
+                    </not>
                     <property>sim/current-view/internal</property>
                  </and>
             </condition>
@@ -328,18 +624,221 @@
             <max-dist>2.0</max-dist>
         </wind>
 
-        <doors>
-            <name>lfdoor</name>
+<!-- Radio -->
+
+   <radio>
+      <name>sound-radio-inside-comm0</name>
+      <mode>looped</mode>
+      <path>Aircraft/dhc6/Sounds/dhc6-radio-5s.wav</path>
+        <condition>
+            <and>
+                <equals>
+                    <property>instrumentation/comm/serviceable</property>
+                    <value>true</value>
+                </equals>
+                <greater-than>
+                    <property>systems/electrical/outputs/comm[0]</property>
+                    <value>1</value>
+                </greater-than>
+          <property>instrumentation/comm/ptt</property>
+          <value>0</value>
+            </and>
+        </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </radio>
+               <!--  BRAKES   -->
+
+        <brakes>
+            <name>brake-lever-off</name>
             <mode>once</mode>
-            <path>Sounds/door_close.wav</path>
+            <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
             <condition>
                 <not>
-                    <property>/controls/doors/LF-door/position-norm</property>
+                    <property>controls/gear/brake-parking</property>
                 </not>
             </condition>
             <volume>
                 <property>sim/signals/fdm-initialized</property>
-                <factor>0.5</factor>
+            </volume>
+            <pitch>
+                <offset>0.8</offset>
+            </pitch>
+            <position>
+                <x>3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>1.0</max-dist>
+        </brakes>
+
+        <brakes>
+            <name>brake-lever-on</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
+            <condition>
+                <and>
+                    <property>controls/gear/brake-parking</property>
+                    <value>0</value>
+                </and>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+            </volume>
+            <pitch>
+                <offset>0.8</offset>
+            </pitch>
+            <position>
+                <x>3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>1.0</max-dist>
+        </brakes>
+
+                    <!-- RUDDER  -->
+
+       <rudder>
+            <name>rudder</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-rudder.wav</path>
+        <property>controls/flight/rudder</property>
+            <condition>             
+                    <less-than>
+                        <property>controls/engines/internal-engine-starter</property>
+                        <value>0.001</value>
+                    </less-than>
+                   <not>
+                        <property>sim/current-view/internal</property>
+                   </not>            
+                <or>
+                    <property>gear/gear[0]/wow</property>
+                    <property>gear/gear[1]/wow</property>
+                    <property>gear/gear[2]/wow</property>
+                    <property>gear/gear[3]/wow</property>
+                    <property>gear/gear[4]/wow</property>
+                    <property>gear/gear[5]/wow</property>
+                    <property>gear/gear[6]/wow</property>
+                    <property>gear/gear[7]/wow</property>
+                    <property>gear/gear[8]/wow</property>
+                    <property>gear/gear[9]/wow</property>
+                </or>
+            </condition>
+            <volume>
+                <property>controls/flight/rudder</property>
+                <factor> 1 </factor>
+            </volume>
+            <position>
+                <x> -8.50 </x>
+                <y>  0.00 </y>
+                <z>  5.33 </z>
+            </position>
+            <reference-dist> 1.00  </reference-dist>
+                  <max-dist> 50.0  </max-dist>
+        </rudder>
+
+                    <!-- AILERONS  -->
+
+       <aileron>
+            <name>aileron</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-rudder.wav</path>
+        <property>controls/flight/aileron</property>
+            <condition>             
+                    <less-than>
+                        <property>controls/engines/internal-engine-starter</property>
+                        <value>0.001</value>
+                    </less-than>
+                   <not>
+                        <property>sim/current-view/internal</property>
+                   </not>
+                <or>
+                    <property>gear/gear[0]/wow</property>
+                    <property>gear/gear[1]/wow</property>
+                    <property>gear/gear[2]/wow</property>
+                    <property>gear/gear[3]/wow</property>
+                    <property>gear/gear[4]/wow</property>
+                    <property>gear/gear[5]/wow</property>
+                    <property>gear/gear[6]/wow</property>
+                    <property>gear/gear[7]/wow</property>
+                    <property>gear/gear[8]/wow</property>
+                    <property>gear/gear[9]/wow</property>
+                </or>
+            </condition>
+            <volume>
+                <property>controls/flight/aileron</property>
+                <factor> 1 </factor>
+            </volume>
+            <position>
+                <x>  0.50 </x>
+                <y>  3.50 </y>
+                <z>  0.00 </z>
+            </position>
+            <reference-dist> 1.00  </reference-dist>
+                  <max-dist> 50.0  </max-dist>
+        </aileron>
+
+                    <!-- ELEVATOR  -->
+
+       <elevator>
+            <name>elevator</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-rudder.wav</path>
+        <property>controls/flight/elevator</property>
+            <condition>             
+                    <less-than>
+                        <property>controls/engines/internal-engine-starter</property>
+                        <value>0.001</value>
+                    </less-than>
+                   <not>
+                        <property>sim/current-view/internal</property>
+                   </not>
+                <or>
+                    <property>gear/gear[0]/wow</property>
+                    <property>gear/gear[1]/wow</property>
+                    <property>gear/gear[2]/wow</property>
+                    <property>gear/gear[3]/wow</property>
+                    <property>gear/gear[4]/wow</property>
+                    <property>gear/gear[5]/wow</property>
+                    <property>gear/gear[6]/wow</property>
+                    <property>gear/gear[7]/wow</property>
+                    <property>gear/gear[8]/wow</property>
+                    <property>gear/gear[9]/wow</property>
+                </or>
+            </condition>
+            <volume>
+                <property>controls/flight/elevator</property>
+                <factor> 1 </factor>
+            </volume>
+            <position>
+                <x> -8.50 </x>
+                <y>  0.00 </y>
+                <z>  4.33 </z>
+            </position>
+            <reference-dist> 1.00  </reference-dist>
+                  <max-dist> 50.0  </max-dist>
+        </elevator>
+                                      <!--   DOORS  -->
+
+  <!-- LF DOOR  -->
+        <doors>
+            <name>lfdoor</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
+            <condition>
+                <not>
+                    <property>/controls/doors/LF-door/open</property>
+                    <value>1</value>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
             </volume>
             <position>
                 <x>-3</x>
@@ -351,17 +850,41 @@
         </doors>
 
         <doors>
+            <name>lfdoor open</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/LF-door/open</property>
+                    <value>1</value>
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+  <!-- rf DOOR  -->
+
+        <doors>
             <name>rfdoor</name>
             <mode>once</mode>
-            <path>Sounds/door_close.wav</path>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
             <condition>
-                <not>
-                    <property>/controls/doors/RF-door/position-norm</property>
-                </not>
+                    <not>
+                    <property>/controls/doors/RF-door/open</property>
+                    <value>1</value>
+                    </not>
             </condition>
             <volume>
                 <property>sim/signals/fdm-initialized</property>
-                <factor>0.5</factor>
+                <factor>1</factor>
             </volume>
             <position>
                 <x>-3</x>
@@ -373,20 +896,45 @@
         </doors>
 
         <doors>
+            <name>rfdoor open</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/RF-door/open</property>
+                    <value>1</value>
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+
+  <!-- RR DOOR  -->
+
+        <doors>
             <name>rrdoor</name>
             <mode>once</mode>
-            <path>Sounds/door_close.wav</path>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
             <condition>
-                <not>
-                    <property>/controls/doors/RR-door/position-norm</property>
-                </not>
+                   <not> 
+                    <property>/controls/doors/RR-door/open</property>
+                    <value>1</value>
+                   </not>
             </condition>
             <volume>
                 <property>sim/signals/fdm-initialized</property>
-                <factor>0.5</factor>
+                <factor>1</factor>
             </volume>
             <position>
-                <x>3</x>
+                <x>-3</x>
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
@@ -395,20 +943,44 @@
         </doors>
 
         <doors>
-            <name>lrdoor</name>
+            <name>rrdoor open</name>
             <mode>once</mode>
-            <path>Sounds/door_close.wav</path>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/RR-door/open</property>
+                    <value>1</value>
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+   <!-- LR DOOR-F  -->
+
+        <doors>
+            <name>lrdoorf</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
             <condition>
-                <not>
-                    <property>/controls/doors/LR-door/position-norm</property>
-                </not>
+                  <not>
+                    <property>/controls/doors/LR-door-F/open</property>
+                    <value>1</value>
+                  </not>
             </condition>
             <volume>
                 <property>sim/signals/fdm-initialized</property>
-                <factor>0.5</factor>
+                <factor>1</factor>
             </volume>
             <position>
-                <x>3</x>
+                <x>-3</x>
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
@@ -416,6 +988,120 @@
             <max-dist>2.0</max-dist>
         </doors>
 
+        <doors>
+            <name>lrdoorf open</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/LR-door-F/open</property>
+                    <value>1</value> 
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+   <!-- LR DOOR-R  -->
+
+        <doors>
+            <name>lrdoorr</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
+            <condition>
+                  <not>
+                    <property>/controls/doors/LR-door-R/open</property>
+                    <value>1</value>
+                  </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>-0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+        <doors>
+            <name>lrdoorr open</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/LR-door-R/open</property>
+                    <value>1</value>
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+          <!-- BAGGAGE DOOR  -->
+        <doors>
+            <name>baggdoor</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_close.wav</path>
+            <condition>
+                  <not>
+                    <property>/controls/doors/Baggage.door/open</property>
+                    <value>1</value>
+                  </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>-0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+        <doors>
+            <name>baggdoor open</name>
+            <mode>once</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-door_open.wav</path>
+                <condition>
+                    <property>/controls/doors/Baggage.door/open</property>
+                    <value>1</value>
+                </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-3</x>
+                <y>0.5</y>
+                <z>0.5</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </doors>
+
+
+                       <!--  CLIC -->
         <click>
             <name>click-on</name>
             <mode>once</mode>
