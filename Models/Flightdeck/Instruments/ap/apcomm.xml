@@ -3,19 +3,167 @@
 
     <path>AP-board.ac</path>
 
-    <!--animation>
-        <type>material</type>        
-        <object-name>cadre</object-name>
-  
-        <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-        </emission>
-    </animation-->
-
+  <animation>
+    <type>material</type>
+    <object-name>ALT-on</object-name>
+<object-name>AP-ALT</object-name>
+<object-name>AP-HDG</object-name>
+<object-name>AP-IAS</object-name>
+<object-name>AP-ONOFF</object-name>
+<object-name>GS-on</object-name>
+<object-name>HDG-on</object-name>
+<object-name>NAV-on</object-name>
+<object-name>VS-on</object-name>
     
+    <emission>
+      <red>0.7</red>
+      <green>0.7</green>
+      <blue>0.7</blue>
+    </emission>
+  </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>ALT-toggle</object-name>
+
+      <object-name>AP-altoff</object-name>
+      <object-name>AP-hdgoff</object-name>
+      <object-name>AP-iasoff</object-name>
+      <object-name>AP-onoff</object-name>
+
+      <object-name>AP-toggle.001</object-name>
+
+      <object-name>GS-toggle</object-name>
+
+      <object-name>HDG-toggle</object-name>
+
+      <object-name>NAV-toggle</object-name>
+
+      <object-name>VS-toggle</object-name>
+      <object-name>cadre</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+    <animation>
+          <type>material</type>
+         
+      <object-name>ALT-onM</object-name>
+
+      <object-name>AP-ALT-M</object-name>
+      <object-name>AP-HDG-M</object-name>
+      <object-name>AP-IAS-M</object-name>
+
+      <object-name>AP-onoff-M</object-name>
+      <object-name>GS-onM</object-name>
+      <object-name>HDG-onM</object-name>
+      <object-name>NAV-onM</object-name>
+      <object-name>VS-onM</object-name>
+          <condition>
+            <equals>
+              <property>controls/lighting/instrument-lights</property>
+              <value>0</value>
+            </equals>
+          </condition>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>ALT-on</object-name>
+      <object-name>ALT-onM</object-name>
+      <object-name>ALT-toggle</object-name>
+      <object-name>AP-ALT</object-name>
+      <object-name>AP-ALT-M</object-name>
+      <object-name>AP-HDG</object-name>
+      <object-name>AP-HDG-M</object-name>
+      <object-name>AP-IAS</object-name>
+      <object-name>AP-IAS-M</object-name>
+      <object-name>AP-ONOFF</object-name>
+      <object-name>AP-altoff</object-name>
+      <object-name>AP-hdgoff</object-name>
+      <object-name>AP-iasoff</object-name>
+      <object-name>AP-onoff</object-name>
+      <object-name>AP-onoff-M</object-name>
+      <object-name>AP-toggle.001</object-name>
+      <object-name>GS-on</object-name>
+      <object-name>GS-onM</object-name>
+      <object-name>GS-toggle</object-name>
+      <object-name>HDG-on</object-name>
+      <object-name>HDG-onM</object-name>
+      <object-name>HDG-toggle</object-name>
+      <object-name>NAV-on</object-name>
+      <object-name>NAV-onM</object-name>
+      <object-name>NAV-toggle</object-name>
+      <object-name>VS-on</object-name>
+      <object-name>VS-onM</object-name>
+      <object-name>VS-toggle</object-name>
+      <object-name>cadre</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>ALT-on</object-name>
+      <object-name>ALT-onM</object-name>
+      <object-name>ALT-toggle</object-name>
+      <object-name>AP-ALT</object-name>
+      <object-name>AP-ALT-M</object-name>
+      <object-name>AP-HDG</object-name>
+      <object-name>AP-HDG-M</object-name>
+      <object-name>AP-IAS</object-name>
+      <object-name>AP-IAS-M</object-name>
+      <object-name>AP-ONOFF</object-name>
+      <object-name>AP-altoff</object-name>
+      <object-name>AP-hdgoff</object-name>
+      <object-name>AP-iasoff</object-name>
+      <object-name>AP-onoff</object-name>
+      <object-name>AP-onoff-M</object-name>
+      <object-name>AP-toggle.001</object-name>
+      <object-name>GS-on</object-name>
+      <object-name>GS-onM</object-name>
+      <object-name>GS-toggle</object-name>
+      <object-name>HDG-on</object-name>
+      <object-name>HDG-onM</object-name>
+      <object-name>HDG-toggle</object-name>
+      <object-name>NAV-on</object-name>
+      <object-name>NAV-onM</object-name>
+      <object-name>NAV-toggle</object-name>
+      <object-name>VS-on</object-name>
+      <object-name>VS-onM</object-name>
+      <object-name>VS-toggle</object-name>
+      <object-name>cadre</object-name>
+    </effect>
+
+    <animation>
+      <type>material</type>
+      <object-name>NAV-onM</object-name>
+      <object-name>AP-HDG-M</object-name>
+      <object-name>HDG-onM</object-name>
+      <object-name>AP-onoff-M</object-name>
+      <object-name>AP-IAS-M</object-name>
+      <object-name>AP-ALT-M</object-name>
+      <object-name>ALT-onM</object-name>
+      <object-name>GS-onM</object-name>
+      <object-name>VS-onM</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>   0.07 </red>
+      <green> 0.04 </green>
+      <blue>  0.04 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
     
  <!--******************SWITCHS*********************-->
  <!-- AP-Onoff -->

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+    <name>options</name>
+    <layout>vbox</layout>
+
+    <group>
+        <layout>hbox</layout>
+
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+
+        <text>
+            <label>Options</label>
+            <halign>center</halign>
+        </text>
+
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+
+        <button>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <legend></legend>
+            <keynum>27</keynum>
+            <border>2</border>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+
+    </group>
+
+    <hrule/>
+
+    <checkbox>
+        <halign>center</halign>
+        <label>Remove Rear Doors</label>
+        <property>sim/model/remove-doors</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
+    <checkbox>
+        <halign>center</halign>
+        <label>Open/Lock tow-hook</label>
+        <property>sim/hitches/aerotow/open</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
+    <!--
+	<checkbox>
+        <halign>left</halign>
+        <label>Advanced avionics</label>
+        <property>sim/model/show-hide-advanced-avionics</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+      </checkbox>-->
+
+      <hrule/>
+
+      <checkbox>
+        <halign>center</halign>
+        <label>Enable engine spray on water</label>
+        <property>sim/model/effects/engine-spray-enabled</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
+    <text>
+        <halign>center</halign>
+        <label>Warning: May have strong</label>
+        <color>
+            <red>   1.0 </red>
+            <green> 0.5 </green>
+            <blue>  0.3 </blue>
+        </color>
+    </text>
+
+    <text>
+        <halign>center</halign>
+        <label>effect on performance!</label>
+        <color>
+            <red>   1.0 </red>
+            <green> 0.5 </green>
+            <blue>  0.3 </blue>
+        </color>
+    </text>
+
+  <button>
+    <legend>Close</legend>
+    <default>true</default>
+    <key>Esc</key>
+    <binding>
+      <command>dialog-close</command>
+    </binding>
+  </button>
+
+</PropertyList>

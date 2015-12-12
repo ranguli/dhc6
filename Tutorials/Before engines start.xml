@@ -53,7 +53,7 @@
 			<message>Set the parking brake</message>
 			<condition>
 				<equals>
-					<property>/controls/gear/brake-parking</property>
+					<property>/controls/gear/parkingbrake-lever</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -61,7 +61,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/controls/gear/brake-parking</property>
+					<property>/controls/gear/parkingbrake-lever</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -481,7 +481,7 @@
 			</condition>
 		</error>
 		<error>
-			<message>Turn of CAUTION LT</message>
+			<message>Turn off CAUTION LT</message>
 			<condition>
 				<property>/controls/electric/caution-test</property>
 			</condition>
@@ -805,7 +805,7 @@
 	</step>
 	
 	<step>
-		<message>Test fire detection: Two red lights must appear at each fire pull handle</message>
+		<message>Test fire detection: The fire pull handles must light up and you hear a alarm bell sound</message>
 		<view>
 			<heading-offset-deg>333.32</heading-offset-deg>
 			<pitch-offset-deg>-14.12</pitch-offset-deg>
@@ -821,9 +821,117 @@
     		<z-m>0.5083</z-m>
     		<scale>1.5124</scale>
 		</marker>
-		<wait>8</wait>
+		<error>
+			<message>To check the functionality of the fire detection, you must activate the test switch!</message>
+			<condition>
+				<not>
+					<property>/controls/engines/fire-test</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/controls/engines/fire-test</property>
+			</condition>
+		</exit>
 	</step>
-	
+
+	<step>
+		<message>Test the mute function of the fire bell.</message>
+		<view>
+			<heading-offset-deg>6.3</heading-offset-deg>
+			<pitch-offset-deg>-30.1</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>0.5</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>43.8</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.8909</x-m>
+			<y-m>-0.6967</y-m>
+			<z-m>0.0645</z-m>
+			<scale>1.2810</scale>
+		</marker>
+		<error>
+			<message>In case of an engine fire you can mute this annoying fire bell. Therefore you have to test the funcionality!</message>
+			<condition>
+				<not>
+					<property>/controls/switches/firebell-switch</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/controls/switches/firebell-switch</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Dismute the firebell again so that you can hear the alarm in case of an engine fire.</message>
+		<view>
+			<heading-offset-deg>6.3</heading-offset-deg>
+			<pitch-offset-deg>-30.1</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>0.5</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>43.8</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.8909</x-m>
+			<y-m>-0.6967</y-m>
+			<z-m>0.0645</z-m>
+			<scale>1.2810</scale>
+		</marker>
+		<error>
+			<message>Dismute the fire bell again!</message>
+			<condition>
+				<property>/controls/switches/firebell-switch</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not>
+					<property>/controls/switches/firebell-switch</property>
+				</not>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Deactivate the fire detetion test.</message>
+		<view>
+			<heading-offset-deg>333.32</heading-offset-deg>
+			<pitch-offset-deg>-14.12</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.48</x-offset-m>
+			<y-offset-m>0.72</y-offset-m>
+			<z-offset-m>-3.15</z-offset-m>
+			<field-of-view>35.6</field-of-view>
+		</view>
+		<marker>
+    		<x-m>-3.9000</x-m>
+    		<y-m>-0.1364</y-m>
+    		<z-m>0.5083</z-m>
+    		<scale>1.5124</scale>
+		</marker>
+		<error>
+			<message>Now you can switch off the fire detection test again!</message>
+			<condition>
+				<property>/controls/engines/fire-test</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not>
+					<property>/controls/engines/fire-test</property>
+				</not>
+			</condition>
+		</exit>
+	</step>
+
 	<step>
 		<message>Check the fuel quantity. It has to be enough for the flight you've planned</message>
 		<view>

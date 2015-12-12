@@ -2,6 +2,16 @@
 <PropertyList>
 
   <path>cabin.ac</path>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>Lrdoor-frt.001</object-name>
+      <object-name>Lrdoor-rear.001</object-name>
+      <object-name>RRdoor.inner</object-name>
+      <object-name>cabin</object-name>
+      <object-name>cabin.seats.001</object-name>
+      <object-name>pass.seating</object-name>
+    </effect>
   
   <!--  <animation>
         <type>select</type>

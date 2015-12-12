@@ -7,9 +7,9 @@ Syd Adams
     <path>fuelflow.ac</path>
 
    <animation>
-        <type>material</type>
         <object-name>FFface</object-name>
         <object-name>FFneedle</object-name>
+          <object-name>FFbezel</object-name>
 
         <object-name>vitre</object-name>
     </animation>
@@ -26,13 +26,61 @@ Syd Adams
           <object-name>vitre</object-name>
   </animation>
 
-    <effect>
+  <animation>
+          <type>material</type>
+          <object-name>FFbezel</object-name>
+          <object-name>backlight</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+        <animation>
+          <type>material</type>
+          <object-name>FFface</object-name>
+          <object-name>FFneedle</object-name>
+          <condition>
+            <equals>
+              <property>controls/lighting/instrument-lights</property>
+              <value>0</value>
+            </equals>
+          </condition>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+  <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>FFbezel</object-name>
+      <object-name>FFface</object-name>
+      <object-name>FFneedle</object-name>
+      <object-name>backlight</object-name>
+      <!--object-name>vitre</object-name-->
+    </effect>
+
+  <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>FFbezel</object-name>
+      <object-name>FFface</object-name>
+      <object-name>FFneedle</object-name>
+      <object-name>backlight</object-name>
+      <!--object-name>vitre</object-name-->
+    </effect>
+
+    <!--effect>
        <inherits-from>Effects/model-transparent</inherits-from>
           <object-name>vitre</object-name>
       <condition>
           <property>sim/rendering/rembrandt/enabled</property>
       </condition>
-   </effect>  
+   </effect-->  
     
     <animation>
         <type>material</type>

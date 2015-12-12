@@ -1,10 +1,11 @@
-####    DHC6 systems   	####
+####    DHC6 systems    ####
 aircraft.livery.init("Aircraft/dhc6/Models/Liveries");
 
 var C_volume = props.globals.initNode("sim/sound/cabin",0.3);
 var D_volume = props.globals.initNode("sim/sound/doors",0.7);
 var E1_volume = props.globals.initNode("sim/sound/engine[0]",0.0);
 var E2_volume = props.globals.initNode("sim/sound/engine[1]",0.0);
+var stall_volume = props.globals.initNode("sim/sound/stall-warning",0.0);
 var ctn_counter=0;
 Wiper=[];
 
@@ -33,108 +34,138 @@ props.globals.initNode("controls/switches/dme-gps-slave", 0);
 ###################################
 
 var Startup = func{
-setprop("controls/electric/avionics-switch",1);
-setprop("controls/electric/battery-switch",1);
-setprop("controls/electric/power-source",1);
-setprop("controls/electric/inverter-switch",1);
-setprop("controls/electric/ammeter-switch",0);
-setprop("controls/lighting/instrument-lights",1);
-setprop("controls/lighting/instruments-norm",0.8);
-setprop("controls/lighting/cabin-lights",1);
-setprop("controls/lighting/beacon",1);
-setprop("controls/electric/aft-boost-pump",1);
-setprop("controls/electric/fwd-boost-pump",1);
-setprop("controls/engines/engine[0]/cutoff",0);
-setprop("controls/engines/engine[1]/cutoff",0);
-setprop("controls/engines/engine[0]/intake-deflector",1);
-setprop("controls/engines/engine[1]/intake-deflector",1);
-setprop("controls/engines/internal-engine-starter",1);
-setprop("controls/engines/engine[0]/throttle",0);
-setprop("controls/engines/engine[1]/throttle",0);
-setprop("controls/anti-ice/pitot-heat",1);
-setprop("controls/anti-ice/prop-heat",1);
-
-var check_loop1 = func {
-
-    if (getprop("controls/engines/internal-engine-starter") != 0) {
-
-    if (getprop("engines/engine[0]/running") == 0 and getprop("engines/engine[1]/running") == 0) {
-    }
+    setprop("controls/electric/avionics-switch",1);
+    setprop("controls/electric/battery-switch",1);
+    setprop("controls/electric/power-source",1);
+    setprop("controls/electric/inverter-switch",1);
+    setprop("controls/electric/ammeter-switch",0);
+    setprop("controls/lighting/instrument-lights",1);
+    setprop("controls/lighting/cabin-lights",1);
+    setprop("controls/lighting/beacon",1);
+    setprop("controls/electric/aft-boost-pump",1);
+    setprop("controls/electric/fwd-boost-pump",1);
+    setprop("controls/engines/engine[0]/cutoff",0);
+    setprop("controls/engines/engine[1]/cutoff",0);
+    setprop("controls/engines/engine[0]/intake-deflector",1);
+    setprop("controls/engines/engine[1]/intake-deflector",1);
+    setprop("controls/engines/internal-engine-starter",1);
+    setprop("controls/engines/engine[0]/throttle",0);
+    setprop("controls/engines/engine[1]/throttle",0);
+    setprop("controls/anti-ice/pitot-heat",1);
+    setprop("controls/anti-ice/prop-heat",1);
+    setprop("controls/anti-ice/window-heat",1);
+    setprop("sim/model/equipment/left-pitot-cover",0);
+    setprop("sim/model/equipment/right-pitot-cover",0);
+    setprop("sim/model/equipment/left-tiedown-wheels",0);
+    setprop("sim/model/equipment/right-tiedown-wheels",0);
+    setprop("sim/model/equipment/rear-tiedown-wheels",0);
+    setprop("sim/model/equipment/left-engine-cover",0);
+    setprop("sim/model/equipment/right-engine-cover",0);
+    setprop("sim/model/equipment/left-chock-fwd",0);
+    setprop("sim/model/equipment/left-chock-aft",0);
+    setprop("sim/model/equipment/right-chock-fwd",0);
+    setprop("sim/model/equipment/right-chock-aft",0);
+    screen.log.write("Starting the engines. Please wait...", 1, 1, 1);
     
-    if (getprop("engines/engine[0]/n2") > 12.0) {
-        setprop("controls/engines/engine[0]/condition",1);
-        setprop("controls/engines/engine[0]/mixture",1);
+    var check_loop1 = func {
+    
+        if (getprop("controls/engines/internal-engine-starter") != 0) {
+    
+        if (getprop("engines/engine[0]/running") == 0 and getprop("engines/engine[1]/running") == 0) {
+        }
         
+        if (getprop("engines/engine[0]/n2") > 12.0) {
+            setprop("controls/engines/engine[0]/condition",1);
+            setprop("controls/engines/engine[0]/mixture",1);
+            
+        }
+    
+        if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 0) {
+        setprop("controls/engines/internal-engine-starter",-1);
+        }    
+        if (getprop("engines/engine[1]/n2") > 12.0) {
+            setprop("controls/engines/engine[1]/condition",1);
+            setprop("controls/engines/engine[1]/mixture",1);
+            
+        }
+        if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1 and getprop("engines/engine[1]/rpm") > 200) {
+            setprop("controls/engines/internal-engine-starter",0);
+            setprop("controls/electric/ammeter-switch",1);
+            setprop("controls/engines/engine[0]/propeller-pitch",1);
+            setprop("controls/engines/engine[1]/propeller-pitch",1);
+            setprop("controls/lighting/no-smoking",1);
+            setprop("controls/lighting/seat-belt",1);
+            setprop("controls/electric/engine[0]/generator",1);
+            setprop("controls/electric/engine[1]/generator",1);
+            setprop("controls/lighting/landing-light[0]",1);
+            setprop("controls/lighting/landing-light[1]",1);
+            setprop("controls/lighting/nav-lights",1);
+            setprop("controls/lighting/strobe",1);
+            setprop("controls/engines/auto-feather",1);
+            setprop("controls/flight/flaps",0.25);
+            setprop("controls/gear/parkingbrake-lever",0);
+            setprop("controls/flight/elevator-trim",-0.14);
+            screen.log.write("Startup procedure finished. - You are now ready for Take Off!", 1, 1, 1);
+        }
+        settimer(check_loop1, 1);
+        }
     }
-
-    if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 0) {
-    setprop("controls/engines/internal-engine-starter",-1);
-    }    
-    if (getprop("engines/engine[1]/n2") > 12.0) {
-        setprop("controls/engines/engine[1]/condition",1);
-        setprop("controls/engines/engine[1]/mixture",1);
-        
-    }
-    if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1) {
-        setprop("controls/engines/internal-engine-starter",0);
-        setprop("controls/electric/ammeter-switch",1);
-        setprop("controls/engines/engine[0]/propeller-pitch",1);
-        setprop("controls/engines/engine[1]/propeller-pitch",1);
-		setprop("controls/lighting/no-smoking",1);
-		setprop("controls/lighting/seat-belt",1);
-		setprop("controls/electric/engine[0]/generator",1);
-		setprop("controls/electric/engine[1]/generator",1);
-		setprop("controls/lighting/landing-light[0]",1);
-		setprop("controls/lighting/landing-light[1]",1);
-		setprop("controls/lighting/nav-lights",1);
-		setprop("controls/lighting/strobe",1);
-		setprop("controls/engines/auto-feather",1);
-    }
-    settimer(check_loop1, 1);
-    }
-}
-check_loop1();
-
+    check_loop1();
 }
 
 var Shutdown = func{
-setprop("controls/electric/engine[0]/generator",0);
-setprop("controls/electric/engine[1]/generator",0);
-setprop("controls/electric/avionics-switch",0);
-setprop("controls/electric/battery-switch",0);
-setprop("controls/electric/inverter-switch",0);
-setprop("controls/lighting/instrument-lights",0);
-setprop("controls/lighting/instruments-norm",0);
-setprop("controls/lighting/nav-lights",0);
-setprop("controls/lighting/beacon",0);
-setprop("controls/lighting/strobe",0);
-setprop("controls/engines/engine[0]/throttle",0);
-setprop("controls/engines/engine[1]/throttle",0);
-setprop("controls/engines/engine[0]/mixture",0);
-setprop("controls/engines/engine[1]/mixture",0);
-setprop("controls/engines/engine[0]/propeller-pitch",0);
-setprop("controls/engines/engine[1]/propeller-pitch",0);
-setprop("controls/engines/engine[0]/condition",0);
-setprop("controls/engines/engine[1]/condition",0);
-setprop("controls/engines/engine[0]/internal-condition",0);
-setprop("controls/engines/engine[1]/internal-condition",0);
-setprop("controls/engines/engine[0]/cutoff",0);
-setprop("controls/engines/engine[1]/cutoff",0);
-setprop("engines/engine[0]/running",0);
-setprop("engines/engine[1]/running",0);
-setprop("controls/electric/aft-boost-pump",0);
-setprop("controls/electric/fwd-boost-pump",0);
-setprop("controls/electric/power-source",0);
-setprop("controls/engines/internal-engine-starter",0);
-setprop("controls/lighting/landing-light[0]",0);
-setprop("controls/lighting/landing-light[1]",0);
-setprop("controls/flight/flaps",0);
-setprop("controls/gear/brake-parking",1);
-setprop("controls/engines/engine[0]/intake-deflector",0);
-setprop("controls/engines/engine[1]/intake-deflector",0);
-setprop("controls/lighting/cabin-lights",0);
+    setprop("controls/electric/engine[0]/generator",0);
+    setprop("controls/electric/engine[1]/generator",0);
+    setprop("controls/electric/avionics-switch",0);
+    setprop("controls/electric/battery-switch",0);
+    setprop("controls/electric/inverter-switch",0);
+    setprop("controls/lighting/instrument-lights",0);
+    setprop("controls/lighting/nav-lights",0);
+    setprop("controls/lighting/beacon",0);
+    setprop("controls/lighting/strobe",0);
+    setprop("controls/engines/engine[0]/throttle",0);
+    setprop("controls/engines/engine[1]/throttle",0);
+    setprop("controls/engines/engine[0]/mixture",0);
+    setprop("controls/engines/engine[1]/mixture",0);
+    setprop("controls/engines/engine[0]/propeller-pitch",0);
+    setprop("controls/engines/engine[1]/propeller-pitch",0);
+    setprop("controls/engines/engine[0]/condition",0);
+    setprop("controls/engines/engine[1]/condition",0);
+    setprop("controls/engines/engine[0]/internal-condition",0);
+    setprop("controls/engines/engine[1]/internal-condition",0);
+    setprop("controls/engines/engine[0]/cutoff",0);
+    setprop("controls/engines/engine[1]/cutoff",0);
+    setprop("engines/engine[0]/running",0);
+    setprop("engines/engine[1]/running",0);
+    setprop("controls/electric/aft-boost-pump",0);
+    setprop("controls/electric/fwd-boost-pump",0);
+    setprop("controls/electric/power-source",0);
+    setprop("controls/engines/internal-engine-starter",0);
+    setprop("controls/lighting/landing-light[0]",0);
+    setprop("controls/lighting/landing-light[1]",0);
+    setprop("controls/flight/flaps",0);
+    setprop("controls/gear/parkingbrake-lever",1);
+    setprop("controls/engines/engine[0]/intake-deflector",0);
+    setprop("controls/engines/engine[1]/intake-deflector",0);
+    setprop("controls/lighting/cabin-lights",0);
+    setprop("controls/lighting/no-smoking",0);
+    setprop("controls/lighting/seat-belt",0);
+    setprop("controls/anti-ice/pitot-heat",0);
+    setprop("controls/anti-ice/prop-heat",0);
+    setprop("controls/anti-ice/window-heat",0);
+    setprop("controls/flight/elevator-trim",0);
+    setprop("sim/model/equipment/left-pitot-cover",1);
+    setprop("sim/model/equipment/right-pitot-cover",1);
+    setprop("sim/model/equipment/left-tiedown-wheels",1);
+    setprop("sim/model/equipment/right-tiedown-wheels",1);
+    setprop("sim/model/equipment/rear-tiedown-wheels",1);
+    setprop("sim/model/equipment/left-engine-cover",1);
+    setprop("sim/model/equipment/right-engine-cover",1);
+    setprop("sim/model/equipment/left-chock-fwd",1);
+    setprop("sim/model/equipment/left-chock-aft",1);
+    setprop("sim/model/equipment/right-chock-fwd",1);
+    setprop("sim/model/equipment/right-chock-aft",1);
 }
-
 
 var Wiper = {
     new : func (wiper_prop,power_prop){
@@ -231,7 +262,7 @@ var Caution_panel = {
             me.fwd_boost2.setValue(me.volts);
         } else {
             me.fwd_boost1.setValue(0);
-            me.fwd_boost2.setValue(0);	    
+            me.fwd_boost2.setValue(0);      
         }
         if(getprop("consumables/fuel/tank/level-lbs")<75)me.fwd_fuel.setValue(me.volts) else me.fwd_fuel.setValue(0);
         var lfdoor=getprop("controls/doors/LF-door/position-norm");
@@ -259,7 +290,7 @@ var Caution_panel = {
             me.aft_boost2.setValue(me.volts);
         } else {
             me.aft_boost1.setValue(0);
-            me.aft_boost2.setValue(0);	    
+            me.aft_boost2.setValue(0);      
         }
         if(getprop("consumables/fuel/tank[1]/level-lbs")<75)me.aft_fuel.setValue(me.volts) else me.aft_fuel.setValue(0);
         
@@ -386,6 +417,12 @@ var update_eng_sound = func {
     E2_volume.setValue(tst2);
     }
 
+var update_stall_sound = func {
+    var stall = (getprop("orientation/alpha-deg"));
+    stall_volume.setValue(stall);
+    }
+
+
 var update_throttles = func {
     var LHrvr=getprop("controls/engines/engine[0]/reverser");
     var RHrvr=getprop("controls/engines/engine[1]/reverser");
@@ -403,7 +440,7 @@ var update_throttles = func {
 
     if(RHrvr==1 and running2==0) {
         setprop("controls/engines/engine[1]/throttle-rvrs-norunning",THR2);
-    } else if (LHrvr==1 and running2==1) {
+    } else if (RHrvr==1 and running2==1) {
         setprop("controls/engines/engine[1]/throttle-rvrs",THR2);
     } else {
         setprop("controls/engines/engine[1]/throttle-fwd",THR2);
@@ -432,5 +469,34 @@ var update_systems = func {
     }
     update_throttles();
     update_eng_sound();
+    update_stall_sound();
     settimer(update_systems, 0);
 }
+
+
+# Thrust reverse info
+var reverse_chg = func {
+   if (getprop("/controls/engines/engine[0]/reverser")) {
+      mess_e0="Left engine active"
+   } else {
+      mess_e0="Left engine inactive"
+   }
+   if (getprop("/controls/engines/engine[1]/reverser")) {
+      mess_e1="Right engine active"
+   } else {
+      mess_e1="Right engine inactive"
+   }
+   gui.popupTip(sprintf("Thrust reverse:\n%s\n%s", mess_e0, mess_e1), 30, nil, {x: 1, y: 1});
+}
+setlistener("/controls/engines/engine[0]/reverser", reverse_chg);
+setlistener("/controls/engines/engine[1]/reverser", reverse_chg);
+
+controls.applyParkingBrake = func (v) {
+    if (!v) {
+        return;
+    }
+
+    var p = "/controls/gear/parkingbrake-lever";
+    setprop(p, var i = !getprop(p));
+    return i;
+};

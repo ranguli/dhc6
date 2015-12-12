@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ELT based on an Artex ELT (now Cobham)
+http://www.acrelectronics.com/products/b/aviation/catalog/elt-remote-switches/remote-switch-standard
+Author: Pavel Cueto
+License: GPL
+
+Designed to work with the "ELTmessage.nas" file provided in the instrument folder.
+Be sure to link the Nasal in your -set file, typing:
+<nasal>
+	<ELT>
+		<file>YOUR/INSTRUMENT/FOLDER/ROUTE/HERE/ELTmessage.nas</file>
+	</ELT>
+</nasal>
+-->
+
+<PropertyList>
+
+	<path>ArtexELT.ac</path>
+
+	<animation>
+	<type>material</type>
+	<object-name>Light</object-name>
+	<emission>
+		<red>  1</red>
+		<green>0</green>
+		<blue> 0</blue>
+	</emission>
+	<condition>
+		<or>
+			<property>/instrumentation/elt/test</property>
+			<property>/instrumentation/elt/armed</property>
+		</or>
+	</condition>
+</animation>
+
+	<animation>
+          <type>material</type>
+          <object-name>Base</object-name>
+          <object-name>Tornillos</object-name>
+          <object-name>Light</object-name>
+          <object-name>Switch</object-name>
+          <object-name>BaseSwitch</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>Base</object-name>
+		<object-name>Tornillos</object-name>
+		<object-name>Light</object-name>
+		<object-name>Switch</object-name>
+		<object-name>BaseSwitch</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+		<object-name>Base</object-name>
+        <object-name>Tornillos</object-name>
+        <object-name>Light</object-name>
+        <object-name>Switch</object-name>
+        <object-name>BaseSwitch</object-name>
+    </effect>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>/instrumentation/elt/armed</property>
+			<value type="bool">true</value>
+		</binding>
+		<binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>false</repeatable> 
+		<binding>
+			<command>property-assign</command>
+			<property>/instrumentation/elt/test</property>
+			<value type="bool">true</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>/instrumentation/elt/armed</property>
+			<value type="bool">false</value>
+		</binding>
+		<binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>/instrumentation/elt/test</property>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
+		</mod-up>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch</object-name>
+	<factor>15</factor>
+	<property>/instrumentation/elt/test</property>
+	<center>
+		<x-m>0.003</x-m>
+		<y-m>0.000</y-m>
+		<z-m>0.000</z-m>
+	</center>
+	<axis>
+		<x> 0</x>
+		<y>-1</y>
+		<z> 0</z>
+	</axis>    
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch</object-name>
+	<property>/instrumentation/elt/armed</property>
+	<factor>-15</factor>
+	<center>
+		<x-m>0.003</x-m>
+		<y-m>0.000</y-m>
+		<z-m>0.000</z-m>
+	</center>
+	<axis>
+		<x> 0</x>
+		<y>-1</y>
+		<z> 0</z>
+	</axis>    
+</animation>
+
+
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Emergency Locator Transmitter</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>

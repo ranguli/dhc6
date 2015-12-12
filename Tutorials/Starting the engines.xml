@@ -10,7 +10,7 @@
 			<value>0</value>
 		</set>
 		<set>
-			<property>/controls/gear/brake-parking</property>
+			<property>/controls/gear/parkingbrake-lever</property>
 			<value>1</value>
 		</set>
 		<set>

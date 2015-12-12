@@ -4,7 +4,7 @@
 
 <path>floats.ac</path>
 
- <effect>
+	<effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
       <object-name>Floats</object-name>
       <object-name>LHfloat.stut</object-name>
@@ -13,7 +13,7 @@
       <object-name>LHupRam</object-name>
     </effect>
 
-<model>
+  <model>
     <path>Aircraft/dhc6/Models/Effects/left-spray.xml</path>
     <name>smoke-s</name>
     <offsets>
@@ -23,7 +23,7 @@
     </offsets>
   </model>
 
-<model>
+  <model>
     <path>Aircraft/dhc6/Models/Effects/right-spray.xml</path>
     <name>smoke-s</name>
     <offsets>
@@ -32,10 +32,31 @@
       <z-m>-2.0</z-m>
     </offsets>
   </model>
+
+  <model>
+    <path>Aircraft/dhc6/Models/Effects/LHeng-spray.xml</path>
+    <name>left-engine-spray</name>
+    <offsets>
+      <x-m>7</x-m>
+      <y-m>-2.5</y-m>
+      <z-m>-2.8</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/dhc6/Models/Effects/RHeng-spray.xml</path>
+    <name>right-engine-spray</name>
+    <offsets>
+      <x-m>7</x-m>
+      <y-m>2.5</y-m>
+      <z-m>-2.8</z-m>
+    </offsets>
+  </model>
   
     <animation>
         <type>translate</type>
         <object-name>LHWheel</object-name>
+        <object-name>LHWheelMounting</object-name>
         <property>gear/gear[6]/compression-m</property>
         <center>
             <x-m>-4.72</x-m>
@@ -52,6 +73,7 @@
     <animation>
         <type>translate</type>
         <object-name>RHWheel</object-name>
+        <object-name>RHWheelMounting</object-name>
         <property>gear/gear[7]/compression-m</property>
         <center>
             <x-m>-4.72</x-m>
@@ -68,6 +90,7 @@
     <animation>
         <type>translate</type>
         <object-name>LHWheel</object-name>
+        <object-name>LHWheelMounting</object-name>
         <property>gear/gear[6]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -86,8 +109,46 @@
     </animation>
 
     <animation>
+    	<type>spin</type>
+    	<object-name>LHWheel</object-name>
+    	<property>gear/gear[6]/rollspeed-ms</property>
+    	<factor>-4</factor>
+        <center>
+            <x-m>1.25322</x-m>
+            <y-m>1.75101</y-m>
+            <z-m>-1.84369</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>LHRam</object-name>
+        <property>gear/gear[6]/position-norm</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1.0</ind><dep>0.18</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>-0.944</x-m>
+            <y-m>-0.35</y-m>
+            <z-m>-0.3158</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-0.2</z>
+        </axis>
+    </animation>
+
+    <animation>
         <type>translate</type>
         <object-name>RHWheel</object-name>
+        <object-name>RHWheelMounting</object-name>
         <property>gear/gear[7]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -106,10 +167,48 @@
     </animation>
 
     <animation>
+    	<type>spin</type>
+    	<object-name>RHWheel</object-name>
+    	<property>gear/gear[7]/rollspeed-ms</property>
+    	<factor>-4</factor>
+        <center>
+            <x-m>1.25322</x-m>
+            <y-m>-1.75101</y-m>
+            <z-m>-1.84369</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>RHRam</object-name>
+        <property>gear/gear[7]/position-norm</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1.0</ind><dep>0.18</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>-0.944</x-m>
+            <y-m>-0.35</y-m>
+            <z-m>-0.3158</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-0.2</z>
+        </axis>
+    </animation>
+
+    <animation>
         <type>translate</type>
         <object-name>LHuprRam</object-name>
         <object-name>LHlwrRam</object-name>
         <object-name>LHfrtWheel</object-name>
+        <object-name>LHfrtWheelMounting</object-name>
         <property>gear/gear[4]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -131,6 +230,7 @@
         <type>translate</type>
         <object-name>LHlwrRam</object-name>
         <object-name>LHfrtWheel</object-name>
+        <object-name>LHfrtWheelMounting</object-name>
         <property>gear/gear[4]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -148,9 +248,10 @@
         </axis>
     </animation>
 
-<animation>
+	<animation>
         <type>rotate</type>
         <object-name>LHfrtWheel</object-name>
+        <object-name>LHfrtWheelMounting</object-name>
         <property>gear/gear[4]/compression-m</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -169,10 +270,28 @@
     </animation>
 
     <animation>
+    	<type>spin</type>
+        <object-name>LHfrtWheel</object-name>
+        <property>gear/gear[4]/rollspeed-ms</property>
+        <factor>-6</factor>
+        <center>
+            <x-m>-4.67464</x-m>
+            <y-m>1.74945</y-m>
+            <z-m>-1.98606</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
         <type>translate</type>
         <object-name>RHuprRam</object-name>
         <object-name>RHlwrRam</object-name>
         <object-name>RHfrtWheel</object-name>
+        <object-name>RHfrtWheelMounting</object-name>
         <property>gear/gear[5]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -194,6 +313,7 @@
         <type>translate</type>
         <object-name>RHlwrRam</object-name>
         <object-name>RHfrtWheel</object-name>
+        <object-name>RHfrtWheelMounting</object-name>
         <property>gear/gear[5]/position-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -214,6 +334,7 @@
     <animation>
         <type>rotate</type>
         <object-name>RHfrtWheel</object-name>
+        <object-name>RHfrtWheelMounting</object-name>
         <property>gear/gear[5]/compression-m</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -228,6 +349,23 @@
             <x>0</x>
             <y>-1</y>
             <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+    	<type>spin</type>
+        <object-name>RHfrtWheel</object-name>
+        <property>gear/gear[5]/rollspeed-ms</property>
+        <factor>-6</factor>
+        <center>
+            <x-m>-4.67464</x-m>
+            <y-m>-1.74945</y-m>
+            <z-m>-1.98606</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1</y>
+            <z>0.0</z>
         </axis>
     </animation>
 

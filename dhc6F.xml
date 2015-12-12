@@ -22,8 +22,8 @@ O Flaps = 74 kt
 <airplane mass="7500">
 
     <approach speed="78" aoa="6.0" fuel="0.5">
-        <control-setting axis="/controls/engines/engine[0]/throttle-fwd" value="0.1"/>
-        <control-setting axis="/controls/engines/engine[1]/throttle-fwd" value="0.1"/>
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="0.30"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="0.30"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
@@ -34,8 +34,8 @@ O Flaps = 74 kt
     </approach>
 
     <cruise speed="172" alt="10000" fuel="0.8">
-        <control-setting axis="/controls/engines/engine[0]/throttle-fwd" value="1.0"/>
-        <control-setting axis="/controls/engines/engine[1]/throttle-fwd" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="1"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="1"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.96"/>
@@ -58,7 +58,7 @@ O Flaps = 74 kt
         sweep="0" dihedral="3" taper="1"  incidence="2.5" camber="0.24" idrag="1.0">
         <stall aoa="10" width="6" peak="1.5"/>
         <flap0 start="0" end="0.90" lift="1.6" drag="3.2"/>
-        <flap1 start=".6" end="0.90" lift="1.2" drag="1.2"/>
+        <flap1 start="0.6" end="0.90" lift="1.2" drag="1.2"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-speed control="FLAP0" transition-time="20"/>
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
@@ -69,9 +69,9 @@ O Flaps = 74 kt
     </wing>
 
     <hstab x="-7.47" y="0.08" z="1.186" length="3.15" chord="1.4"
-        sweep="0" dihedral="0" taper="1" >
+        sweep="0" dihedral="0" taper="1" camber="-0.05">
         <stall aoa="17" width="6" peak="1.5"/>
-        <flap0 start="0" end="1" lift="1.7" drag="1.5" camber="-0.05"/>
+        <flap0 start="0" end="1" lift="1.7" drag="1.5"/>
         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
@@ -231,8 +231,8 @@ Prop diam: 2.59 m
             eng-power="668" eng-rpm="2200" alt="0"
             flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="2.65" z="1.0"/>
-        <control-input axis="/controls/engines/engine[0]/throttle-fwd"
-        control="THROTTLE"/>
+        <control-input axis="/controls/engines/engine[0]/internal-throttle-fwd"
+        src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[0]/internal-condition"
         control="CONDLEVER"/>
         <control-input axis="/controls/engines/engine[0]/starter"
@@ -253,7 +253,7 @@ Prop diam: 2.59 m
             eng-power="668" eng-rpm="2200" alt="0"
             flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="-2.65" z="1.0"/>
-        <control-input axis="/controls/engines/engine[1]/throttle-fwd"
+        <control-input axis="/controls/engines/engine[1]/internal-throttle-fwd"
         control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[1]/internal-condition"
         control="CONDLEVER"/>

@@ -143,6 +143,38 @@
 		</view>
 		<wait>15</wait>
 	</step>
+
+	<step>
+		<message>Switch on the window heating.</message>
+		<view>
+		<heading-offset-deg>309.7</heading-offset-deg>
+		<pitch-offset-deg>33.3</pitch-offset-deg>
+		<roll-offset-deg>0.0</roll-offset-deg>
+		<x-offset-m>0.0</x-offset-m>
+		<y-offset-m>0.7</y-offset-m>
+		<z-offset-m>-3.4</z-offset-m>
+		<field-of-view>90.8</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.5793</x-m>
+			<y-m>0.2421</y-m>
+			<z-m>0.8653</z-m>
+			<scale>1.2810</scale>
+		</marker>
+		<error>
+			<message>Under certain circumstances the windows can get frosty or foggy. To prevent this, switch on the heating!</message>
+			<condition>
+				<not>
+					<property>/controls/anti-ice/window-heat</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/controls/anti-ice/window-heat</property>
+			</condition>
+		</exit>
+	</step>
 	
 	<step>
 		<message>Check warning lights: They all have to be off</message>

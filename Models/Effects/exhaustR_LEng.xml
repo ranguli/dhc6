@@ -22,6 +22,9 @@
                     <property>/controls/engines/engine/condition</property>
                     <value>0.5</value>
                 </less-than>
+                <not>
+                    <property>sim/model/equipment/left-engine-cover</property>
+                </not>
             </and>
         </condition>
 

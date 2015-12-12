@@ -13,6 +13,87 @@ Syd Adams
 
     <path>ctl32.ac</path>
 
+     <animation>
+          <type>material</type>
+          <object-name>CTL-32</object-name>
+          <object-name>CTL-32.pwr</object-name>
+          <object-name>CTL-32.toggle</object-name>
+          <object-name>CTL-32.vol</object-name>
+          <object-name>act.btn</object-name>
+          <object-name>freq.dwn</object-name>
+          <object-name>freq.knob</object-name>
+          <object-name>freq.up</object-name>
+          <object-name>freq1.knob</object-name>
+          <object-name>mem.annun</object-name>
+          <object-name>sto.btn</object-name>
+          <object-name>test.btn</object-name>
+          <object-name>xmt.annun</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>CTL-32</object-name>
+      <object-name>CTL-32.pwr</object-name>
+      <object-name>CTL-32.toggle</object-name>
+      <object-name>CTL-32.vol</object-name>
+      <object-name>act.btn</object-name>
+      <object-name>freq.001</object-name>
+      <object-name>freq.002</object-name>
+      <object-name>freq.003</object-name>
+      <object-name>freq.004</object-name>
+      <object-name>freq.005</object-name>
+      <object-name>freq.dec</object-name>
+      <object-name>freq.dwn</object-name>
+      <object-name>freq.knob</object-name>
+      <object-name>freq.up</object-name>
+      <object-name>freq1.knob</object-name>
+      <object-name>mem.annun</object-name>
+      <object-name>stby.001</object-name>
+      <object-name>stby.002</object-name>
+      <object-name>stby.003</object-name>
+      <object-name>stby.004</object-name>
+      <object-name>stby.005</object-name>
+      <object-name>stby.dec</object-name>
+      <object-name>sto.btn</object-name>
+      <object-name>test.btn</object-name>
+      <object-name>xmt.annun</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>CTL-32</object-name>
+      <object-name>CTL-32.pwr</object-name>
+      <object-name>CTL-32.toggle</object-name>
+      <object-name>CTL-32.vol</object-name>
+      <object-name>act.btn</object-name>
+      <object-name>freq.001</object-name>
+      <object-name>freq.002</object-name>
+      <object-name>freq.003</object-name>
+      <object-name>freq.004</object-name>
+      <object-name>freq.005</object-name>
+      <object-name>freq.dec</object-name>
+      <object-name>freq.dwn</object-name>
+      <object-name>freq.knob</object-name>
+      <object-name>freq.up</object-name>
+      <object-name>freq1.knob</object-name>
+      <object-name>mem.annun</object-name>
+      <object-name>stby.001</object-name>
+      <object-name>stby.002</object-name>
+      <object-name>stby.003</object-name>
+      <object-name>stby.004</object-name>
+      <object-name>stby.005</object-name>
+      <object-name>stby.dec</object-name>
+      <object-name>sto.btn</object-name>
+      <object-name>test.btn</object-name>
+      <object-name>xmt.annun</object-name>
+    </effect>
+
     <animation>
         <type>select</type>
         <object-name>freq.001</object-name>

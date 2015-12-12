@@ -32,6 +32,78 @@
     <max-m> 45 </max-m>
   </animation>
 
+      <animation>
+          <type>material</type>
+          <object-name>Ident</object-name>
+          <object-name>face</object-name>
+          <object-name>face-int</object-name>
+          <object-name>Knob1</object-name>
+          <object-name>Knob10</object-name>
+          <object-name>Knob100</object-name>
+          <object-name>Knob1000</object-name>
+          <object-name>KnobMode</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+        <animation>
+          <type>material</type>
+          <object-name>Dial1</object-name>
+          <object-name>Dial10</object-name>
+          <object-name>Dial100</object-name>
+          <object-name>Dial1000</object-name>
+          <condition>
+            <equals>
+              <property>controls/lighting/instrument-lights</property>
+              <value>0</value>
+            </equals>
+          </condition>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+  <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>Dial1</object-name>
+      <object-name>Dial10</object-name>
+      <object-name>Dial100</object-name>
+      <object-name>Dial1000</object-name>
+      <object-name>Ident</object-name>
+      <object-name>Knob1</object-name>
+      <object-name>Knob10</object-name>
+      <object-name>Knob100</object-name>
+      <object-name>Knob1000</object-name>
+      <object-name>KnobMode</object-name>
+      <object-name>face</object-name>
+      <object-name>face-int</object-name>
+      <object-name>vitre</object-name>
+    </effect>
+
+  <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>Dial1</object-name>
+      <object-name>Dial10</object-name>
+      <object-name>Dial100</object-name>
+      <object-name>Dial1000</object-name>
+      <object-name>Ident</object-name>
+      <object-name>Knob1</object-name>
+      <object-name>Knob10</object-name>
+      <object-name>Knob100</object-name>
+      <object-name>Knob1000</object-name>
+      <object-name>KnobMode</object-name>
+      <object-name>face</object-name>
+      <object-name>face-int</object-name>
+      <object-name>vitre</object-name>
+    </effect>
+
   <animation>
     <object-name>KnobMode</object-name>
     <object-name>Ident</object-name>
@@ -79,34 +151,12 @@
      <not><property>/sim/rendering/rembrandt/enabled</property></not>
     </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <red>   0.07 </red>
+      <green> 0.04 </green>
+      <blue>  0.04 </blue>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>KnobMode</object-name>
-    <object-name>Ident</object-name>
-    <object-name>Knob1</object-name>
-    <object-name>Knob10</object-name>
-    <object-name>Knob100</object-name>
-    <object-name>Knob1000</object-name>
-    <object-name>face</object-name>
-    <object-name>face-int</object-name>
-    <condition>
-      <not><property>/sim/rendering/rembrandt/enabled</property></not>
-    </condition>
-    <emission>
-      <red>   0.01 </red>
-      <green> 0.01 </green>
-      <blue>  0.01 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-    </emission>
-  </animation>
-
 
  <animation> 
     <type>rotate</type>

@@ -9,18 +9,30 @@ Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#2194
 
 <PropertyList include="dhc6-base.xml">
     <sim>
-        <description>de Havilland Twin Otter (floats)</description>
-        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505)... </author>
+        <description>De Havilland Canada DHC-6 Twin Otter (floats)</description>
+        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505), CaptB, Adam Swift (Mig29pilot), tauchergreg, Sebastian (rollershutter), others</author>
         <flight-model>yasim</flight-model>
         <aero>dhc6F</aero>
         <type type="string">seaplane</type>
         <fuel-fraction>0.5</fuel-fraction>
         <startup>
-            <splash-texture>Aircraft/dhc6/splash1.png</splash-texture>
+            <splash-texture>Aircraft/dhc6/dhc6F-splash1.png</splash-texture>
+            <splash-texture>Aircraft/dhc6/dhc6F-splash2.png</splash-texture>
+            <splash-texture>Aircraft/dhc6/dhc6F-splash3.png</splash-texture>
+            <splash-texture>Aircraft/dhc6/dhc6F-splash4.png</splash-texture>
         </startup>
          <model>
             <path>Aircraft/dhc6/Models/DHC6F.xml</path>
             <blunt-nose type="bool">0</blunt-nose>
+            <equipment>
+                <left-tiedown-wheels type="bool">0</left-tiedown-wheels>
+                <right-tiedown-wheels type="bool">0</right-tiedown-wheels>
+                <rear-tiedown-wheels type="bool">0</rear-tiedown-wheels>
+                <left-chock-fwd type="bool">0</left-chock-fwd>
+                <left-chock-aft type="bool">0</left-chock-aft>
+                <right-chock-fwd type="bool">0</right-chock-fwd>
+                <right-chock-aft type="bool">0</right-chock-aft>
+            </equipment>
         </model>
     
     <hitches>

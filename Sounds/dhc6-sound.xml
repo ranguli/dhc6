@@ -2,292 +2,316 @@
 
 <!-- created by ??
    January 2015:Modified By PAF Team Christian Thiriot "PATTEN") -->
- 
+
 <PropertyList>
 
-  <fx>
-   <stall>
-      <name>fire-test</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-alarm.wav</path>
-      <mode>looped</mode>
-      <property>controls/engines/fire-test</property>
-      <condition>
-	<and>
-	  <equals>
-	    <property>controls/engines/fire-test</property>
-	    <value>1</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>1</factor>
-      </volume>
-    </stall>
-<!-- Cabin Alarms -->
-   <stall>
-      <name>seat-belt</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
-      <mode>once</mode>
-                <property>controls/lighting/seat-belt</property>
-      <condition>
-	<and>
-	  <equals>
-                <property>controls/lighting/seat-belt</property>
-	    <value>1</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>1</factor>
-      </volume>
-    </stall>
+    <fx>
+        <fire>
+            <name>fire-test</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-alarm.wav</path>
+            <mode>looped</mode>
+            <property>controls/engines/fire-test</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/engines/fire-test</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                    <not>
+                        <property>controls/switches/firebell-switch</property>
+                    </not>
+                </and>
+            </condition>
+            <volume>
+               <factor>3</factor>
+            </volume>
+            <position>
+                <x>-4</x>
+                <y>0</y>
+                <z>-0.6</z>
+            </position>
+            <reference-dist>0.2</reference-dist>
+            <max-dist>10</max-dist>
+        </fire>
 
-   <stall>
-      <name>seat-belt-off</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
-      <mode>once</mode>
-                <property>controls/lighting/seat-belt</property>
-      <condition>
-	<and>
-	  <equals>
-                <property>controls/lighting/seat-belt</property>
-	    <value>0</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>1</factor>
-      </volume>
-    </stall>
+        <!-- Cabin Alarms -->
+        <cabin>
+            <name>seat-belt</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+            <mode>once</mode>
+            <property>controls/lighting/seat-belt</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/lighting/seat-belt</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-2.8</x>
+                <y>-0.5</y>
+                <z>0.6</z>
+            </position>
+            <orientation>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </orientation>
+        </cabin>
 
-   <stall>
-      <name>no-smoking</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
-      <mode>once</mode>
-        <property>controls/lighting/no-smoking</property>
-      <condition>
-	<and>
-	  <equals>
-        <property>controls/lighting/no-smoking</property>
-	    <value>1</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>1</factor>
-      </volume>
-    </stall>
+        <cabin>
+            <name>seat-belt-off</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+            <mode>once</mode>
+            <property>controls/lighting/seat-belt</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/lighting/seat-belt</property>
+                        <value>0</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-2.8</x>
+                <y>-0.5</y>
+                <z>0.6</z>
+            </position>
+            <orientation>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </orientation>
+        </cabin>
 
-   <stall>
-      <name>no-smoking-off</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
-      <mode>once</mode>
-        <property>controls/lighting/no-smoking</property>
-      <condition>
-	<and>
-	  <equals>
-        <property>controls/lighting/no-smoking</property>
-	    <value>0</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>1</factor>
-      </volume>
-    </stall>
+        <cabin>
+            <name>no-smoking</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+            <mode>once</mode>
+            <property>controls/lighting/no-smoking</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/lighting/no-smoking</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-2.8</x>
+                <y>-0.5</y>
+                <z>0.6</z>
+            </position>
+            <orientation>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </orientation>
+        </cabin>
 
-<!-- WIPERS -->
+        <cabin>
+            <name>no-smoking-off</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-cabinalert.wav</path>
+            <mode>once</mode>
+            <property>controls/lighting/no-smoking</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/lighting/no-smoking</property>
+                        <value>0</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-2.8</x>
+                <y>-0.5</y>
+                <z>0.6</z>
+            </position>
+            <orientation>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </orientation>
+        </cabin>
 
-   <wipers>
-      <name>wiper</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-wipers.wav</path>
-      <mode>looped</mode>
-                <property>controls/electric/wipers/switch</property>
-      <condition>
-	<and>
-	  <equals>
-                <property>controls/electric/wipers/switch</property>
-	    <value>1</value>
-	  </equals>
-          <equals>
-                <property>sim/current-view/internal</property>
-             <value>1</value>
-          </equals>
-	  <greater-than>
-	        <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.5</factor>
-      </volume>
-    </wipers>
+        <stall>
+            <name>stall-warning</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/stall.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>sim/sound/stall-warning</property>
+                        <value>5</value>
+                    </greater-than>
+                    <less-than>
+                        <property>sim/sound/stall-warning</property>
+                        <value>20</value>
+                    </less-than>
+                    <greater-than>
+                        <property>sim/time/elapsed-sec</property>
+                        <value>15</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>velocities/airspeed-kt</property>
+                        <value>30</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <pitch>
+                <factor>1</factor>
+            </pitch>
+            <reference-dist>3.0</reference-dist>
+            <max-dist>10.0</max-dist>
+            <position>
+                <x>-4</x>
+                <y>0</y>
+                <z>-0.6</z>
+            </position>
+        </stall>
 
-    <prop>
-      <name>aft-boost-pump</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
-      <mode>looped</mode>
-      <property>sim/sound/aft-boost-pump</property>
-      <condition>
-	<and>
-	  <equals>
-	    <property>controls/electric/aft-boost-pump</property>
-	    <value>1</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.16</factor>
-      </volume>
-    </prop>
+        <!-- WIPERS -->
+        <wipers>
+            <name>wiper</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-wipers.wav</path>
+            <mode>looped</mode>
+            <property>controls/electric/wipers/switch</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/electric/wipers/switch</property>
+                        <value>1</value>
+                    </equals>
+                    <equals>
+                        <property>sim/current-view/internal</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.5</factor>
+            </volume>
+        </wipers>
 
-    <prop>
-      <name>fwd-boost-pump</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
-      <mode>looped</mode>
-      <property>sim/sound/fwd-boost-pump</property>
-      <condition>
-	<and>
-	  <equals>
-	    <property>controls/electric/fwd-boost-pump</property>
-	    <value>1</value>
-	  </equals>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.16</factor>
-      </volume>
-    </prop>
+        <prop>
+            <name>aft-boost-pump</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
+            <mode>looped</mode>
+            <property>sim/sound/aft-boost-pump</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/electric/aft-boost-pump</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.16</factor>
+            </volume>
+        </prop>
+
+        <prop>
+            <name>fwd-boost-pump</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-boost-pump.wav</path>
+            <mode>looped</mode>
+            <property>sim/sound/fwd-boost-pump</property>
+            <condition>
+                <and>
+                    <equals>
+                        <property>controls/electric/fwd-boost-pump</property>
+                        <value>1</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.16</factor>
+            </volume>
+        </prop>
     
-    <prop>
-      <name>starter</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter.wav</path>
-      <mode>once</mode>
-      <property>sim/sound/engine-starter</property>
-      <condition>
-	<and>
-	  <not>
-	    <equals>
-	      <property>controls/engines/internal-engine-starter</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <not>
-	    <equals>
-	      <property>controls/electric/power-source</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.3</factor>
-      </volume>
-    </prop>
+        <prop>
+            <name>starter</name>
+            <path>Aircraft/dhc6/Sounds/dhc6-engine-starter.wav</path>
+            <mode>once</mode>
+            <property>sim/sound/engine-starter</property>
+            <condition>
+                <and>
+                    <not>
+                        <equals>
+                            <property>controls/engines/internal-engine-starter</property>
+                            <value>0</value>
+                        </equals>
+                    </not>
+                    <not>
+                        <equals>
+                            <property>controls/electric/power-source</property>
+                            <value>0</value>
+                        </equals>
+                    </not>
+                    <greater-than>
+                        <property>systems/electrical/volts</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.3</factor>
+            </volume>
+        </prop>
 
-    <prop>
-      <name>starter-loop-0</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter-loop.wav</path>
-      <mode>looped</mode>
-      <property>sim/sound/engine-starter-loop[0]</property>
-      <condition>
-	<and>
-	  <not>
-	    <equals>
-	      <property>controls/engines/internal-engine-starter</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <not>
-	    <equals>
-	      <property>controls/electric/power-source</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	  <greater-than>
-	    <property>engines/engine[0]/n2</property>
-	    <value>15</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.16</factor>
-      </volume>
-    </prop>
-
-    <prop>
-      <name>starter-loop-1</name>
-      <path>Aircraft/dhc6/Sounds/dhc6-engine-starter-loop.wav</path>
-      <mode>looped</mode>
-      <property>sim/sound/engine-starter-loop[1]</property>
-      <condition>
-	<and>
-	  <not>
-	    <equals>
-	      <property>controls/engines/internal-engine-starter</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <not>
-	    <equals>
-	      <property>controls/electric/power-source</property>
-	      <value>0</value>
-	    </equals>
-	  </not>
-	  <greater-than>
-	    <property>systems/electrical/volts</property>
-	    <value>0</value>
-	  </greater-than>
-	  <greater-than>
-	    <property>engines/engine[1]/n2</property>
-	    <value>15</value>
-	  </greater-than>
-	</and>
-      </condition>
-      <volume>
-	<factor>0.16</factor>
-      </volume>
-    </prop>
-
-<!-- Engine 1 exterior-->
-
+        <!-- Engine 1 exterior-->
         <prop>
             <name>propeller1</name>
             <mode>looped</mode>
@@ -362,8 +386,7 @@
             </position>
         </prop>
 
-<!-- Engine 2 -->
-
+        <!-- Engine 2 -->
         <prop>
             <name>propeller2</name>
             <reference-dist>20.0</reference-dist>
@@ -606,9 +629,9 @@
             </volume>
             <volume>
                 <property>velocities/airspeed-kt</property>
-                <factor>0.0015</factor>
+                <factor>0.001</factor>
                 <min>0.0</min>
-                <max>0.25</max>
+                <max>1</max>
             </volume>
             <pitch>
                 <property>velocities/airspeed-kt</property>
@@ -621,44 +644,43 @@
                 <z>0.5</z>
             </position>
             <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
+            <max-dist>20.0</max-dist>
         </wind>
 
-<!-- Radio -->
+        <!-- Radio -->
+        <radio>
+            <name>sound-radio-inside-comm0</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/dhc6-radio-5s.wav</path>
+            <condition>
+                <and>
+                    <equals>
+                        <property>instrumentation/comm/serviceable</property>
+                        <value>true</value>
+                    </equals>
+                    <greater-than>
+                        <property>systems/electrical/outputs/comm[0]</property>
+                        <value>1</value>
+                    </greater-than>
+                    <property>instrumentation/comm/ptt</property>
+                    <value>0</value>
+                </and>
+            </condition>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <reference-dist>100</reference-dist>
+            <max-dist>1000</max-dist>
+        </radio>
 
-   <radio>
-      <name>sound-radio-inside-comm0</name>
-      <mode>looped</mode>
-      <path>Aircraft/dhc6/Sounds/dhc6-radio-5s.wav</path>
-        <condition>
-            <and>
-                <equals>
-                    <property>instrumentation/comm/serviceable</property>
-                    <value>true</value>
-                </equals>
-                <greater-than>
-                    <property>systems/electrical/outputs/comm[0]</property>
-                    <value>1</value>
-                </greater-than>
-          <property>instrumentation/comm/ptt</property>
-          <value>0</value>
-            </and>
-        </condition>
-      <volume>
-        <factor>1</factor>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </radio>
-               <!--  BRAKES   -->
-
+        <!--  BRAKES   -->
         <brakes>
             <name>brake-lever-off</name>
             <mode>once</mode>
             <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
             <condition>
                 <not>
-                    <property>controls/gear/brake-parking</property>
+                    <property>controls/gear/parkingbrake-lever</property>
                 </not>
             </condition>
             <volume>
@@ -672,8 +694,8 @@
                 <y>0</y>
                 <z>1</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>1.0</max-dist>
+            <reference-dist>1</reference-dist>
+            <max-dist>20</max-dist>
         </brakes>
 
         <brakes>
@@ -682,7 +704,7 @@
             <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
             <condition>
                 <and>
-                    <property>controls/gear/brake-parking</property>
+                    <property>controls/gear/parkingbrake-lever</property>
                     <value>0</value>
                 </and>
             </condition>
@@ -690,24 +712,23 @@
                 <property>sim/signals/fdm-initialized</property>
             </volume>
             <pitch>
-                <offset>0.8</offset>
+                <offset>0.7</offset>
             </pitch>
             <position>
                 <x>3</x>
                 <y>0</y>
                 <z>1</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>1.0</max-dist>
+            <reference-dist>1</reference-dist>
+            <max-dist>20</max-dist>
         </brakes>
 
-                    <!-- RUDDER  -->
-
+        <!-- RUDDER  -->
        <rudder>
             <name>rudder</name>
             <mode>looped</mode>
             <path>Aircraft/dhc6/Sounds/dhc6-rudder.wav</path>
-        <property>controls/flight/rudder</property>
+            <property>controls/flight/rudder</property>
             <condition>             
                     <less-than>
                         <property>controls/engines/internal-engine-starter</property>
@@ -739,11 +760,10 @@
                 <z>  5.33 </z>
             </position>
             <reference-dist> 1.00  </reference-dist>
-                  <max-dist> 50.0  </max-dist>
+            <max-dist> 50.0  </max-dist>
         </rudder>
 
-                    <!-- AILERONS  -->
-
+        <!-- AILERONS  -->
        <aileron>
             <name>aileron</name>
             <mode>looped</mode>
@@ -780,16 +800,15 @@
                 <z>  0.00 </z>
             </position>
             <reference-dist> 1.00  </reference-dist>
-                  <max-dist> 50.0  </max-dist>
+            <max-dist> 50.0  </max-dist>
         </aileron>
 
-                    <!-- ELEVATOR  -->
-
+        <!-- ELEVATOR  -->
        <elevator>
             <name>elevator</name>
             <mode>looped</mode>
             <path>Aircraft/dhc6/Sounds/dhc6-rudder.wav</path>
-        <property>controls/flight/elevator</property>
+            <property>controls/flight/elevator</property>
             <condition>             
                     <less-than>
                         <property>controls/engines/internal-engine-starter</property>
@@ -821,11 +840,12 @@
                 <z>  4.33 </z>
             </position>
             <reference-dist> 1.00  </reference-dist>
-                  <max-dist> 50.0  </max-dist>
+            <max-dist> 50.0  </max-dist>
         </elevator>
-                                      <!--   DOORS  -->
+                                      
+        <!--   DOORS  -->
 
-  <!-- LF DOOR  -->
+        <!-- LF DOOR  -->
         <doors>
             <name>lfdoor</name>
             <mode>once</mode>
@@ -845,8 +865,8 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -866,12 +886,11 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
-  <!-- rf DOOR  -->
-
+        <!-- rf DOOR  -->
         <doors>
             <name>rfdoor</name>
             <mode>once</mode>
@@ -891,8 +910,8 @@
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -912,13 +931,11 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
-
-  <!-- RR DOOR  -->
-
+        <!-- RR DOOR  -->
         <doors>
             <name>rrdoor</name>
             <mode>once</mode>
@@ -938,8 +955,8 @@
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -959,12 +976,11 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
-   <!-- LR DOOR-F  -->
-
+        <!-- LR DOOR-F  -->
         <doors>
             <name>lrdoorf</name>
             <mode>once</mode>
@@ -984,8 +1000,8 @@
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -1005,12 +1021,11 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
-   <!-- LR DOOR-R  -->
-
+        <!-- LR DOOR-R  -->
         <doors>
             <name>lrdoorr</name>
             <mode>once</mode>
@@ -1030,8 +1045,8 @@
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -1051,11 +1066,11 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
-          <!-- BAGGAGE DOOR  -->
+        <!-- BAGGAGE DOOR  -->
         <doors>
             <name>baggdoor</name>
             <mode>once</mode>
@@ -1075,8 +1090,8 @@
                 <y>-0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
         <doors>
@@ -1096,12 +1111,12 @@
                 <y>0.5</y>
                 <z>0.5</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>2.0</max-dist>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
         </doors>
 
 
-                       <!--  CLIC -->
+        <!--  CLIC -->
         <click>
             <name>click-on</name>
             <mode>once</mode>
@@ -1116,12 +1131,12 @@
                 <offset>1.0</offset>
             </pitch>
             <position>
-                <x>3</x>
+                <x>-3</x>
                 <y>0</y>
                 <z>1</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>1.0</max-dist>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
         </click>
         
         <click>
@@ -1137,16 +1152,161 @@
                 <property>sim/signals/fdm-initialized</property>
             </volume>
             <pitch>
-                <offset>0.8</offset>
+                <offset>1</offset>
             </pitch>
             <position>
-                <x>3</x>
+                <x>-3</x>
                 <y>0</y>
                 <z>1</z>
             </position>
-            <reference-dist>0.5</reference-dist>
-            <max-dist>1.0</max-dist>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
         </click>
+
+        <click2>
+            <name>click2-on</name>
+            <mode>once</mode>
+            <path>Sounds/click2.wav</path>
+            <condition>
+                <property>sim/sound/click2</property>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+            </volume>
+            <pitch>
+                <offset>1.0</offset>
+            </pitch>
+            <position>
+                <x>-3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
+        </click2>
+        
+        <click2>
+            <name>click2-off</name>
+            <mode>once</mode>
+            <path>Sounds/click2.wav</path>
+            <condition>
+                <not>
+                    <property>sim/sound/click2</property>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+            </volume>
+            <pitch>
+                <offset>1</offset>
+            </pitch>
+            <position>
+                <x>-3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
+        </click2>
+
+        <!-- rain sound -->
+        <rain>
+            <name>rain</name>
+            <mode>looped</mode>
+            <path>Sounds/rain.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/environment/rain-norm</property>
+                        <value>0</value>
+                    </greater-than>
+                    <or>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                        <greater-than>
+                            <property>/controls/doors/LF-door/position-norm</property>
+                            <value>0.05</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>/controls/doors/RF-door/position-norm</property>
+                            <value>0.05</value>
+                        </greater-than>
+                    </or>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+                <property>/environment/rain-norm</property>
+                <offset>0.2</offset>
+            </volume>
+        </rain>
+
+        <rain-windshield>
+            <name>rain-windshield</name>
+            <mode>looped</mode>
+            <path>Sounds/rain-windshield.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/environment/rain-norm</property>
+                        <value>0</value>
+                    </greater-than>
+                    <property>/sim/current-view/internal</property>
+                </and>
+            </condition>
+            <position>
+                <x>-0.5</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </position>
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.03</factor>
+                <min>0.03</min>
+                <offset>0.3</offset>
+            </volume>
+        </rain-windshield>
+
+        <!-- Thunder sound -->
+        <thunder1>
+            <name>thunder1</name>
+            <mode>once</mode>
+            <path>Sounds/thunder1.wav</path>
+            <property>/sim/sound/click-thunder1</property>
+            <volume>
+                <offset>2</offset>
+            </volume>
+            <volume>
+                <offset>2</offset>
+            </volume>
+        </thunder1>
+
+        <thunder2>
+            <name>thunder2</name>
+            <mode>once</mode>
+            <path>Sounds/thunder2.wav</path>
+            <property>/sim/sound/click-thunder2</property>
+            <volume>
+                <offset>2</offset>
+            </volume>
+            <volume>
+                <offset>2</offset>
+            </volume>
+        </thunder2>
+
+        <thunder3>
+            <name>thunder3</name>
+            <mode>once</mode>
+            <path>Sounds/thunder3.wav</path>
+            <property>/sim/sound/click-thunder3</property>
+            <volume>
+                <offset>2</offset>
+            </volume>
+            <volume>
+                <offset>2</offset>
+            </volume>
+        </thunder3>
         
     </fx>
 

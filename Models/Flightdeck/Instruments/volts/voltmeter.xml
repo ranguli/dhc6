@@ -5,18 +5,67 @@
 <path>voltmeter.ac</path>
 
 <animation>
+          <type>material</type>
+          <object-name>voltbezel</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+        <animation>
+          <type>material</type>
+          <object-name>volt.face</object-name>
+          <object-name>voltneedle</object-name>
+          <object-name>voltneedle.001</object-name>
+          <object-name>voltneedle.002</object-name>
+          <condition>
+            <equals>
+              <property>controls/lighting/instrument-lights</property>
+              <value>0</value>
+            </equals>
+          </condition>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+<animation>
     <type>material</type>
     <object-name>volt.face</object-name>
     <object-name>voltneedle</object-name>
     <object-name>voltneedle.001</object-name>
     <object-name>voltneedle.002</object-name>
     <emission>
-        <red>0.028</red>
-        <green>0.014</green>
-        <blue>0.007</blue>
+        <red>0.07</red>
+        <green>0.04</green>
+        <blue>0.04</blue>
         <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
 </animation>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+      <object-name>volt.face</object-name>
+      <object-name>voltbezel</object-name>
+      <object-name>voltneedle</object-name>
+      <object-name>voltneedle.001</object-name>
+      <object-name>voltneedle.002</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>volt.face</object-name>
+      <object-name>voltbezel</object-name>
+      <object-name>voltneedle</object-name>
+      <object-name>voltneedle.001</object-name>
+      <object-name>voltneedle.002</object-name>
+    </effect>
 
 <animation>
     <type>rotate</type>

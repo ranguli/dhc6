@@ -33,7 +33,7 @@ O Flaps = 74 kt
         <solve-weight idx="1" weight="3150"/>
     </approach>
 
-    <cruise speed="182" alt="10000" fuel="0.8">
+    <cruise speed="176" alt="10000" fuel="0.8">
         <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="1"/>
         <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="1"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
@@ -53,8 +53,6 @@ O Flaps = 74 kt
         width="1.8" taper="1.0" midpoint="0.75" cy="1.1" cx="1.1" />
     <fuselage ax="-1.017"  ay="0" az="0.069" bx="-8.805" by="0" bz="0.352"
         width="1.8" taper="0.0" midpoint="0.0" cy="1.1" cx="1.1" />
-
-
 
     <wing x="0.0" y="0.880" z="1.0" length="9.0" chord="2.0"
         sweep="0" dihedral="3" taper="1"  incidence="2.5" idrag="1.0" camber="0.24">
@@ -87,7 +85,6 @@ O Flaps = 74 kt
         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
     </vstab>
-
 
 <!-- frt doors-->
     <vstab x="0" y="0" z="0" length="0.001" chord="0.001">

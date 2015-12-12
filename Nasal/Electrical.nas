@@ -198,6 +198,8 @@ init_switches = func() {
     append(output_list,"aft-boost-pump");
     append(switch_list,"controls/electric/fwd-boost-pump");
     append(output_list,"fwd-boost-pump");
+    append(switch_list,"controls/anti-ice/window-heat");
+    append(output_list,"window-heat");
 
 
     append(serv_list,"instrumentation/adf/serviceable");
@@ -400,13 +402,13 @@ electrical_bus = func(bv) {
     if_engine0_running = getprop("engines/engine[0]/running");
     if_engine1_running = getprop("engines/engine[1]/running");
 
-    if (getprop("engines/engine[0]/n2") >= 12 and internal_condition0 > 0 and fuel_rich0 < 25 and fwd_boost != 0 and if_engine0_serviceable and if_engine0_cutoff==0 and internal_condition0>0.382) {
+    if (getprop("engines/engine[0]/n2") >= 12 and internal_condition0 > 0 and fuel_rich0 < 25 and fwd_boost != 0 and if_engine0_serviceable and if_engine0_cutoff==0 and internal_condition0>0.382 and !getprop("sim/model/equipment/left-engine-cover")) {
        setprop("controls/engines/engine[0]/internal-condition", 1);
     } else {
        setprop("controls/engines/engine[0]/internal-condition", 0);
     }
 
-    if (getprop("engines/engine[1]/n2") >= 12 and internal_condition1 > 0 and fuel_rich1 < 25 and aft_boost != 0  and if_engine1_serviceable and if_engine1_cutoff==0 and internal_condition1>0.382) {
+    if (getprop("engines/engine[1]/n2") >= 12 and internal_condition1 > 0 and fuel_rich1 < 25 and aft_boost != 0  and if_engine1_serviceable and if_engine1_cutoff==0 and internal_condition1>0.382 and !getprop("sim/model/equipment/right-engine-cover")) {
        setprop("controls/engines/engine[1]/internal-condition", 1);
     } else {
        setprop("controls/engines/engine[1]/internal-condition", 0);

@@ -22,16 +22,16 @@ O Flaps = 74 kt
 <airplane mass="7500">
 
     <approach speed="73" aoa="6.0" fuel="0.5">
-        <control-setting axis="/controls/engines/engine[0]/throttle-fwd" value="0.2"/>
-        <control-setting axis="/controls/engines/engine[1]/throttle-fwd" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="0.2"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/flight/flaps" value="0.0"/>
     </approach>
 
     <cruise speed="182" alt="10000" fuel="0.8"> 
-        <control-setting axis="/controls/engines/engine[0]/throttle-fwd" value="1.0"/>
-        <control-setting axis="/controls/engines/engine[1]/throttle-fwd" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="1.0"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.96"/>
@@ -157,7 +157,7 @@ Prop diam: 2.59 m
             eng-power="668" eng-rpm="2200" alt="0"
             flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.468"/>
         <actionpt x="2.2" y="2.65" z="1.0"/>
-        <control-input axis="/controls/engines/engine[0]/throttle-fwd"
+        <control-input axis="/controls/engines/engine[0]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[0]/internal-condition"
         control="CONDLEVER"/>
@@ -179,7 +179,7 @@ Prop diam: 2.59 m
             eng-power="668" eng-rpm="2200" alt="0"
             flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.468"/>
         <actionpt x="2.2" y="-2.65" z="1.0"/>
-        <control-input axis="/controls/engines/engine[1]/throttle-fwd"
+        <control-input axis="/controls/engines/engine[1]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[1]/internal-condition"
         control="CONDLEVER"/>

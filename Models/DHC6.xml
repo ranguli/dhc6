@@ -40,7 +40,8 @@
       <object-name>Hstab</object-name>
       <object-name>rudder</object-name>
       <object-name>Elevator</object-name>
-      <object-name>Engine</object-name>
+      <object-name>LHEngine</object-name>
+      <object-name>RHEngine</object-name>
       <object-name>float.fairing</object-name>
       <object-name>wheel.fairing</object-name>
       <object-name>RHstrut</object-name>
@@ -56,6 +57,10 @@
 	  <object-name>SpinnerLRot</object-name>
 	  <object-name>SpinnerRRot</object-name>
       <object-name>Exhaust</object-name>
+      <object-name>left-pitot-tube</object-name>
+      <object-name>right-pitot-tube</object-name>
+      <object-name>frt.d1</object-name>
+      <object-name>frt.d2</object-name>
     </animation>
 
     <model>
@@ -110,6 +115,1071 @@
             </equals>
         </condition>
         <path>Aircraft/dhc6/Models/floats.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <!-- Pitot tube cover -->
+    <model>
+        <name>left-pitot-cover</name>
+        <path>Aircraft/dhc6/Models/Equipment/pitot-cover/left-pitot-cover.xml</path>
+        <offsets>
+            <x-m>-4.18611</x-m>
+            <y-m>-0.879673</y-m>
+            <z-m>0.1570</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-pitot-cover</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-pitot-cover</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-pitot-cover</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/left-pitot-cover-removable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-pitot-cover</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/left-pitot-cover-removable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-pitot-cover</tooltip-id>
+                <label>Remove pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-pitot-tube</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-pitot-cover-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-pitot-cover</property>
+                <value>true</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                <value>0.0</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/left-pitot-cover-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>put-left-pitot-cover</tooltip-id>
+                <label>Put pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <model>
+        <name>right-pitot-cover</name>
+        <path>Aircraft/dhc6/Models/Equipment/pitot-cover/right-pitot-cover.xml</path>
+        <offsets>
+            <x-m>-4.18611</x-m>
+            <y-m>0.879673</y-m>
+            <z-m>0.1570</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-pitot-cover</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-pitot-cover</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-pitot-cover</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-pitot-cover</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-pitot-cover</tooltip-id>
+                <label>Remove pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-pitot-tube</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-pitot-cover</property>
+                <value>true</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                <value>0.0</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>put-right-pitot-cover</tooltip-id>
+                <label>Put pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Left tiedown (wheels/ski) -->
+    <model>
+      <name>left-tiedown-wheels</name>
+      <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </not-equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/tiedowns/left-tiedown-wheels.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>left-tiedown-wheels</object-name>
+      <condition>
+        <property>/sim/model/equipment/left-tiedown-wheels</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>left-tiedown-wheels</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-tiedown-wheels</tooltip-id>
+                <label>Remove tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-tiedown-remove-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-tiedown-wheels</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-tiedown-remove-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/left-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-tiedown-add-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-tiedown-fasteningpoint</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/left-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-tiedown-add-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/left-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Right tiedown (wheels/ski) -->
+    <model>
+      <name>right-tiedown-wheels</name>
+      <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </not-equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/tiedowns/right-tiedown-wheels.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>right-tiedown-wheels</object-name>
+      <condition>
+        <property>/sim/model/equipment/right-tiedown-wheels</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>right-tiedown-wheels</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-tiedown-wheels</tooltip-id>
+                <label>Remove tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-tiedown-remove-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-tiedown-wheels</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-tiedown-remove-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/right-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-right-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-tiedown-add-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-tiedown-fasteningpoint</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/right-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-right-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-tiedown-add-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/right-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-right-left-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Rear tiedown (wheels/ski) -->
+    <model>
+      <name>rear-tiedown-wheels</name>
+      <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </not-equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/tiedowns/rear-tiedown-wheels.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>rear-tiedown-wheels</object-name>
+      <condition>
+        <property>/sim/model/equipment/rear-tiedown-wheels</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>rear-tiedown-wheels</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-rear-tiedown-wheels</tooltip-id>
+                <label>Remove tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>rear-tiedown-remove-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/rear-tiedown-wheels</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>rear-tiedown-remove-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/rear-tiedown-wheels</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-rear-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>rear-tiedown-add-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>rear-tiedown-fasteningpoint</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/rear-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-with-rear-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>rear-tiedown-add-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/rear-tiedown-wheels</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>secure-rear-left-tiedown-wheels</tooltip-id>
+                <label>Secure with tiedown</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Left engine cover -->
+    <model>
+        <name>left-engine-cover</name>
+        <path>Aircraft/dhc6/Models/Equipment/engine-cover/left-engine-cover.xml</path>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-engine-cover</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-engine-cover</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-engine-cover</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-engine-cover-removable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-engine-cover</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/left-engine-cover-removable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-engine-cover</tooltip-id>
+                <label>Remove engine cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>LHEngine</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-engine-cover-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-engine-cover</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/left-engine-cover-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>put-left-engine-cover</tooltip-id>
+                <label>Put engine cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Right engine cover -->
+    <model>
+        <name>right-engine-cover</name>
+        <path>Aircraft/dhc6/Models/Equipment/engine-cover/right-engine-cover.xml</path>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-engine-cover</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-engine-cover</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-engine-cover</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-engine-cover-removable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-engine-cover</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/right-engine-cover-removable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-engine-cover</tooltip-id>
+                <label>Remove engine cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>RHEngine</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-engine-cover-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-engine-cover</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+              <condition>
+                    <property>/sim/model/equipment/right-engine-cover-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>put-right-engine-cover</tooltip-id>
+                <label>Put engine cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Left chocks -->
+    <!-- FWD -->
+    <model>
+      <name>left-chock-fwd</name>
+      <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6</value>
+            </equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/chocks/left-chock-fwd.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>left-chock-fwd</object-name>
+      <condition>
+        <property>/sim/model/equipment/left-chock-fwd</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>left-chock-fwd</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-chock-fwd</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-fwd</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-chock-fwd</tooltip-id>
+                <label>Remove chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-chock-fwd-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-chock-fwd-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-chock-fwd-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-fwd-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/left-chock-fwd</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-fwd-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>place-left-chock-fwd</tooltip-id>
+                <label>Place chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- AFT -->
+    <model>
+      <name>left-chock-aft</name>
+      <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6</value>
+            </equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/chocks/left-chock-aft.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>left-chock-aft</object-name>
+      <condition>
+        <property>/sim/model/equipment/left-chock-aft</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>left-chock-aft</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/left-chock-aft</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-aft</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-chock-fwd</tooltip-id>
+                <label>Remove chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-chock-aft-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/left-chock-aft-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-chock-aft-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-aft-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/left-chock-aft</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/left-chock-aft-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>place-left-chock-aft</tooltip-id>
+                <label>Place chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Right chocks -->
+    <!-- FWD -->
+    <model>
+      <name>right-chock-fwd</name>
+      <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6</value>
+            </equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/chocks/right-chock-fwd.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>right-chock-fwd</object-name>
+      <condition>
+        <property>/sim/model/equipment/right-chock-fwd</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>right-chock-fwd</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-chock-fwd</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-fwd</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-chock-fwd</tooltip-id>
+                <label>Remove chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-chock-fwd-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-chock-fwd-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-chock-fwd-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-fwd-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/right-chock-fwd</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-fwd-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>place-right-chock-fwd</tooltip-id>
+                <label>Place chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- AFT -->
+    <model>
+      <name>right-chock-aft</name>
+      <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6</value>
+            </equals>
+      </condition>
+      <path>Aircraft/dhc6/Models/Equipment/chocks/right-chock-aft.xml</path>
+    </model>
+
+    <animation>
+      <type>select</type>
+      <object-name>right-chock-aft</object-name>
+      <condition>
+        <property>/sim/model/equipment/right-chock-aft</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>right-chock-aft</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/equipment/right-chock-aft</property>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-aft</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-chock-fwd</tooltip-id>
+                <label>Remove chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-chock-aft-hotspot</object-name>
+        <condition>
+            <property>/sim/model/equipment/right-chock-aft-addable</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-chock-aft-hotspot</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-aft-addable</property>
+                </condition>
+                <command>property-assign</command>
+                <property>sim/model/equipment/right-chock-aft</property>
+                <value>true</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <property>/sim/model/equipment/right-chock-aft-addable</property>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>place-right-chock-aft</tooltip-id>
+                <label>Place chock</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- 2D shadow -->
+    <model>
+        <name>shadow</name>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </not-equals>
+        </condition>
+        <path>Aircraft/dhc6/Models/shadow.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>shadowF</name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </equals>
+        </condition>
+        <path>Aircraft/dhc6/Models/shadowF.xml</path>
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -200,6 +1270,13 @@
         </offsets>
     </model>
 
+<!--    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+      <object-name>glass_interior</object-name>
+      <object-name>LHdoor.glass_interior</object-name>
+      <object-name>RHdoor.glass_interior</object-name>
+    </effect>-->
+
 <effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
       <object-name>fuselage</object-name>
@@ -228,13 +1305,18 @@
       <object-name>Hstab</object-name>
       <object-name>rudder</object-name>
       <object-name>Elevator</object-name>
-      <object-name>Engine</object-name>
+      <object-name>LHEngine</object-name>
+      <object-name>RHEngine</object-name>
       <object-name>float.fairing</object-name>
       <object-name>wheel.fairing</object-name>
       <object-name>FrrtStrut</object-name>
       <object-name>LHstrut</object-name>
       <object-name>RHstrut</object-name>
       <object-name>FrtStrut</object-name>
+      <object-name>left-pitot-tube</object-name>
+      <object-name>right-pitot-tube</object-name>
+      <object-name>frt.d1</object-name>
+      <object-name>frt.d2</object-name>
     </effect>
 
     <effect>
@@ -254,6 +1336,24 @@
     <condition>
           <property>sim/rendering/rembrandt/enabled</property>
     </condition>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior-glass-reflection-side</inherits-from>
+      <object-name>LHdoor.glass_interior</object-name>
+      <object-name>RHdoor.glass_interior</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior-glass-reflection-front</inherits-from>
+      <object-name>glass_interior</object-name>
+    </effect>
+
+    <effect>
+      <inherits-from>Effects/glass</inherits-from>
+      <object-name>cabin-glass_interior</object-name>
+      <object-name>RRdoor.glass_interior</object-name>
+      <object-name>Lrdoor.glass_interior</object-name>
     </effect>
 
       <animation>
@@ -887,7 +1987,7 @@
         <condition>
             <less-than> 
             <property>engines/engine[0]/n2</property>
-            <value>50.0001</value>
+            <value>62.0000</value>
             </less-than>
         </condition> 
     </animation>
@@ -899,7 +1999,7 @@
         <condition>
             <greater-than> 
             <property>engines/engine[0]/n2</property>
-            <value>50.000</value>
+            <value>28.000</value>
             </greater-than>
         </condition> 
     </animation>
@@ -909,7 +2009,7 @@
         <object-name>LpropParent</object-name>
 	<object-name>SpinnerL</object-name>
         <property>engines/engine[0]/n2</property>
-        <factor>10.0</factor>
+        <factor>8.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>-2.857</y-m>
@@ -936,7 +2036,7 @@
 	  <condition>
             <less-than> 
               <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
+              <value>50.000</value>
             </less-than>
           </condition>
 	  <interpolation>
@@ -1081,7 +2181,7 @@
         <condition>
             <less-than> 
             <property>engines/engine[1]/n2</property>
-            <value>50.0001</value>
+            <value>62.000</value>
             </less-than>
         </condition> 
     </animation>
@@ -1093,7 +2193,7 @@
         <condition>
             <greater-than> 
             <property>engines/engine[1]/n2</property>
-            <value>50.000</value>
+            <value>28.000</value>
             </greater-than>
         </condition> 
     </animation>
@@ -1103,7 +2203,7 @@
         <object-name>RpropParent</object-name>
 	<object-name>SpinnerR</object-name>
         <property>engines/engine[1]/n2</property>
-        <factor>10.0</factor>
+        <factor>8.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>2.857</y-m>
@@ -1124,13 +2224,14 @@
         <type>rotate</type>
         <object-name>LFdoor</object-name>
         <object-name>LHdoor.glass</object-name>
+        <object-name>LHdoor.glass_interior</object-name>
         <object-name>LHdoor.inner</object-name>
         <property>controls/doors/LF-door/position-norm</property>
         <factor>120</factor>
         <center>
-            <x-m>-3.900</x-m>
-            <y-m>-0.826</y-m>
-            <z-m>0.129</z-m>
+            <x-m>-3.91319</x-m>
+            <y-m>-0.825301</y-m>
+            <z-m>0.00864831</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -1143,13 +2244,14 @@
         <type>rotate</type>
         <object-name>RFdoor</object-name>
         <object-name>RHdoor.glass</object-name>
+        <object-name>RHdoor.glass_interior</object-name>
         <object-name>RHdoor.inner</object-name>
         <property>controls/doors/RF-door/position-norm</property>
         <factor>-120</factor>
         <center>
-            <x-m>-3.900</x-m>
-            <y-m>0.826</y-m>
-            <z-m>0.129</z-m>
+            <x-m>-3.91319</x-m>
+            <y-m>0.8221</y-m>
+            <z-m>0.00864831</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -1162,13 +2264,14 @@
         <type>rotate</type>
         <object-name>RRdoor</object-name>
         <object-name>RRdoor.glass</object-name>
+        <object-name>RRdoor.glass_interior</object-name>
         <object-name>RRdoor.inner</object-name>
         <property>controls/doors/RR-door/position-norm</property>
         <factor>-100</factor>
         <center>
-            <x-m>1.831</x-m>
-            <y-m>0.820</y-m>
-            <z-m>0.256</z-m>
+            <x-m>1.81359</x-m>
+            <y-m>0.830508</y-m>
+            <z-m>0.178957</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -1200,12 +2303,13 @@
         <object-name>Lrdoor-rear</object-name>
         <object-name>Lrdoor-rear.001</object-name>
         <object-name>Lrdoor.glass</object-name>
+        <object-name>Lrdoor.glass_interior</object-name>
         <property>controls/doors/LR-door-R/position-norm</property>
-        <factor>-130</factor>
+        <factor>-120</factor>
         <center>
-            <x-m>2.546</x-m>
-            <y-m>-0.758</y-m>
-            <z-m>0.019</z-m>
+            <x-m>2.55925</x-m>
+            <y-m>-0.767985</y-m>
+            <z-m>0.0391285</z-m>
         </center>
         <axis>
             <x>0</x>
@@ -1307,5 +2411,132 @@
         </action>
     </animation>
 
+    <animation>
+        <type>pick</type>
+        <object-name>fuel.caps</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+            	<condition>
+                    <and>
+                        <property>gear/gear[6]/ground-is-solid</property>
+                        <property>gear/gear[6]/wow</property>
+                    </and>
+                </condition>
+                <command>nasal</command>
+                <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
+            </binding>
+            <binding>
+            	<condition>
+                    <and>
+                        <property>gear/gear[6]/ground-is-solid</property>
+                        <property>gear/gear[6]/wow</property>
+                        <less-than>
+                        	<property>velocities/groundspeed-kt</property>
+                        	<value>1</value>
+                        </less-than>
+                    </and>
+                </condition>
+                <command>property-toggle</command>
+                <property>sim/model/equipment/ground-services/fuel-truck/enable</property>
+            </binding>
+        </action>
+    </animation>
+
+    <!-- Fuel truck controls -->
+    <model>
+        <name>fuel-truck</name>
+        <path>Aircraft/dhc6/Models/equipment/ground-services/fuel-truck/fuel-truck.ac</path>
+        <condition>
+            <equals>
+                <property>sim/model/equipment/ground-services/fuel-truck/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <animation>
+        <type>translate</type>
+        <object-name>fuel-truck</object-name>
+        <object-name>fuel-pipe-disconnected</object-name>
+        <object-name>handle</object-name>
+        <property>sim/signals/fdm-initialized</property>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </equals>
+        </condition>
+        <factor>0.5</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>fuel-pipe-disconnected</object-name>
+        <condition>
+            <property>sim/model/equipment/ground-services/fuel-truck/disconnect</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>pipe-fwd-wheels</object-name>
+        <condition>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <property>sim/model/equipment/ground-services/fuel-truck/connect-fwd</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>pipe-aft-wheels</object-name>
+        <condition>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <property>sim/model/equipment/ground-services/fuel-truck/connect-aft</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>pipe-fwd-floats</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <property>sim/model/equipment/ground-services/fuel-truck/connect-fwd</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>pipe-aft-floats</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <property>sim/model/equipment/ground-services/fuel-truck/connect-aft</property>
+            </and>
+        </condition>
+    </animation>
 
 </PropertyList>

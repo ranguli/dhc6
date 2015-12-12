@@ -6,7 +6,7 @@ Jan 2008 Syd Adams
 ************************************************************************
 -->
 
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
     <sim>
 
     <model>
@@ -14,14 +14,43 @@ Jan 2008 Syd Adams
         <blunt-nose type="bool">1</blunt-nose>
         <display-callsign type="bool">0</display-callsign>
         <remove-doors type="bool">0</remove-doors>
+
+        <equipment>
+            <left-pitot-cover type="bool">1</left-pitot-cover>
+            <right-pitot-cover type="bool">1</right-pitot-cover>
+            <left-engine-cover type="bool">1</left-engine-cover>
+            <right-engine-cover type="bool">1</right-engine-cover>
+        </equipment>
+
+        <effects>
+            <engine-spray-enabled type="bool">1</engine-spray-enabled>
+        </effects>
+
+        <!-- An exit for the walker -->
+        <map>
+            <default_exit>
+                <x-offset-m type="float">-1.5</x-offset-m>
+                <y-offset-m type="float">-1.5</y-offset-m>
+            </default_exit>
+        </map>
+
+        <aircraft-data>
+            <path>/consumables/fuel/tank/level-lbs</path>
+            <path>/consumables/fuel/tank[1]/level-lbs</path>
+            <path>/sim/model/remove-doors</path>
+            <path>/sim/weight/weight-lb</path>
+            <path>/sim/weight[1]/weight-lb</path>
+            <path>/sim/model/effects/engine-spray-enabled</path>
+        </aircraft-data>
+
     </model>
 
-	<status>production</status>
+	<status>advanced production</status>
 	<rating>
  		<FDM type="int">4</FDM>
 		<systems type="int">4</systems>
-		<cockpit type="int">4</cockpit>
-		<model type="int">4</model>
+		<cockpit type="int">5</cockpit>
+		<model type="int">5</model>
 	</rating>
 
     <view n="0">
@@ -38,7 +67,7 @@ Jan 2008 Syd Adams
                 <enabled type="bool">true</enabled>
                 <left>
                   <heading-max-deg type="double">160</heading-max-deg>
-                  <x-offset-max-m type="double">0.22</x-offset-max-m>
+                  <x-offset-max-m type="double">0.15</x-offset-max-m>
                   <x-offset-threshold-deg type="double">40</x-offset-threshold-deg>
                 </left>
                 <right>
@@ -225,8 +254,8 @@ Jan 2008 Syd Adams
                   <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
                 </left>
                 <right>
-                    <heading-max-deg type="double">100</heading-max-deg>
-                    <x-offset-max-m type="double">0.25</x-offset-max-m>
+                    <heading-max-deg type="double">160</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
                     <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
                 </right>
             </limits>
@@ -274,9 +303,13 @@ Jan 2008 Syd Adams
         <autopilot>
             <path>Aircraft/dhc6/systems/autopilot.xml</path>
         </autopilot>
-        <!--ALS Landing Lights-->
+        <!-- ALS Landing Light s-->
         <property-rule n="101">
             <path>Aircraft/dhc6/systems/als-lights.xml</path>
+        </property-rule>
+        <!-- Equipment  for securing aircraft -->
+        <property-rule n ="102">
+            <path>Aircraft/dhc6/systems/equipment.xml</path>
         </property-rule>
     </systems>
 
@@ -286,6 +319,17 @@ Jan 2008 Syd Adams
 
     <sound>
         <path>Aircraft/dhc6/Sounds/dhc6-sound.xml</path>
+
+        <click-thunder1 type="bool">false</click-thunder1>
+        <click-thunder2 type="bool">false</click-thunder2>
+        <click-thunder3 type="bool">false</click-thunder3>
+
+        <!--Lightning distance from aircraft -->
+        <lightning>
+            <dist1 type="double">0.0</dist1>
+            <dist2 type="double">0.0</dist2>
+            <dist3 type="double">0.0</dist3>
+        </lightning>
     </sound>
 
     <flaps>
@@ -304,7 +348,7 @@ Jan 2008 Syd Adams
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
     <help>
-        <title>Twin Otter</title>
+        <title>De Havilland Canada DHC-6 Twin Otter</title>
 		<key>
 			<name>Del</name>
 			<desc>Toggle thrust reverse</desc>
@@ -330,6 +374,14 @@ Jan 2008 Syd Adams
 			<desc>Select both engines</desc>
 		</key>
 		<key>
+			<name>s</name>
+			<desc>Set engine starter left</desc>
+		</key>
+		<key>
+			<name>d</name>
+			<desc>Set engine starter right</desc>
+		</key>
+		<key>
 			<name>n/N</name>
 			<desc>Increase/decrease propeller</desc>
 		</key>
@@ -341,6 +393,22 @@ Jan 2008 Syd Adams
 			<name>k/K</name>
 			<desc>Increase/decrease right condition</desc>
 		</key>
+        <key>
+            <name>f</name>
+            <desc>Toggle flashlight</desc>
+        </key>
+        <key>
+            <name>y</name>
+            <desc>Show/hide yokes</desc>
+        </key>
+        <key>
+            <name>F11</name>
+            <desc>Autopilot controls</desc>
+        </key>
+        <key>
+            <name>F12</name>
+            <desc>Radio Stack</desc>
+        </key>
 		<line>Tiller steering is controlled via rudder</line>
 		<line></line>
 		<line>To open/close the doors, just click on it</line>
@@ -430,7 +498,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 
     <menubar>
         <default>
-            <menu n="100">
+            <menu n="10">
                 <label>DHC-6</label>
                 <enabled type="bool">true</enabled>
                 <item>
@@ -444,14 +512,37 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
                     <label>Options</label>
                     <binding>
                         <command>nasal</command>
-                        <script>dialogs.options.open()</script>
+                        <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "options"}));</script>
                     </binding>
                 </item>
                 <item>
                     <label>Throttles</label>
                     <binding>
                         <command>nasal</command>
-                        <script>dialogs.throttles.open()</script>
+                        <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "throttles"}));</script>
+                    </binding>
+                </item>
+                <item>
+                    <label>Flashlight</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>dhc6.toggle_flashlight()</script>
+                    </binding>
+                </item>
+                <item>
+                    <name>fuel-truck</name>
+                    <label>Fuel Truck Controls</label>
+                    <enabled>
+                        <condition>
+                            <and>
+                                <property>gear/gear[6]/ground-is-solid</property>
+                                <property>gear/gear[6]/wow</property>
+                            </and>
+                        </condition>
+                    </enabled>
+                    <binding>
+                        <command>nasal</command>
+                        <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
                     </binding>
                 </item>
                 <item>
@@ -467,10 +558,24 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 
     <rendering>
         <als-secondary-lights>
-            <landing-light1-offset-deg type="float">-5</landing-light1-offset-deg>
             <landing-light2-offset-deg type="float">5</landing-light2-offset-deg>
         </als-secondary-lights>
     </rendering>
+
+    <flight-recorder include="systems/flightrecorder.xml"/>
+
+    <replay>
+        <buffer>
+            <hi-res-time type="double">1200</hi-res-time>
+            <medium-res-time type="double">3600</medium-res-time>
+            <low-res-time type="double">7200</low-res-time>
+        </buffer>
+    </replay>
+
+    <panel>
+        <path>Aircraft/dhc6/Panels/dhc6-panel.xml</path>
+        <visibility>false</visibility>
+    </panel>
 
 </sim>
 
@@ -518,7 +623,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
                 <value type="bool">false</value>
             </binding>
         </key>
-	<key n="106">
+	    <key n="106">
             <name>j</name>
             <desc>Push the left condition</desc>
             <repeatable type="bool">true</repeatable>
@@ -529,7 +634,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 	      <max>1</max>
             </binding>
         </key>
-	<key n="107">
+	    <key n="107">
             <name>k</name>
             <desc>Push the right condition</desc>
             <repeatable type="bool">true</repeatable>
@@ -540,7 +645,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 	      <max>1</max>
             </binding>
         </key>
-	<key n="74">
+	    <key n="74">
             <name>J</name>
             <desc>Pull the left condition</desc>
             <repeatable type="bool">true</repeatable>
@@ -551,7 +656,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 	      <max>1</max>
             </binding>
         </key>
-	<key n="75">
+	    <key n="75">
             <name>K</name>
             <desc>Pull the right condition</desc>
             <repeatable type="bool">true</repeatable>
@@ -562,7 +667,73 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 	      <max>1</max>
             </binding>
         </key>
+        <!-- Disable the following two key bindings because of the walker:
+        <key n="115">
+            <name>s</name>
+            <desc>Set engine starter left</desc>
+            <repeatable type="bool">false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>1</max>
+            </binding>
+        </key>
+        <key n="100">
+            <name>d</name>
+            <desc>Set engine starter right</desc>
+            <repeatable type="bool">false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>1</max>
+            </binding>
+        </key-->
+        <key n="102">
+            <name>f</name>
+            <desc>Toggle flashlight</desc>
+            <repeatable type="bool">false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>dhc6.toggle_flashlight()</script>
+            </binding>
+        </key>
+        <key n="121">
+            <name>y</name>
+            <desc>Show/hide yokes</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/yokes-visible</property>
+            </binding>
+        </key>
+        <key n="267">
+            <name>F11</name>
+            <desc>Autopilot Controls</desc>
+            <binding>
+                <command>nasal</command>
+                <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "autopilot-dlg"}));</script>
+            </binding>
+        </key>
+        <key n="268">
+            <name>F12</name>
+            <desc>Radio Stack</desc>
+            <binding>
+                <command>nasal</command>
+                <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "tranceivers"}));</script>
+            </binding>
+        </key>
     </keyboard>
+    <key n="66">
+        <name>Shift-B</name>
+        <desc>Parking Brakes</desc>
+        <binding>
+            <command>property-toggle</command>
+            <property>/controls/gear/parkingbrake-lever</property>
+        </binding>
+    </key>
 </input>
 
 <controls>
@@ -624,7 +795,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
                 <open type="bool">0</open>
                 <position-norm type="double">0</position-norm>
             </LR-door-F>
-	    <LR-door-R>
+           <LR-door-R>
                 <open type="bool">0</open>
                 <position-norm type="double">0</position-norm>
             </LR-door-R>
@@ -636,8 +807,10 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
         <fuel>
             <tank-selector type="int">0</tank-selector>
         </fuel>
-</controls>
-
+        <gear>
+            <parkingbrake-lever type="bool">1</parkingbrake-lever>
+        </gear>
+    </controls>
 
     <gear>
 		<gear n="0">
@@ -722,31 +895,68 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
         </locks>
     </autopilot>
 
+    <limits>
+
+        <max-flap-extension-speed>
+            <flaps>0.0</flaps>
+            <speed>108</speed>
+        </max-flap-extension-speed>
+
+        <vne>172</vne>
+
+        <max-positive-g>3.8</max-positive-g>
+        <max-negative-g>-1.52</max-negative-g>
+
+        <mass-and-balance>
+            <maximum-takeoff-mass-lbs>12500</maximum-takeoff-mass-lbs>
+            <maximum-landing-mass-lbs>12300</maximum-landing-mass-lbs>
+        </mass-and-balance>
+
+        <max-torque-ftlb>1530</max-torque-ftlb>
+
+        <max-prop-rpm>2200</max-prop-rpm>
+
+        <max-exhaust-temp>725</max-exhaust-temp>
+
+        <max-n2>100</max-n2>
+
+    </limits>
+
 
     <nasal>
         <dhc6>
-        
             <file>Aircraft/dhc6/Nasal/convert.nas</file>
             <file>Aircraft/dhc6/Nasal/Electrical.nas</file>
             <file>Aircraft/dhc6/Nasal/systems.nas</file>
-	    <file>Aircraft/dhc6/Nasal/printGforce.nas</file>
-	    <file>Aircraft/dhc6/Nasal/t5.nas</file>
-	    <file>Aircraft/dhc6/Nasal/torque.nas</file>
-	    <file>Aircraft/dhc6/Nasal/failures.nas</file>
-	    <file>Aircraft/dhc6/Nasal/direction-gyro.nas</file>
-	    <file>Aircraft/dhc6/Nasal/earth-rate.nas</file>
-	    <file>Aircraft/dhc6/Nasal/smoothAnimate.nas</file>
-	    <file>Aircraft/dhc6/Nasal/beta-range.nas</file>
-	    <file>Aircraft/dhc6/Nasal/auto-feather.nas</file>
-	    <file>Aircraft/dhc6/Nasal/spool-downgrader.nas</file>
+            <file>Aircraft/dhc6/Nasal/printGforce.nas</file>
+            <file>Aircraft/dhc6/Nasal/t5.nas</file>
+            <file>Aircraft/dhc6/Nasal/torque.nas</file>
+            <file>Aircraft/dhc6/Nasal/failures.nas</file>
+            <file>Aircraft/dhc6/Nasal/direction-gyro.nas</file>
+            <file>Aircraft/dhc6/Nasal/earth-rate.nas</file>
+            <file>Aircraft/dhc6/Nasal/smoothAnimate.nas</file>
+            <file>Aircraft/dhc6/Nasal/beta-range.nas</file>
+            <file>Aircraft/dhc6/Nasal/auto-feather.nas</file>
+            <file>Aircraft/dhc6/Nasal/spool-downgrader.nas</file>
+            <file>Aircraft/dhc6/Nasal/weather-effects.nas</file>
+            <file>Aircraft/dhc6/Nasal/als-taxi-lights.nas</file>
+            <file>Nasal/flashlight.nas</file>
+            <file>Aircraft/dhc6/Nasal/cabin-light.nas</file>
+            <file>Aircraft/dhc6/Nasal/limits.nas</file>
+            <file>Aircraft/dhc6/Nasal/ground-services.nas</file>
         </dhc6>
-    <dialogs><file>Aircraft/dhc6/Nasal/dialogs.nas</file></dialogs>
+        <dialogs>
+            <file>Aircraft/dhc6/Nasal/dialogs.nas</file>
+        </dialogs>
         <m877>
             <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
         </m877>
-	<tyresmoke>
+	   <tyresmoke>
             <file>Aircraft/dhc6/Nasal/tyresmoke.nas</file>
         </tyresmoke>
+        <ELT>
+            <file>Aircraft/dhc6/Models/Flightdeck/Instruments/ELT/ELTmessage.nas</file>
+        </ELT>
 	   <!--    <garmin196>
           <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
         </garmin196>-->
