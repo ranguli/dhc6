@@ -2446,7 +2446,7 @@
     <!-- Fuel truck controls -->
     <model>
         <name>fuel-truck</name>
-        <path>Aircraft/dhc6/Models/equipment/ground-services/fuel-truck/fuel-truck.ac</path>
+        <path>Aircraft/dhc6/Models/Equipment/ground-services/fuel-truck/fuel-truck.ac</path>
         <condition>
             <equals>
                 <property>sim/model/equipment/ground-services/fuel-truck/enable</property>

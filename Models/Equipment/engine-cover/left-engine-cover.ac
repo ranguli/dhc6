@@ -7,7 +7,7 @@ kids 5
 OBJECT poly
 name "left-engine-cover"
 loc -2.50379 0.539458 2.95177
-texture "E:/FlightGear Aircraft/dhc6/Models/Equipment/pitot-cover/pitot-cover.png"
+texture "rbf.png"
 crease 139.000000
 numvert 8
 0.00219131 0.0765018 -0.118246
@@ -1432,7 +1432,7 @@ kids 0
 OBJECT poly
 name "left-engine-cover"
 loc -2.50821 0.601969 2.86768
-texture "E:/FlightGear Aircraft/dhc6/Models/Equipment/pitot-cover/pitot-cover.png"
+texture "rbf.png"
 crease 110.000000
 numvert 33
 0.0198021 0.00259876 0.00627398

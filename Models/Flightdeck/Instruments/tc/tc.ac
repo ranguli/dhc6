@@ -4907,7 +4907,7 @@ name "Ref"
 loc 0.00285967 -0.00769205 0
 data 6
 TB.Ref
-texture "E:/FlightGear Aircraft/707/Models/Cockpit/Instruments/turn/turn.png"
+texture "tc.png"
 crease 30.000002
 numvert 8
 0 -7.53477e-005 -0.00927546
@@ -4939,7 +4939,7 @@ name "Ball"
 loc 0.00272694 -0.000100886 0
 data 7
 TB.Ball
-texture "E:/FlightGear Aircraft/707/Models/Cockpit/Instruments/turn/turn.png"
+texture "tc.png"
 crease 30.000002
 numvert 9
 -1.39698e-009 -0.0148957 -0.00713611
@@ -4997,7 +4997,7 @@ refs 3
 kids 0
 OBJECT poly
 name "backlight"
-loc 0.187606 0.200011 0.199968
+loc 1.18761 1.20001 1.19997
 data 9
 backlight
 crease 30.000002
@@ -5680,7 +5680,7 @@ refs 3
 kids 0
 OBJECT poly
 name "vitre"
-loc 0.206159 0.2 0.2
+loc 1.20616 1.2 1.2
 data 5
 vitre
 crease 30.000002
