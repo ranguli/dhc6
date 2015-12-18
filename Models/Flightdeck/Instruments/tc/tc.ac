@@ -4997,7 +4997,7 @@ refs 3
 kids 0
 OBJECT poly
 name "backlight"
-loc 1.18761 1.20001 1.19997
+loc 0.18761 0.20001 0.19997
 data 9
 backlight
 crease 30.000002
@@ -5680,7 +5680,7 @@ refs 3
 kids 0
 OBJECT poly
 name "vitre"
-loc 1.20616 1.2 1.2
+loc 0.20616 0.2 0.2
 data 5
 vitre
 crease 30.000002
