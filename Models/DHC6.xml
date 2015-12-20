@@ -1838,14 +1838,8 @@
           <object-name>Lprop.1</object-name>
           <type>rotate</type>
           <property>engines/engine[0]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -1863,13 +1857,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[0]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than>
               <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -1886,14 +1880,8 @@
           <object-name>Lprop.2</object-name>
           <type>rotate</type>
           <property>engines/engine[0]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -1911,13 +1899,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[0]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than> 
               <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -1934,14 +1922,8 @@
           <object-name>Lprop.3</object-name>
           <type>rotate</type>
           <property>engines/engine[0]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -1959,13 +1941,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[0]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than> 
               <property>engines/engine[0]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2009,7 +1991,7 @@
         <object-name>LpropParent</object-name>
 	<object-name>SpinnerL</object-name>
         <property>engines/engine[0]/n2</property>
-        <factor>8.0</factor>
+        <factor>-8.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>-2.857</y-m>
@@ -2033,14 +2015,8 @@
           <object-name>Rprop.1</object-name>
           <type>rotate</type>
           <property>engines/engine[1]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[1]/n2</property>
-              <value>50.000</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2058,13 +2034,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[1]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than> 
               <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2081,14 +2057,8 @@
           <object-name>Rprop.2</object-name>
           <type>rotate</type>
           <property>engines/engine[1]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2106,13 +2076,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[1]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than> 
               <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2129,14 +2099,8 @@
           <object-name>Rprop.3</object-name>
           <type>rotate</type>
           <property>engines/engine[1]/n2</property>
-	  <condition>
-            <less-than> 
-              <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
-            </less-than>
-          </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-61</dep></entry>
+            <entry><ind>0</ind><dep>61</dep></entry>
             <entry><ind>50</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2154,13 +2118,13 @@
           <type>rotate</type>
           <property>controls/engines/engine[1]/propeller-pitch</property>
 	  <condition>
-            <less-than> 
+            <greater-than> 
               <property>engines/engine[1]/n2</property>
-              <value>50.0001</value>
-            </less-than>
+              <value>30</value>
+            </greater-than>
           </condition>
 	  <interpolation>
-            <entry><ind>0</ind><dep>-20</dep></entry>
+            <entry><ind>0</ind><dep>20</dep></entry>
             <entry><ind>1</ind><dep>0</dep></entry>
         </interpolation>
 	  <axis>
@@ -2203,7 +2167,7 @@
         <object-name>RpropParent</object-name>
 	<object-name>SpinnerR</object-name>
         <property>engines/engine[1]/n2</property>
-        <factor>8.0</factor>
+        <factor>-8.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>2.857</y-m>
