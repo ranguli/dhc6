@@ -295,19 +295,36 @@
 			</item>
 		
 			<item>
-				<name>Boost pumps</name>
+				<name>Forward boost pump</name>
 				<value>OFF</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.0702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
 				<condition>
-					<and>
-						<equals>
-							<property>/controls/electric/aft-boost-pump</property>
-							<value>0</value>
-						</equals>
-						<equals>
-							<property>/controls/electric/fwd-boost-pump</property>
-							<value>0</value>
-						</equals>
-					</and>
+					<equals>
+						<property>/controls/electric/fwd-boost-pump</property>
+						<value>0</value>
+					</equals>
+				</condition>
+			</item>
+
+			<item>
+				<name>Rear boost pump</name>
+				<value>OFF</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.1702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
+				<condition>
+					<equals>
+						<property>/controls/electric/aft-boost-pump</property>
+						<value>0</value>
+					</equals>
 				</condition>
 			</item>
 		
@@ -776,19 +793,36 @@
 			</item>
 			
 			<item>
-				<name>Boost pumps</name>
+				<name>Forward boost pump</name>
 				<value>ON</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.0702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
 				<condition>
-					<and>
-						<equals>
-							<property>/controls/electric/aft-boost-pump</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>/controls/electric/fwd-boost-pump</property>
-							<value>1</value>
-						</equals>
-					</and>
+					<equals>
+						<property>/controls/electric/fwd-boost-pump</property>
+						<value>1</value>
+					</equals>
+				</condition>
+			</item>
+
+			<item>
+				<name>Rear boost pump</name>
+				<value>ON</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.1702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
+				<condition>
+					<equals>
+						<property>/controls/electric/aft-boost-pump</property>
+						<value>1</value>
+					</equals>
 				</condition>
 			</item>
 	
@@ -2292,19 +2326,36 @@
 			</item>
 							
 			<item>
-				<name>Boost pumps</name>
+				<name>Forward boost pump</name>
 				<value>OFF</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.0702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
 				<condition>
-					<and>
-						<equals>
-							<property>/controls/electric/aft-boost-pump</property>
-							<value>0</value>
-						</equals>
-						<equals>
-							<property>/controls/electric/fwd-boost-pump</property>
-							<value>0</value>
-						</equals>
-					</and>
+					<equals>
+						<property>/controls/electric/fwd-boost-pump</property>
+						<value>0</value>
+					</equals>
+				</condition>
+			</item>
+
+			<item>
+				<name>Rear boost pump</name>
+				<value>OFF</value>
+				<marker>
+					<x-m>3.9107</x-m>
+					<y-m>-0.1702</y-m>
+					<z-m>0.1653</z-m>
+					<scale>1.0000</scale>
+				</marker>
+				<condition>
+					<equals>
+						<property>/controls/electric/aft-boost-pump</property>
+						<value>0</value>
+					</equals>
 				</condition>
 			</item>
 	
