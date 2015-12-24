@@ -27,9 +27,38 @@
   </params>
 
   <animation>
+    <object-name>KnobMode</object-name>
+    <object-name>Ident</object-name>
+    <object-name>Dial1</object-name>
+    <object-name>Knob1</object-name>
+    <object-name>Dial10</object-name>
+    <object-name>Knob10</object-name>
+    <object-name>Dial100</object-name>
+    <object-name>Knob100</object-name>
+    <object-name>Dial1000</object-name>
+    <object-name>Knob1000</object-name>
+    <object-name>face</object-name>
+    <object-name>face-int</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
     <type>range</type>
     <min-m>  0 </min-m>
     <max-m> 45 </max-m>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+          <object-name>vitre</object-name>
   </animation>
 
       <animation>
@@ -84,7 +113,7 @@
       <object-name>KnobMode</object-name>
       <object-name>face</object-name>
       <object-name>face-int</object-name>
-      <object-name>vitre</object-name>
+      <!--object-name>vitre</object-name-->
     </effect>
 
   <effect>
@@ -101,45 +130,16 @@
       <object-name>KnobMode</object-name>
       <object-name>face</object-name>
       <object-name>face-int</object-name>
-      <object-name>vitre</object-name>
+      <!--object-name>vitre</object-name-->
     </effect>
 
-  <animation>
-    <object-name>KnobMode</object-name>
-    <object-name>Ident</object-name>
-    <object-name>Dial1</object-name>
-    <object-name>Knob1</object-name>
-    <object-name>Dial10</object-name>
-    <object-name>Knob10</object-name>
-    <object-name>Dial100</object-name>
-    <object-name>Knob100</object-name>
-    <object-name>Dial1000</object-name>
-    <object-name>Knob1000</object-name>
-    <object-name>face</object-name>
-    <object-name>face-int</object-name>
-
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-          <object-name>vitre</object-name>
-  </animation>
-
-    <effect>
+    <!--effect>
        <inherits-from>Effects/model-transparent</inherits-from>
           <object-name>vitre</object-name>
       <condition>
           <property>sim/rendering/rembrandt/enabled</property>
       </condition>
-   </effect> 
+   </effect--> 
 
   <animation>
     <type>material</type>
