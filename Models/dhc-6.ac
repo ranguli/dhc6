@@ -12835,7 +12835,7 @@ refs 4
 kids 0
 OBJECT poly
 name "right-pitot-tube"
-loc 2.21635 1.50882 -0.0132542
+loc 2.21635 1.40882 -0.0132495
 texture "paint2-R.png"
 crease 45.000000
 numvert 240
