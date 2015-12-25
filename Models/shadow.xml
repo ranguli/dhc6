@@ -17,7 +17,10 @@
 		<inherits-from>Effects/shadow</inherits-from>
 		<object-name>shadow</object-name>
 		<condition>
-			<property>/sim/rendering/shaders/skydome</property>
+			<equals>
+				<property>/sim/replay/replay-state</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</effect>
 
@@ -67,12 +70,18 @@
 		<type>translate</type>
 		<object-name>shadow</object-name>
 		<condition>
-			<not>
-				<property>/sim/rendering/shaders/skydome</property>
-			</not>
+			<or>
+				<not>
+					<property>/sim/rendering/shaders/skydome</property>
+				</not>
+				<equals>
+					<property>/sim/replay/replay-state</property>
+					<value>1</value>
+				</equals>
+			</or>
 		</condition>
-		<property>/position/altitude-agl-ft</property>
-		<factor>-0.3048</factor>
+		<property>/position/gear-agl-m</property>
+		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
 			<y-m>0</y-m>
@@ -84,5 +93,5 @@
 			<z>1</z>
 		</axis>
 	</animation>
- 
+
 </PropertyList>

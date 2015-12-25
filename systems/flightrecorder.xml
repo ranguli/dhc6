@@ -666,5 +666,15 @@
             <property type="string">/sim/model/equipment/right-chock-aft-addable</property>
             <interpolation>linear</interpolation>
         </signal>
+        <signal>
+            <type>float</type>
+            <property type="string">/position/gear-agl-m</property>
+            <interpolation>linear</interpolation>
+        </signal>
+        <signal>
+            <type>float</type>
+            <property type="string">/position/gear-agl-ft</property>
+            <interpolation>linear</interpolation>
+        </signal>
     </config>
 </PropertyList>
