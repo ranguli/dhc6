@@ -888,6 +888,11 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
     <comm n="1">
         <serviceable type="bool">1</serviceable>
     </comm>
+    <elt>
+        <armed type="bool">false</armed>
+        <on type="bool">true</on>
+        <test type="bool">false</test>
+    </elt>
     </instrumentation>
 
     <engines>
