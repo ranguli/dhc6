@@ -182,12 +182,28 @@
 	</animation>
 
 	<animation>
+		<type>rotate</type>
+		<object-name>AI.knob</object-name>
+		<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+		<factor>10</factor>
+		<center>
+			<x-m>0.004016</x-m>
+			<y-m>-0.036714</y-m>
+			<z-m>-0.03615</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>AI.knob</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
@@ -197,15 +213,9 @@
 				<wrap>0</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>AI.knob</object-name>
 		<action>
 			<button>1</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
@@ -215,11 +225,6 @@
 				<wrap>0</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>AI.knob</object-name>
 		<action>
 			<button>3</button>
 			<binding>
@@ -231,11 +236,6 @@
 				<wrap>0</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>AI.knob</object-name>
 		<action>
 			<button>4</button>
 			<binding>
@@ -247,6 +247,14 @@
 				<wrap>0</wrap>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+        		<tooltip-id>horizon-offset</tooltip-id>
+        		<label>Horizon offset: %.1f deg</label>
+				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+			</binding>
+		</hovered>
 	</animation>
 
 	<!-- TEXT OSG -->

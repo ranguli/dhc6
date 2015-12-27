@@ -31,9 +31,10 @@
           <type>material</type>
           <object-name>Base</object-name>
           <object-name>Tornillos</object-name>
-          <object-name>Light-ON</object-name>
+          <!--object-name>Light-ON</object-name-->
           <object-name>Light-OFF</object-name>
           <object-name>Switch</object-name>
+          <object-name>Switch.test</object-name>
           <object-name>BaseSwitch</object-name>
           <emission>
             <red>0.381924</red>
@@ -50,6 +51,7 @@
           <object-name>Light-ON</object-name>
           <object-name>Light-OFF</object-name>
 		<object-name>Switch</object-name>
+          <object-name>Switch.test</object-name>
 		<object-name>BaseSwitch</object-name>
     </effect>
 
@@ -60,6 +62,7 @@
           <object-name>Light-ON</object-name>
           <object-name>Light-OFF</object-name>
         <object-name>Switch</object-name>
+          <object-name>Switch.test</object-name>
         <object-name>BaseSwitch</object-name>
     </effect>
 
@@ -80,7 +83,7 @@
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>sim/model/click</property>
+        <property>sim/sound/click2</property>
       </binding>
     </action>
     <hovered>
@@ -123,18 +126,27 @@
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>sim/model/click</property>
+        <property>sim/sound/click2</property>
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/instrumentation/elt/test</property>
+          <property>instrumentation/elt/test</property>
           <value type="bool">false</value>
         </binding>
         <binding>
           <command>property-assign</command>
           <property>instrumentation/elt/armed</property>
+          <value type="bool">false</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>instrumentation/elt/on</property>
           <value type="bool">true</value>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/sound/click2</property>
         </binding>
       </mod-up>
     </action>
@@ -144,33 +156,39 @@
         <tooltip-id>elt-test</tooltip-id>
         <label>ELT test: %s</label>
         <property>instrumentation/elt/test</property>
-        <mapping>on-off</mapping>
+         <mapping>nasal</mapping>
+        <script>
+          var m = getprop("instrumentation/elt/test");
+          if ( m ) return 'ON';
+          return 'OFF';
+        </script>
       </binding>
     </hovered>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>select</type>
     <object-name>Switch</object-name>
-    <factor>-15</factor>
-    <property>instrumentation/elt/test</property>
-    <center>
-      <x-m>0.003</x-m>
-      <y-m>0.000</y-m>
-      <z-m>0.000</z-m>
-    </center>
-    <axis>
-      <x> 0</x>
-      <y>-1</y>
-      <z> 0</z>
-    </axis>    
+    <condition>
+      <not>
+        <property>instrumentation/elt/test</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Switch.test</object-name>
+    <condition>
+      <property>instrumentation/elt/test</property>
+    </condition>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Switch</object-name>
     <property>instrumentation/elt/on</property>
-    <factor>15</factor>
+    <factor>10</factor>
     <center>
       <x-m>0.003</x-m>
       <y-m>0.000</y-m>

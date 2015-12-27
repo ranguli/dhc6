@@ -40,6 +40,15 @@ setlistener("instrumentation/elt/armed", func(alrm) {
 	}
 });
 
+#Print a message when pressing the TEST button
+setlistener("instrumentation/elt/test", func(tst) {
+    if (getprop("instrumentation/elt/test")) {
+        var help_string = "ELT Message: " ~ aircraft_id ~ ", testing functionality of the Emergency Locator Transmitter";
+        setprop("/sim/multiplay/chat", help_string);
+        print(help_string);
+    }
+});
+
 setlistener("sim/signals/fdm-initialized", func {
     print("Emergency Locator Transmitter (ELT) initialized");
 });

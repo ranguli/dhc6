@@ -7,6 +7,7 @@
 	<animation>
 		<object-name>RALT.face</object-name>
 		<object-name>DH.lamp</object-name>
+		<object-name>DH.lamp.lit</object-name>
 		<object-name>DH.bug</object-name>
 		<object-name>RALT.flag</object-name>
 		<object-name>RALT.needle</object-name>
@@ -31,6 +32,7 @@
 	<animation>
 		<type>material</type>
 		<object-name>DH.lamp</object-name>
+		<!--object-name>DH.lamp.lit</object-name-->
 		<object-name>backlight</object-name>
 		<object-name>mount</object-name>
 		<emission>
@@ -66,6 +68,7 @@
 		<inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
 		<object-name>DH.bug</object-name>
 		<object-name>DH.lamp</object-name>
+		<object-name>DH.lamp.lit</object-name>
 		<object-name>RALT.face</object-name>
 		<object-name>RALT.flag</object-name>
 		<object-name>RALT.knob</object-name>
@@ -79,6 +82,7 @@
 		<inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
 		<object-name>DH.bug</object-name>
 		<object-name>DH.lamp</object-name>
+		<object-name>DH.lamp.lit</object-name>
 		<object-name>RALT.face</object-name>
 		<object-name>RALT.flag</object-name>
 		<object-name>RALT.knob</object-name>
@@ -118,7 +122,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>DH.lamp</object-name>
+		<object-name>DH.lamp.lit</object-name>
 		<condition>
 			<less-than>
 				<property>position/altitude-agl-ft</property>
@@ -171,6 +175,23 @@
 		</axis>
 	</animation>
 
+	<animation>
+		<type>rotate</type>
+		<object-name>RALT.knob</object-name>
+		<property>instrumentation/altimeter/decision-height</property>
+		<factor>0.2</factor>
+		<center>
+			<x-m>0.00408726</x-m>
+			<y-m>0.0275315</y-m>
+			<z-m>-0.027663</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
 	<!-- Hotspots-->
 	<animation>
 		<type>pick</type>
@@ -178,7 +199,6 @@
 		<action>
 			<button>0</button>
 				<repeatable>true</repeatable>
-				<interval-sec>0.2</interval-sec>
 			 <binding>
 				<condition>
 					<less-than>
@@ -208,15 +228,9 @@
 				<wrap>false</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>RALT.knob</object-name>
 		<action>
 			<button>1</button>
 				<repeatable>true</repeatable>
-				<interval-sec>0.2</interval-sec>
 			<binding>
 				<condition>
 					<less-than>
@@ -246,11 +260,6 @@
 				<wrap>false</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>RALT.knob</object-name>
 		<action>
 			<button>3</button>
 			 <binding>
@@ -262,42 +271,6 @@
 				</condition>
 				<command>property-adjust</command>
 				<property>instrumentation/altimeter/decision-height</property>
-				<step>10</step>
-				<min>0</min>
-				<max>1000</max>
-				<wrap>false</wrap>
-			</binding>
-			 <binding>
-				<condition>
-					<greater-than>
-						<property>instrumentation/altimeter/decision-height</property>
-						<value>490</value>
-					</greater-than>
-				</condition>
-				<command>property-adjust</command>
-				<property>instrumentation/altimeter/decision-height</property>
-				<step>100</step>
-				<min>0</min>
-				<max>1000</max>
-				<wrap>false</wrap>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>RALT.knob</object-name>
-		<action>
-			<button>4</button>
-			 <binding>
-				<condition>
-					<less-than>
-						<property>instrumentation/altimeter/decision-height</property>
-						<value>500</value>
-					</less-than>
-				</condition>
-				<command>property-adjust</command>
-				<property>instrumentation/altimeter/decision-height</property>
 				<step>-10</step>
 				<min>0</min>
 				<max>1000</max>
@@ -318,6 +291,60 @@
 				<wrap>false</wrap>
 			</binding>
 		</action>
+		<action>
+			<button>4</button>
+			 <binding>
+				<condition>
+					<less-than>
+						<property>instrumentation/altimeter/decision-height</property>
+						<value>500</value>
+					</less-than>
+				</condition>
+				<command>property-adjust</command>
+				<property>instrumentation/altimeter/decision-height</property>
+				<step>10</step>
+				<min>0</min>
+				<max>1000</max>
+				<wrap>false</wrap>
+			</binding>
+			 <binding>
+				<condition>
+					<greater-than>
+						<property>instrumentation/altimeter/decision-height</property>
+						<value>490</value>
+					</greater-than>
+				</condition>
+				<command>property-adjust</command>
+				<property>instrumentation/altimeter/decision-height</property>
+				<step>100</step>
+				<min>0</min>
+				<max>1000</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+        		<tooltip-id>decision-height</tooltip-id>
+        		<label>Decision height: %.0f ft AGL</label>
+				<property>instrumentation/altimeter/decision-height</property>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>RALT.face</object-name>
+		<object-name>mount</object-name>
+		<visible>true</visible>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+        		<tooltip-id>agl-ft</tooltip-id>
+        		<label>Altitude above ground:% 3dft</label>
+				<property>position/gear-agl-ft</property>
+			</binding>
+		</hovered>
 	</animation>
 
 	<!-- TEXT OSG -->
