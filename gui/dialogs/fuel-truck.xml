@@ -90,8 +90,16 @@
 				<enable>
 					<and>
 						<property>sim/model/equipment/ground-services/fuel-truck/disconnect</property>
-                        <property>gear/gear[6]/ground-is-solid</property>
-                        <property>gear/gear[6]/wow</property>
+						<or>
+							<and>
+                        		<property>gear/gear[6]/ground-is-solid</property>
+                        		<property>gear/gear[6]/wow</property>
+                        	</and>
+							<and>
+                        		<property>gear/gear[1]/ground-is-solid</property>
+                        		<property>gear/gear[1]/wow</property>
+                        	</and>
+                    	</or>
                         <less-than>
                         	<property>velocities/groundspeed-kt</property>
                         	<value>1</value>
@@ -225,6 +233,19 @@
 
 						} else
 							screen.log.write("Please enable and connect the fuel truck first!", 1, 0, 0);
+					</script>
+				</binding>
+			</button>
+
+			<button>
+				<legend>Stop!</legend>
+				<padding>5</padding>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("/sim/model/equipment/ground-services/fuel-truck/transfer", 0);
+						setprop("/sim/model/equipment/ground-services/fuel-truck/clean", 0);
+						screen.log.write("Operation stopped!", 1, 0.4, 0);
 					</script>
 				</binding>
 			</button>
