@@ -14,6 +14,8 @@ Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#2194
         <flight-model>yasim</flight-model>
         <aero>dhc6F</aero>
         <type type="string">seaplane</type>
+        <variant-of>dhc6</variant-of>
+
         <fuel-fraction>0.5</fuel-fraction>
         <startup>
             <splash-texture>Aircraft/dhc6/dhc6F-splash1.png</splash-texture>
@@ -34,7 +36,7 @@ Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#2194
                 <right-chock-aft type="bool">0</right-chock-aft>
             </equipment>
         </model>
-    
+
     <hitches>
         <aerotow>
             <tow>

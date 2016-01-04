@@ -13,6 +13,8 @@ Jan 2008 Syd Adams
         <flight-model>yasim</flight-model>
         <aero>dhc6S</aero>
         <fuel-fraction>0.5</fuel-fraction>
+        <variant-of>dhc6</variant-of>
+        
         <startup>
             <splash-texture>Aircraft/dhc6/dhc6S-splash1.png</splash-texture>
             <splash-texture>Aircraft/dhc6/dhc6S-splash2.png</splash-texture>
@@ -32,7 +34,7 @@ Jan 2008 Syd Adams
                 <right-chock-aft type="bool">0</right-chock-aft>
             </equipment>
         </model>
-    
+
     <hitches>
         <aerotow>
             <tow>
