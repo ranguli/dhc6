@@ -727,7 +727,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
             <desc>Autopilot Controls</desc>
             <binding>
                 <command>nasal</command>
-                <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "autopilot-dlg"}));</script>
+                <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "autopilot"}));</script>
             </binding>
         </key>
         <key n="268">
