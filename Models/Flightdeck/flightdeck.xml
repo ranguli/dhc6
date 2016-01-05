@@ -682,17 +682,6 @@
         </offsets>
     </model>
 
-
-    <!--model>
-        <name>Pilot ADF</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/adf/adf.xml</path>
-        <offsets>
-            <x-m>-3.933</x-m>
-            <y-m>-0.634</y-m>
-            <z-m>0.247</z-m> 
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model-->
     <model>
         <name>Pilot TC</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/tc/tc.xml</path>
@@ -869,16 +858,6 @@
         </offsets>
     </model>
 
-    <!--model>
-        <name>CoPilot ADF</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/adf/adf.xml</path>
-        <offsets>
-            <x-m>-3.933</x-m>
-            <y-m>0.421</y-m>
-            <z-m>0.247</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model-->
     <model>
         <name>CoPilot TC</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/tc/tc.xml</path>
