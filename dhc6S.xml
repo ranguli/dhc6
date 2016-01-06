@@ -22,21 +22,27 @@ O Flaps = 74 kt
 <airplane mass="7500">
 
     <approach speed="73" aoa="6.0" fuel="0.5">
-        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="0.2"/>
-        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="0.30"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="0.30"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
         <control-setting axis="/controls/flight/flaps" value="0.0"/>
+        <solve-weight idx="0" weight="360"/>
+        <solve-weight idx="1" weight="3150"/>
     </approach>
 
-    <cruise speed="182" alt="10000" fuel="0.8"> 
-        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="1.0"/>
-        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="1.0"/>
+    <cruise speed="176" alt="10000" fuel="0.8">
+        <control-setting axis="/controls/engines/engine[0]/internal-throttle-fwd" value="1"/>
+        <control-setting axis="/controls/engines/engine[1]/internal-throttle-fwd" value="1"/>
         <control-setting axis="/controls/engines/engine[0]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[1]/internal-condition" value="1.0"/>
         <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.96"/>
         <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.96"/>
         <control-setting axis="/controls/flight/flaps" value="0.0"/>
+        <solve-weight idx="0" weight="360"/>
+        <solve-weight idx="1" weight="3350"/>
     </cruise>
 
     <cockpit x="2.8" y="0.3" z="0.745"/>
@@ -55,22 +61,18 @@ O Flaps = 74 kt
     <fuselage ax="2.497"  ay="-2.857" az="0.858" bx="-0.410" by="-2.857" bz="1.012"
         width="0.6" taper="0.2" midpoint="0.2" cy="1.5" cx="1.5" />
 
-
-
-    <wing x="0.10" y="0.80" z="1.0" length="9.0" chord="2.0"
-        sweep="0" dihedral="3" taper="1"  camber="0.24" incidence="2.5">
+    <wing x="0.0" y="0.80" z="1.0" length="9.0" chord="2.0"
+        sweep="0" dihedral="3" taper="1"  incidence="2.5" idrag="1.0" camber="0.24">
         <stall aoa="10" width="6" peak="1.5"/>
-        <flap0 start="0" end=".90" lift="1.6" drag="3.2"/>
-        <flap1 start=".6" end=".90" lift="1.3" drag="1.3"/>
+        <flap0 start="0" end="0.90" lift="1.6" drag="3.2"/>
+        <flap1 start="0.6" end="0.90" lift="1.2" drag="1.2"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-speed control="FLAP0" transition-time="20"/>
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-        <control-output control="FLAP1" side="left"
-        prop="/surface-positions/left-aileron-pos-norm"/>
-        <control-output control="FLAP1" side="right"
-        prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
     </wing>
 
     <hstab x="-7.47" y="0.08" z="1.186" length="3.15" chord="1.4"
@@ -103,15 +105,26 @@ O Flaps = 74 kt
         <control-speed control="FLAP1" transition-time="2"/>
     </vstab>
 
-<!-- rear doors-->
+<!-- rear doors pasenger-->
     <vstab x="0" y="0" z="0" length="0.001" chord="0.001">
         <stall aoa="16" width="4" peak="1.5"/>
         <flap0 start="0" end="0.5" lift="0" drag="0"/>
-        <control-input axis="/controls/doors/LR-door/open" control="FLAP0"/>
-        <control-output control="FLAP0" prop="/controls/doors/LR-door/position-norm"/>
+        <control-input axis="/controls/doors/LR-door-F/open" control="FLAP0"/>
+        <control-output control="FLAP0" prop="/controls/doors/LR-door-F/position-norm"/>
         <control-speed control="FLAP0" transition-time="2"/>
         <control-input axis="/controls/doors/RR-door/open" control="FLAP1"/>
         <control-output control="FLAP1" prop="/controls/doors/RR-door/position-norm"/>
+        <control-speed control="FLAP1" transition-time="2"/>
+        </vstab> 
+<!-- rear door baggage -->       
+    <vstab x="0" y="0" z="0" length="0.001" chord="0.001">
+        <stall aoa="16" width="4" peak="1.5"/>
+        <flap0 start="0" end="0.5" lift="0" drag="0"/>
+        <control-input axis="/controls/doors/LR-door-R/open" control="FLAP0"/>
+        <control-output control="FLAP0" prop="/controls/doors/LR-door-R/position-norm"/>
+        <control-speed control="FLAP0" transition-time="2"/>
+        <control-input axis="/controls/doors/Baggage.door/open" control="FLAP1"/>
+        <control-output control="FLAP1" prop="/controls/doors/Baggage.door/position-norm"/>
         <control-speed control="FLAP1" transition-time="2"/>
     </vstab>
 
@@ -155,7 +168,7 @@ Prop diam: 2.59 m
         fine-stop="0.25" coarse-stop="4.0">
         <turbine-engine
             eng-power="668" eng-rpm="2200" alt="0"
-            flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.468"/>
+            flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="2.65" z="1.0"/>
         <control-input axis="/controls/engines/engine[0]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
@@ -177,7 +190,7 @@ Prop diam: 2.59 m
         fine-stop="0.25" coarse-stop="4.0">
         <turbine-engine
             eng-power="668" eng-rpm="2200" alt="0"
-            flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.468"/>
+            flat-rating="668" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="-2.65" z="1.0"/>
         <control-input axis="/controls/engines/engine[1]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
@@ -191,6 +204,7 @@ Prop diam: 2.59 m
         control="PROPFEATHER"/>
     </propeller>
 
+
     <thruster x="2.2" y="2.65" z="1.0" vx="-1" vy="0" vz="0" thrust="1600">
         <control-input axis="/controls/engines/engine[0]/internal-throttle-rvrs" control="THROTTLE"/>
         <control-output control="THROTTLE" prop="engines/engine[0]/reverse"/>
@@ -203,13 +217,12 @@ Prop diam: 2.59 m
         <control-speed control="THROTTLE" transition-time="2"/>
     </thruster>
 
-
-    <ballast x="5" y="0" z="1" mass="2078"/>
-	
     <weight x="2.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
     <weight x="0.0" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
 
-  <hitch name="aerotow" x="-2.5" y="0" z="-0.85"  force-is-calculated-by-other="1">
+    <ballast x="5" y="0" z="-2.5" mass="2078"/>
+
+    <hitch name="aerotow" x="-2.5" y="0" z="-0.85"  force-is-calculated-by-other="1">
   <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
   <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
 </hitch>

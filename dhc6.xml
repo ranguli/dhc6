@@ -47,14 +47,21 @@ O Flaps = 74 kt
 
     <cockpit x="2.8" y="0.3" z="0.745"/>
 
-    <fuselage ax="6.356"  ay="0" az="-0.237" bx="3.509" by="0" bz="0.069"
-        width="1.8" taper="0.2" midpoint="1.0" cy="1.1" cx="1.1" />
-    <fuselage ax="3.509"  ay="0" az="0.069" bx="-1.017" by="0" bz="0.069"
-        width="1.8" taper="1.0" midpoint="0.75" cy="1.1" cx="1.1" />
-    <fuselage ax="-1.017"  ay="0" az="0.069" bx="-8.805" by="0" bz="0.352"
-        width="1.8" taper="0.0" midpoint="0.0" cy="1.1" cx="1.1" />
+    <fuselage ax="6.338"  ay="0" az="-0.185" bx="3.609" by="0" bz="0.111"
+        width="1.8" taper="0.2" midpoint="1.0" cy="1.1" cx="1.1"/>
+    <fuselage ax="3.609"  ay="0" az="0.111" bx="-2.470" by="0" bz="0.111"
+        width="1.8" taper="1.0" midpoint="0.5" cy="1.1" cx="1.1" />
+    <fuselage ax="-2.470"  ay="0" az="0.111" bx="-8.811" by="0" bz="0.30"
+        width="1.8" taper="0.1" midpoint="0.0" cy="1.1" cx="1.1" />
 
-    <wing x="0.0" y="0.880" z="1.0" length="9.0" chord="2.0"
+
+    <fuselage ax="2.497"  ay="2.857" az="0.858" bx="-0.410" by="2.857" bz="1.012"
+        width="0.6" taper="0.2" midpoint="0.2" cy="1.5" cx="1.5" />
+
+    <fuselage ax="2.497"  ay="-2.857" az="0.858" bx="-0.410" by="-2.857" bz="1.012"
+        width="0.6" taper="0.2" midpoint="0.2" cy="1.5" cx="1.5" />
+
+    <wing x="0.0" y="0.80" z="1.0" length="9.0" chord="2.0"
         sweep="0" dihedral="3" taper="1"  incidence="2.5" idrag="1.0" camber="0.24">
         <stall aoa="10" width="6" peak="1.5"/>
         <flap0 start="0" end="0.90" lift="1.6" drag="3.2"/>
@@ -213,7 +220,7 @@ Prop diam: 2.59 m
     <weight x="2.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
     <weight x="0.0" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
 
-    <ballast x="5" y="0" z="1.0" mass="2036"/>
+    <ballast x="5" y="0" z="-2.5" mass="2078"/>
 
     <hitch name="aerotow" x="-2.5" y="0" z="-0.85"  force-is-calculated-by-other="1">
   <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
