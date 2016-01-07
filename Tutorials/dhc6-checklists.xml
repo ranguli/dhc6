@@ -1750,12 +1750,12 @@
     			<z-m>0.9926</z-m>
     			<scale>3.6281</scale>
 			</marker>
-			<condition>
+			<!--condition>
 				<less-than-equals>
 					<property>/environment/temperature-degc</property>
 					<value>0</value>
 				</less-than-equals>
-			</condition>
+			</condition-->
 		</item>
 
 		<item>
@@ -1794,7 +1794,6 @@
 						<value>0</value>
 					</less-than-equals>
 					<property>/controls/anti-ice/prop-heat</property>
-					<value>1</value>
 				</and>
 			</condition>
 		</item>
