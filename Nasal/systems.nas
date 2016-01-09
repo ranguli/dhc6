@@ -500,3 +500,21 @@ controls.applyParkingBrake = func (v) {
     setprop(p, var i = !getprop(p));
     return i;
 };
+
+var DMEinit = func {
+    ki266.new(0);
+};
+
+setlistener("/sim/signals/fdm-initialized", DMEinit );
+
+var DMESources = {
+  1 : "/instrumentation/nav[0]/frequencies/selected-mhz",
+  2 : "/instrumentation/dme/frequencies/selected-mhz",
+  3 : "/instrumentation/nav[1]/frequencies/selected-mhz"
+};
+
+setlistener( "/instrumentation/dme/switch-position", func(n) {
+  var v = n.getValue();
+  v == nil and return;
+  n.getParent().getNode( "frequencies/source", 1 ).setValue(DMESources[v]);
+}, 1, 0 );

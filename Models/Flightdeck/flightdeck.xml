@@ -639,11 +639,11 @@
 
    <model>
        <name>dme</name>
-       <path>Aircraft/dhc6/Models/Flightdeck/Instruments/dme/dme.xml</path>
+       <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki266/ki266.xml</path>
        <offsets>
-         <x-m>-3.93596 </x-m>
-         <y-m> 0.19038 </y-m>
-         <z-m> 0.28388 </z-m>
+         <x-m>-3.93096 </x-m>
+         <y-m> 0.13538 </y-m>
+         <z-m> 0.21788 </z-m>
        </offsets>
    </model>
 

@@ -33,6 +33,129 @@
 
     <path>ki266.ac</path>
 
+    <animation>
+          <type>material</type>
+          <object-name>Plane</object-name>
+          <object-name>n1f</object-name>
+          <object-name>hld</object-name>
+          <object-name>n2</object-name>
+          <object-name>on</object-name>
+          <object-name>Label3</object-name>
+          <object-name>off</object-name>
+          <object-name>SourceSelectorKnob</object-name>
+          <object-name>PowerSwitch.Base</object-name>
+          <object-name>PowerSwitch.Lever</object-name>
+          <object-name>Frame</object-name>
+          <object-name>ModeSwitch</object-name>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+        <animation>
+          <type>material</type>
+          <object-name>Left.100</object-name>
+          <object-name>Left.10</object-name>
+          <object-name>Left.Dot1</object-name>
+          <object-name>Left.1</object-name>
+          <object-name>Right.100</object-name>
+          <object-name>Right.10</object-name>
+          <object-name>Right.1</object-name>
+          <object-name>Miles</object-name>
+          <object-name>Min</object-name>
+          <object-name>Kts</object-name>
+          <condition>
+            <equals>
+              <property>controls/lighting/instrument-lights</property>
+              <value>0</value>
+            </equals>
+          </condition>
+          <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+          </emission>
+        </animation>
+
+        <effect>
+          <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+          <object-name>Plane</object-name>
+          <object-name>n1f</object-name>
+          <object-name>hld</object-name>
+          <object-name>n2</object-name>
+          <object-name>on</object-name>
+          <object-name>Label3</object-name>
+          <object-name>off</object-name>
+          <object-name>SourceSelectorKnob</object-name>
+          <object-name>PowerSwitch.Base</object-name>
+          <object-name>PowerSwitch.Lever</object-name>
+          <object-name>Frame</object-name>
+          <object-name>Left.100</object-name>
+          <object-name>Left.10</object-name>
+          <object-name>Left.Dot1</object-name>
+          <object-name>Left.1</object-name>
+          <object-name>Right.100</object-name>
+          <object-name>Right.10</object-name>
+          <object-name>Right.1</object-name>
+          <object-name>Miles</object-name>
+          <object-name>Min</object-name>
+          <object-name>Kts</object-name>
+          <object-name>ModeSwitch</object-name>
+        </effect>
+
+    <effect>
+      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+          <object-name>Plane</object-name>
+          <object-name>n1f</object-name>
+          <object-name>hld</object-name>
+          <object-name>n2</object-name>
+          <object-name>on</object-name>
+          <object-name>Label3</object-name>
+          <object-name>off</object-name>
+          <object-name>SourceSelectorKnob</object-name>
+          <object-name>PowerSwitch.Base</object-name>
+          <object-name>PowerSwitch.Lever</object-name>
+          <object-name>Frame</object-name>
+          <object-name>Left.100</object-name>
+          <object-name>Left.10</object-name>
+          <object-name>Left.Dot1</object-name>
+          <object-name>Left.1</object-name>
+          <object-name>Right.100</object-name>
+          <object-name>Right.10</object-name>
+          <object-name>Right.1</object-name>
+          <object-name>Miles</object-name>
+          <object-name>Min</object-name>
+          <object-name>Kts</object-name>
+          <object-name>ModeSwitch</object-name>
+    </effect>
+
+    <animation>
+          <type>material</type>
+          <object-name>Left.100</object-name>
+          <object-name>Left.10</object-name>
+          <object-name>Left.Dot1</object-name>
+          <object-name>Left.1</object-name>
+          <object-name>Right.100</object-name>
+          <object-name>Right.10</object-name>
+          <object-name>Right.1</object-name>
+          <object-name>Miles</object-name>
+          <object-name>Min</object-name>
+          <object-name>Kts</object-name>
+       <condition>
+          <not><property>sim/rendering/rembrandt/enabled</property></not>
+       </condition>
+        <emission>
+            <red>0.7</red>
+            <green>0.4</green>
+            <blue>0.4</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
     <!-- turn it off, when u/s or switched off -->
     <animation>
         <type>select</type>
@@ -41,6 +164,10 @@
             <and>
                 <property alias="../../../../params/serviceable"/>
                 <property alias="../../../../params/power-btn"/>
+                <greater-than>
+                	<property>systems/electrical/outputs/dme</property>
+                	<value>18</value>
+                </greater-than>
             </and>
         </condition>
     </animation>
@@ -55,17 +182,6 @@
         <max-m>10</max-m>
     </animation>
 
-    <animation>
-        <type>material</type>
-        <object-name>ModeSwitch</object-name>
-        <emission>
-            <red-prop>sim/model/instrument-lighting/emission/red</red-prop>
-            <green-prop>sim/model/instrument-lighting/emission/green</green-prop>
-            <blue-prop>sim/model/instrument-lighting/emission/blue</blue-prop>
-            <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission>
-    </animation>
-
     <!-- the power switch -->
     <animation>
         <type>rotate</type>
@@ -78,8 +194,8 @@
             <z>0</z>
         </axis>
         <center>
-            <x-m>0.000862624</x-m>
-            <y-m>-0.0328855</y-m>
+            <x-m>-0.0018</x-m>
+            <y-m>-0.0328</y-m>
             <z-m>0</z-m>
         </center>
     </animation>
@@ -125,6 +241,10 @@
             <command>property-toggle</command>
             <property alias="../../../../params/power-btn"/>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click</property>
+        </binding>
         </action>
     </animation>
 
@@ -208,6 +328,10 @@
               <property>instrumentation/dme/frequencies/source</property>
               <value>instrumentation/nav[1]/frequencies/selected-mhz</value>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
         </action>
     </animation>
 
@@ -259,6 +383,10 @@
               <property>instrumentation/dme/frequencies/selected-mhz</property>
               <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
         </action>
     </animation>
 
@@ -304,6 +432,10 @@
             <command>property-toggle</command>
             <property>instrumentation/dme/switch-min-kts</property>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/sound/click2</property>
+        </binding>
         </action>
     </animation>
 

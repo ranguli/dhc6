@@ -39,7 +39,7 @@ ki266.new = func(idx) {
 
   obj.update();
 
-  print( "KI266 dme indicator #" ~ idx ~ " initialized" ); 
+  print( "KI266 DME ... initialized" ); 
   return obj;
 };
 
@@ -74,5 +74,5 @@ ki266.update = func {
     me.leftDotNode.setBoolValue( 0 );
   }
 
-  settimer( func { me.update() }, 0.2 );
+  settimer( func { me.update() }, 0.01 );
 }
