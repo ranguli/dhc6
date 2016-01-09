@@ -96,11 +96,33 @@ var checkVNE = func {
     return;
   var msg = "";
   var airspeed = getprop("instrumentation/airspeed-indicator/indicated-speed-kt");
-  var vne      = getprop("limits/vne");
+  var altitude = getprop("position/altitude-ft");
+  var vne_0    = getprop("limits/vne-0");
+  var vne_1    = getprop("limits/vne-1");
+  var vne_2    = getprop("limits/vne-2");
+  var vne_3    = getprop("limits/vne-3");
+  var vne_4    = getprop("limits/vne-4");
 
-  if ((airspeed != nil) and (vne != nil) and (airspeed > vne)) {
-    msg = "Airspeed exceeds Vne! Reduce the speed!";
+  if ((airspeed != nil) and (altitude != nil) and (vne_0 != nil) and (airspeed > vne_0) and (altitude < 6700)) {
+    msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
+
+  if ((airspeed != nil) and (altitude != nil) and (vne_1 != nil) and (airspeed > vne_1) and (altitude >= 6700) and altitude < 10000) {
+    msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
+  }
+
+  if ((airspeed != nil) and (altitude != nil) and (vne_2 != nil) and (airspeed > vne_2) and (altitude >= 10000 and altitude < 15000)) {
+    msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
+  }
+
+  if ((airspeed != nil) and (altitude != nil) and (vne_3 != nil) and (airspeed > vne_3) and (altitude >= 15000 and altitude < 20000)) {
+    msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
+  }
+
+  if ((airspeed != nil) and (altitude != nil) and (vne_4 != nil) and (airspeed > vne_4) and (altitude >= 20000)) {
+    msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
+  }
+
   if (msg != "") {
     screen.log.write(msg);
     settimer(checkVNE, 10);
@@ -110,6 +132,28 @@ var checkVNE = func {
   }
 }
 checkVNE();
+
+# Altitude limit
+var checkALT = func {
+   if (getprop("/sim/freeze/replay-state"))
+    return;
+  var msg = "";
+  var altitude = getprop("position/altitude-ft");
+  var max_alt = getprop("limits/max-alt");
+
+  if ((altitude != nil) and (altitude > max_alt)) {
+    msg = "Maximum Operation Altitude exceeded! Descend!";
+  }
+
+  if (msg != "") {
+    screen.log.write(msg);
+    settimer(checkALT, 10);
+  }
+  else {
+    settimer(checkALT, 1);
+  }
+}
+checkALT();
 
 # ENGINE LIMITS
 # Tourque pressure

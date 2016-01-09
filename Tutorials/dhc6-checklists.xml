@@ -1222,7 +1222,7 @@
 	
 		<item>
 			<name>Taxi speed</name>
-			<value>BELOW 20 KT</value>
+			<value>BELOW 20 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1447,7 +1447,7 @@
 			
 		<item>
 			<name>V1</name>
-			<value>80 kt</value>
+			<value>80 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1464,7 +1464,7 @@
 			
 		<item>
 			<name>Vr</name>
-			<value>95 kt</value>
+			<value>95 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1515,7 +1515,7 @@
 		
 		<item>
 			<name>Airspeed</name>
-			<value>110-120 KTS</value>
+			<value>100-110 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1526,11 +1526,11 @@
 				<and>
 					<greater-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>110</value>
+						<value>100</value>
 					</greater-than>
 					<less-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>120</value>
+						<value>110</value>
 					</less-than>
 				</and>
 			</condition>
@@ -1625,7 +1625,7 @@
 			
 		<item>
 			<name>Airspeed</name>
-			<value>150-165 KTS</value>
+			<value>around 150 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1636,14 +1636,21 @@
 				<and>
 					<greater-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>150</value>
+						<value>140</value>
 					</greater-than>
 					<less-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>165</value>
+						<value>160</value>
 					</less-than>
 				</and>
 			</condition>
+		</item>
+
+		<item>
+			<name></name>
+			<value>=== Note that the cruise speed MUST be below the Maximum</value>
+			<value>Operating Speed,which depends on your altitude!! ===</value>
+			<value>See the Aircraft help menu for details</value>
 		</item>
 				
 		<item>
@@ -1816,7 +1823,7 @@
 						
 		<item>
 			<name>Airspeed</name>
-			<value>130-140 KTS</value>
+			<value>110-120 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -1827,11 +1834,11 @@
 				<and>
 					<greater-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>130</value>
+						<value>110</value>
 					</greater-than>
 					<less-than>
 						<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-						<value>140</value>
+						<value>120</value>
 					</less-than>
 				</and>
 			</condition>
@@ -1952,7 +1959,7 @@
 						
 		<item>
 			<name>Airspeed</name>
-			<value>SLOWLY DECREASE TO 90 KTS</value>
+			<value>SLOWLY DECREASE TO 90 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
@@ -2020,7 +2027,7 @@
 						
 		<item>
 			<name>Landing speed</name>
-			<value>60-70 KTS</value>
+			<value>60-70 KIAS</value>
 			<marker>
     			<x-m>-3.9256</x-m>
     			<y-m>-0.6281</y-m>
