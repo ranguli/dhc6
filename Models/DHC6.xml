@@ -2436,6 +2436,10 @@
                     <property>velocities/groundspeed-kt</property>
                     <value>1</value>
                 </less-than>
+                <less-than>
+                    <property>position/altitude-agl-ft</property>
+                    <value>10</value>
+                </less-than>
             </and>
         </condition>
     </model>
@@ -2523,5 +2527,24 @@
             </and>
         </condition>
     </animation>
+
+    <!-- External Power -->
+    <model>
+        <name>external-power</name>
+        <path>Aircraft/dhc6/Models/Equipment/ground-services/external-power/external-power.ac</path>
+        <condition>
+            <and>
+                <property>sim/model/equipment/ground-services/external-power/enable</property>
+                <less-than>
+                    <property>velocities/groundspeed-kt</property>
+                    <value>1</value>
+                </less-than>
+                <less-than>
+                    <property>position/altitude-agl-ft</property>
+                    <value>10</value>
+                </less-than>
+            </and>
+        </condition>
+    </model>
 
 </PropertyList>

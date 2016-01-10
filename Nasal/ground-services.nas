@@ -10,6 +10,9 @@ var ground_services = {
 		me.UPDATE_INTERVAL = 0.02;
 	me.loopid = 0;
 
+	# External power
+	setprop("/sim/model/equipment/ground-services/external-power/enable", 1);
+
 	# Fuel Truck
 	setprop("/sim/model/equipment/ground-services/fuel-truck/enable", 0);
 	setprop("/sim/model/equipment/ground-services/fuel-truck/connect-fwd", 0);
@@ -22,11 +25,19 @@ var ground_services = {
 	# Set it to 0 if the aircraft is not stationary
 	if (getprop("/velocities/groundspeed-kt") > 1) {
 		setprop("/sim/model/equipment/ground-services/fuel-truck/enable", 0);
+		setprop("/sim/model/equipment/ground-services/external-power/enable", 0);
 	}
 
 	me.reset();
 	},
 	update : func {
+
+		# External Power
+		if (getprop("/velocities/groundspeed-kt") > 1)
+			setprop("/sim/model/equipment/ground-services/external-power/enable", 0);
+		
+		if (getprop("/sim/model/equipment/ground-services/external-power/enable") == 0)
+			setprop("controls/electric/external-power", 0);
 
 		# Fuel truck controls
 

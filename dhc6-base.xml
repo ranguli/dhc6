@@ -16,6 +16,13 @@ Jan 2008 Syd Adams
         <remove-doors type="bool">0</remove-doors>
 
         <equipment>
+
+            <ground-services>
+                <external-power>
+                    <enable type="bool">1</enable>
+                </external-power>
+            </ground-services>
+
             <left-pitot-cover type="bool">1</left-pitot-cover>
             <right-pitot-cover type="bool">1</right-pitot-cover>
             <left-engine-cover type="bool">1</left-engine-cover>
@@ -549,6 +556,28 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
                     <binding>
                         <command>nasal</command>
                         <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
+                    </binding>
+                </item>
+                <item>
+                    <name>external-power</name>
+                    <label>Toggle external power</label>
+                    <enabled>
+                        <condition>
+                            <or>
+                                <and>
+                                    <property>gear/gear[1]/ground-is-solid</property>
+                                    <property>gear/gear[1]/wow</property>
+                                </and>
+                                <and>
+                                    <property>gear/gear[6]/ground-is-solid</property>
+                                    <property>gear/gear[6]/wow</property>
+                                </and>
+                            </or>
+                        </condition>
+                    </enabled>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/equipment/ground-services/external-power/enable</property>
                     </binding>
                 </item>
                 <item>
