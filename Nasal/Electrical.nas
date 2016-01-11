@@ -6,7 +6,7 @@ var outPut = "systems/electrical/outputs/";
 var BattVolts = props.globals.getNode("systems/electrical/batt-volts",1);
 var Volts = props.globals.getNode("/systems/electrical/volts",1);
 var Amps = props.globals.getNode("/systems/electrical/amps",1);
-var EXT  = props.globals.getNode("/controls/electric/external-power",1); 
+var EXT  = props.globals.getNode("/controls/electric/external-power",1);
 var switch_list=[];
 var output_list=[];
 var serv_list=[];
@@ -246,14 +246,18 @@ update_virtual_bus = func( dt ) {
     BattVolts.setValue(battery_volts);
     var alternator1_volts = alternator1.get_output_volts();
     var alternator2_volts = alternator2.get_output_volts();
-    var external_volts = 24.0;
+    var external_volts = 28.0;
+    var power_selector = getprop("controls/electric/power-source");
+    var EXT_plugged = getprop("/sim/model/equipment/ground-services/external-power/enable");
 
     load = 0.0;
     bus_volts = 0.0;
     power_source = nil;
         
+    if (power_selector == 1){
         bus_volts = battery_volts;
         power_source = "battery";
+    }
 
     if (alternator1_volts > bus_volts) {
         bus_volts = alternator1_volts;
@@ -264,7 +268,13 @@ update_virtual_bus = func( dt ) {
         bus_volts = alternator2_volts;
         power_source = "alternator2";
         }
+        if (EXT_plugged == 1 and power_selector == -1){
+        setprop("/controls/electric/external-power", 1);
+        } else {
+        setprop("/controls/electric/external-power", 0);
+        }
     if ( EXT.getBoolValue() and ( external_volts > bus_volts) ) {
+        power_source = "external";
         bus_volts = external_volts;
         }
 
@@ -309,7 +319,6 @@ electrical_bus = func(bv) {
     var start_n2_1 = 0.0;
 
     var internal_starter = getprop("controls/engines/internal-engine-starter");
-    var power_source = getprop("controls/electric/power-source");
     var if_engine0_running = getprop("engines/engine[0]/running");
     var if_engine1_running = getprop("engines/engine[1]/running");
     var if_engine0_serviceable = getprop("engines/engine[0]/serviceable");
@@ -326,10 +335,10 @@ electrical_bus = func(bv) {
         increasing_counter1 = 0.0;
     }
 
-    if (internal_starter < 0 and power_source == 1) {
+    if (internal_starter < 0) {
        	internal_starter = -internal_starter;
 	starter_volts1 = bus_volts * internal_starter;
-    } else if (internal_starter > 0 and power_source == 1) {
+    } else if (internal_starter > 0) {
        	starter_volts = bus_volts * internal_starter;
     }
     

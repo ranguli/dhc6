@@ -41,8 +41,7 @@
   <name>Heading Bug Hold (DG based) Stage 1</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/heading</prop>
-    <value>dg-heading-hold</value>
+    <prop>controls/autopilot/settings/hdgsetflag</prop>
   </enable>
   <input>
     <prop>instrumentation/heading-indicator-real-dg/custom-heading-bug-error-deg</prop>
@@ -65,9 +64,7 @@
   <name>Heading Bug Hold (DG based) Stage 2</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/heading</prop>
-    <value>dg-heading-hold</value>
-    <honor-passive>true</honor-passive>
+    <prop>controls/autopilot/settings/hdgsetflag</prop>
   </enable>
   <input>
     <prop>orientation/roll-deg</prop>
@@ -95,8 +92,7 @@
   <name>Nav1 Hold Stage 1</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/heading</prop>
-    <value>nav1-hold</value>
+    <prop>instrumentation/nav[0]/crs-catched</prop>
   </enable>
   <input>
     <prop>autopilot/internal/nav1-heading-error-deg</prop>
@@ -119,9 +115,7 @@
   <name>Nav1 Hold Stage 2</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/heading</prop>
-    <value>nav1-hold</value>
-    <honor-passive>true</honor-passive>
+    <prop>instrumentation/nav[0]/crs-catched</prop>
   </enable>
   <input>
     <prop>orientation/roll-deg</prop>
@@ -188,8 +182,7 @@
   <name>Altitude Hold (Altimeter based) Stage 1</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/altitude</prop>
-    <value>altitude-hold</value>
+    <prop>controls/autopilot/settings/altsetflag</prop>
   </enable>
   <input>
     <prop>instrumentation/altimeter/indicated-altitude-ft</prop>
@@ -212,8 +205,7 @@
   <name>Altitude Hold (Altimeter based) Stage 2</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/altitude</prop>
-    <value>altitude-hold</value>
+    <prop>controls/autopilot/settings/altsetflag</prop>
   </enable>
   <input>
     <prop>velocities/vertical-speed-fps</prop>
@@ -237,12 +229,10 @@
 </pid-controller>
 
 <pid-controller>
-  <name>Pitch hold</name>
+  <name>Altitude Hold (Altimeter based) Stage 3</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/altitude</prop>
-    <value>altitude-hold</value>
-    <honor-passive>true</honor-passive>
+    <prop>controls/autopilot/settings/altsetflag</prop>
   </enable>
   <input>
     <prop>orientation/pitch-deg</prop>
@@ -256,17 +246,18 @@
     <output>
       <prop>controls/flight/elevator-trim</prop>
     </output>
-   <config>
+    <config>
        <Kp>-0.02</Kp>
       <beta>1.0</beta>
-      <alpha>0.01</alpha>
+      <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>10.0</Ti>
-      <Td>0.000001</Td>
+      <Ti>1.0</Ti>
+      <Td>0.00001</Td>
       <u_min>-0.5</u_min>
       <u_max>0.5</u_max> 
     </config>
 </pid-controller>
+
 
 <!-- Glideslope hold. -->
 
@@ -274,8 +265,7 @@
   <name>Glideslope Hold</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/altitude</prop>
-    <value>gs1-hold</value>
+    <prop>instrumentation/nav[0]/gs-catched</prop>
   </enable>
   <input>
     <prop>velocities/vertical-speed-fps</prop>
@@ -287,14 +277,14 @@
     <prop>autopilot/settings/target-pitch-deg</prop>
   </output>
   <config>
-    <Kp>0.06</Kp>
+    <Kp>0.5</Kp>
     <beta>1.0</beta>
     <alpha>0.1</alpha>
     <gamma>0.0</gamma>
     <Ti>10.0</Ti>
     <Td>0.00001</Td>
-    <u_min>-5.0</u_min>
-    <u_max>5.0</u_max>
+    <u_min>-25.0</u_min>
+    <u_max>25.0</u_max>
   </config>
 </pid-controller>
 
@@ -302,9 +292,7 @@
   <name>Pitch hold</name>
   <debug>false</debug>
   <enable>
-    <prop>autopilot/locks/altitude</prop>
-    <value>gs1-hold</value>
-    <honor-passive>true</honor-passive>
+    <prop>instrumentation/nav[0]/gs-catched</prop>
   </enable>
   <input>
     <prop>orientation/pitch-deg</prop>
@@ -336,9 +324,7 @@
     <name>Vertical Speed Hold</name>
     <debug>false</debug>
     <enable>
-      <prop>autopilot/locks/altitude</prop>
-      <value>vertical-speed-hold</value>
-      <honor-passive>true</honor-passive>
+      <prop>controls/autopilot/settings/vssetflag</prop>
     </enable>
     <input>
       <prop>velocities/vertical-speed-fps</prop>
@@ -393,7 +379,7 @@ Speed Modes
     <Ti>10.0</Ti>
     <Td>0.0000001</Td>
     <u_min>-20</u_min>
-    <u_max>30</u_max>
+    <u_min>-25</u_min>
   </config>
 </pi-simple-controller>
 
