@@ -92,7 +92,7 @@
   <name>Nav1 Hold Stage 1</name>
   <debug>false</debug>
   <enable>
-    <prop>instrumentation/nav[0]/crs-catched</prop>
+      <prop>instrumentation/nav[0]/crs-catched</prop>
   </enable>
   <input>
     <prop>autopilot/internal/nav1-heading-error-deg</prop>
@@ -115,7 +115,7 @@
   <name>Nav1 Hold Stage 2</name>
   <debug>false</debug>
   <enable>
-    <prop>instrumentation/nav[0]/crs-catched</prop>
+      <prop>instrumentation/nav[0]/crs-catched</prop>
   </enable>
   <input>
     <prop>orientation/roll-deg</prop>
@@ -378,8 +378,8 @@ Speed Modes
     <Ki>0.0</Ki>
     <Ti>10.0</Ti>
     <Td>0.0000001</Td>
-    <u_min>-20</u_min>
     <u_min>-25</u_min>
+    <u_max>30</u_max>
   </config>
 </pi-simple-controller>
 
