@@ -17,4 +17,4 @@ var cabinLight = func {
         dim_factor);
     settimer(cabinLight, 0.1);
 };
-setlistener("/controls/lighting/cabin-lights",cabinLight);
+setlistener("sim/signals/fdm-initialized",cabinLight);
