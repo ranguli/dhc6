@@ -521,9 +521,41 @@
 			</condition>
 		</exit>
 	</step>
+
+	<step>
+		<message>Enable external power (via Menu --> DHC-6 --> Toggle external power). Hit "F10" if the Menubar is not visible</message>
+		<view>
+			<heading-offset-deg>292.1</heading-offset-deg>
+			<pitch-offset-deg>-9.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-10.6</x-offset-m>
+			<y-offset-m>-0.0</y-offset-m>
+			<z-offset-m>7.4</z-offset-m>
+			<field-of-view>60.7</field-of-view>
+		</view>
+		<marker>
+			<x-m>5.8802</x-m>
+			<y-m>-5.3000</y-m>
+			<z-m>-1.5083</z-m>
+			<scale>57.0331</scale>
+		</marker>
+		<error>
+			<message>Enable the external power via the Menu</message>
+			<condition>
+				<not>
+					<property>/sim/model/equipment/ground-services/external-power/enable</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/sim/model/equipment/ground-services/external-power/enable</property>
+			</condition>
+		</exit>
+	</step>
 	
 	<step>
-		<message>Select the power source to battery</message>
+		<message>Select the power source to external power</message>
 		<view>
 			<heading-offset-deg>329</heading-offset-deg>
 			<pitch-offset-deg>20</pitch-offset-deg>
@@ -540,11 +572,11 @@
 	    	<scale>1.9917</scale>
 		</marker>
 		<error>
-			<message>Click LMB on the External/Battery switch to select the battery as power source</message>
+			<message>Click RMB on the External/Battery switch to select the external power as power source</message>
 			<condition>
 				<not-equals>
 					<property>/controls/electric/power-source</property>
-					<value>1</value>
+					<value>-1</value>
 				</not-equals>
 			</condition>
 		</error>
@@ -552,7 +584,7 @@
 			<condition>
 				<equals>
 					<property>/controls/electric/power-source</property>
-					<value>1</value>
+					<value>-1</value>
 				</equals>
 			</condition>
 		</exit>

@@ -2547,4 +2547,50 @@
         </condition>
     </model>
 
+    <animation>
+        <type>translate</type>
+        <object-name>external-power-unit</object-name>
+        <property>sim/signals/fdm-initialized</property>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value>dhc6F</value>
+            </equals>
+        </condition>
+        <factor>0.5</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>cable-w</object-name>
+        <condition>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <property>sim/model/equipment/ground-services/external-power/enable</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>cable-f</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <property>sim/model/equipment/ground-services/external-power/enable</property>
+            </and>
+        </condition>
+    </animation>
+
 </PropertyList>

@@ -34,9 +34,16 @@ props.globals.initNode("controls/switches/dme-gps-slave", 0);
 ###################################
 
 var Startup = func{
+	setprop("sim/model/equipment/ground-services/external-power/enable",1);
+	setprop("sim/model/equipment/ground-services/fuel-truck/clean",0);
+	setprop("sim/model/equipment/ground-services/fuel-truck/transfer",0);
+	setprop("sim/model/equipment/ground-services/fuel-truck/connect-aft",0);
+	setprop("sim/model/equipment/ground-services/fuel-truck/connect-fwd",0);
+	setprop("sim/model/equipment/ground-services/fuel-truck/disconnect",1);
+	setprop("sim/model/equipment/ground-services/fuel-truck/enable",0);
     setprop("controls/electric/avionics-switch",1);
     setprop("controls/electric/battery-switch",1);
-    setprop("controls/electric/power-source",1);
+    setprop("controls/electric/power-source",-1);
     setprop("controls/electric/inverter-switch",1);
     setprop("controls/electric/ammeter-switch",0);
     setprop("controls/lighting/instrument-lights",1);
@@ -89,8 +96,10 @@ var Startup = func{
             
         }
         if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1 and getprop("engines/engine[1]/rpm") > 200) {
+			setprop("sim/model/equipment/ground-services/external-power/enable",0);
             setprop("controls/engines/internal-engine-starter",0);
             setprop("controls/electric/ammeter-switch",1);
+    		setprop("controls/electric/power-source",1);
             setprop("controls/engines/engine[0]/propeller-pitch",1);
             setprop("controls/engines/engine[1]/propeller-pitch",1);
             setprop("controls/lighting/no-smoking",1);
@@ -165,6 +174,7 @@ var Shutdown = func{
     setprop("sim/model/equipment/left-chock-aft",1);
     setprop("sim/model/equipment/right-chock-fwd",1);
     setprop("sim/model/equipment/right-chock-aft",1);
+    setprop("sim/model/equipment/ground-services/external-power/enable",1);
 }
 
 var Wiper = {

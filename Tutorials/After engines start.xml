@@ -15,6 +15,74 @@
 		<message>Let's go through the after engine start checks, and after that, we can fly away</message>
 		<wait>5</wait>
 	</step>
+
+	<step>
+		<message>Select the power source to battery</message>
+		<view>
+			<heading-offset-deg>329</heading-offset-deg>
+			<pitch-offset-deg>20</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.48</x-offset-m>
+			<y-offset-m>0.72</y-offset-m>
+			<z-offset-m>-3.15</z-offset-m>
+			<field-of-view>40</field-of-view>
+		</view>
+		<marker>
+    		<x-m>-3.5636</x-m>
+    		<y-m>-0.2132</y-m>
+    		<z-m>0.9190</z-m>
+	    	<scale>1.9917</scale>
+		</marker>
+		<error>
+			<message>Click RMB on the External/Battery switch to battery as power source</message>
+			<condition>
+				<not-equals>
+					<property>/controls/electric/power-source</property>
+					<value>1</value>
+				</not-equals>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/controls/electric/power-source</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Disable external power</message>
+		<view>
+			<heading-offset-deg>292.1</heading-offset-deg>
+			<pitch-offset-deg>-9.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-10.6</x-offset-m>
+			<y-offset-m>-0.0</y-offset-m>
+			<z-offset-m>7.4</z-offset-m>
+			<field-of-view>60.7</field-of-view>
+		</view>
+		<marker>
+			<x-m>5.8802</x-m>
+			<y-m>-5.3000</y-m>
+			<z-m>-1.5083</z-m>
+			<scale>57.0331</scale>
+		</marker>
+		<error>
+			<message>Disable the external power via the menu</message>
+			<condition>
+					<property>/sim/model/equipment/ground-services/external-power/enable</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not>
+					<property>/sim/model/equipment/ground-services/external-power/enable</property>
+				</not>
+			</condition>
+		</exit>
+	</step>
 	
 	<step>
 		<message>Turn the POSN light</message>

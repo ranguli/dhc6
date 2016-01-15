@@ -91,7 +91,11 @@
 		</set>
 		<set>
 			<property>/controls/electric/power-source</property>
-			<value>1</value>
+			<value>-1</value>
+		</set>
+		<set>
+			<property>/sim/model/equipment/ground-services/external-power/enable</property>
+			<value>true</value>
 		</set>
 		<set>
 			<property>/controls/electric/battery-switch</property>
