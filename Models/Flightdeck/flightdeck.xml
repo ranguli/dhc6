@@ -3826,9 +3826,9 @@
       <property>/controls/flight/elevator-trim</property>
       <factor>360</factor>
       <center>
-        <x-m>-3.07116</x-m>
+        <x-m>-3.07558</x-m>
         <y-m>-0.20196</y-m>
-        <z-m>-0.0466682</z-m>
+        <z-m>-0.046666</z-m>
       </center>
       <axis>
         <x>0</x>
@@ -3841,11 +3841,11 @@
       <type>rotate</type>
       <object-name>trimind-elevator</object-name>
       <property>/controls/flight/elevator-trim</property>
-      <factor>22.5</factor>
+      <factor>21</factor>
       <center>
-        <x-m>-3.06273</x-m>
+        <x-m>-3.06715</x-m>
         <y-m>-0.191541</y-m>
-        <z-m>-0.0556786</z-m>
+        <z-m>-0.05568</z-m>
       </center>
       <axis>
         <x>0</x>
@@ -3938,9 +3938,9 @@
       <property>/controls/flight/rudder-trim</property>
       <factor>360</factor>
       <center>
-        <x-m>-3.01144</x-m>
-        <y-m>-0.2065636</y-m>
-        <z-m>-0.0069117</z-m>
+        <x-m>-3.01587</x-m>
+        <y-m>-0.206562</y-m>
+        <z-m>-0.0069133</z-m>
       </center>
       <axis>
         <x>0</x>
@@ -3953,11 +3953,11 @@
       <type>rotate</type>
       <object-name>trimind-rudder</object-name>
       <property>/controls/flight/rudder-trim</property>
-      <factor>27</factor>
+      <factor>28</factor>
       <center>
-        <x-m>-3.00267</x-m>
-        <y-m>-0.206562</y-m>
-        <z-m>-0.0131491</z-m>
+        <x-m>-3.00849</x-m>
+        <y-m>-0.20656</y-m>
+        <z-m>-0.013465</z-m>
       </center>
       <axis>
         <x>0</x>
@@ -4067,9 +4067,9 @@
       <property>/controls/flight/aileron-trim</property>
       <factor>60</factor>
       <center>
-        <x-m>-2.96359</x-m>
-        <y-m>-0.208438</y-m>
-        <z-m>-0.0142976</z-m>
+        <x-m>-2.968</x-m>
+        <y-m>-0.208437</y-m>
+        <z-m>-0.0142938</z-m>
       </center>
       <axis>
         <x>0</x>

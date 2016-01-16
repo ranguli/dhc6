@@ -316,7 +316,7 @@ Jan 2008 Syd Adams
             <from-model type="bool">true</from-model>
             <from-model-idx type="int">0</from-model-idx>
             <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-            <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+            <default-field-of-view-deg type="double">56.8</default-field-of-view-deg>
             <default-pitch-deg type="double">-70</default-pitch-deg>
             <default-heading-deg type="double">20</default-heading-deg>
             <front-direction-deg type="double">0</front-direction-deg>
@@ -328,11 +328,11 @@ Jan 2008 Syd Adams
             <right-direction-deg type="double">270</right-direction-deg>
             <front-right-direction-deg type="double">315</front-right-direction-deg>
             <dynamic-view type="bool">false</dynamic-view>
-            <heading-offset-deg>20</heading-offset-deg>
-            <x-offset-m type="double">-0.1725</x-offset-m>
-            <y-offset-m type="double">0.2349</y-offset-m>
-            <z-offset-m type="double">-2.9092</z-offset-m>
-            <pitch-offset-deg>-70</pitch-offset-deg>
+            <heading-offset-deg>53.73695198</heading-offset-deg>
+            <x-offset-m type="double">-0.10299</x-offset-m>
+            <y-offset-m type="double">0.285</y-offset-m>
+            <z-offset-m type="double">-2.96654</z-offset-m>
+            <pitch-offset-deg>-67.4563055</pitch-offset-deg>
         </config>
     </view>
 
@@ -435,12 +435,40 @@ Jan 2008 Syd Adams
 			<desc>Increase/decrease right condition</desc>
 		</key>
         <key>
+            <name>l</name>
+            <desc>Toggle pitot heat on/off</desc>
+        </key>
+        <key>
+            <name>L</name>
+            <desc>Toggle prop deice on/off</desc>
+        </key>
+        <key>
+            <name>m</name>
+            <desc>Toggle intake deflectors on/off</desc>
+        </key>
+        <key>
             <name>f</name>
             <desc>Toggle flashlight</desc>
         </key>
         <key>
             <name>y</name>
             <desc>Show/hide yokes</desc>
+        </key>
+        <key>
+            <name>F5</name>
+            <desc>Aileron trim left</desc>
+        </key>
+        <key>
+            <name>F6</name>
+            <desc>Aileron trim right</desc>
+        </key>
+        <key>
+            <name>F7</name>
+            <desc>Rudder trim left</desc>
+        </key>
+        <key>
+            <name>F8</name>
+            <desc>Rudder trim right</desc>
         </key>
         <key>
             <name>F11</name>
@@ -731,6 +759,14 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 	      <max>1</max>
             </binding>
         </key>
+        <key n="76">
+            <name>L</name>
+            <desc>Toggle prop deice on/off</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/anti-ice/prop-heat</property>
+            </binding>
+        </key>
         <!-- Disable the following two key bindings because of the walker:
         <key n="115">
             <name>s</name>
@@ -765,12 +801,72 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
                 <script>dhc6.toggle_flashlight()</script>
             </binding>
         </key>
+        <key n="108">
+            <name>l</name>
+            <desc>Toggle pitot heat on/off</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/anti-ice/pitot-heat</property>
+            </binding>
+        </key>
+        <key n="109">
+            <name>m</name>
+            <desc>Toggle intake deflectors on/off</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/engines/engine/intake-deflector</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[1]/intake-deflector</property>
+            </binding>
+        </key>
         <key n="121">
             <name>y</name>
             <desc>Show/hide yokes</desc>
             <binding>
                 <command>property-toggle</command>
                 <property>sim/yokes-visible</property>
+            </binding>
+        </key>
+        <key n="261">
+            <name>F5</name>
+            <desc>Aileron Trim left</desc>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/aileron-trim</property>
+                <step type="double">-0.01</step>
+            </binding>
+        </key>
+        <key n="262">
+            <name>F6</name>
+            <desc>Aileron Trim right</desc>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/aileron-trim</property>
+                <step type="double">0.01</step>
+            </binding>
+        </key>
+        <key n="263">
+            <name>F7</name>
+            <desc>Rudder Trim left</desc>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/rudder-trim</property>
+                <step type="double">-0.01</step>
+            </binding>
+        </key>
+        <key n="264">
+            <name>F8</name>
+            <desc>Rudder Trim right</desc>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/rudder-trim</property>
+                <step type="double">0.01</step>
             </binding>
         </key>
         <key n="267">

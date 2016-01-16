@@ -305,6 +305,108 @@
 		</marker>
 		<wait>5</wait>
 	</step>
+
+	<step>
+		<message>Set the elevator trim for take off (a bit nose up)</message>
+		<view>
+			<heading-offset-deg>320.3</heading-offset-deg>
+			<pitch-offset-deg>-89.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.2</x-offset-m>
+			<y-offset-m>0.3</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>56.1</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.0810</x-m>
+			<y-m>-0.1926</y-m>
+			<z-m>-0.0157</z-m>
+			<scale>0.4380</scale>
+		</marker>
+		<error>
+			<message>That's too less. Use the "END"-key to adjust the elevator trim more nose up</message>
+			<condition>
+				<greater-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>-0.19</value>
+				</greater-than>
+			</condition>
+		</error>
+		<error>
+			<message>That's too much. Use the "HOME"-key to adjust the elevator trim more nose down</message>
+			<condition>
+				<less-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>-0.21</value>
+				</less-than>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<less-than-equals>
+						<property>/controls/flight/elevator-trim</property>
+						<value>-0.19</value>
+					</less-than-equals>
+					<greater-than-equals>
+						<property>/controls/flight/elevator-trim</property>
+						<value>-0.21</value>
+					</greater-than-equals>
+				</and>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Set the rudder trim for take off (a bit right)</message>
+		<view>
+			<heading-offset-deg>320.3</heading-offset-deg>
+			<pitch-offset-deg>-89.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.2</x-offset-m>
+			<y-offset-m>0.3</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>56.1</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.0405</x-m>
+			<y-m>-0.2041</y-m>
+			<z-m>-0.0157</z-m>
+			<scale>0.4380</scale>
+		</marker>
+		<error>
+			<message>That's too less. Use "F8" to adjust the rudder trim more right</message>
+			<condition>
+				<less-than>
+					<property>/controls/flight/rudder-trim</property>
+					<value>0.11</value>
+				</less-than>
+			</condition>
+		</error>
+		<error>
+			<message>That's too much. Use "F7" to adjust the rudder trim more left</message>
+			<condition>
+				<greater-than>
+					<property>/controls/flight/rudder-trim</property>
+					<value>0.13</value>
+				</greater-than>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<greater-than-equals>
+						<property>/controls/flight/rudder-trim</property>
+						<value>0.11</value>
+					</greater-than-equals>
+					<less-than-equals>
+						<property>/controls/flight/rudder-trim</property>
+						<value>0.13</value>
+					</less-than-equals>
+				</and>
+			</condition>
+		</exit>
+	</step>
 	
 	<step>
 		<message>Nailed it! Now you're ready to taxi to the runway, take off, and enjoy your flight! Have fun :) (For additional help, see Help->Checklists!)</message>

@@ -113,7 +113,8 @@ var Startup = func{
             setprop("controls/engines/auto-feather",1);
             setprop("controls/flight/flaps",0.25);
             setprop("controls/gear/parkingbrake-lever",0);
-            setprop("controls/flight/elevator-trim",-0.14);
+            setprop("controls/flight/elevator-trim",-0.2);
+            setprop("controls/flight/rudder-trim",0.12);
             screen.log.write("Startup procedure finished. - You are now ready for Take Off!", 1, 1, 1);
         }
         settimer(check_loop1, 1);
@@ -162,7 +163,8 @@ var Shutdown = func{
     setprop("controls/anti-ice/pitot-heat",0);
     setprop("controls/anti-ice/prop-heat",0);
     setprop("controls/anti-ice/window-heat",0);
-    setprop("controls/flight/elevator-trim",0);
+    setprop("controls/flight/elevator-trim",-0.2);
+    setprop("controls/flight/rudder-trim",0.12);
     setprop("sim/model/equipment/left-pitot-cover",1);
     setprop("sim/model/equipment/right-pitot-cover",1);
     setprop("sim/model/equipment/left-tiedown-wheels",1);
