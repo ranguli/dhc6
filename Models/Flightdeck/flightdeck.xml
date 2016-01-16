@@ -211,6 +211,7 @@
   <animation>
     <type>material</type>
     <object-name>trim-console</object-name>
+    <object-name>trim-console-cover</object-name>
     <object-name>trimswitch-aileron</object-name>
     <object-name>trimind-aileron</object-name>
     <object-name>glass-aileron</object-name>
@@ -352,6 +353,7 @@
     <object-name>sockle</object-name>
     <object-name>plate</object-name>
     <object-name>trim-console</object-name>
+    <object-name>trim-console-cover</object-name>
     <object-name>trimswitch-aileron</object-name>
     <object-name>trimind-aileron</object-name>
     <object-name>glass-aileron</object-name>
@@ -487,6 +489,7 @@
     <object-name>sockle</object-name>
     <object-name>plate</object-name>
     <object-name>trim-console</object-name>
+    <object-name>trim-console-cover</object-name>
     <object-name>trimswitch-aileron</object-name>
     <object-name>trimind-aileron</object-name>
     <object-name>glass-aileron</object-name>
