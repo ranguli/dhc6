@@ -1092,6 +1092,8 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
 
         <max-n2>101.5</max-n2>
 
+        <warnings-enabled type="bool">true</warnings-enabled>
+
     </limits>
 
 

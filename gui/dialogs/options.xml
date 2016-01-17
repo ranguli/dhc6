@@ -94,6 +94,15 @@
         </color>
     </text>
 
+    <checkbox>
+        <halign>center</halign>
+        <label>Show limit warnings (recommended)</label>
+        <property>limits/warnings-enabled</property>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
   <button>
     <legend>Close</legend>
     <default>true</default>

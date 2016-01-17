@@ -27,6 +27,7 @@ var checkFlaps = func(n) {
   var flapsetting = n.getValue();
   if (flapsetting == 0)
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var airspeed = getprop("instrumentation/airspeed-indicator/indicated-speed-kt");
   var ltext = "";
   var limits = props.globals.getNode("limits");
@@ -40,7 +41,8 @@ var checkFlaps = func(n) {
         if ((flaps != nil)        and
             (speed != nil)        and
             (flapsetting > flaps) and
-            (airspeed > speed)       ) {
+            (airspeed > speed)    and
+            (enabled == 1)           ) {
           ltext = "Flaps extended above maximum flap extension speed!";
         }
       }
@@ -55,10 +57,11 @@ var checkFlaps = func(n) {
 var checkGear = func(n) {
   if (!n.getValue())
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var airspeed = getprop("instrumentation/airspeed-indicator/indicated-speed-kt");
   var max_gear = getprop("limits/max-gear-extension-speed");
 
-  if ((max_gear != nil) and (airspeed > max_gear)) {
+  if ((max_gear != nil) and (airspeed > max_gear) and (enabled == 1)) {
     screen.log.write("Gear extended above maximum extension speed!");
   }
 }
@@ -70,14 +73,15 @@ setlistener("controls/gear/gear-down", checkGear);
 var checkG = func{
   if (getprop("/sim/freeze/replay-state"))
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var g = getprop("/accelerations/pilot-gdamped") or 1;
   var max_positive = getprop("limits/max-positive-g");
   var max_negative = getprop("limits/max-negative-g");
   var msg = "";
-  if ((max_positive != nil) and (g > max_positive)) {
+  if ((max_positive != nil) and (g > max_positive) and (enabled == 1)) {
     msg = "Airframe structural positive-g load limit exceeded!";
   }
-  if ((max_negative != nil) and (g < max_negative)) {
+  if ((max_negative != nil) and (g < max_negative) and (enabled == 1)) {
     msg = "Airframe structural negative-g load limit exceeded!";
   }
   if (msg != "") {
@@ -94,6 +98,7 @@ checkG();
 var checkVNE = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var msg = "";
   var airspeed = getprop("instrumentation/airspeed-indicator/indicated-speed-kt");
   var altitude = getprop("position/altitude-ft");
@@ -103,23 +108,23 @@ var checkVNE = func {
   var vne_3    = getprop("limits/vne-3");
   var vne_4    = getprop("limits/vne-4");
 
-  if ((airspeed != nil) and (altitude != nil) and (vne_0 != nil) and (airspeed > vne_0) and (altitude < 6700)) {
+  if ((airspeed != nil) and (altitude != nil) and (vne_0 != nil) and (airspeed > vne_0) and (altitude < 6700) and (enabled == 1)) {
     msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
 
-  if ((airspeed != nil) and (altitude != nil) and (vne_1 != nil) and (airspeed > vne_1) and (altitude >= 6700) and altitude < 10000) {
+  if ((airspeed != nil) and (altitude != nil) and (vne_1 != nil) and (airspeed > vne_1) and (altitude >= 6700) and (altitude < 10000) and (enabled == 1)) {
     msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
 
-  if ((airspeed != nil) and (altitude != nil) and (vne_2 != nil) and (airspeed > vne_2) and (altitude >= 10000 and altitude < 15000)) {
+  if ((airspeed != nil) and (altitude != nil) and (vne_2 != nil) and (airspeed > vne_2) and (altitude >= 10000) and (altitude < 15000) and (enabled == 1)) {
     msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
 
-  if ((airspeed != nil) and (altitude != nil) and (vne_3 != nil) and (airspeed > vne_3) and (altitude >= 15000 and altitude < 20000)) {
+  if ((airspeed != nil) and (altitude != nil) and (vne_3 != nil) and (airspeed > vne_3) and (altitude >= 15000) and (altitude < 20000) and (enabled == 1)) {
     msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
 
-  if ((airspeed != nil) and (altitude != nil) and (vne_4 != nil) and (airspeed > vne_4) and (altitude >= 20000)) {
+  if ((airspeed != nil) and (altitude != nil) and (vne_4 != nil) and (airspeed > vne_4) and (altitude >= 20000) and (enabled == 1)) {
     msg = "Airspeed exceeds Maximum Operating Speed! Reduce the speed!";
   }
 
@@ -137,11 +142,12 @@ checkVNE();
 var checkALT = func {
    if (getprop("/sim/freeze/replay-state"))
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var msg = "";
   var altitude = getprop("position/altitude-ft");
   var max_alt = getprop("limits/max-alt");
 
-  if ((altitude != nil) and (altitude > max_alt)) {
+  if ((altitude != nil) and (altitude > max_alt) and (enabled == 1)) {
     msg = "Maximum Operation Altitude exceeded! Descend!";
   }
 
@@ -160,10 +166,11 @@ checkALT();
 var checkLHtorque = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var msg = "";
   var LHtorque = getprop("engines/engine[0]/torque-ftlb");
   var LHtorque_limit = getprop("limits/max-torque-ftlb");
-  if ((LHtorque != nil) and (LHtorque_limit != nil) and (LHtorque > LHtorque_limit)) {
+  if ((LHtorque != nil) and (LHtorque_limit != nil) and (LHtorque > LHtorque_limit) and (enabled == 1)) {
     msg = "Left torque pressure ecxeeds maximum! Reduce throttle immediately!!";
   }
   if (msg != "") {
@@ -179,10 +186,11 @@ checkLHtorque();
 var checkRHtorque = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+  var enabled = getprop("limits/warnings-enabled");
   var msg = "";
   var RHtorque = getprop("engines/engine[1]/torque-ftlb");
   var RHtorque_limit = getprop("limits/max-torque-ftlb");
-  if ((RHtorque != nil) and (RHtorque_limit != nil) and (RHtorque > RHtorque_limit)) {
+  if ((RHtorque != nil) and (RHtorque_limit != nil) and (RHtorque > RHtorque_limit) and (enabled == 1)) {
     msg = "Right torque pressure exceeds maximum! Reduce throttle immediately!!";
   }
   if (msg != "") {
@@ -199,10 +207,11 @@ checkRHtorque();
 var checkLHrpm = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var LHrpm = getprop("engines/engine[0]/rpm");
     var LHrpm_limit = getprop("limits/max-prop-rpm");
-    if ((LHrpm != nil) and (LHrpm_limit != nil) and (LHrpm > LHrpm_limit)) {
+    if ((LHrpm != nil) and (LHrpm_limit != nil) and (LHrpm > LHrpm_limit) and (enabled == 1)) {
       msg = "Left propeller exceeds maximum RPM! Reduce propeller pitch!";
   }
   if (msg != "") {
@@ -218,10 +227,11 @@ checkLHrpm();
 var checkRHrpm = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var RHrpm = getprop("engines/engine[1]/rpm");
     var RHrpm_limit = getprop("limits/max-prop-rpm");
-    if ((RHrpm != nil) and (RHrpm_limit != nil) and (RHrpm > RHrpm_limit)) {
+    if ((RHrpm != nil) and (RHrpm_limit != nil) and (RHrpm > RHrpm_limit) and (enabled == 1)) {
       msg = "Right propeller exceeds maximum RPM! Reduce propeller pitch!";
   }
   if (msg != "") {
@@ -238,10 +248,11 @@ checkRHrpm();
 var checkLHT5 = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var LHT5 = getprop("engines/engine[0]/t5");
     var LHT5_limit = getprop("limits/max-exhaust-temp");
-    if ((LHT5 != nil) and (LHT5_limit != nil) and (LHT5 > LHT5_limit)) {
+    if ((LHT5 != nil) and (LHT5_limit != nil) and (LHT5 > LHT5_limit) and (enabled == 1)) {
       msg = "The left engine overheates! Reduce the throttle!!";
   }
   if (msg != "") {
@@ -257,10 +268,11 @@ checkLHT5();
 var checkRHT5 = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var RHT5 = getprop("engines/engine[1]/t5");
     var RHT5_limit = getprop("limits/max-exhaust-temp");
-    if ((RHT5 != nil) and (RHT5_limit != nil) and (RHT5 > RHT5_limit)) {
+    if ((RHT5 != nil) and (RHT5_limit != nil) and (RHT5 > RHT5_limit) and (enabled == 1)) {
       msg = "The right engine overheates! Reduce the throttle!!";
   }
   if (msg != "") {
@@ -277,10 +289,11 @@ checkRHT5();
 var checkLHggRPM = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var LHggRPM = getprop("engines/engine[0]/n2");
     var LHTggRPM_limit = getprop("limits/max-n2");
-    if ((LHggRPM != nil) and (LHTggRPM_limit != nil) and (LHggRPM > LHTggRPM_limit)) {
+    if ((LHggRPM != nil) and (LHTggRPM_limit != nil) and (LHggRPM > LHTggRPM_limit) and (enabled == 1)) {
       msg = "The left turbine is over-revving! Reduce power!";
   }
   if (msg != "") {
@@ -296,10 +309,11 @@ checkLHggRPM();
 var checkRHggRPM = func {
   if (getprop("/sim/freeze/replay-state"))
     return;
+    var enabled = getprop("limits/warnings-enabled");
     var msg = "";
     var RHggRPM = getprop("engines/engine[1]/n2");
     var RHggRPM_limit = getprop("limits/max-n2");
-    if ((RHggRPM != nil) and (RHggRPM_limit != nil) and (RHggRPM > RHggRPM_limit)) {
+    if ((RHggRPM != nil) and (RHggRPM_limit != nil) and (RHggRPM > RHggRPM_limit) and (enabled == 1)) {
       msg = "The right turbine is over-revving! Reduce power!";
   }
   if (msg != "") {
