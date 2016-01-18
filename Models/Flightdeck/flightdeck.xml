@@ -3938,9 +3938,9 @@
       <property>/controls/flight/rudder-trim</property>
       <factor>360</factor>
       <center>
-        <x-m>-3.01587</x-m>
-        <y-m>-0.206562</y-m>
-        <z-m>-0.0069133</z-m>
+        <x-m>-3.01584</x-m>
+        <y-m>-0.20658</y-m>
+        <z-m>-0.00436</z-m>
       </center>
       <axis>
         <x>0</x>
