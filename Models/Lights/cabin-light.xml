@@ -50,6 +50,15 @@
 			<b>0.7</b>
 			<a>1.0</a>
 		</specular>
+		<dim-factor>
+		  <property>systems/electrical/outputs/instrument-lights</property>
+		  <!-- optional begin -->
+		  <factor>0.04</factor>
+		  <offset>0</offset>
+		  <min>0</min>
+		  <max>1</max>
+		  <!-- optional end -->
+		</dim-factor>
 		<attenuation>
 			<c>1.0</c>
 			<l>0.2</l>
