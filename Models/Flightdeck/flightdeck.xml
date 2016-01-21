@@ -356,13 +356,13 @@
     <object-name>trim-console-cover</object-name>
     <object-name>trimswitch-aileron</object-name>
     <object-name>trimind-aileron</object-name>
-    <object-name>glass-aileron</object-name>
+    <!-- object-name>glass-aileron</object-name -->
     <object-name>trimwheel-rudder</object-name>
     <object-name>trimind-rudder</object-name>
-    <object-name>glass-rudder</object-name>
+    <!-- object-name>glass-rudder</object-name -->
     <object-name>trimwheel-elevator</object-name>
     <object-name>trimind-elevator</object-name>
-    <object-name>glass-elevator</object-name>
+    <!-- object-name>glass-elevator</object-name -->
     </effect>
 
     <!--flashlight-->
@@ -492,13 +492,13 @@
     <object-name>trim-console-cover</object-name>
     <object-name>trimswitch-aileron</object-name>
     <object-name>trimind-aileron</object-name>
-    <object-name>glass-aileron</object-name>
+    <!-- object-name>glass-aileron</object-name -->
     <object-name>trimwheel-rudder</object-name>
     <object-name>trimind-rudder</object-name>
-    <object-name>glass-rudder</object-name>
+    <!-- object-name>glass-rudder</object-name -->
     <object-name>trimwheel-elevator</object-name>
     <object-name>trimind-elevator</object-name>
-    <object-name>glass-elevator</object-name>
+    <!-- object-name>glass-elevator</object-name -->
     </effect>
     
     <effect>
@@ -4163,7 +4163,25 @@
       <object-name>glass-rudder</object-name>
       <object-name>glass-aileron</object-name>
     </animation>
+    
+    <animation>
+      <type>noshadow</type>
+      <object-name>glass-elevator</object-name>
+      <object-name>glass-rudder</object-name>
+      <object-name>glass-aileron</object-name>
+    </animation>
 
+    <effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>glass-elevator</object-name>
+      <object-name>glass-rudder</object-name>
+      <object-name>glass-aileron</object-name>
+      <condition>
+	<property>sim/rendering/rembrandt/enabled</property>
+      </condition>
+    </effect>
+
+    
     <!--
 	<model>
         <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
