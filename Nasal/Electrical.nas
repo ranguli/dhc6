@@ -122,7 +122,8 @@ Alternator = {
             var out = (me.ideal_volts * factor);
         }
         me.gen_output.setValue(out);
-        return out;
+        if (out > 1) return out;
+        return 0;
     },
 
     get_output_amps : func {
