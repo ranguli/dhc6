@@ -7,6 +7,8 @@ props.globals.initNode("velocities/airspeed-kt",0);
 props.globals.initNode("controls/engines/engine[0]/intake-deflector",0);
 props.globals.initNode("controls/engines/engine[1]/intake-deflector",0);
 props.globals.initNode("controls/anti-ice/prop-heat",0);
+setprop("/tooltips-custom/torque-ftlb[0]", 0.0);
+setprop("/tooltips-custom/torque-ftlb[1]", 0.0);
 
 var torque = func {
     var intake_deflector0 = getprop("controls/engines/engine[0]/intake-deflector");
@@ -25,6 +27,8 @@ var torque = func {
     torque1 = torque1 + ias_effect - intake_deflector_effect1 - propdeice_effect;
     setprop("engines/engine[0]/torque-ftlb", torque0);
     setprop("engines/engine[1]/torque-ftlb", torque1);
+    setprop("tooltips-custom/torque-ftlb[0]", torque0);
+    setprop("tooltips-custom/torque-ftlb[1]", torque1);
 
     settimer(torque, 0);
 }

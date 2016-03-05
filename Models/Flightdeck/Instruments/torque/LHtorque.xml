@@ -96,8 +96,8 @@ Syd Adams
             <binding>
               <command>set-tooltip</command>
                 <tooltip-id>LH-Torque</tooltip-id>
-                  <label>LH-torque: %3g ftlb </label>
-                <property>engines/engine[0]/torque-ftlb</property>
+                  <label>LH-torque: %3g PSI </label>
+                <property>tooltips-custom/torque-pressure[0]</property>
             </binding>
       </hovered>
    </animation>
