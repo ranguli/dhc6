@@ -339,27 +339,10 @@
           <visible>true</visible>
           <hovered>
             <binding>
-              <condition>
-                <less-than-equals>
-                  <property>position/gear-agl-ft</property>
-                  <value>2499</value>
-                </less-than-equals>
-              </condition>
               <command>set-tooltip</command>
               <tooltip-id>agl-ft</tooltip-id>
               <label>Altitude above ground:% 3dft</label>
-              <property>position/gear-agl-ft</property>
-            </binding>
-            <binding>
-              <condition>
-                <greater-than>
-                  <property>position/gear-agl-ft</property>
-                  <value>2499</value>
-                </greater-than>
-              </condition>
-              <command>set-tooltip</command>
-              <tooltip-id>agl-ft</tooltip-id>
-              <label>Altitude above ground: 2500ft or more</label>
+              <property>tooltips-custom/radar-alt</property>
             </binding>
           </hovered>
 	</animation>

@@ -1120,6 +1120,7 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
             <file>Aircraft/dhc6/Nasal/ground-services.nas</file>
             <file>Aircraft/dhc6/Models/Flightdeck/Instruments/ki266/ki266.nas</file>
             <file>Aircraft/dhc6/Nasal/vor-ils-catch.nas</file>
+	    <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>
