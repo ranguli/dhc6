@@ -1,6 +1,7 @@
 ####    DHC6 systems    ####
 aircraft.livery.init("Aircraft/dhc6/Models/Liveries");
-
+setprop("controls/armament/station[5]/release-all",1);
+setprop("controls/armament/station[6]/release-all",0);
 var C_volume = props.globals.initNode("sim/sound/cabin",0.3);
 var D_volume = props.globals.initNode("sim/sound/doors",0.7);
 var E1_volume = props.globals.initNode("sim/sound/engine[0]",0.0);

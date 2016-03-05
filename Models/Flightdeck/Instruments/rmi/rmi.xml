@@ -398,7 +398,7 @@
                 <command>property-assign</command>
                 <!-- NAV2 off-->
                 <property>/controls/armament/station[6]/release-all</property>
-                <value type="bool">false</value>value
+                <value type="bool">false</value>
               </binding>
               <binding>
             <command>property-toggle</command>
