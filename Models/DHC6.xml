@@ -1277,16 +1277,24 @@
       <object-name>RHdoor.glass_interior</object-name>
     </effect>-->
 
+    <effect>
+        <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
+        <parameters>
+            <reflection-correction type="float">1.0</reflection-correction>
+            <reflection-dynamic type="int">1</reflection-dynamic>
+        </parameters>
+        <object-name>SpinnerL</object-name>
+        <object-name>SpinnerR</object-name>
+        <object-name>SpinnerLRot</object-name>
+        <object-name>SpinnerRRot</object-name>
+    </effect>
+
 <effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
       <object-name>fuselage</object-name>
       <object-name>fuselage.004</object-name>
       <object-name>longnose</object-name>
       <object-name>bluntnose</object-name>
-      <object-name>SpinnerL</object-name>
-	  <object-name>SpinnerR</object-name>
-	  <object-name>SpinnerLRot</object-name>
-	  <object-name>SpinnerRRot</object-name>
       <object-name>RFdoor</object-name>
       <object-name>LFdoor</object-name>
       <object-name>RRdoor</object-name>
@@ -1356,7 +1364,7 @@
       <object-name>Lrdoor.glass_interior</object-name>
     </effect>
 
-      <animation>
+      <!--animation>
         <type>shader</type>
         <shader>chrome</shader>
         <texture>Aircraft/dhc6/Models/Effects/chrome2.png</texture>
@@ -1364,7 +1372,7 @@
 		<object-name>SpinnerR</object-name>
 		<object-name>SpinnerLRot</object-name>
 		<object-name>SpinnerRRot</object-name>
-    </animation>
+    </animation-->
 
     <animation>
         <type>shader</type>
