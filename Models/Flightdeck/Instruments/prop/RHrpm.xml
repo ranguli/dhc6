@@ -91,9 +91,9 @@ Syd Adams
       <hovered>
             <binding>
               <command>set-tooltip</command>
-                <tooltip-id>Left Prop-Speed</tooltip-id>
+                <tooltip-id>Right Prop-Speed</tooltip-id>
                   <label>Right Prop-Speed: %3d RPM</label>
-                <property>engines/engine[0]/rpm</property>
+                <property>engines/engine[1]/rpm</property>
             </binding>
       </hovered>
    </animation>
