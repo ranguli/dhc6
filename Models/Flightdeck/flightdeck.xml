@@ -43,7 +43,7 @@
     <object-name>roilpsi.lit</object-name>
     <condition>
       <equals>
-        <property>/systems/electrical/outputs/cabin-lights-dim-factor</property>
+        <property>sim/multiplay/generic/float[10]</property>
         <value>0</value>
       </equals>
     </condition>
@@ -114,7 +114,7 @@
       <red>0.381924</red>
       <green>0.30935844</green>
       <blue>0.161171928</blue>
-      <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
     </emission>
   </animation>
 
@@ -177,7 +177,7 @@
       <red>0.381924</red>
       <green>0.30935844</green>
       <blue>0.161171928</blue>
-      <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
     </emission>
   </animation>
 
@@ -191,7 +191,7 @@
       <red>0.381924</red>
       <green>0.30935844</green>
       <blue>0.161171928</blue>
-      <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
     </emission>
   </animation>
 
@@ -204,7 +204,7 @@
       <red>0.381924</red>
       <green>0.30935844</green>
       <blue>0.161171928</blue>
-      <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
     </emission>
   </animation>
 
@@ -225,7 +225,7 @@
       <red>0.381924</red>
       <green>0.30935844</green>
       <blue>0.161171928</blue>
-      <factor-prop>/systems/electrical/outputs/cabin-lights-dim-factor</factor-prop>
+      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
     </emission>
   </animation>
   

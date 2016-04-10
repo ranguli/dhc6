@@ -52,7 +52,7 @@
     <object-name>blue-light-plate</object-name>
     <condition>
       <and>
-        <property>sim/multiplay/generic/int[10]</property>
+        <property>sim/multiplay/generic/int[3]</property>
         <greater-than>
           <property>sim/multiplay/generic/float[8]</property>
           <value>8</value>

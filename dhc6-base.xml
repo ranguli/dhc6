@@ -546,23 +546,50 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
         <generic>
             <string n="0" alias="/sim/aero"/>
             <string n="1" alias="/sim/multiplay/callsign"/>
+
             <int n="0" alias="/sim/model/blunt-nose"/>
             <int n="1" alias="/sim/model/display-callsign"/>
 
-            <int n="9" alias="/sim/model/lights/nav-lights/state"/>
-            <int n="10" alias="/sim/model/lights/landing-light[0]/state"/>
-            <int n="11" alias="/sim/model/lights/landing-light[1]/state"/>
-            <int n="12" alias="/sim/model/lights/taxi-lights/state"/>
-            <int n="13" alias="/sim/model/lights/strobe/state"/>
-            <int n="14" alias="/sim/model/lights/beacon/state"/>
+            <int n="2" alias="/sim/model/lights/nav-lights/state"/>
+            <int n="3" alias="/sim/model/lights/landing-light[0]/state"/>
+            <int n="4" alias="/sim/model/lights/landing-light[1]/state"/>
+            <int n="5" alias="/sim/model/lights/taxi-lights/state"/>
+            <int n="6" alias="/sim/model/lights/strobe/state"/>
+            <int n="7" alias="/sim/model/lights/beacon/state"/>
 
-            <float n="3" alias="/systems/electrical/outputs/nav-lights">       0 </float>
-            <float n="4" alias="/systems/electrical/outputs/landing-light[0]"> 0 </float>
-            <float n="5" alias="/systems/electrical/outputs/landing-light[1]"> 0 </float>
-            <float n="6" alias="/systems/electrical/outputs/taxi-lights">      0 </float>
-            <float n="7" alias="/systems/electrical/outputs/strobe">           0 </float>
-            <float n="8" alias="/systems/electrical/outputs/beacon">           0 </float>
-            <float n="9" alias="/systems/electrical/volts">                    0 </float>
+            <int n="8" alias="/sim/model/equipment/left-pitot-cover"/>
+            <int n="9" alias="/sim/model/equipment/left-engine-cover"/>
+            <int n="10" alias="/sim/model/equipment/left-tiedown-wheels"/>
+            <int n="11" alias="/sim/model/equipment/left-chock-fwd"/>
+            <int n="12" alias="/sim/model/equipment/left-chock-aft"/>
+            <int n="13" alias="/sim/model/equipment/rear-tiedown-wheels"/>
+            <int n="14" alias="/sim/model/equipment/right-chock-aft"/>
+            <int n="15" alias="/sim/model/equipment/right-chock-fwd"/>
+            <int n="16" alias="/sim/model/equipment/right-tiedown-wheels"/>
+            <int n="17" alias="/sim/model/equipment/right-engine-cover"/>
+            <int n="18" alias="/sim/model/equipment/right-pitot-cover"/>
+
+            <int n="19" alias="/sim/model/remove-doors"/>
+
+            <float n="0" alias="/controls/flight/aileron">                             0 </float>
+            <float n="1" alias="/controls/flight/elevator">                            0 </float>
+            <float n="2" alias="/controls/flight/rudder">                              0 </float>
+
+            <float n="3" alias="/systems/electrical/outputs/nav-lights">               0 </float>
+            <float n="4" alias="/systems/electrical/outputs/landing-light[0]">         0 </float>
+            <float n="5" alias="/systems/electrical/outputs/landing-light[1]">         0 </float>
+            <float n="6" alias="/systems/electrical/outputs/taxi-lights">              0 </float>
+            <float n="7" alias="/systems/electrical/outputs/strobe">                   0 </float>
+            <float n="8" alias="/systems/electrical/outputs/beacon">                   0 </float>
+            <float n="9" alias="/systems/electrical/volts">                            0 </float>
+            <float n="10" alias="/systems/electrical/outputs/cabin-lights-dim-factor"> 0 </float>
+
+            <float n="11" alias="/controls/doors/Baggage.door/position-norm">          0 </float>
+            <float n="12" alias="/controls/doors/LF-door/position-norm">               0 </float>
+            <float n="13" alias="/controls/doors/LR-door-F/position-norm">             0 </float>
+            <float n="14" alias="/controls/doors/LR-door-R/position-norm">             0 </float>
+            <float n="15" alias="/controls/doors/RF-door/position-norm">               0 </float>
+            <float n="16" alias="/controls/doors/RR-door/position-norm">               0 </float>
         </generic>
     </multiplay>
 
