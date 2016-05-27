@@ -53,15 +53,14 @@
         </binding>
     </checkbox>
 
-    <!--
 	<checkbox>
-        <halign>left</halign>
-        <label>Advanced avionics</label>
-        <property>sim/model/show-hide-advanced-avionics</property>
+        <halign>center</halign>
+        <label>Show Garmin 196 GPS</label>
+        <property>sim/model/show-garmin-196</property>
         <binding>
             <command>dialog-apply</command>
         </binding>
-      </checkbox>-->
+      </checkbox>
 
       <hrule/>
 
@@ -94,6 +93,8 @@
         </color>
     </text>
 
+    <hrule/>
+
     <checkbox>
         <halign>center</halign>
         <label>Show limit warnings (recommended)</label>
@@ -102,6 +103,8 @@
             <command>dialog-apply</command>
         </binding>
     </checkbox>
+
+    <hrule/>
 
   <button>
     <legend>Close</legend>

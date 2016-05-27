@@ -4182,16 +4182,18 @@
     </effect>
 
     
-    <!--
+    
 	<model>
         <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
         <offsets>
             <x-m>-3.89</x-m>
             <y-m>-0.14</y-m>
-            <z-m>0.7</z-m>
+            <z-m>0.69</z-m>
+            <heading-deg>-10</heading-deg>
+            <pitch-deg>-5</pitch-deg>
         </offsets>
         <condition>
-            <property>sim/model/show-hide-advanced-avionics</property>
+            <property>sim/model/show-garmin-196</property>
         </condition>
-    </model>-->
+    </model>
 </PropertyList>
