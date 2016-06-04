@@ -10,7 +10,21 @@ Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#2194
 <PropertyList include="dhc6-base.xml">
     <sim>
         <description>De Havilland Canada DHC-6 Twin Otter (floats)</description>
-        <author>Syd Adams, Christian Thiriot (PATTEN), Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2, lanbo64, Jonathan Schellhase (dg-505), CaptB, Adam Swift (Mig29pilot), tauchergreg, Sebastian (rollershutter), others</author>
+        <long-description>The DHC-6-300 Twin Otter from de Havilland Canada is a 20 seat,
+            twin turboprop, high wing aircraft with a fixed tricycle gear. First flown in 1996,
+            the aircraft still enjoys great popularity among skydivers and as a bush plane due
+            to it's powerful engines and it's robustness and versatility. Moreover it can
+            easily be equipped with floats and skis.
+        </long-description>
+        <de>
+            <long-description>Die DHC-6-300 Twin Otter von de Havilland Canada ist ein 20-sitziger Hochdecker
+                mit zwei Turboprop-Triebwerken und einem festen Dreibeinfahrwerk. Ihr Erstflug war 1969
+                und auch heute noch erfreut sie sich dank ihrer starken Treibwerke und ihrer Robustheit
+                und Vielseitigkeit großer Beliebtheit bei Fallschirmspringern und als Buschflugzeug.
+                Zudem kann sie einfach mit Schwimmern und Skiern ausgestattet werden.
+            </long-description>
+        </de>
+        <author>Syd Adams (Initial model), Christian Thiriot (3D, Textures), Bo Lan (Nasal, FDM, Systems), Jonathan Schellhase (3D, Nasal, Systems, Sound, misc)</author>
         <flight-model>yasim</flight-model>
         <aero>dhc6F</aero>
         <type type="string">seaplane</type>
