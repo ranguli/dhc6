@@ -164,11 +164,11 @@ Prop diam: 2.59 m
         mass="500" moment="40" radius="1.1"
         cruise-speed="146" cruise-rpm="1650"
         cruise-power="484" cruise-alt="10000"
-        min-rpm="1650" max-rpm="2200"
+        min-rpm="1650" max-rpm="2110"
         fine-stop="0.25" coarse-stop="4.0">
         <turbine-engine
-            eng-power="680" eng-rpm="2200" alt="0"
-            flat-rating="680" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
+            eng-power="620" eng-rpm="2110" alt="0"
+            flat-rating="620" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="2.65" z="1.0"/>
         <control-input axis="/controls/engines/engine[0]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
@@ -186,11 +186,11 @@ Prop diam: 2.59 m
         mass="500" moment="40" radius="1.0"
         cruise-speed="146" cruise-rpm="1650"
         cruise-power="484" cruise-alt="10000"
-        min-rpm="1650" max-rpm="2200"
+        min-rpm="1650" max-rpm="2110"
         fine-stop="0.25" coarse-stop="4.0">
         <turbine-engine
-            eng-power="680" eng-rpm="2200" alt="0"
-            flat-rating="680" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
+            eng-power="620" eng-rpm="2110" alt="0"
+            flat-rating="620" n2-low-idle="45" n2-high-idle="65" n2-max="101.5" bsfc="0.6"/>
         <actionpt x="2.2" y="-2.65" z="1.0"/>
         <control-input axis="/controls/engines/engine[1]/internal-throttle-fwd"
         src0="0" dst0="0.05" src1="1" dst1="1" control="THROTTLE"/>
