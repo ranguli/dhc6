@@ -74,12 +74,12 @@ Jan 2008 Syd Adams
 
     <view n="0">
         <internal>true</internal>
-        <name>Cockpit</name>
+        <name>Pilot</name>
         <type>lookfrom</type>
         <config>
             <default-field-of-view-deg>60</default-field-of-view-deg>
-            <x-offset-m type="double">-0.48</x-offset-m>
-            <y-offset-m type="double">0.72</y-offset-m>
+            <x-offset-m type="double">-0.46</x-offset-m>
+            <y-offset-m type="double">0.76</y-offset-m>
             <z-offset-m type="double">-3.15</z-offset-m>
             <pitch-offset-deg>-15</pitch-offset-deg>
             <limits>
@@ -241,7 +241,7 @@ Jan 2008 Syd Adams
     </view>
 
     <view n="105">
-        <name>CoPilot View</name>
+        <name>Copilot View</name>
         <enabled type="bool">true</enabled>
         <type>lookfrom</type>
         <internal type="bool">true</internal>
@@ -261,8 +261,8 @@ Jan 2008 Syd Adams
             <right-direction-deg type="double">270</right-direction-deg>
             <front-right-direction-deg type="double">315</front-right-direction-deg>
             <dynamic-view type="bool">true</dynamic-view>
-            <x-offset-m type="double">0.48</x-offset-m>
-            <y-offset-m type="double">0.72</y-offset-m>
+            <x-offset-m type="double">0.46</x-offset-m>
+            <y-offset-m type="double">0.76</y-offset-m>
             <z-offset-m type="double">-3.26</z-offset-m>
             <pitch-offset-deg>-12</pitch-offset-deg>
              <limits>
@@ -399,7 +399,7 @@ Jan 2008 Syd Adams
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
     <help>
-        <title>De Havilland Canada DHC-6 Twin Otter</title>
+        <title>de Havilland Canada DHC-6 Twin Otter</title>
 		<key>
 			<name>Del</name>
 			<desc>Toggle thrust reverse</desc>
@@ -457,6 +457,10 @@ Jan 2008 Syd Adams
             <desc>Show/hide yokes</desc>
         </key>
         <key>
+            <name>Y</name>
+            <desc>Show/hide pilots</desc>
+        </key>
+        <key>
             <name>F5</name>
             <desc>Aileron trim left</desc>
         </key>
@@ -511,7 +515,7 @@ Jan 2008 Syd Adams
 		<line>Typical Cruise Speed (up to 10000 ft MSL): around 150 KIAS</line>
 		<text>
 Some information about the Twin Otter:
-The DHC-6 Twin Otter is a Canadian 19-passanger STOL aircraft developed by de Havilland Canada.
+The DHC-6 Twin Otter is a Canadian 19-passenger STOL aircraft developed by de Havilland Canada.
 It's first flight was on May 20th, 1965 and it was produced until 1988. Since 2008 Viking Air produces the Twin Otter in License as DHC-6-400 Series.
 Till today there were built more than 900 Twin Otters.
 It's STOL abilities and high rate of climb have made it ideal for regional cargo/passenger transport and for MEDEVAC flights. In USA and in Europe it is a popular aircraft in the commercial skydiving sector.
@@ -697,6 +701,14 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
         <path>Aircraft/dhc6/Panels/dhc6-panel.xml</path>
         <visibility>false</visibility>
     </panel>
+
+    <pilots>
+        <pilots-enabled type="bool">true</pilots-enabled>
+        <show-pilot type="bool">true</show-pilot>
+        <hide-pilot-cockpit-view type="bool">false</hide-pilot-cockpit-view>
+        <show-copilot type="bool">true</show-copilot>
+        <hide-copilot-cockpit-view type="bool">false</hide-copilot-cockpit-view>
+    </pilots>
 
 </sim>
 
@@ -922,6 +934,14 @@ de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
             	<property>/controls/gear/parkingbrake-lever</property>
         	</binding>
     	</key>
+        <key n="89">
+            <name>Shift-Y</name>
+            <desc>Show/hide pilots</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/pilots/pilots-enabled</property>
+            </binding>
+        </key>
     </keyboard>
     <mice include="dhc6-mice.xml"/>
 </input>

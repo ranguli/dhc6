@@ -4196,4 +4196,31 @@
             <property>sim/model/show-garmin-196</property>
         </condition>
     </model>
+
+    <!-- Pilot -->
+    <model>
+		<path>Aircraft/dhc6/Models/Pilot/pilot.xml</path>
+		<offsets>
+			<x-m>-3.15</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+		<condition>
+			<property>sim/pilots/pilots-enabled</property>
+		</condition>
+	</model>
+
+	<!-- Copilot -->
+	<model>
+		<path>Aircraft/dhc6/Models/Pilot/copilot.xml</path>
+		<offsets>
+			<x-m>-3.1888</x-m>
+			<y-m>0.43</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+		<condition>
+			<property>sim/pilots/pilots-enabled</property>
+		</condition>
+	</model>
+
 </PropertyList>

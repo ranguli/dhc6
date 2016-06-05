@@ -35,6 +35,20 @@
 
     <hrule/>
 
+    <group>
+        <layout>hbox</layout>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+        <text>
+            <label>General</label>
+            <halign>center</halign>
+        </text>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+    </group>
+
     <checkbox>
         <halign>center</halign>
         <label>Remove Rear Doors</label>
@@ -62,7 +76,19 @@
         </binding>
       </checkbox>
 
-      <hrule/>
+      <group>
+        <layout>hbox</layout>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+        <text>
+            <label>Rendering</label>
+            <halign>center</halign>
+        </text>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+    </group>
 
       <checkbox>
         <halign>center</halign>
@@ -93,7 +119,110 @@
         </color>
     </text>
 
-    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+        <text>
+            <label>Pilot options</label>
+            <halign>center</halign>
+        </text>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+    </group>
+
+    <checkbox>
+        <halign>center</halign>
+        <label>Enable pilots</label>
+        <property>sim/pilots/pilots-enabled</property>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </checkbox>
+
+    <group>
+        <layout>table</layout>
+
+        <checkbox>
+            <col>0</col>
+            <row>0</row>
+            <halign>left</halign>
+            <label>Show pilot</label>
+            <enable>
+                <property>sim/pilots/pilots-enabled</property>
+            </enable>
+            <property>sim/pilots/show-pilot</property>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </checkbox>
+
+        <checkbox>
+            <col>1</col>
+            <row>0</row>
+            <halign>left</halign>
+            <label>Hide pilot in Pilot's view</label>
+            <enable>
+                <and>
+                    <property>sim/pilots/pilots-enabled</property>
+                    <property>sim/pilots/show-pilot</property>
+                </and>
+            </enable>
+            <property>sim/pilots/hide-pilot-cockpit-view</property>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </checkbox>
+
+        <checkbox>
+            <col>0</col>
+            <row>1</row>
+            <halign>left</halign>
+            <label>Show copilot</label>
+            <enable>
+                <property>sim/pilots/pilots-enabled</property>
+            </enable>
+            <property>sim/pilots/show-copilot</property>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </checkbox>
+
+        <checkbox>
+            <col>1</col>
+            <row>1</row>
+            <halign>left</halign>
+            <label>Hide copilot in Copilot's view</label>
+            <enable>
+                <and>
+                    <property>sim/pilots/pilots-enabled</property>
+                    <property>sim/pilots/show-copilot</property>
+                </and>
+            </enable>
+            <property>sim/pilots/hide-copilot-cockpit-view</property>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </checkbox>
+
+    </group>
+
+    <group>
+        <layout>hbox</layout>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+        <text>
+            <label>Limits</label>
+            <halign>center</halign>
+        </text>
+        <hrule>
+            <stretch>true</stretch>
+        </hrule>
+    </group>
 
     <checkbox>
         <halign>center</halign>
@@ -106,13 +235,13 @@
 
     <hrule/>
 
-  <button>
-    <legend>Close</legend>
-    <default>true</default>
-    <key>Esc</key>
-    <binding>
-      <command>dialog-close</command>
-    </binding>
-  </button>
+    <button>
+        <legend>Close</legend>
+        <default>true</default>
+        <key>Esc</key>
+        <binding>
+            <command>dialog-close</command>
+        </binding>
+    </button>
 
 </PropertyList>
