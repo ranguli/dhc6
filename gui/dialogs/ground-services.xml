@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>ground-services</name>
+	<layout>vbox</layout>
+
+	<text>
+		<label>Ground Services</label>
+	</text>
+
+	<hrule/>
+
+	<button>
+		<legend>Fuel Truck controls</legend>
+		<padding>5</padding>
+		<enable>
+			<condition>
+				<and>
+					<property>gear/gear[6]/ground-is-solid</property>
+					<property>gear/gear[6]/wow</property>
+					<less-than>
+						<property>velocities/airspeed-kt</property>
+						<value>1.0</value>
+					</less-than>
+				</and>
+			</condition>
+		</enable>
+		<binding>
+			<command>nasal</command>
+			<script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
+		</binding>
+		<binding>
+			<command>dialog-close</command>
+		</binding>
+	</button>
+
+	<button>
+		<legend>Securing equipment</legend>
+		<padding>5</padding>
+		<binding>
+			<command>nasal</command>
+			<script>fgcommand("dialog-show", props.Node.new({"dialog-name": "equipment"}));</script>
+		</binding>
+		<binding>
+			<command>dialog-close</command>
+		</binding>
+	</button>
+
+	<button>
+		<legend>Toggle External Power</legend>
+		<padding>5</padding>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<and>
+							<property>gear/gear[1]/ground-is-solid</property>
+							<property>gear/gear[1]/wow</property>
+						</and>
+						<and>
+							<property>gear/gear[6]/ground-is-solid</property>
+							<property>gear/gear[6]/wow</property>
+						</and>
+					</or>
+					<less-than>
+						<property>velocities/airspeed-kt</property>
+						<value>1.0</value>
+					</less-than>
+				</and>
+			</condition>
+		</enable>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/model/equipment/ground-services/external-power/enable</property>
+		</binding>
+	</button>
+
+	<hrule/>
+
+	<button>
+		<legend>Close</legend>
+		<default>true</default>
+		<key>Esc</key>
+		<padding>5</padding>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>dialog-close</command>
+		</binding>
+	</button>
+
+</PropertyList>

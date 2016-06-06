@@ -45,50 +45,18 @@
 			</item>
 
 			<item>
-				<name>fuel-truck</name>
-				<label>Fuel Truck Controls</label>
-				<enabled>
-					<condition>
-						<and>
-							<property>gear/gear[6]/ground-is-solid</property>
-							<property>gear/gear[6]/wow</property>
-						</and>
-					</condition>
-				</enabled>
-				<binding>
-					<command>nasal</command>
-					<script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
-				</binding>
-			</item>
-
-			<item>
-				<name>external-power</name>
-				<label>Toggle external power</label>
-				<enabled>
-					<condition>
-						<or>
-							<and>
-								<property>gear/gear[1]/ground-is-solid</property>
-								<property>gear/gear[1]/wow</property>
-							</and>
-							<and>
-								<property>gear/gear[6]/ground-is-solid</property>
-								<property>gear/gear[6]/wow</property>
-							</and>
-						</or>
-					</condition>
-				</enabled>
-				<binding>
-					<command>property-toggle</command>
-					<property>sim/model/equipment/ground-services/external-power/enable</property>
-				</binding>
-			</item>
-
-			<item>
 				<label>Select Livery</label>
 				<binding>
 					<command>nasal</command>
 					<script>aircraft.livery.dialog.open()</script>
+				</binding>
+			</item>
+
+			<item>
+				<label>DHC-6 wiki page</label>
+				<binding>
+					<command>open-browser</command>
+					<path>http://wiki.flightgear.org/De_Havilland_Canada_DHC-6_Twin_Otter</path>
 				</binding>
 			</item>
 

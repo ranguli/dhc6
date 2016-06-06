@@ -282,10 +282,22 @@
 	<layout>hbox</layout>
 
 		<button>
+			<legend>Back</legend>
+			<padding>5</padding>
+			<binding>
+				<command>nasal</command>
+				<script>fgcommand("dialog-show", props.Node.new({"dialog-name": "ground-services"}));</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+
+		<button>
 			<legend>Close</legend>
 			<default>true</default>
 			<key>Esc</key>
-		<padding>5</padding>
+			<padding>5</padding>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
