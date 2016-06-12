@@ -246,7 +246,7 @@ Jan 2008 Syd Adams
         </als-secondary-lights>
     </rendering>
 
-    <flight-recorder include="systems/flightrecorder.xml"/>
+    <flight-recorder include="Systems/flightrecorder.xml"/>
 
     <replay>
         <buffer>
