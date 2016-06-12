@@ -115,7 +115,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AIneedle</object-name>
-		<property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+		<property>/instrumentation/attitude-indicator[0]/indicated-pitch-deg</property>
 		<interpolation>
 			<entry><ind>25.0</ind><dep>-0.015</dep></entry>
 			<entry><ind>-25.0</ind><dep>0.015</dep></entry>
@@ -135,7 +135,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AIneedle</object-name>
-		<property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+		<property>/instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
 		<factor>-1</factor>
 		<axis>
 			<x>-1</x>
@@ -152,7 +152,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AIring</object-name>
-		<property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+		<property>/instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
 		<factor>-1</factor>
 		<axis>
 			<x>-1</x>
@@ -169,7 +169,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AIplane</object-name>
-		<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+		<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 		<interpolation>
 			<entry><ind>10.0</ind><dep>0.006</dep></entry>
 			<entry><ind>-10.0</ind><dep>-0.006</dep></entry>
@@ -184,7 +184,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AI.knob</object-name>
-		<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+		<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 		<factor>10</factor>
 		<center>
 			<x-m>0.004016</x-m>
@@ -206,7 +206,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+				<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 				<step>0.5</step>
 				<min>-10</min>
 				<max>10</max>
@@ -218,7 +218,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+				<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 				<step>-0.5</step>
 				<min>-10</min>
 				<max>10</max>
@@ -229,7 +229,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+				<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 				<step>0.5</step>
 				<min>-10</min>
 				<max>10</max>
@@ -240,7 +240,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+				<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 				<step>-0.5</step>
 				<min>-10</min>
 				<max>10</max>
@@ -252,7 +252,7 @@
 				<command>set-tooltip</command>
         		<tooltip-id>horizon-offset</tooltip-id>
         		<label>Horizon offset: %.1f deg</label>
-				<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+				<property>instrumentation/attitude-indicator[0]/horizon-offset-deg</property>
 			</binding>
 		</hovered>
 	</animation>

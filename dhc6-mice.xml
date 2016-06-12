@@ -69,6 +69,34 @@
             </button>
         </mode>
 
+        <mode n="1">
+
+            <button n="3">
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/elevator-trim</property>
+                    <step type="double">0.01</step>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>gui.popupTip(sprintf("Elevator trim: %2.2f", getprop("/controls/flight/elevator-trim")), 5);</script>
+                </binding>
+            </button>
+
+            <button n="4">
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/elevator-trim</property>
+                    <step type="double">-0.01</step>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>gui.popupTip(sprintf("Elevator trim: %2.2f", getprop("/controls/flight/elevator-trim")), 5);</script>
+                </binding>
+            </button>
+
+        </mode>
+
     </mouse>
 
 </PropertyList>

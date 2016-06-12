@@ -6,6 +6,32 @@
           <path>rmi.ac</path>
 
           <animation>
+            <type>scale</type>
+            <object-name>Bugminus</object-name>
+            <object-name>Bugplus</object-name>
+            <object-name>NAV1BUTT</object-name>
+            <object-name>NAV2BUTT</object-name>
+            <object-name>RMI</object-name>
+            <object-name>RMI-bug</object-name>
+            <object-name>RMI.adf</object-name>
+            <object-name>RMI.brgN1</object-name>
+            <object-name>RMI.brgN2</object-name>
+            <object-name>RMI.face</object-name>
+            <object-name>RMI.ticks</object-name>
+            <object-name>V1on</object-name>
+            <object-name>V2on</object-name>
+            <object-name>knob</object-name>
+            <object-name>mount</object-name>
+            <object-name>switchbox</object-name>
+            <object-name>vitre</object-name>
+            <object-name>backlight</object-name>
+            <object-name>vitre</object-name>
+            <x-offset>1.0</x-offset>
+            <y-offset>0.9</y-offset>
+            <z-offset>0.9</z-offset>
+          </animation>
+
+          <animation>
             <object-name>RMI</object-name>
             <object-name>RMI.face</object-name>
             <object-name>RMI.ticks</object-name>

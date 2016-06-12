@@ -12,6 +12,7 @@ props.globals.initNode("controls/anti-ice/pitot-heat",0);
 props.globals.initNode("controls/anti-ice/prop-heat",0);
 props.globals.initNode("hazards/icing/pitot",0);
 props.globals.initNode("hazards/icing/propeller",0);
+props.globals.initNode("hazards/icing/pitot-icing-lvl", 0, "DOUBLE");
 
 var pitot_icing_lvl = 0;
 
@@ -66,35 +67,42 @@ var pitot_fail = func {
     var relative_humidity = getprop("/environment/relative-humidity");
     var internal_ias = getprop("velocities/airspeed-kt");
     var ias_serviceable =
-    getprop("instrumentation/vertical-speed-indicator/serviceable");
+#   getprop("instrumentation/vertical-speed-indicator/serviceable");
+    getprop("systems/pitot[0]/serviceable");
+    getprop("systems/pitot[1]/serviceable");
 
     if ((oat <= 0 and oat <= dew_point and relative_humidity > 50) and
     pitot_heat != 1) {
-        setprop("instrumentation/airspeed-indicator/serviceable",0);
-	setprop("instrumentation/altimeter[0]/serviceable",0);
-        setprop("instrumentation/altimeter[1]/serviceable",0);
-        setprop("instrumentation/vertical-speed-indicator/serviceable",0);
-	setprop("instrumentation/vertical-speed-indicator/indicated-speed-fpm",0);
+#       setprop("systems/pitot[0]/serviceable",0);
+#       setprop("systems/pitot[1]/serviceable",0);
+#       setprop("instrumentation/altimeter[0]/serviceable",0);
+#       setprop("instrumentation/altimeter[1]/serviceable",0);
+#       setprop("instrumentation/vertical-speed-indicator/serviceable",0);
+#       setprop("instrumentation/vertical-speed-indicator/indicated-speed-fpm",0);
         pitot_icing_lvl = pitot_icing_lvl  + rand();
         if (pitot_icing_lvl > internal_ias) {
             pitot_icing_lvl = internal_ias;
         }
+        setprop("hazards/icing/pitot-icing-lvl", pitot_icing_lvl);
         setprop("hazards/icing/pitot",1);
     } else {
-	setprop("instrumentation/altimeter[0]/serviceable",1);
-        setprop("instrumentation/altimeter[1]/serviceable",1);
-        setprop("instrumentation/vertical-speed-indicator/serviceable",1);
-        pitot_icing_lvl = pitot_icing_lvl - rand();
+#       setprop("instrumentation/altimeter[0]/serviceable",1);
+#       setprop("instrumentation/altimeter[1]/serviceable",1);
+#       setprop("instrumentation/vertical-speed-indicator/serviceable",1);
+        pitot_icing_lvl = pitot_icing_lvl - rand()*2;
+        setprop("hazards/icing/pitot-icing-lvl", pitot_icing_lvl);
         if (pitot_icing_lvl < 0) {
             pitot_icing_lvl = 0;
-            setprop("instrumentation/airspeed-indicator/serviceable",1);
+#           setprop("systems/pitot[0]/serviceable",1);
+#           setprop("systems/pitot[1]/serviceable",1);
+            setprop("hazards/icing/pitot",0);
         }
-        setprop("hazards/icing/pitot",0);
+        
     }
-    if (ias_serviceable == 0) {
-        setprop("instrumentation/airspeed-indicator/indicated-speed-kt",
-        (internal_ias - pitot_icing_lvl));
-    }
+#   if (ias_serviceable == 0) {
+#       setprop("instrumentation/airspeed-indicator/indicated-speed-kt",
+#       (internal_ias - pitot_icing_lvl));
+#   }
 
     settimer(pitot_fail, 0.1);
 }

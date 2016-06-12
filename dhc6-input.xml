@@ -39,6 +39,10 @@
 				<property>sim/hitches/aerotow/open</property>
 				<value type="bool">true</value>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Aerotow hook opened!")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="111">
@@ -48,6 +52,10 @@
 				<command>property-assign</command>
 				<property>sim/hitches/aerotow/open</property>
 				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Aerotow hook locked!")), 5);</script>
 			</binding>
 		</key>
 
@@ -62,6 +70,10 @@
 				<min>0</min>
 				<max>1</max>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Left condition: %0.1f", getprop("/controls/engines/engine[0]/condition")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="107">
@@ -74,6 +86,10 @@
 				<step>0.05</step>
 				<min>0</min>
 				<max>1</max>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Right condition: %0.1f", getprop("/controls/engines/engine[1]/condition")), 5);</script>
 			</binding>
 		</key>
 
@@ -88,6 +104,10 @@
 				<min>0</min>
 				<max>1</max>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Left condition: %0.1f", getprop("/controls/engines/engine[0]/condition")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="75">
@@ -101,6 +121,10 @@
 				<min>0</min>
 				<max>1</max>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Right condition: %0.1f", getprop("/controls/engines/engine[1]/condition")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="76">
@@ -109,6 +133,10 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>controls/anti-ice/prop-heat</property>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Prop De-Ice: %i", getprop("/controls/anti-ice/prop-heat")), 5);</script>
 			</binding>
 		</key>
 
@@ -156,6 +184,10 @@
 				<command>property-toggle</command>
 				<property>controls/anti-ice/pitot-heat</property>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Pitot Heat: %i", getprop("/controls/anti-ice/pitot-heat")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="109">
@@ -168,6 +200,10 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>controls/engines/engine[1]/intake-deflector</property>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Intake deflactors: %i", getprop("/controls/engines/engine/intake-deflector")), 5);</script>
 			</binding>
 		</key>
 
@@ -189,6 +225,10 @@
 				<property>/controls/flight/aileron-trim</property>
 				<step type="double">-0.01</step>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Aileron trim: %2.2f", getprop("/controls/flight/aileron-trim")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="262">
@@ -199,6 +239,10 @@
 				<command>property-adjust</command>
 				<property>/controls/flight/aileron-trim</property>
 				<step type="double">0.01</step>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Aileron trim: %2.2f", getprop("/controls/flight/aileron-trim")), 5);</script>
 			</binding>
 		</key>
 
@@ -211,6 +255,10 @@
 				<property>/controls/flight/rudder-trim</property>
 				<step type="double">-0.01</step>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Rudder trim: %2.2f", getprop("/controls/flight/rudder-trim")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="264">
@@ -221,6 +269,10 @@
 				<command>property-adjust</command>
 				<property>/controls/flight/rudder-trim</property>
 				<step type="double">0.01</step>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Rudder trim: %2.2f", getprop("/controls/flight/rudder-trim")), 5);</script>
 			</binding>
 		</key>
 
@@ -249,6 +301,10 @@
 				<command>property-toggle</command>
 				<property>/controls/gear/parkingbrake-lever</property>
 			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Parking brake: %i", getprop("/controls/gear/parkingbrake-lever")), 5);</script>
+			</binding>
 		</key>
 
 		<key n="89">
@@ -257,6 +313,38 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>sim/pilots/pilots-enabled</property>
+			</binding>
+		</key>
+
+		<key n="91">
+			<name>[</name>
+			<desc>Decrease flaps</desc>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/flaps</property>
+				<step type="double">-0.005</step>
+				<min>0</min>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Flaps: %3.1f deg", 37.5*getprop("/controls/flight/flaps")), 5);</script>
+			</binding>
+		</key>
+
+		<key n="93">
+			<name>]</name>
+			<desc>Increase flaps</desc>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/flaps</property>
+				<step type="double">0.005</step>
+				<max>1</max>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>gui.popupTip(sprintf("Flaps: %3.1f deg", 37.5*getprop("/controls/flight/flaps")));</script>
 			</binding>
 		</key>
 

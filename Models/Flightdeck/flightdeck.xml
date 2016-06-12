@@ -583,7 +583,7 @@
 
     <model>
         <name>Pilot Airspeed</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/asi/asi.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/asi/asi0.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>-0.637</y-m>
@@ -594,7 +594,7 @@
 
     <model>
         <name>Pilot AI</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ai/ai.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ai/ai0.xml</path>
         <offsets>
             <x-m>-3.92806</x-m>
             <y-m>-0.534</y-m>
@@ -605,7 +605,7 @@
 
     <model>
         <name>Pilot Alt</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt/alt1-3d.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt/alt1-3d0.xml</path>
         <offsets>
             <x-m>-3.934</x-m>
             <y-m>-0.433</y-m>
@@ -630,7 +630,7 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/clock/m877.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
-            <y-m>-0.534</y-m>
+            <y-m>-0.514</y-m>
             <z-m>0.443</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
@@ -648,12 +648,23 @@
     </model>
 
     <model>
-        <name>Pilot VOR</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki206/ki206.xml</path>
+        <name>Pilot VOR 1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki206/ki206_1.xml</path>
         <offsets>
             <x-m>-3.933</x-m>
             <y-m>-0.333</y-m>
-            <z-m>0.357</z-m>
+            <z-m>0.414</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot VOR 2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki206/ki206_2.xml</path>
+        <offsets>
+            <x-m>-3.933</x-m>
+            <y-m>-0.333</y-m>
+            <z-m>0.318</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -664,7 +675,7 @@
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>-0.333</y-m>
-            <z-m>0.247</z-m>
+            <z-m>0.220</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -696,9 +707,9 @@
         <name>apcomm</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
         <offsets>
-            <x-m>-3.940</x-m>
-            <y-m>-0.400</y-m>
-            <z-m>0.487</z-m>
+            <x-m>-3.94</x-m>
+            <y-m>-0.463</y-m>
+            <z-m>0.147</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -708,8 +719,8 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ias-set/ias-set.xml</path>
         <offsets>
             <x-m>-3.937</x-m>
-            <y-m>-0.372</y-m>
-            <z-m>0.472</z-m>
+            <y-m>-0.332</y-m>
+            <z-m>0.517</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -719,8 +730,8 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt-set/alt-selt.xml</path>
         <offsets>
             <x-m>-3.937</x-m>
-            <y-m>-0.372</y-m>
-            <z-m>0.435</z-m>
+            <y-m>-0.332</y-m>
+            <z-m>0.483</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -837,7 +848,7 @@
 
     <model>
         <name>CoPilot Airspeed</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/asi/asi.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/asi/asi1.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.421</y-m>
@@ -848,7 +859,7 @@
 
     <model>
         <name>CoPilot AI</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ai/ai.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ai/ai1.xml</path>
         <offsets>
             <x-m>-3.92806</x-m>
             <y-m>0.521</y-m>
@@ -859,7 +870,7 @@
 
     <model>
         <name>CoPilot Alt</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt/alt1-3d.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt/alt1-3d1.xml</path>
         <offsets>
             <x-m>-3.934</x-m>
             <y-m>0.628</y-m>
@@ -1668,7 +1679,7 @@
         <type>rotate</type>
         <object-name>LHthrottle</object-name>
         <property>controls/engines/engine[0]/throttle-fwd</property>
-        <factor>9</factor>
+        <factor>8.8</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1685,7 +1696,7 @@
         <type>rotate</type>
         <object-name>LHthrottle</object-name>
         <property>controls/engines/engine[0]/throttle-rvrs-norunning</property>
-        <factor>-5</factor>
+        <factor>-5.5</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1702,7 +1713,7 @@
         <type>rotate</type>
         <object-name>LHthrottle</object-name>
         <property>controls/engines/engine[0]/throttle-rvrs</property>
-        <factor>-5</factor>
+        <factor>-5.5</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1719,7 +1730,7 @@
         <type>rotate</type>
         <object-name>RHthrottle</object-name>
         <property>controls/engines/engine[1]/throttle-fwd</property>
-        <factor>9</factor>
+        <factor>8.8</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1736,7 +1747,7 @@
         <type>rotate</type>
         <object-name>RHthrottle</object-name>
         <property>controls/engines/engine[1]/throttle-rvrs-norunning</property>
-        <factor>-5</factor>
+        <factor>-5.5</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1753,7 +1764,7 @@
         <type>rotate</type>
         <object-name>RHthrottle</object-name>
         <property>controls/engines/engine[1]/throttle-rvrs</property>
-        <factor>-5</factor>
+        <factor>-5.5</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1771,7 +1782,7 @@
         <type>rotate</type>
         <object-name>LHprop</object-name>
         <property>controls/engines/engine[0]/propeller-pitch</property>
-        <factor>13.0</factor>
+        <factor>12.4</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1788,7 +1799,7 @@
         <type>rotate</type>
         <object-name>RHprop</object-name>
         <property>controls/engines/engine[1]/propeller-pitch</property>
-        <factor>13.0</factor>
+        <factor>12.4</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1805,7 +1816,7 @@
         <type>rotate</type>
         <object-name>LHcondition</object-name>
         <property>controls/engines/engine[0]/condition</property>
-        <factor>13.0</factor>
+        <factor>12.8</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -1822,7 +1833,7 @@
         <type>rotate</type>
         <object-name>RHcondition</object-name>
         <property>controls/engines/engine[1]/condition</property>
-        <factor>13.0</factor>
+        <factor>12.8</factor>
         <center>
             <x-m>-3.6</x-m>
             <y-m>0</y-m>
@@ -3790,7 +3801,7 @@
       <property>controls/engines/auto-feather</property>
       <factor>35.0</factor>
       <center>
-        <x-m>-3.9395</x-m>
+        <x-m>-3.9375</x-m>
         <y-m>-0.481471</y-m>
         <z-m>0.456843</z-m>
       </center>

@@ -62,6 +62,7 @@
         <halign>center</halign>
         <label>Open/Lock tow-hook</label>
         <property>sim/hitches/aerotow/open</property>
+        <live>true</live>
         <binding>
             <command>dialog-apply</command>
         </binding>

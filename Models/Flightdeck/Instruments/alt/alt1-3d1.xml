@@ -137,7 +137,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle100</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter[1]/indicated-altitude-ft</property>
     <factor>0.36</factor>
     <axis>
       <x> -1 </x>
@@ -156,7 +156,7 @@
               <command>set-tooltip</command>
                 <tooltip-id>Altimeter-ft</tooltip-id>
                        <label> Altitude-ft:% 3d ft </label>
-                <property>instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter[1]/indicated-altitude-ft</property>
             </binding>
       </hovered>
    </animation>
@@ -164,7 +164,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle1000</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter[1]/indicated-altitude-ft</property>
     <factor>0.036</factor>
     <axis>
       <x> -1 </x>
@@ -176,7 +176,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle10000</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter[1]/indicated-altitude-ft</property>
     <factor>0.0036</factor>
     <axis>
       <x>-1</x>
@@ -188,7 +188,7 @@
   <animation>
     <type>rotate</type>
     <object-name>inhgknob</object-name>
-    <property>instrumentation/altimeter/setting-hpa</property>
+    <property>instrumentation/altimeter[1]/setting-hpa</property>
     <factor>5</factor>
     <center>
       <x-m>  0.00098 </x-m>
@@ -205,7 +205,7 @@
   <animation>
     <type>texrotate</type>
     <object-name>inhg</object-name>
-    <property>instrumentation/altimeter/setting-hpa</property>
+    <property>instrumentation/altimeter[1]/setting-hpa</property>
     <interpolation>
       <entry><ind> 950.00</ind><dep> 90.0</dep></entry>
       <entry><ind> 975.00</ind><dep> 45.0</dep></entry>
@@ -231,7 +231,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-hpa</property>
+        <property>/instrumentation/altimeter[1]/setting-hpa</property>
         <factor>1</factor>
         <min>950.0</min>
         <max>1050.0</max>
@@ -243,7 +243,7 @@
         <command>set-tooltip</command>
         <tooltip-id>alt-setting</tooltip-id>
         <label>Altimeter QNH: %.0f</label>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
       </binding>
     </hovered>   
   </animation>
@@ -257,7 +257,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>-1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -269,7 +269,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>-5</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -282,7 +282,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -295,7 +295,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>-1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -307,7 +307,7 @@
         <command>set-tooltip</command>
         <tooltip-id>alt-setting</tooltip-id>
         <label>Altimeter QNH: %.0f</label>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
       </binding>
     </hovered>   
   </animation>
@@ -321,7 +321,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -333,7 +333,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>5</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -346,7 +346,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -359,7 +359,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
         <step>-1</step>
         <min>950.0</min>
         <max>1050.0</max>
@@ -371,7 +371,7 @@
         <command>set-tooltip</command>
         <tooltip-id>alt-setting</tooltip-id>
         <label>Altimeter QNH: %.0f</label>
-        <property>instrumentation/altimeter/setting-hpa</property>
+        <property>instrumentation/altimeter[1]/setting-hpa</property>
       </binding>
     </hovered>
   </animation>

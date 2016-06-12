@@ -1825,7 +1825,7 @@
         <type>rotate</type>
         <object-name>R.flap</object-name>
         <property>surface-positions/flap-pos-norm</property>
-        <factor>40.0</factor>
+        <factor>37.5</factor>
         <center>
             <x-m>0.594</x-m>
             <y-m>0.913</y-m>
@@ -1878,7 +1878,7 @@
         <type>rotate</type>
         <object-name>L.flap</object-name>
         <property>surface-positions/flap-pos-norm</property>
-        <factor>-40.0</factor>
+        <factor>-37.5</factor>
         <center>
             <x-m>0.594</x-m>
             <y-m>-0.913</y-m>
