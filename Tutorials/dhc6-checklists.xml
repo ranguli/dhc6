@@ -731,10 +731,162 @@
 					</not>
 				</condition>
 			</item>
+
+		</page>
+
+		<page>
 			
 			<item>
 				<name>Fuel Quantity</name>
 				<value>CHECK enough for planned flight</value>
+			</item>
+
+			<item>
+				<name>Fuel quantity indicators</name>
+				<value>TEST</value>
+				<value>(Press and hold down the IND TEST button)</value>
+				<marker>
+					<x-m>-3.9339</x-m>
+					<y-m>-0.0240</y-m>
+					<z-m>0.2298</z-m>
+					<scale>1.4959</scale>
+				</marker>
+				<condition>
+					<property>/controls/fuel/ind-test</property>
+				</condition>
+			</item>
+
+			<item>
+				<name>FWD tank fuel gauge</name>
+				<value>INDICATE 0</value>
+				<marker>
+					<x-m>-3.9430</x-m>
+					<y-m>-0.2182</y-m>
+					<z-m>0.1810</z-m>
+					<scale>3.1653</scale>
+				</marker>
+				<condition>
+					<less-than>
+						<property>/consumables/fuel/tank[0]/indicated-level-lbs</property>
+						<value>10</value>
+					</less-than>
+				</condition>
+			</item>
+
+			<item>
+				<name>AFT tank fuel gauge</name>
+				<value>INDICATE 0</value>
+				<marker>
+					<x-m>-3.9430</x-m>
+					<y-m>-0.0025</y-m>
+					<z-m>0.1810</z-m>
+					<scale>3.1653</scale>
+				</marker>
+				<condition>
+					<less-than>
+						<property>/consumables/fuel/tank[1]/indicated-level-lbs</property>
+						<value>10</value>
+					</less-than>
+				</condition>
+			</item>
+
+			<item>
+				<name>FWD FUEL LOW LEVEL warning light</name>
+				<value>LIGHT UP</value>
+				<marker>
+					<x-m>-3.9388</x-m>
+					<y-m>-0.1231</y-m>
+					<z-m>0.6182</z-m>
+					<scale>1.8760</scale>
+				</marker>
+				<condition>
+					<property>/instrumentation/caution-panel/low-fuel[0]</property>
+				</condition>
+			</item>
+
+			<item>
+				<name>AFT FUEL LOW LEVEL warning light</name>
+				<value>LIGHT UP</value>
+				<marker>
+					<x-m>-3.9388</x-m>
+					<y-m>0.1091</y-m>
+					<z-m>0.6182</z-m>
+					<scale>1.8760</scale>
+				</marker>
+				<condition>
+					<property>/instrumentation/caution-panel/low-fuel[1]</property>
+				</condition>
+			</item>
+
+			<item>
+				<name>IND TEST button</name>
+				<value>RELEASE</value>
+				<marker>
+					<x-m>-3.9339</x-m>
+					<y-m>-0.0240</y-m>
+					<z-m>0.2298</z-m>
+					<scale>1.4959</scale>
+				</marker>
+				<condition>
+					<not>
+						<property>/controls/fuel/ind-test</property>
+					</not>
+				</condition>
+			</item>
+
+			<item>
+				<name>Fuel indicators</name>
+				<value>RETURN TO PREV. VALUE</value>
+				<condition>
+					<and>
+						<greater-than>
+							<property>/consumables/fuel/tank[0]/indicated-level-lbs</property>
+							<value>10</value>
+						</greater-than>
+						<greater-than>
+							<property>/consumables/fuel/tank[1]/indicated-level-lbs</property>
+							<value>10</value>
+						</greater-than>
+					</and>
+				</condition>
+			</item>
+
+			<item>
+				<name>LOW FUEL warning lights</name>
+				<value>EXTIGUISHED</value>
+				<condition>
+					<and>
+						<not>
+							<property>/instrumentation/caution-panel/low-fuel[0]</property>
+						</not>
+						<not>
+							<property>/instrumentation/caution-panel/low-fuel[1]</property>
+						</not>
+					</and>
+				</condition>
+			</item>
+
+			<item>
+				<name>Hydraulic pressure</name>
+				<value>BETWEEN 1300 AND 1600 PSI</value>
+				<marker>
+		    		<x-m>-3.9273</x-m>
+	    			<y-m>-0.1843</y-m>
+	    			<z-m>0.0744</z-m>
+	    			<scale>2.7521</scale>
+				</marker>
+				<condition>
+					<and>
+						<greater-than>
+							<property>/systems/hydraulic/indicated-pressure</property>
+							<value>1300</value>
+						</greater-than>
+						<less-than>
+							<property>/systems/hydraulic/indicated-pressure</property>
+							<value>1600</value>
+						</less-than>
+					</and>
+				</condition>
 			</item>
 		
 		</page>
@@ -1925,6 +2077,29 @@
 					<property>/controls/lighting/seat-belt</property>
 					<value>1</value>
 				</equals>
+			</condition>
+		</item>
+
+		<item>
+			<name>Hydraulic pressure</name>
+			<value>BETWEEN 1300 AND 1600 PSI</value>
+			<marker>
+				<x-m>-3.9273</x-m>
+				<y-m>-0.1843</y-m>
+				<z-m>0.0744</z-m>
+				<scale>2.7521</scale>
+			</marker>
+			<condition>
+				<and>
+					<greater-than>
+						<property>/systems/hydraulic/indicated-pressure</property>
+						<value>1300</value>
+					</greater-than>
+					<less-than>
+						<property>/systems/hydraulic/indicated-pressure</property>
+						<value>1600</value>
+					</less-than>
+				</and>
 			</condition>
 		</item>
 						

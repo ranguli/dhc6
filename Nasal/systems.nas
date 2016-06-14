@@ -7,6 +7,7 @@ var D_volume = props.globals.initNode("sim/sound/doors",0.7);
 var E1_volume = props.globals.initNode("sim/sound/engine[0]",0.0);
 var E2_volume = props.globals.initNode("sim/sound/engine[1]",0.0);
 var stall_volume = props.globals.initNode("sim/sound/stall-warning",0.0);
+var hyd_pump_volume = props.globals.initNode("sim/sound/hyd-pump",0.0);
 var ctn_counter=0;
 Wiper=[];
 
@@ -277,7 +278,7 @@ var Caution_panel = {
             me.fwd_boost1.setValue(0);
             me.fwd_boost2.setValue(0);      
         }
-        if(getprop("consumables/fuel/tank/level-lbs")<75)me.fwd_fuel.setValue(me.volts) else me.fwd_fuel.setValue(0);
+        if(getprop("consumables/fuel/tank/indicated-level-lbs")<75)me.fwd_fuel.setValue(me.volts) else me.fwd_fuel.setValue(0);
         var lfdoor=getprop("controls/doors/LF-door/position-norm");
         var rfdoor=getprop("controls/doors/RF-door/position-norm");
         var rrdoor=getprop("controls/doors/RR-door/position-norm");
@@ -305,7 +306,7 @@ var Caution_panel = {
             me.aft_boost1.setValue(0);
             me.aft_boost2.setValue(0);      
         }
-        if(getprop("consumables/fuel/tank[1]/level-lbs")<75)me.aft_fuel.setValue(me.volts) else me.aft_fuel.setValue(0);
+        if(getprop("consumables/fuel/tank[1]/indicated-level-lbs")<75)me.aft_fuel.setValue(me.volts) else me.aft_fuel.setValue(0);
         
         me.count=1-me.count;
     },
@@ -435,6 +436,10 @@ var update_stall_sound = func {
     stall_volume.setValue(stall);
     }
 
+var update_hyd_pump_sound = func {
+    var pressure = (getprop("systems/hydraulic/indicated-pressure"));
+    hyd_pump_volume.setValue(pressure);
+}
 
 var update_throttles = func {
     var LHrvr=getprop("controls/engines/engine[0]/reverser");
@@ -483,6 +488,7 @@ var update_systems = func {
     update_throttles();
     update_eng_sound();
     update_stall_sound();
+    update_hyd_pump_sound();
     settimer(update_systems, 0);
 }
 

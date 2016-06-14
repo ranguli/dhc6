@@ -4,13 +4,12 @@ Syd Adams
 -->
 <PropertyList>
 
-    <path>fuel-qty.ac</path>
+    <path>hydpress.ac</path>
 
       <animation>
-        <object-name>FuelQTY.face</object-name>
-        <object-name>FuelQTY.tank</object-name>
-        <object-name>FuelQTY.needle</object-name>
-          <object-name>FuelQTY.bezel</object-name>
+        <object-name>hydpress.face</object-name>
+        <object-name>Needle</object-name>
+          <object-name>hydpress.bezel</object-name>
 
         <object-name>vitre</object-name>
      </animation>
@@ -27,9 +26,9 @@ Syd Adams
           <object-name>vitre</object-name>
   </animation>
 
-  <animation>
+    <animation>
           <type>material</type>
-          <object-name>FuelQTY.bezel</object-name>
+          <object-name>hydpress.bezel</object-name>
           <object-name>backlight</object-name>
           <emission>
             <red>0.381924</red>
@@ -41,9 +40,8 @@ Syd Adams
 
         <animation>
           <type>material</type>
-          <object-name>FuelQTY.face</object-name>
-          <object-name>FuelQTY.needle</object-name>
-          <object-name>FuelQTY.tank</object-name>
+          <object-name>hydpress.face</object-name>
+          <object-name>Needle</object-name>
           <condition>
             <equals>
               <property>controls/lighting/instrument-lights</property>
@@ -60,20 +58,18 @@ Syd Adams
 
   <effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
-      <object-name>FuelQTY.bezel</object-name>
-      <object-name>FuelQTY.face</object-name>
-      <object-name>FuelQTY.needle</object-name>
-      <object-name>FuelQTY.tank</object-name>
+      <object-name>hydpress.bezel</object-name>
+      <object-name>hydpress.face</object-name>
+      <object-name>Needle</object-name>
       <object-name>backlight</object-name>
       <!--object-name>vitre</object-name-->
     </effect>
 
   <effect>
       <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
-      <object-name>FuelQTY.bezel</object-name>
-      <object-name>FuelQTY.face</object-name>
-      <object-name>FuelQTY.needle</object-name>
-      <object-name>FuelQTY.tank</object-name>
+      <object-name>hydpress.bezel</object-name>
+      <object-name>hydpress.face</object-name>
+      <object-name>Needle</object-name>
       <object-name>backlight</object-name>
       <!--object-name>vitre</object-name-->
     </effect>
@@ -81,15 +77,15 @@ Syd Adams
    <animation>
             <type>pick</type>
         <type>material</type>
-        <object-name>FuelQTY.face</object-name>
+        <object-name>hydpress.face</object-name>
         <object-name>vitre</object-name>         
               <visible>true</visible>
       <hovered>
             <binding>
               <command>set-tooltip</command>
-                <tooltip-id>FuelQTY</tooltip-id>
-                  <label>Fuel Qty: %g lbs</label>
-                <property>consumables/fuel/tank[1]/indicated-level-lbs</property>
+                <tooltip-id>Hydpress</tooltip-id>
+                  <label>Hydraulic Pressure: %d PSI</label>
+                <property>systems/hydraulic/indicated-pressure</property>
             </binding>
       </hovered>
    </animation>
@@ -104,9 +100,8 @@ Syd Adams
 
     <animation>
         <type>material</type>
-        <object-name>FuelQTY.face</object-name>
-        <object-name>FuelQTY.tank</object-name>
-        <object-name>FuelQTY.needle</object-name>
+        <object-name>hydpress.face</object-name>
+        <object-name>Needle</object-name>
        <condition>
           <not><property>sim/rendering/rembrandt/enabled</property></not>
        </condition>
@@ -118,27 +113,13 @@ Syd Adams
         </emission>
     </animation>
 
-
-
-    <animation>
-        <type>textranslate</type>
-        <object-name>FuelQTY.tank</object-name>
-        <property>sim/signals/fdm-initialized</property>
-        <factor>0.0755</factor>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>-1</z>
-        </axis>
-    </animation>
-
     <animation>
         <type>rotate</type>
-        <object-name>FuelQTY.needle</object-name>
-        <property>consumables/fuel/tank[1]/indicated-level-lbs</property>
+        <object-name>Needle</object-name>
+        <property>systems/hydraulic/indicated-pressure</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>1400</ind><dep>320</dep></entry>
+            <entry><ind>2000</ind><dep>180</dep></entry>
         </interpolation>
         <axis>
             <x>-1</x>
@@ -151,7 +132,7 @@ Syd Adams
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">Fuel quantity </text>
+    <text type="string">Hydraulic pressure </text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>

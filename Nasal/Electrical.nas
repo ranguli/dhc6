@@ -435,7 +435,7 @@ electrical_bus = func(bv) {
         load +=srvc;
         setprop(outPut~output_list[i],bus_volts * srvc);
     }
-    setprop(outPut~"flaps",bus_volts);
+    setprop(outPut~"hydraulics",bus_volts);
 
     return load;
 }

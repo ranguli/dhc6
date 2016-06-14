@@ -977,6 +977,142 @@
 		</view>
 		<wait>8</wait>
 	</step>
+
+	<step>
+		<message>Now we have to test the functionality of the fuel indicators and the fuel warning lights.
+		Press and hold down the IND TEST button.</message>
+		<view>
+			<heading-offset-deg>332.5</heading-offset-deg>
+			<pitch-offset-deg>-21.8</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.5</x-offset-m>
+			<y-offset-m>0.8</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>56.2</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.9339</x-m>
+			<y-m>-0.0240</y-m>
+			<z-m>0.2298</z-m>
+			<scale>1.4959</scale>
+		</marker>
+		<error>
+			<message>Press and hold down the IND TEST button!</message>
+			<condition>
+				<not>
+					<property>/controls/fuel/ind-test</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/controls/fuel/ind-test</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Check that the fuel gauges for the forward and the rear tank indicate 0.</message>
+		<error>
+			<message>Press and hold down the IND TEST button to test the fuel indicators!</message>
+			<condition>
+				<not>
+					<property>/controls/fuel/ind-test</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<property>/controls/fuel/ind-test</property>
+					<less-than>
+						<property>/consumables/fuel/tank[0]/indicated-level-lbs</property>
+						<value>10</value>
+					</less-than>
+					<less-than>
+						<property>/consumables/fuel/tank[1]/indicated-level-lbs</property>
+						<value>10</value>
+					</less-than>
+				</and>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Check that both warning lights "FWD FUEL LOW LEVEL" and "AFT FUEL LOW LEVEL" light up.</message>
+		<error>
+			<message>Press and hold down the IND TEST button to test the fuel warning lights!</message>
+			<condition>
+				<not>
+					<property>/controls/fuel/ind-test</property>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<property>/controls/fuel/ind-test</property>
+					<property>/instrumentation/caution-panel/low-fuel[0]</property>
+					<property>/instrumentation/caution-panel/low-fuel[1]</property>
+				</and>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Now you can release the IND TEST button again.</message>
+		<view>
+			<heading-offset-deg>332.5</heading-offset-deg>
+			<pitch-offset-deg>-21.8</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.5</x-offset-m>
+			<y-offset-m>0.8</y-offset-m>
+			<z-offset-m>-3.1</z-offset-m>
+			<field-of-view>56.2</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.9339</x-m>
+			<y-m>-0.0240</y-m>
+			<z-m>0.2298</z-m>
+			<scale>1.4959</scale>
+		</marker>
+		<error>
+			<message>Release the IND TEST button!</message>
+			<condition>
+				<property>/controls/fuel/ind-test</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not>
+					<property>/controls/fuel/ind-test</property>
+				</not>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Check that the hydraulic pressure is between 1300 and 1600 PSI.</message>
+		<view>
+			<heading-offset-deg>352.1</heading-offset-deg>
+			<pitch-offset-deg>-38.4</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.3</x-offset-m>
+			<y-offset-m>0.6</y-offset-m>
+			<z-offset-m>-3.3</z-offset-m>
+			<field-of-view>30.8</field-of-view>
+		</view>
+		<marker>
+			<x-m>-3.9273</x-m>
+			<y-m>-0.1843</y-m>
+			<z-m>0.0744</z-m>
+			<scale>2.7521</scale>
+		</marker>
+	</step>
+
+
+
+
 	
 	<step>
 		<message>Great. Now our Twin Otter is ready to start their engines.</message>

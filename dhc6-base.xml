@@ -129,6 +129,13 @@ Jan 2008 Syd Adams
         <property-rule n="103">
         	<path>Aircraft/dhc6/Systems/views.xml</path>
         </property-rule>
+        <!-- Hydraulic system -->
+        <property-rule n="104">
+            <path>Aircraft/dhc6/Systems/hydraulic.xml</path>
+        </property-rule>
+        <property-rule n="105">
+            <path>Aircraft/dhc6/Systems/fuel.xml</path>
+        </property-rule>
     </systems>
 
         <instrumentation>
@@ -370,6 +377,7 @@ Jan 2008 Syd Adams
         </doors>
         <fuel>
             <tank-selector type="int">0</tank-selector>
+            <ind-test type="bool">0</ind-test>
         </fuel>
         <gear>
             <parkingbrake-lever type="bool">1</parkingbrake-lever>
@@ -424,6 +432,10 @@ Jan 2008 Syd Adams
     <static n="1">
         <serviceable type="bool">1</serviceable>
     </static>
+    <hydraulic>
+        <pressure type="double">0.0</pressure>
+        <serviceable type="bool">1</serviceable>
+    </hydraulic>
 </systems>
 
 <instrumentation>
@@ -578,7 +590,7 @@ Jan 2008 Syd Adams
             <file>Aircraft/dhc6/Nasal/ground-services.nas</file>
             <file>Aircraft/dhc6/Models/Flightdeck/Instruments/ki266/ki266.nas</file>
             <file>Aircraft/dhc6/Nasal/vor-ils-catch.nas</file>
-	    <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
+	        <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>

@@ -67,6 +67,8 @@
     <object-name>Glareshield</object-name>
     <object-name>Glareshield.001</object-name>
     <object-name>Indselect.toggle</object-name>
+    <object-name>Ind-test</object-name>
+    <object-name>Ind-test-label</object-name>
     <object-name>LFuel.off</object-name>
     <object-name>LHdoor.inner</object-name>
     <object-name>LHengFire</object-name>
@@ -252,6 +254,8 @@
       <object-name>Glareshield.001</object-name>
       <object-name>Ign.guard</object-name>
       <object-name>Indselect.toggle</object-name>
+      <object-name>Ind-test</object-name>
+      <object-name>Ind-test-label</object-name>
       <object-name>Invtr.sw</object-name>
       <object-name>L-Llight.sw</object-name>
       <object-name>L-Llight.sw.001</object-name>
@@ -388,6 +392,8 @@
       <object-name>Glareshield.001</object-name>
       <object-name>Ign.guard</object-name>
       <object-name>Indselect.toggle</object-name>
+      <object-name>Ind-test</object-name>
+      <object-name>Ind-test-label</object-name>
       <object-name>Invtr.sw</object-name>
       <object-name>L-Llight.sw</object-name>
       <object-name>L-Llight.sw.001</object-name>
@@ -553,7 +559,7 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/gear/gear-ctl.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
-            <y-m>-0.200</y-m>
+            <y-m>0.050</y-m>
             <z-m>0.062</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
@@ -1096,7 +1102,7 @@
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>-0.224</y-m>
-            <z-m>0.190</z-m>
+            <z-m>0.180</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -1107,10 +1113,42 @@
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>-0.004</y-m>
-            <z-m>0.190</z-m>
+            <z-m>0.180</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
+
+    <animation>
+      <type>translate</type>
+      <object-name>Ind-test</object-name>
+      <property>controls/fuel/ind-test</property>
+      <factor>0.008</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>Ind-test</object-name>
+      <action>
+        <button>0</button>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/fuel/ind-test</property>
+            <value type="bool">1</value>
+          </binding>
+          <mod-up>
+            <binding>
+              <command>property-assign</command>
+              <property>controls/fuel/ind-test</property>
+              <value type="bool">0</value>
+            </binding>
+          </mod-up>
+      </action>
+    </animation>
 
     <model>
         <name>Center Voltmeter</name>
@@ -1133,6 +1171,17 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
+
+    <model>
+      <name>Hydraulic pressure</name>
+      <path>Aircraft/dhc6/Models/Flightdeck/Instruments/hyd/hydpress.xml</path>
+      <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>-0.184</y-m>
+            <z-m>0.070</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+      </model>
 
 <!-- No smoking -->
 

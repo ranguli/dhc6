@@ -89,7 +89,7 @@ Syd Adams
               <command>set-tooltip</command>
                 <tooltip-id>FuelQTY</tooltip-id>
                   <label>Fuel Qty: %g lbs</label>
-                <property>consumables/fuel/tank[0]/level-lbs</property>
+                <property>consumables/fuel/tank[0]/indicated-level-lbs</property>
             </binding>
       </hovered>
    </animation>
@@ -135,7 +135,7 @@ Syd Adams
     <animation>
         <type>rotate</type>
         <object-name>FuelQTY.needle</object-name>
-        <property>consumables/fuel/tank[0]/level-lbs</property>
+        <property>consumables/fuel/tank[0]/indicated-level-lbs</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
             <entry><ind>1400</ind><dep>320</dep></entry>
