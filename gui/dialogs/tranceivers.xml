@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
     <name>tranceivers</name>
     <modal>false</modal>
     <draggable>true</draggable>
@@ -70,10 +71,7 @@
 
     <hrule/>
 
-
-<!--         COM 1          -->
-
-
+    <!-- COM 1 -->
     <group>
          <layout>table</layout>
 
@@ -138,8 +136,7 @@
             </binding>
         </dial>
 
-<!--         COM 2          -->
-
+        <!-- COM 2 -->
         <text>
             <row>1</row>
             <col>0</col>
@@ -197,8 +194,7 @@
             </binding>
         </dial>
 
-<!--         NAV 1          -->
-
+        <!-- NAV 1 -->
         <text>
             <row>2</row>
             <col>0</col>
@@ -274,8 +270,7 @@
             </binding>
         </input>
 
-<!--         NAV 2          -->
-
+        <!-- NAV 2 -->
         <text>
             <row>3</row>
             <col>0</col>
@@ -351,8 +346,7 @@
             </binding>
         </input>
 
-<!--         ADF 1          -->
-
+        <!-- ADF 1 -->
         <text>
             <row>4</row>
             <col>0</col>
@@ -418,9 +412,8 @@
             </binding>
         </checkbox>
 
-<!--         ADF 2          -->
-<!--
-        <text>
+        <!-- ADF 2 -->
+        <!--text>
             <row>5</row>
             <col>0</col>
             <label>Adf2</label>
@@ -483,10 +476,9 @@
             <binding>
                 <command>dialog-apply</command>
             </binding>
-        </checkbox>
-    -->
+        </checkbox-->
 
-<!--         Transponder (with SquawkGear/VATSIM)     -->
+        <!-- Transponder (with SquawkGear/VATSIM) -->
         <text>
             <row>6</row>
             <col>0</col>
@@ -533,13 +525,13 @@
     </group>
 
     <hrule/>
-  
-  <button>
-    <legend>ATC Services in range</legend>
-    <binding>
-      <command>ATC-freq-search</command>
-    </binding>
-  </button>
+
+    <button>
+        <legend>ATC Services in range</legend>
+        <binding>
+            <command>ATC-freq-search</command>
+        </binding>
+    </button>
   
     <group>
     </group>

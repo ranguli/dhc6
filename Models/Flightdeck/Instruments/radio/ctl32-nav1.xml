@@ -1,97 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CTL 32 Nav1 Control for VIR-32 receiver
-Active and preset displayed +
-6 frequency memory storage
-2.375"W x 2.625"H
-Freq. range 108.000 - 117.975 (normal) 
-Strap option 133.00 - 135.95
- 05 khz spacing
-Syd Adams
- -->
+
+<!--
+    CTL 32 Nav1 Control for VIR-32 receiver
+    Active and preset displayed +
+    6 frequency memory storage
+    2.375"W x 2.625"H
+    Freq. range 108.000 - 117.975 (normal) 
+    Strap option 133.00 - 135.95
+    05 khz spacing
+    Syd Adams
+-->
 
 <PropertyList>
 
     <path>ctl32.ac</path>
 
-     <animation>
-          <type>material</type>
-          <object-name>CTL-32</object-name>
-          <object-name>CTL-32.pwr</object-name>
-          <object-name>CTL-32.toggle</object-name>
-          <object-name>CTL-32.vol</object-name>
-          <object-name>act.btn</object-name>
-          <object-name>freq.dwn</object-name>
-          <object-name>freq.knob</object-name>
-          <object-name>freq.up</object-name>
-          <object-name>freq1.knob</object-name>
-          <object-name>mem.annun</object-name>
-          <object-name>sto.btn</object-name>
-          <object-name>test.btn</object-name>
-          <object-name>xmt.annun</object-name>
-          <emission>
+    <animation>
+        <type>material</type>
+        <object-name>CTL-32</object-name>
+        <object-name>CTL-32.pwr</object-name>
+        <object-name>CTL-32.toggle</object-name>
+        <object-name>CTL-32.vol</object-name>
+        <object-name>act.btn</object-name>
+        <object-name>freq.dwn</object-name>
+        <object-name>freq.knob</object-name>
+        <object-name>freq.up</object-name>
+        <object-name>freq1.knob</object-name>
+        <object-name>mem.annun</object-name>
+        <object-name>sto.btn</object-name>
+        <object-name>test.btn</object-name>
+        <object-name>xmt.annun</object-name>
+        <emission>
             <red>0.381924</red>
             <green>0.30935844</green>
             <blue>0.161171928</blue>
             <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-          </emission>
-        </animation>
+        </emission>
+    </animation>
 
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
-      <object-name>CTL-32</object-name>
-      <object-name>CTL-32.pwr</object-name>
-      <object-name>CTL-32.toggle</object-name>
-      <object-name>CTL-32.vol</object-name>
-      <object-name>act.btn</object-name>
-      <object-name>freq.001</object-name>
-      <object-name>freq.002</object-name>
-      <object-name>freq.003</object-name>
-      <object-name>freq.004</object-name>
-      <object-name>freq.005</object-name>
-      <object-name>freq.dec</object-name>
-      <object-name>freq.dwn</object-name>
-      <object-name>freq.knob</object-name>
-      <object-name>freq.up</object-name>
-      <object-name>freq1.knob</object-name>
-      <object-name>mem.annun</object-name>
-      <object-name>stby.001</object-name>
-      <object-name>stby.002</object-name>
-      <object-name>stby.003</object-name>
-      <object-name>stby.004</object-name>
-      <object-name>stby.005</object-name>
-      <object-name>stby.dec</object-name>
-      <object-name>sto.btn</object-name>
-      <object-name>test.btn</object-name>
-      <object-name>xmt.annun</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+        <object-name>CTL-32</object-name>
+        <object-name>CTL-32.pwr</object-name>
+        <object-name>CTL-32.toggle</object-name>
+        <object-name>CTL-32.vol</object-name>
+        <object-name>act.btn</object-name>
+        <object-name>freq.001</object-name>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.005</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.dwn</object-name>
+        <object-name>freq.knob</object-name>
+        <object-name>freq.up</object-name>
+        <object-name>freq1.knob</object-name>
+        <object-name>mem.annun</object-name>
+        <object-name>stby.001</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.005</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>sto.btn</object-name>
+        <object-name>test.btn</object-name>
+        <object-name>xmt.annun</object-name>
     </effect>
 
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
-      <object-name>CTL-32</object-name>
-      <object-name>CTL-32.pwr</object-name>
-      <object-name>CTL-32.toggle</object-name>
-      <object-name>CTL-32.vol</object-name>
-      <object-name>act.btn</object-name>
-      <object-name>freq.001</object-name>
-      <object-name>freq.002</object-name>
-      <object-name>freq.003</object-name>
-      <object-name>freq.004</object-name>
-      <object-name>freq.005</object-name>
-      <object-name>freq.dec</object-name>
-      <object-name>freq.dwn</object-name>
-      <object-name>freq.knob</object-name>
-      <object-name>freq.up</object-name>
-      <object-name>freq1.knob</object-name>
-      <object-name>mem.annun</object-name>
-      <object-name>stby.001</object-name>
-      <object-name>stby.002</object-name>
-      <object-name>stby.003</object-name>
-      <object-name>stby.004</object-name>
-      <object-name>stby.005</object-name>
-      <object-name>stby.dec</object-name>
-      <object-name>sto.btn</object-name>
-      <object-name>test.btn</object-name>
-      <object-name>xmt.annun</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+        <object-name>CTL-32</object-name>
+        <object-name>CTL-32.pwr</object-name>
+        <object-name>CTL-32.toggle</object-name>
+        <object-name>CTL-32.vol</object-name>
+        <object-name>act.btn</object-name>
+        <object-name>freq.001</object-name>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.005</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.dwn</object-name>
+        <object-name>freq.knob</object-name>
+        <object-name>freq.up</object-name>
+        <object-name>freq1.knob</object-name>
+        <object-name>mem.annun</object-name>
+        <object-name>stby.001</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.005</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>sto.btn</object-name>
+        <object-name>test.btn</object-name>
+        <object-name>xmt.annun</object-name>
     </effect>
 
     <animation>
@@ -122,7 +124,7 @@ Syd Adams
         <object-name>CTL-32.pwr</object-name>
         <property>instrumentation/nav/serviceable</property>
         <interpolation>
-            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>0.0</ind><dep> 0</dep></entry>
             <entry><ind>1.0</ind><dep>30</dep></entry>
         </interpolation>
         <center>
@@ -154,8 +156,7 @@ Syd Adams
         </axis>
     </animation>
 
-<!--    Active Frequency   -->
-
+    <!-- Active Frequency -->
     <animation>
         <type>textranslate</type>
         <object-name>freq.001</object-name>
@@ -226,8 +227,7 @@ Syd Adams
         </axis>
     </animation>
 
-<!--    Preselected Frequency     -->
-
+    <!-- Preselected Frequency -->
     <animation>
         <type>textranslate</type>
         <object-name>stby.001</object-name>
@@ -298,8 +298,7 @@ Syd Adams
         </axis>
     </animation>
 
-<!--    OSG hotspots  -->
-
+    <!-- OSG hotspots -->
     <animation>
         <type>pick</type>
         <object-name>CTL-32.toggle</object-name>
@@ -307,10 +306,10 @@ Syd Adams
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            <command>property-swap</command>
-            <property>instrumentation/nav/frequencies/selected-mhz</property>
-            <property>instrumentation/nav/frequencies/standby-mhz</property>
-        </binding>
+                <command>property-swap</command>
+                <property>instrumentation/nav/frequencies/selected-mhz</property>
+                <property>instrumentation/nav/frequencies/standby-mhz</property>
+            </binding>
         </action>
     </animation>
 
@@ -325,13 +324,13 @@ Syd Adams
                 <property>instrumentation/nav/serviceable</property>
             </binding>
         </action>
-         <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>CTL-32-pwr</tooltip-id>
                 <label>Power: %s</label>
                 <mapping>on-off</mapping>
-                <property>instrumentation/nav/serviceable</property>>
+                <property>instrumentation/nav/serviceable</property>
             </binding>
         </hovered>
     </animation>
@@ -402,7 +401,7 @@ Syd Adams
                 <wrap>false</wrap>
             </binding>
         </action>
-         <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>CTL32-vol</tooltip-id>
@@ -478,7 +477,7 @@ Syd Adams
                 <wrap>true</wrap>
             </binding>
         </action>
-         <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>freq1.knob</tooltip-id>
@@ -522,7 +521,7 @@ Syd Adams
                 <wrap>true</wrap>
             </binding>
         </action>
-         <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>freq.knob</tooltip-id>
@@ -565,45 +564,45 @@ Syd Adams
     </animation>
 
     <!-- TEXT OSG -->
-  <text>
-    <name>textosg</name>
-    <type type="string">literal</type>
-    <text type="string">NAV 1</text>
-    <draw-text type="bool">true</draw-text>
-    <font>Helvetica.txf</font>
-    <character-size type="double">0.014</character-size>
-    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
-    <axis-alignment>yz-plane</axis-alignment>
-    <max-height>0.06</max-height>
-    <max-width>0.05</max-width>
-    <font-resolution>
-      <width type="int">64</width>
-      <height type="int">64</height>
-    </font-resolution>
-    <alignment>center-center</alignment>
-    <offsets>
-      <x-m>  0.005 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.000 </z-m>
-    </offsets>
-  </text>
+    <text>
+        <name>textosg</name>
+        <type type="string">literal</type>
+        <text type="string">NAV 1</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.014</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.06</max-height>
+        <max-width>0.05</max-width>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m>  0.005 </x-m>
+            <y-m>  0.000 </y-m>
+            <z-m>  0.000 </z-m>
+        </offsets>
+    </text>
 
-  <animation>
-    <type>material</type>
-    <object-name>textosg</object-name>
-    <emission>
-      <red>   0.8 </red>
-      <green> 0.8 </green>
-      <blue>  0.0 </blue>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>textosg</object-name>
+        <emission>
+            <red>   0.8 </red>
+            <green> 0.8 </green>
+            <blue>  0.0 </blue>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>select</type>
-    <object-name>textosg</object-name>
-    <condition>
-      <property>sim/panel-hotspots</property>
-    </condition>
-  </animation>
+    <animation>
+        <type>select</type>
+        <object-name>textosg</object-name>
+        <condition>
+            <property>sim/panel-hotspots</property>
+        </condition>
+    </animation>
 
 </PropertyList>

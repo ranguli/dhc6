@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
     <particlesystem>
+
         <name>tyre-smoke-n</name>
         <texture>tiresmoke.png</texture>
         <emissive>false</emissive>
@@ -40,7 +41,7 @@
 
         <counter>
             <particles-per-sec>
-				<value>50</value>
+                <value>50</value>
                 <spread>50</spread>
             </particles-per-sec>
         </counter>

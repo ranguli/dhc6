@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-************************************************************************
-De Havilland Twin Otter
-Jan 2008 Syd Adams
-Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#21949
-2014-2015 developers work in various countries around the world.
-************************************************************************
+    ************************************************************************
+    De Havilland Twin Otter
+    Jan 2008 Syd Adams
+    Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#21949
+    2014-2015 developers work in various countries around the world.
+    ************************************************************************
 -->
 
 <PropertyList include="dhc6-base.xml">
+
     <sim>
         <description>De Havilland Canada DHC-6 Twin Otter (wheels)</description>
         <long-description>The DHC-6-300 Twin Otter from de Havilland Canada is a 20 seat,
@@ -48,46 +50,39 @@ Dec 2013 http://equipe-flightgear.forumactif.com/t1195-dhc-6-300-twin-otter#2194
                 <right-chock-aft type="bool">1</right-chock-aft>
             </equipment>
         </model>
-    
+        <hitches>
+            <aerotow>
+                <tow>
+                    <length type="float">60</length>
+                    <elastic-constant type="float">10000</elastic-constant>
+                    <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+                    <dist type="float">1</dist>
+                    <connected-to-property-node type="bool"></connected-to-property-node>
+                    <brake-force type="float">100000</brake-force>
+                    <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+                    <end-force-x type ="float">0</end-force-x>
+                    <end-force-y type ="float">0</end-force-y>
+                    <end-force-z type ="float">0</end-force-z>
+                </tow>
+                <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+                <open type="bool">true</open>
+                <local-pos-x type="float">0</local-pos-x>
+                <local-pos-y type="float">0</local-pos-y>
+                <local-pos-z type="float">0</local-pos-z>
+                <is-slave type="bool">false</is-slave>
+            </aerotow>
+        </hitches>
+    </sim>
 
-    <hitches>
-        <aerotow>
-            <tow>
-                <length type="float">60</length>
-                <elastic-constant type="float">10000</elastic-constant>
-                <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
-                <dist type="float">1</dist>
-                <connected-to-property-node type="bool"></connected-to-property-node>
-                <brake-force type="float">100000</brake-force>
-                <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
-                <end-force-x type ="float">0</end-force-x>
-                <end-force-y type ="float">0</end-force-y>
-                <end-force-z type ="float">0</end-force-z>
-            </tow>
-            <speed-in-tow-direction type="float">0</speed-in-tow-direction>
-            <open type="bool">true</open>
-            <local-pos-x type="float">0</local-pos-x>
-            <local-pos-y type="float">0</local-pos-y>
-            <local-pos-z type="float">0</local-pos-z>
-            <is-slave type="bool">false</is-slave>
-        </aerotow>
-    </hitches>
-
-
-
-</sim>
-
-<controls>
+    <controls>
         <gear>
             <brake-parking>1</brake-parking>
         </gear>
-</controls>
+    </controls>
 
-
-
-  <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
-  <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
-  <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
-</hitch>
+    <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
+        <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+        <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+    </hitch>
 
 </PropertyList>

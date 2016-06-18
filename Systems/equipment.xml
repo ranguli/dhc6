@@ -2,8 +2,8 @@
 
 <PropertyList>
 
-	<!-- logic for pitot tube -->
-	<logic>
+    <!-- logic for pitot tube -->
+    <logic>
         <name>Pitot cover and icing disable pitot[0] system</name>
         <inverted>true</inverted>
         <input>
@@ -183,10 +183,10 @@
         <name>Left tiedown (wheels) addable</name>
         <input>
             <and>
-            	<not-equals>
-                	<property>sim/multiplay/generic/string</property>
-                	<value>dhc6F</value>
-            	</not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
                 <not>
                     <property>sim/model/equipment/left-tiedown-wheels</property>
                 </not>
@@ -205,10 +205,10 @@
         <name>Right tiedown (wheels) addable</name>
         <input>
             <and>
-            	<not-equals>
-                	<property>sim/multiplay/generic/string</property>
-                	<value>dhc6F</value>
-            	</not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
                 <not>
                     <property>sim/model/equipment/right-tiedown-wheels</property>
                 </not>
@@ -227,10 +227,10 @@
         <name>Rear tiedown (wheels) addable</name>
         <input>
             <and>
-            	<not-equals>
-                	<property>sim/multiplay/generic/string</property>
-                	<value>dhc6F</value>
-            	</not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
                 <not>
                     <property>sim/model/equipment/rear-tiedown-wheels</property>
                 </not>
@@ -258,8 +258,8 @@
                     <value>1.0</value>
                 </less-than>
                 <less-than>
-                	<property>engines/engine/n2</property>
-                	<value>1.0</value>
+                    <property>engines/engine/n2</property>
+                    <value>1.0</value>
                 </less-than>
             </and>
         </input>
@@ -278,8 +278,8 @@
                     <value>1.0</value>
                 </less-than>
                 <less-than>
-                	<property>engines/engine/n2</property>
-                	<value>1.0</value>
+                    <property>engines/engine/n2</property>
+                    <value>1.0</value>
                 </less-than>
             </and>
         </input>
@@ -300,8 +300,8 @@
                     <value>1.0</value>
                 </less-than>
                 <less-than>
-                	<property>engines/engine[1]/n2</property>
-                	<value>1.0</value>
+                    <property>engines/engine[1]/n2</property>
+                    <value>1.0</value>
                 </less-than>
             </and>
         </input>
@@ -320,8 +320,8 @@
                     <value>1.0</value>
                 </less-than>
                 <less-than>
-                	<property>engines/engine[1]/n2</property>
-                	<value>1.0</value>
+                    <property>engines/engine[1]/n2</property>
+                    <value>1.0</value>
                 </less-than>
             </and>
         </input>

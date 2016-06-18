@@ -2,7 +2,6 @@
 
 <PropertyList>
 
-
     <!-- Fuel indicators need electrical power to work. The IND-TEST button sets the indicated fuel level to zero. -->
     <filter>
         <name>Forward tank indicated level</name>

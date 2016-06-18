@@ -2,550 +2,550 @@
 
 <PropertyList>
 
-  <path>flightdeck.ac</path>
+    <path>flightdeck.ac</path>
 
-  <animation>
-    <type>material</type>
-    <object-name>LHengFire</object-name>
-    <object-name>RHengFire</object-name>
-    <object-name>LHengFire.001</object-name>
-    <object-name>RHengFire.001</object-name>
-    <condition>
-      <property>/controls/engines/fire-test</property>
-    </condition>
-    <emission>
-      <red>1.000</red>
-      <green>0.937</green>
-      <blue>0.459</blue>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>LHengFire</object-name>
+        <object-name>RHengFire</object-name>
+        <object-name>LHengFire.001</object-name>
+        <object-name>RHengFire.001</object-name>
+        <condition>
+            <property>/controls/engines/fire-test</property>
+        </condition>
+        <emission>
+            <red>1.000</red>
+            <green>0.937</green>
+            <blue>0.459</blue>
+        </emission>
+    </animation>
   
-  <!--light-->
-  <animation>
-    <type>material</type>
-    <object-name>lgenOheat.lit</object-name>
-    <object-name>fwdfuel.lit</object-name>
-    <object-name>l400cycle.lit</object-name>
-    <object-name>lgen.lit</object-name>
-    <object-name>boost1fwd.lit</object-name>
-    <object-name>doors.lit</object-name>
-    <object-name>loilpsi.lit</object-name>
-    <object-name>boost1aft.lit</object-name>
-    <object-name>ductoheat.lit</object-name>
-    <object-name>r400cycle.lit</object-name>
-    <object-name>aftfuel.lit</object-name>
-    <object-name>rgenOheat.lit</object-name>
-    <object-name>lopsi.lit</object-name>
-    <object-name>boost2fwd.lit</object-name>
-    <object-name>rgen.lit</object-name>
-    <object-name>resetprops.lit</object-name>
-    <object-name>boost2aft.lit</object-name>
-    <object-name>roilpsi.lit</object-name>
-    <condition>
-      <equals>
-        <property>sim/multiplay/generic/float[10]</property>
-        <value>0</value>
-      </equals>
-    </condition>
-    <emission>
-      <red>0.3</red>
-      <green>0.3</green>
-      <blue>0.3</blue>
-    </emission>
-  </animation>
+    <!--light-->
+    <animation>
+        <type>material</type>
+        <object-name>lgenOheat.lit</object-name>
+        <object-name>fwdfuel.lit</object-name>
+        <object-name>l400cycle.lit</object-name>
+        <object-name>lgen.lit</object-name>
+        <object-name>boost1fwd.lit</object-name>
+        <object-name>doors.lit</object-name>
+        <object-name>loilpsi.lit</object-name>
+        <object-name>boost1aft.lit</object-name>
+        <object-name>ductoheat.lit</object-name>
+        <object-name>r400cycle.lit</object-name>
+        <object-name>aftfuel.lit</object-name>
+        <object-name>rgenOheat.lit</object-name>
+        <object-name>lopsi.lit</object-name>
+        <object-name>boost2fwd.lit</object-name>
+        <object-name>rgen.lit</object-name>
+        <object-name>resetprops.lit</object-name>
+        <object-name>boost2aft.lit</object-name>
+        <object-name>roilpsi.lit</object-name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/float[10]</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <emission>
+            <red>0.3</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>Brakelever</object-name>
-    <object-name>Cube.003</object-name>
-    <object-name>Cylinder.001</object-name>
-    <object-name>Cylinder.002</object-name>
-    <object-name>Cylinder.004</object-name>
-    <object-name>Cylinder.005</object-name>
-    <object-name>Flaplever</object-name>
-    <object-name>Fuel.select</object-name>
-    <object-name>Glareshield</object-name>
-    <object-name>Glareshield.001</object-name>
-    <object-name>Indselect.toggle</object-name>
-    <object-name>Ind-test</object-name>
-    <object-name>Ind-test-label</object-name>
-    <object-name>LFuel.off</object-name>
-    <object-name>LHdoor.inner</object-name>
-    <object-name>LHengFire</object-name>
-    <object-name>LHengFire.001</object-name>
-    <object-name>LHpedal</object-name>
-    <object-name>RFuel.off</object-name>
-    <object-name>RHdoor.inner</object-name>
-    <object-name>RHengFire</object-name>
-    <object-name>RHengFire.001</object-name>
-    <object-name>RHpedal</object-name>
-    <object-name>Yoke</object-name>
-    <object-name>Yoke1</object-name>
-    <object-name>Yoke2</object-name>
-    <object-name>beta-range-nut-l</object-name>
-    <object-name>beta-range-nut-r</object-name>
-    <object-name>flightdeck</object-name>
-    <object-name>panel</object-name>
-    <object-name>panel.005</object-name>
-    <object-name>Fire.test</object-name>
-    <object-name>text</object-name>
-    <object-name>firebell-switch.cover</object-name>
-    <object-name>firebell-switch</object-name>
-    <object-name>sockle</object-name>
-    <object-name>plate</object-name>
-    <object-name>Cpanel.off</object-name>
-    <object-name>lgenOheat.lit</object-name>
-    <object-name>fwdfuel.lit</object-name>
-    <object-name>l400cycle.lit</object-name>
-    <object-name>lgen.lit</object-name>
-    <object-name>boost1fwd.lit</object-name>
-    <object-name>doors.lit</object-name>
-    <object-name>loilpsi.lit</object-name>
-    <object-name>boost1aft.lit</object-name>
-    <object-name>ductoheat.lit</object-name>
-    <object-name>r400cycle.lit</object-name>
-    <object-name>aftfuel.lit</object-name>
-    <object-name>rgenOheat.lit</object-name>
-    <object-name>lopsi.lit</object-name>
-    <object-name>boost2fwd.lit</object-name>
-    <object-name>rgen.lit</object-name>
-    <object-name>resetprops.lit</object-name>
-    <object-name>boost2aft.lit</object-name>
-    <object-name>roilpsi.lit</object-name>
-    <emission>
-      <red>0.381924</red>
-      <green>0.30935844</green>
-      <blue>0.161171928</blue>
-      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>Brakelever</object-name>
+        <object-name>Cube.003</object-name>
+        <object-name>Cylinder.001</object-name>
+        <object-name>Cylinder.002</object-name>
+        <object-name>Cylinder.004</object-name>
+        <object-name>Cylinder.005</object-name>
+        <object-name>Flaplever</object-name>
+        <object-name>Fuel.select</object-name>
+        <object-name>Glareshield</object-name>
+        <object-name>Glareshield.001</object-name>
+        <object-name>Indselect.toggle</object-name>
+        <object-name>Ind-test</object-name>
+        <object-name>Ind-test-label</object-name>
+        <object-name>LFuel.off</object-name>
+        <object-name>LHdoor.inner</object-name>
+        <object-name>LHengFire</object-name>
+        <object-name>LHengFire.001</object-name>
+        <object-name>LHpedal</object-name>
+        <object-name>RFuel.off</object-name>
+        <object-name>RHdoor.inner</object-name>
+        <object-name>RHengFire</object-name>
+        <object-name>RHengFire.001</object-name>
+        <object-name>RHpedal</object-name>
+        <object-name>Yoke</object-name>
+        <object-name>Yoke1</object-name>
+        <object-name>Yoke2</object-name>
+        <object-name>beta-range-nut-l</object-name>
+        <object-name>beta-range-nut-r</object-name>
+        <object-name>flightdeck</object-name>
+        <object-name>panel</object-name>
+        <object-name>panel.005</object-name>
+        <object-name>Fire.test</object-name>
+        <object-name>text</object-name>
+        <object-name>firebell-switch.cover</object-name>
+        <object-name>firebell-switch</object-name>
+        <object-name>sockle</object-name>
+        <object-name>plate</object-name>
+        <object-name>Cpanel.off</object-name>
+        <object-name>lgenOheat.lit</object-name>
+        <object-name>fwdfuel.lit</object-name>
+        <object-name>l400cycle.lit</object-name>
+        <object-name>lgen.lit</object-name>
+        <object-name>boost1fwd.lit</object-name>
+        <object-name>doors.lit</object-name>
+        <object-name>loilpsi.lit</object-name>
+        <object-name>boost1aft.lit</object-name>
+        <object-name>ductoheat.lit</object-name>
+        <object-name>r400cycle.lit</object-name>
+        <object-name>aftfuel.lit</object-name>
+        <object-name>rgenOheat.lit</object-name>
+        <object-name>lopsi.lit</object-name>
+        <object-name>boost2fwd.lit</object-name>
+        <object-name>rgen.lit</object-name>
+        <object-name>resetprops.lit</object-name>
+        <object-name>boost2aft.lit</object-name>
+        <object-name>roilpsi.lit</object-name>
+        <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>AftBoostPump.sw</object-name>
-    <object-name>Anticoll.sw</object-name>
-    <object-name>AutoFthr.toggle</object-name>
-    <object-name>BusTie.sw</object-name>
-    <object-name>Cylinder.003</object-name>
-    <object-name>Fire.text</object-name>
-    <object-name>FwdBoostPump.sw</object-name>
-    <object-name>Ign.guard</object-name>
-    <object-name>Invtr.sw</object-name>
-    <object-name>L-Llight.sw</object-name>
-    <object-name>L-Llight.sw.001</object-name>
-    <object-name>LGen.sw</object-name>
-    <object-name>LHcondition</object-name>
-    <object-name>LHprop</object-name>
-    <object-name>LHthrottle</object-name>
-    <object-name>Plane.066</object-name>
-    <object-name>Posn.sw</object-name>
-    <object-name>R-Llight.sw</object-name>
-    <object-name>R-Llight.sw.001</object-name>
-    <object-name>RGen.sw</object-name>
-    <object-name>RHcondition</object-name>
-    <object-name>RHprop</object-name>
-    <object-name>RHthrottle</object-name>
-    <object-name>beacon.sw</object-name>
-    <object-name>caution.sw</object-name>
-    <object-name>flaplever</object-name>
-    <object-name>inst_lt.sw</object-name>
-    <object-name>intake-deflector-l</object-name>
-    <object-name>intake-deflector-r</object-name>
-    <object-name>master.sw</object-name>
-    <object-name>pitot-heat</object-name>
-    <object-name>power.sw</object-name>
-    <object-name>propdeice</object-name>
-    <object-name>smoking.sw</object-name>
-    <object-name>spot</object-name>
-    <object-name>starter.sw</object-name>
-    <object-name>stbelt.sw</object-name>
-    <object-name>sw</object-name>
-    <object-name>sw.001</object-name>
-    <object-name>sw.002</object-name>
-    <object-name>sw.003</object-name>
-    <object-name>sw.004</object-name>
-    <object-name>sw.009</object-name>
-    <object-name>sw.010</object-name>
-    <object-name>sw.011</object-name>
-    <object-name>sw.012</object-name>
-    <object-name>sw.015</object-name>
-    <object-name>sw.016</object-name>
-    <object-name>taxi.sw</object-name>
-    <object-name>throttleQ</object-name>
-    <object-name>windshield-heat</object-name>
-    <object-name>wiper.park</object-name>
-    <object-name>wiper.speed</object-name>
-    <emission>
-      <red>0.381924</red>
-      <green>0.30935844</green>
-      <blue>0.161171928</blue>
-      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>AftBoostPump.sw</object-name>
+        <object-name>Anticoll.sw</object-name>
+        <object-name>AutoFthr.toggle</object-name>
+        <object-name>BusTie.sw</object-name>
+        <object-name>Cylinder.003</object-name>
+        <object-name>Fire.text</object-name>
+        <object-name>FwdBoostPump.sw</object-name>
+        <object-name>Ign.guard</object-name>
+        <object-name>Invtr.sw</object-name>
+        <object-name>L-Llight.sw</object-name>
+        <object-name>L-Llight.sw.001</object-name>
+        <object-name>LGen.sw</object-name>
+        <object-name>LHcondition</object-name>
+        <object-name>LHprop</object-name>
+        <object-name>LHthrottle</object-name>
+        <object-name>Plane.066</object-name>
+        <object-name>Posn.sw</object-name>
+        <object-name>R-Llight.sw</object-name>
+        <object-name>R-Llight.sw.001</object-name>
+        <object-name>RGen.sw</object-name>
+        <object-name>RHcondition</object-name>
+        <object-name>RHprop</object-name>
+        <object-name>RHthrottle</object-name>
+        <object-name>beacon.sw</object-name>
+        <object-name>caution.sw</object-name>
+        <object-name>flaplever</object-name>
+        <object-name>inst_lt.sw</object-name>
+        <object-name>intake-deflector-l</object-name>
+        <object-name>intake-deflector-r</object-name>
+        <object-name>master.sw</object-name>
+        <object-name>pitot-heat</object-name>
+        <object-name>power.sw</object-name>
+        <object-name>propdeice</object-name>
+        <object-name>smoking.sw</object-name>
+        <object-name>spot</object-name>
+        <object-name>starter.sw</object-name>
+        <object-name>stbelt.sw</object-name>
+        <object-name>sw</object-name>
+        <object-name>sw.001</object-name>
+        <object-name>sw.002</object-name>
+        <object-name>sw.003</object-name>
+        <object-name>sw.004</object-name>
+        <object-name>sw.009</object-name>
+        <object-name>sw.010</object-name>
+        <object-name>sw.011</object-name>
+        <object-name>sw.012</object-name>
+        <object-name>sw.015</object-name>
+        <object-name>sw.016</object-name>
+        <object-name>taxi.sw</object-name>
+        <object-name>throttleQ</object-name>
+        <object-name>windshield-heat</object-name>
+        <object-name>wiper.park</object-name>
+        <object-name>wiper.speed</object-name>
+        <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>Seatframe</object-name>
-    <object-name>Seatframe.001</object-name>
-    <object-name>Seats</object-name>
-    <object-name>Seats.001</object-name>
-    <emission>
-      <red>0.381924</red>
-      <green>0.30935844</green>
-      <blue>0.161171928</blue>
-      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>Seatframe</object-name>
+        <object-name>Seatframe.001</object-name>
+        <object-name>Seats</object-name>
+        <object-name>Seats.001</object-name>
+        <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>extincteur</object-name>
-    <object-name>fuse-panel</object-name>
-    <object-name>fuse-panel-2</object-name>
-    <emission>
-      <red>0.381924</red>
-      <green>0.30935844</green>
-      <blue>0.161171928</blue>
-      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>extincteur</object-name>
+        <object-name>fuse-panel</object-name>
+        <object-name>fuse-panel-2</object-name>
+        <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
+        </emission>
+    </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>trim-console</object-name>
-    <object-name>trim-console-cover</object-name>
-    <object-name>trimswitch-aileron</object-name>
-    <object-name>trimind-aileron</object-name>
-    <object-name>glass-aileron</object-name>
-    <object-name>trimwheel-rudder</object-name>
-    <object-name>trimind-rudder</object-name>
-    <object-name>glass-rudder</object-name>
-    <object-name>trimwheel-elevator</object-name>
-    <object-name>trimind-elevator</object-name>
-    <object-name>glass-elevator</object-name>
-    <emission>
-      <red>0.381924</red>
-      <green>0.30935844</green>
-      <blue>0.161171928</blue>
-      <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>trim-console</object-name>
+        <object-name>trim-console-cover</object-name>
+        <object-name>trimswitch-aileron</object-name>
+        <object-name>trimind-aileron</object-name>
+        <object-name>glass-aileron</object-name>
+        <object-name>trimwheel-rudder</object-name>
+        <object-name>trimind-rudder</object-name>
+        <object-name>glass-rudder</object-name>
+        <object-name>trimwheel-elevator</object-name>
+        <object-name>trimind-elevator</object-name>
+        <object-name>glass-elevator</object-name>
+        <emission>
+            <red>0.381924</red>
+            <green>0.30935844</green>
+            <blue>0.161171928</blue>
+            <factor-prop>sim/multiplay/generic/float[10]</factor-prop>
+        </emission>
+    </animation>
   
     <!--interior shadows-->
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
-      <object-name>AftBoostPump.sw</object-name>
-      <object-name>Anticoll.sw</object-name>
-      <object-name>AutoFthr.toggle</object-name>
-      <object-name>Brakelever</object-name>
-      <object-name>BusTie.sw</object-name>
-      <object-name>Cpanel.off</object-name>
-      <object-name>Cube.003</object-name>
-      <object-name>Cylinder.001</object-name>
-      <object-name>Cylinder.002</object-name>
-      <object-name>Cylinder.003</object-name>
-      <object-name>Cylinder.004</object-name>
-      <object-name>Cylinder.005</object-name>
-      <object-name>Fire.test</object-name>
-      <object-name>FlapLever</object-name>
-      <object-name>Fuel.select</object-name>
-      <object-name>FwdBoostPump.sw</object-name>
-      <object-name>Glareshield</object-name>
-      <object-name>Glareshield.001</object-name>
-      <object-name>Ign.guard</object-name>
-      <object-name>Indselect.toggle</object-name>
-      <object-name>Ind-test</object-name>
-      <object-name>Ind-test-label</object-name>
-      <object-name>Invtr.sw</object-name>
-      <object-name>L-Llight.sw</object-name>
-      <object-name>L-Llight.sw.001</object-name>
-      <object-name>LFuel.off</object-name>
-      <object-name>LGen.sw</object-name>
-      <object-name>LHcondition</object-name>
-      <object-name>LHdoor.inner</object-name>
-      <object-name>LHengFire</object-name>
-      <object-name>LHengFire.001</object-name>
-      <object-name>LHpedal</object-name>
-      <object-name>LHprop</object-name>
-      <object-name>LHthrottle</object-name>
-      <object-name>Plane.066</object-name>
-      <object-name>Posn.sw</object-name>
-      <object-name>R-Llight.sw</object-name>
-      <object-name>R-Llight.sw.001</object-name>
-      <object-name>RFuel.off</object-name>
-      <object-name>RGen.sw</object-name>
-      <object-name>RHcondition</object-name>
-      <object-name>RHdoor.inner</object-name>
-      <object-name>RHengFire</object-name>
-      <object-name>RHengFire.001</object-name>
-      <object-name>RHpedal</object-name>
-      <object-name>RHprop</object-name>
-      <object-name>RHthrottle</object-name>
-      <object-name>Seatframe</object-name>
-      <object-name>Seatframe.001</object-name>
-      <object-name>Seats</object-name>
-      <object-name>Seats.001</object-name>
-      <object-name>Yoke</object-name>
-      <object-name>Yoke1</object-name>
-      <object-name>Yoke2</object-name>
-      <object-name>aftfuel.lit</object-name>
-      <object-name>autofeather.arm.lit</object-name>
-      <object-name>autofeather.sel.lit</object-name>
-      <object-name>beacon.sw</object-name>
-      <object-name>beta-range-nut-l</object-name>
-      <object-name>beta-range-nut-r</object-name>
-      <object-name>boost1aft.lit</object-name>
-      <object-name>boost1fwd.lit</object-name>
-      <object-name>boost2aft.lit</object-name>
-      <object-name>boost2fwd.lit</object-name>
-      <object-name>caution.sw</object-name>
-      <object-name>doors.lit</object-name>
-      <object-name>ductoheat.lit</object-name>
-      <object-name>extincteur</object-name>
-      <object-name>flaplever</object-name>
-      <object-name>flightdeck</object-name>
-      <object-name>fuse-panel</object-name>
-      <object-name>fuse-panel-2</object-name>
-      <object-name>fwdfuel.lit</object-name>
-      <object-name>inst_lt.sw</object-name>
-      <object-name>intake-deflector-l</object-name>
-      <object-name>intake-deflector-r</object-name>
-      <object-name>l400cycle.lit</object-name>
-      <object-name>lgen.lit</object-name>
-      <object-name>lgen.Oheat.lit</object-name>
-      <object-name>loilpsi.lit</object-name>
-      <object-name>lopsi.lit</object-name>
-      <object-name>master.sw</object-name>
-      <object-name>panel</object-name>
-      <object-name>panel.005</object-name>
-      <object-name>pitot-heat</object-name>
-      <object-name>power.sw</object-name>
-      <object-name>propdeice</object-name>
-      <object-name>r400cycle.lit</object-name>
-      <object-name>resetprops.lit</object-name>
-      <object-name>rgen.lit</object-name>
-      <object-name>rgenOheat.lit</object-name>
-      <object-name>roilpsi.lit</object-name>
-      <object-name>smoking.sw</object-name>
-      <object-name>spot</object-name>
-      <object-name>starter.sw</object-name>
-      <object-name>stbelt.sw</object-name>
-      <object-name>sw</object-name>
-      <object-name>sw.001</object-name>
-      <object-name>sw.002</object-name>
-      <object-name>sw.003</object-name>
-      <object-name>sw.004</object-name>
-      <object-name>sw.009</object-name>
-      <object-name>sw.010</object-name>
-      <object-name>sw.011</object-name>
-      <object-name>sw.012</object-name>
-      <object-name>sw.015</object-name>
-      <object-name>sw.016</object-name>
-      <object-name>taxi.sw</object-name>
-      <object-name>throttleQ</object-name>
-      <object-name>thrust_reverse_l</object-name>
-      <object-name>thrust_reverse_l.001</object-name>
-      <object-name>thrust_reverse_l.lit</object-name>
-      <object-name>thrust_reverse_r.lit</object-name>
-      <object-name>windshield-heat</object-name>
-      <object-name>wiper.park</object-name>
-      <object-name>wiper.speed</object-name>
-      <object-name>Fire.test</object-name>
-    <object-name>text</object-name>
-    <object-name>firebell-switch.cover</object-name>
-    <object-name>firebell-switch</object-name>
-    <object-name>sockle</object-name>
-    <object-name>plate</object-name>
-    <object-name>trim-console</object-name>
-    <object-name>trim-console-cover</object-name>
-    <object-name>trimswitch-aileron</object-name>
-    <object-name>trimind-aileron</object-name>
-    <!-- object-name>glass-aileron</object-name -->
-    <object-name>trimwheel-rudder</object-name>
-    <object-name>trimind-rudder</object-name>
-    <!-- object-name>glass-rudder</object-name -->
-    <object-name>trimwheel-elevator</object-name>
-    <object-name>trimind-elevator</object-name>
-    <!-- object-name>glass-elevator</object-name -->
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+        <object-name>AftBoostPump.sw</object-name>
+        <object-name>Anticoll.sw</object-name>
+        <object-name>AutoFthr.toggle</object-name>
+        <object-name>Brakelever</object-name>
+        <object-name>BusTie.sw</object-name>
+        <object-name>Cpanel.off</object-name>
+        <object-name>Cube.003</object-name>
+        <object-name>Cylinder.001</object-name>
+        <object-name>Cylinder.002</object-name>
+        <object-name>Cylinder.003</object-name>
+        <object-name>Cylinder.004</object-name>
+        <object-name>Cylinder.005</object-name>
+        <object-name>Fire.test</object-name>
+        <object-name>FlapLever</object-name>
+        <object-name>Fuel.select</object-name>
+        <object-name>FwdBoostPump.sw</object-name>
+        <object-name>Glareshield</object-name>
+        <object-name>Glareshield.001</object-name>
+        <object-name>Ign.guard</object-name>
+        <object-name>Indselect.toggle</object-name>
+        <object-name>Ind-test</object-name>
+        <object-name>Ind-test-label</object-name>
+        <object-name>Invtr.sw</object-name>
+        <object-name>L-Llight.sw</object-name>
+        <object-name>L-Llight.sw.001</object-name>
+        <object-name>LFuel.off</object-name>
+        <object-name>LGen.sw</object-name>
+        <object-name>LHcondition</object-name>
+        <object-name>LHdoor.inner</object-name>
+        <object-name>LHengFire</object-name>
+        <object-name>LHengFire.001</object-name>
+        <object-name>LHpedal</object-name>
+        <object-name>LHprop</object-name>
+        <object-name>LHthrottle</object-name>
+        <object-name>Plane.066</object-name>
+        <object-name>Posn.sw</object-name>
+        <object-name>R-Llight.sw</object-name>
+        <object-name>R-Llight.sw.001</object-name>
+        <object-name>RFuel.off</object-name>
+        <object-name>RGen.sw</object-name>
+        <object-name>RHcondition</object-name>
+        <object-name>RHdoor.inner</object-name>
+        <object-name>RHengFire</object-name>
+        <object-name>RHengFire.001</object-name>
+        <object-name>RHpedal</object-name>
+        <object-name>RHprop</object-name>
+        <object-name>RHthrottle</object-name>
+        <object-name>Seatframe</object-name>
+        <object-name>Seatframe.001</object-name>
+        <object-name>Seats</object-name>
+        <object-name>Seats.001</object-name>
+        <object-name>Yoke</object-name>
+        <object-name>Yoke1</object-name>
+        <object-name>Yoke2</object-name>
+        <object-name>aftfuel.lit</object-name>
+        <object-name>autofeather.arm.lit</object-name>
+        <object-name>autofeather.sel.lit</object-name>
+        <object-name>beacon.sw</object-name>
+        <object-name>beta-range-nut-l</object-name>
+        <object-name>beta-range-nut-r</object-name>
+        <object-name>boost1aft.lit</object-name>
+        <object-name>boost1fwd.lit</object-name>
+        <object-name>boost2aft.lit</object-name>
+        <object-name>boost2fwd.lit</object-name>
+        <object-name>caution.sw</object-name>
+        <object-name>doors.lit</object-name>
+        <object-name>ductoheat.lit</object-name>
+        <object-name>extincteur</object-name>
+        <object-name>flaplever</object-name>
+        <object-name>flightdeck</object-name>
+        <object-name>fuse-panel</object-name>
+        <object-name>fuse-panel-2</object-name>
+        <object-name>fwdfuel.lit</object-name>
+        <object-name>inst_lt.sw</object-name>
+        <object-name>intake-deflector-l</object-name>
+        <object-name>intake-deflector-r</object-name>
+        <object-name>l400cycle.lit</object-name>
+        <object-name>lgen.lit</object-name>
+        <object-name>lgen.Oheat.lit</object-name>
+        <object-name>loilpsi.lit</object-name>
+        <object-name>lopsi.lit</object-name>
+        <object-name>master.sw</object-name>
+        <object-name>panel</object-name>
+        <object-name>panel.005</object-name>
+        <object-name>pitot-heat</object-name>
+        <object-name>power.sw</object-name>
+        <object-name>propdeice</object-name>
+        <object-name>r400cycle.lit</object-name>
+        <object-name>resetprops.lit</object-name>
+        <object-name>rgen.lit</object-name>
+        <object-name>rgenOheat.lit</object-name>
+        <object-name>roilpsi.lit</object-name>
+        <object-name>smoking.sw</object-name>
+        <object-name>spot</object-name>
+        <object-name>starter.sw</object-name>
+        <object-name>stbelt.sw</object-name>
+        <object-name>sw</object-name>
+        <object-name>sw.001</object-name>
+        <object-name>sw.002</object-name>
+        <object-name>sw.003</object-name>
+        <object-name>sw.004</object-name>
+        <object-name>sw.009</object-name>
+        <object-name>sw.010</object-name>
+        <object-name>sw.011</object-name>
+        <object-name>sw.012</object-name>
+        <object-name>sw.015</object-name>
+        <object-name>sw.016</object-name>
+        <object-name>taxi.sw</object-name>
+        <object-name>throttleQ</object-name>
+        <object-name>thrust_reverse_l</object-name>
+        <object-name>thrust_reverse_l.001</object-name>
+        <object-name>thrust_reverse_l.lit</object-name>
+        <object-name>thrust_reverse_r.lit</object-name>
+        <object-name>windshield-heat</object-name>
+        <object-name>wiper.park</object-name>
+        <object-name>wiper.speed</object-name>
+        <object-name>Fire.test</object-name>
+        <object-name>text</object-name>
+        <object-name>firebell-switch.cover</object-name>
+        <object-name>firebell-switch</object-name>
+        <object-name>sockle</object-name>
+        <object-name>plate</object-name>
+        <object-name>trim-console</object-name>
+        <object-name>trim-console-cover</object-name>
+        <object-name>trimswitch-aileron</object-name>
+        <object-name>trimind-aileron</object-name>
+        <!-- object-name>glass-aileron</object-name -->
+        <object-name>trimwheel-rudder</object-name>
+        <object-name>trimind-rudder</object-name>
+        <!-- object-name>glass-rudder</object-name -->
+        <object-name>trimwheel-elevator</object-name>
+        <object-name>trimind-elevator</object-name>
+        <!-- object-name>glass-elevator</object-name -->
     </effect>
 
     <!--flashlight-->
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
-      <object-name>AftBoostPump.sw</object-name>
-      <object-name>Anticoll.sw</object-name>
-      <object-name>AutoFthr.toggle</object-name>
-      <object-name>Brakelever</object-name>
-      <object-name>BusTie.sw</object-name>
-      <object-name>Cpanel.off</object-name>
-      <object-name>Cube.003</object-name>
-      <object-name>Cylinder.001</object-name>
-      <object-name>Cylinder.002</object-name>
-      <object-name>Cylinder.003</object-name>
-      <object-name>Cylinder.004</object-name>
-      <object-name>Cylinder.005</object-name>
-      <object-name>Fire.test</object-name>
-      <object-name>FlapLever</object-name>
-      <object-name>Fuel.select</object-name>
-      <object-name>FwdBoostPump.sw</object-name>
-      <object-name>Glareshield</object-name>
-      <object-name>Glareshield.001</object-name>
-      <object-name>Ign.guard</object-name>
-      <object-name>Indselect.toggle</object-name>
-      <object-name>Ind-test</object-name>
-      <object-name>Ind-test-label</object-name>
-      <object-name>Invtr.sw</object-name>
-      <object-name>L-Llight.sw</object-name>
-      <object-name>L-Llight.sw.001</object-name>
-      <object-name>LFuel.off</object-name>
-      <object-name>LGen.sw</object-name>
-      <object-name>LHcondition</object-name>
-      <object-name>LHdoor.inner</object-name>
-      <object-name>LHengFire</object-name>
-      <object-name>LHengFire.001</object-name>
-      <object-name>LHpedal</object-name>
-      <object-name>LHprop</object-name>
-      <object-name>LHthrottle</object-name>
-      <object-name>Plane.066</object-name>
-      <object-name>Posn.sw</object-name>
-      <object-name>R-Llight.sw</object-name>
-      <object-name>R-Llight.sw.001</object-name>
-      <object-name>RFuel.off</object-name>
-      <object-name>RGen.sw</object-name>
-      <object-name>RHcondition</object-name>
-      <object-name>RHdoor.inner</object-name>
-      <object-name>RHengFire</object-name>
-      <object-name>RHengFire.001</object-name>
-      <object-name>RHpedal</object-name>
-      <object-name>RHprop</object-name>
-      <object-name>RHthrottle</object-name>
-      <object-name>Seatframe</object-name>
-      <object-name>Seatframe.001</object-name>
-      <object-name>Seats</object-name>
-      <object-name>Seats.001</object-name>
-      <object-name>Yoke</object-name>
-      <object-name>Yoke1</object-name>
-      <object-name>Yoke2</object-name>
-      <object-name>aftfuel.lit</object-name>
-      <object-name>autofeather.arm.lit</object-name>
-      <object-name>autofeather.sel.lit</object-name>
-      <object-name>beacon.sw</object-name>
-      <object-name>beta-range-nut-l</object-name>
-      <object-name>beta-range-nut-r</object-name>
-      <object-name>boost1aft.lit</object-name>
-      <object-name>boost1fwd.lit</object-name>
-      <object-name>boost2aft.lit</object-name>
-      <object-name>boost2fwd.lit</object-name>
-      <object-name>caution.sw</object-name>
-      <object-name>doors.lit</object-name>
-      <object-name>ductoheat.lit</object-name>
-      <object-name>extincteur</object-name>
-      <object-name>flaplever</object-name>
-      <object-name>flightdeck</object-name>
-      <object-name>fuse-panel</object-name>
-      <object-name>fuse-panel-2</object-name>
-      <object-name>fwdfuel.lit</object-name>
-      <object-name>inst_lt.sw</object-name>
-      <object-name>intake-deflector-l</object-name>
-      <object-name>intake-deflector-r</object-name>
-      <object-name>l400cycle.lit</object-name>
-      <object-name>lgen.lit</object-name>
-      <object-name>lgen.Oheat.lit</object-name>
-      <object-name>loilpsi.lit</object-name>
-      <object-name>lopsi.lit</object-name>
-      <object-name>master.sw</object-name>
-      <object-name>panel</object-name>
-      <object-name>panel.005</object-name>
-      <object-name>pitot-heat</object-name>
-      <object-name>power.sw</object-name>
-      <object-name>propdeice</object-name>
-      <object-name>r400cycle.lit</object-name>
-      <object-name>resetprops.lit</object-name>
-      <object-name>rgen.lit</object-name>
-      <object-name>rgenOheat.lit</object-name>
-      <object-name>roilpsi.lit</object-name>
-      <object-name>smoking.sw</object-name>
-      <object-name>spot</object-name>
-      <object-name>starter.sw</object-name>
-      <object-name>stbelt.sw</object-name>
-      <object-name>sw</object-name>
-      <object-name>sw.001</object-name>
-      <object-name>sw.002</object-name>
-      <object-name>sw.003</object-name>
-      <object-name>sw.004</object-name>
-      <object-name>sw.009</object-name>
-      <object-name>sw.010</object-name>
-      <object-name>sw.011</object-name>
-      <object-name>sw.012</object-name>
-      <object-name>sw.015</object-name>
-      <object-name>sw.016</object-name>
-      <object-name>taxi.sw</object-name>
-      <object-name>throttleQ</object-name>
-      <object-name>thrust_reverse_l</object-name>
-      <object-name>thrust_reverse_l.001</object-name>
-      <object-name>thrust_reverse_l.lit</object-name>
-      <object-name>thrust_reverse_r.lit</object-name>
-      <object-name>windshield-heat</object-name>
-      <object-name>wiper.park</object-name>
-      <object-name>wiper.speed</object-name>
-      <object-name>Fire.test</object-name>
-    <object-name>text</object-name>
-    <object-name>firebell-switch.cover</object-name>
-    <object-name>firebell-switch</object-name>
-    <object-name>sockle</object-name>
-    <object-name>plate</object-name>
-    <object-name>trim-console</object-name>
-    <object-name>trim-console-cover</object-name>
-    <object-name>trimswitch-aileron</object-name>
-    <object-name>trimind-aileron</object-name>
-    <!-- object-name>glass-aileron</object-name -->
-    <object-name>trimwheel-rudder</object-name>
-    <object-name>trimind-rudder</object-name>
-    <!-- object-name>glass-rudder</object-name -->
-    <object-name>trimwheel-elevator</object-name>
-    <object-name>trimind-elevator</object-name>
-    <!-- object-name>glass-elevator</object-name -->
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+        <object-name>AftBoostPump.sw</object-name>
+        <object-name>Anticoll.sw</object-name>
+        <object-name>AutoFthr.toggle</object-name>
+        <object-name>Brakelever</object-name>
+        <object-name>BusTie.sw</object-name>
+        <object-name>Cpanel.off</object-name>
+        <object-name>Cube.003</object-name>
+        <object-name>Cylinder.001</object-name>
+        <object-name>Cylinder.002</object-name>
+        <object-name>Cylinder.003</object-name>
+        <object-name>Cylinder.004</object-name>
+        <object-name>Cylinder.005</object-name>
+        <object-name>Fire.test</object-name>
+        <object-name>FlapLever</object-name>
+        <object-name>Fuel.select</object-name>
+        <object-name>FwdBoostPump.sw</object-name>
+        <object-name>Glareshield</object-name>
+        <object-name>Glareshield.001</object-name>
+        <object-name>Ign.guard</object-name>
+        <object-name>Indselect.toggle</object-name>
+        <object-name>Ind-test</object-name>
+        <object-name>Ind-test-label</object-name>
+        <object-name>Invtr.sw</object-name>
+        <object-name>L-Llight.sw</object-name>
+        <object-name>L-Llight.sw.001</object-name>
+        <object-name>LFuel.off</object-name>
+        <object-name>LGen.sw</object-name>
+        <object-name>LHcondition</object-name>
+        <object-name>LHdoor.inner</object-name>
+        <object-name>LHengFire</object-name>
+        <object-name>LHengFire.001</object-name>
+        <object-name>LHpedal</object-name>
+        <object-name>LHprop</object-name>
+        <object-name>LHthrottle</object-name>
+        <object-name>Plane.066</object-name>
+        <object-name>Posn.sw</object-name>
+        <object-name>R-Llight.sw</object-name>
+        <object-name>R-Llight.sw.001</object-name>
+        <object-name>RFuel.off</object-name>
+        <object-name>RGen.sw</object-name>
+        <object-name>RHcondition</object-name>
+        <object-name>RHdoor.inner</object-name>
+        <object-name>RHengFire</object-name>
+        <object-name>RHengFire.001</object-name>
+        <object-name>RHpedal</object-name>
+        <object-name>RHprop</object-name>
+        <object-name>RHthrottle</object-name>
+        <object-name>Seatframe</object-name>
+        <object-name>Seatframe.001</object-name>
+        <object-name>Seats</object-name>
+        <object-name>Seats.001</object-name>
+        <object-name>Yoke</object-name>
+        <object-name>Yoke1</object-name>
+        <object-name>Yoke2</object-name>
+        <object-name>aftfuel.lit</object-name>
+        <object-name>autofeather.arm.lit</object-name>
+        <object-name>autofeather.sel.lit</object-name>
+        <object-name>beacon.sw</object-name>
+        <object-name>beta-range-nut-l</object-name>
+        <object-name>beta-range-nut-r</object-name>
+        <object-name>boost1aft.lit</object-name>
+        <object-name>boost1fwd.lit</object-name>
+        <object-name>boost2aft.lit</object-name>
+        <object-name>boost2fwd.lit</object-name>
+        <object-name>caution.sw</object-name>
+        <object-name>doors.lit</object-name>
+        <object-name>ductoheat.lit</object-name>
+        <object-name>extincteur</object-name>
+        <object-name>flaplever</object-name>
+        <object-name>flightdeck</object-name>
+        <object-name>fuse-panel</object-name>
+        <object-name>fuse-panel-2</object-name>
+        <object-name>fwdfuel.lit</object-name>
+        <object-name>inst_lt.sw</object-name>
+        <object-name>intake-deflector-l</object-name>
+        <object-name>intake-deflector-r</object-name>
+        <object-name>l400cycle.lit</object-name>
+        <object-name>lgen.lit</object-name>
+        <object-name>lgen.Oheat.lit</object-name>
+        <object-name>loilpsi.lit</object-name>
+        <object-name>lopsi.lit</object-name>
+        <object-name>master.sw</object-name>
+        <object-name>panel</object-name>
+        <object-name>panel.005</object-name>
+        <object-name>pitot-heat</object-name>
+        <object-name>power.sw</object-name>
+        <object-name>propdeice</object-name>
+        <object-name>r400cycle.lit</object-name>
+        <object-name>resetprops.lit</object-name>
+        <object-name>rgen.lit</object-name>
+        <object-name>rgenOheat.lit</object-name>
+        <object-name>roilpsi.lit</object-name>
+        <object-name>smoking.sw</object-name>
+        <object-name>spot</object-name>
+        <object-name>starter.sw</object-name>
+        <object-name>stbelt.sw</object-name>
+        <object-name>sw</object-name>
+        <object-name>sw.001</object-name>
+        <object-name>sw.002</object-name>
+        <object-name>sw.003</object-name>
+        <object-name>sw.004</object-name>
+        <object-name>sw.009</object-name>
+        <object-name>sw.010</object-name>
+        <object-name>sw.011</object-name>
+        <object-name>sw.012</object-name>
+        <object-name>sw.015</object-name>
+        <object-name>sw.016</object-name>
+        <object-name>taxi.sw</object-name>
+        <object-name>throttleQ</object-name>
+        <object-name>thrust_reverse_l</object-name>
+        <object-name>thrust_reverse_l.001</object-name>
+        <object-name>thrust_reverse_l.lit</object-name>
+        <object-name>thrust_reverse_r.lit</object-name>
+        <object-name>windshield-heat</object-name>
+        <object-name>wiper.park</object-name>
+        <object-name>wiper.speed</object-name>
+        <object-name>Fire.test</object-name>
+        <object-name>text</object-name>
+        <object-name>firebell-switch.cover</object-name>
+        <object-name>firebell-switch</object-name>
+        <object-name>sockle</object-name>
+        <object-name>plate</object-name>
+        <object-name>trim-console</object-name>
+        <object-name>trim-console-cover</object-name>
+        <object-name>trimswitch-aileron</object-name>
+        <object-name>trimind-aileron</object-name>
+        <!-- object-name>glass-aileron</object-name -->
+        <object-name>trimwheel-rudder</object-name>
+        <object-name>trimind-rudder</object-name>
+        <!-- object-name>glass-rudder</object-name -->
+        <object-name>trimwheel-elevator</object-name>
+        <object-name>trimind-elevator</object-name>
+        <!-- object-name>glass-elevator</object-name -->
     </effect>
     
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
-      <object-name>Seatframe</object-name>
-      <object-name>Seatframe.001</object-name>
-      <object-name>sw</object-name>
-      <object-name>sw.001</object-name>
-      <object-name>sw.002</object-name>
-      <object-name>sw.003</object-name>
-      <object-name>sw.004</object-name>
-      <object-name>intake-deflector-r</object-name>
-      <object-name>intake-deflector-l</object-name>
-      <object-name>propdeice</object-name>
-      <object-name>sw.009</object-name>
-      <object-name>sw.010</object-name>
-      <object-name>sw.011</object-name>
-      <object-name>sw.012</object-name>
-      <object-name>pitot-heat</object-name>
-      <object-name>sw.015</object-name>
-      <object-name>sw.016</object-name>
-      <object-name>taxi.sw</object-name>
-      <object-name>RGen.sw</object-name>
-      <object-name>LGen.sw</object-name>
-      <object-name>LHengfire</object-name>
-      <object-name>RHengfire</object-name>
-      <object-name>LFuel.off</object-name>
-      <object-name>RFuel.off</object-name>      
-      <object-name>AftBoostPump.sw</object-name>      
-      <object-name>FwdBoostPump.sw</object-name>      
-      <object-name>smoking.sw</object-name>
-      <object-name>AutoFthr.toggle</object-name>
-      <object-name>autofeather.arm.lit</object-name>
-      <object-name>autofeather.sel.lit</object-name>
-      <object-name>beta-range-nut-l</object-name>
-      <object-name>beta-range-nut-r</object-name>
-      <object-name>thrust_reverse_l.lit</object-name>
-      <object-name>thrust_reverse_r.lit</object-name>
-      <object-name>windshield-heat</object-name>
-      <object-name>sockle</object-name>
-      <object-name>firebell-switch</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
+        <object-name>Seatframe</object-name>
+        <object-name>Seatframe.001</object-name>
+        <object-name>sw</object-name>
+        <object-name>sw.001</object-name>
+        <object-name>sw.002</object-name>
+        <object-name>sw.003</object-name>
+        <object-name>sw.004</object-name>
+        <object-name>intake-deflector-r</object-name>
+        <object-name>intake-deflector-l</object-name>
+        <object-name>propdeice</object-name>
+        <object-name>sw.009</object-name>
+        <object-name>sw.010</object-name>
+        <object-name>sw.011</object-name>
+        <object-name>sw.012</object-name>
+        <object-name>pitot-heat</object-name>
+        <object-name>sw.015</object-name>
+        <object-name>sw.016</object-name>
+        <object-name>taxi.sw</object-name>
+        <object-name>RGen.sw</object-name>
+        <object-name>LGen.sw</object-name>
+        <object-name>LHengfire</object-name>
+        <object-name>RHengfire</object-name>
+        <object-name>LFuel.off</object-name>
+        <object-name>RFuel.off</object-name>      
+        <object-name>AftBoostPump.sw</object-name>      
+        <object-name>FwdBoostPump.sw</object-name>      
+        <object-name>smoking.sw</object-name>
+        <object-name>AutoFthr.toggle</object-name>
+        <object-name>autofeather.arm.lit</object-name>
+        <object-name>autofeather.sel.lit</object-name>
+        <object-name>beta-range-nut-l</object-name>
+        <object-name>beta-range-nut-r</object-name>
+        <object-name>thrust_reverse_l.lit</object-name>
+        <object-name>thrust_reverse_r.lit</object-name>
+        <object-name>windshield-heat</object-name>
+        <object-name>sockle</object-name>
+        <object-name>firebell-switch</object-name>
     </effect> 
 
     <model>
@@ -707,8 +707,7 @@
        </offsets>
    </model>
 
-<!--AP commands--> 
-    
+    <!--AP commands-->
     <model>
         <name>apcomm</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
@@ -940,8 +939,7 @@
         </offsets>
     </model>
 
-<!--center panel-->
-
+    <!--center panel-->
     <model>
         <name>Center LHtorque</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/torque/LHtorque.xml</path>
@@ -1119,10 +1117,10 @@
     </model>
 
     <animation>
-      <type>translate</type>
-      <object-name>Ind-test</object-name>
-      <property>controls/fuel/ind-test</property>
-      <factor>0.008</factor>
+        <type>translate</type>
+        <object-name>Ind-test</object-name>
+        <property>controls/fuel/ind-test</property>
+        <factor>0.008</factor>
         <axis>
             <x>-1</x>
             <y>0</y>
@@ -1131,23 +1129,23 @@
     </animation>
 
     <animation>
-      <type>pick</type>
-      <object-name>Ind-test</object-name>
-      <action>
-        <button>0</button>
-          <binding>
-            <command>property-assign</command>
-            <property>controls/fuel/ind-test</property>
-            <value type="bool">1</value>
-          </binding>
-          <mod-up>
+        <type>pick</type>
+        <object-name>Ind-test</object-name>
+        <action>
+            <button>0</button>
             <binding>
-              <command>property-assign</command>
-              <property>controls/fuel/ind-test</property>
-              <value type="bool">0</value>
+                <command>property-assign</command>
+                <property>controls/fuel/ind-test</property>
+                <value type="bool">1</value>
             </binding>
-          </mod-up>
-      </action>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/fuel/ind-test</property>
+                    <value type="bool">0</value>
+                </binding>
+            </mod-up>
+        </action>
     </animation>
 
     <model>
@@ -1183,8 +1181,7 @@
         </offsets>
       </model>
 
-<!-- No smoking -->
-
+    <!-- No smoking -->
     <model>
         <name>no-smoking</name>
         <path>Aircraft/dhc6/Models/Flightdeck/No-smoking/no-smoking.xml</path>
@@ -1196,38 +1193,37 @@
         </offsets>
     </model>
 
-<!-- Show/hide yokes -->
-
+    <!-- Show/hide yokes -->
     <animation>
         <type>select</type>
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
         <condition>
-          <property>sim/yokes-visible</property>
+            <property>sim/yokes-visible</property>
         </condition>
       </animation>
 
-<!-- Auto Feather-->
+    <!-- Auto Feather-->
     <animation>
         <type>select</type>
         <object-name>autofeather.sel.lit</object-name>
         <condition>
-	    <and>
-              <property>controls/engines/auto-feather</property>
-	      <or>
-		<not>
-		  <property>engines/engine[0]/running</property>
-		</not>
-		<not>
-		  <property>engines/engine[1]/running</property>
-		</not>
-	      </or>
-	      <greater-than>
-		<property>systems/electrical/volts</property>
-		<value>1</value>
-	      </greater-than>
-	    </and>
+        <and>
+            <property>controls/engines/auto-feather</property>
+            <or>
+          <not>
+              <property>engines/engine[0]/running</property>
+          </not>
+          <not>
+              <property>engines/engine[1]/running</property>
+          </not>
+       </or>
+      <greater-than>
+          <property>systems/electrical/volts</property>
+      <value>1</value>
+      </greater-than>
+    </and>
         </condition>
     </animation>
     
@@ -1235,43 +1231,43 @@
         <type>material</type>
         <object-name>autofeather.sel.lit</object-name>
         <condition>
-	  <not><property>sim/rendering/rembrandt/enabled</property></not>
-	    <and>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+        <and>
               <property>controls/engines/auto-feather</property>
-	      <or>
-		<not>
-		  <property>engines/engine[0]/running</property>
-		</not>
-		<not>
-		  <property>engines/engine[1]/running</property>
-		</not>
-	      </or>
-	      <greater-than>
-		<property>systems/electrical/volts</property>
-		<value>1</value>
-	      </greater-than>
-	    </and>
+          <or>
+        <not>
+          <property>engines/engine[0]/running</property>
+        </not>
+        <not>
+          <property>engines/engine[1]/running</property>
+        </not>
+          </or>
+          <greater-than>
+        <property>systems/electrical/volts</property>
+        <value>1</value>
+          </greater-than>
+        </and>
         </condition>
-	<emission>
-	  <red>   0.7 </red>
-	  <green> 0.6 </green>
-	  <blue>  0.6 </blue>
-	</emission>
+    <emission>
+      <red>   0.7 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
     </animation>
        
     <animation>
         <type>select</type>
         <object-name>autofeather.arm.lit</object-name>
         <condition>
-	    <and>
+        <and>
               <property>controls/engines/auto-feather</property>
-	      <property>engines/engine[0]/running</property>
-	      <property>engines/engine[1]/running</property>
-	      <greater-than>
-		<property>systems/electrical/volts</property>
-		<value>1</value>
-	      </greater-than>
-	    </and>
+          <property>engines/engine[0]/running</property>
+          <property>engines/engine[1]/running</property>
+          <greater-than>
+        <property>systems/electrical/volts</property>
+        <value>1</value>
+          </greater-than>
+        </and>
         </condition>
     </animation>
     
@@ -1279,22 +1275,22 @@
         <type>material</type>
         <object-name>autofeather.arm.lit</object-name>
         <condition>
-	  <not><property>sim/rendering/rembrandt/enabled</property></not>
-	    <and>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+        <and>
               <property>controls/engines/auto-feather</property>
-	      <property>engines/engine[0]/running</property>
-	      <property>engines/engine[1]/running</property>
-	      <greater-than>
-		<property>systems/electrical/volts</property>
-		<value>1</value>
-	      </greater-than>
-	    </and>
+          <property>engines/engine[0]/running</property>
+          <property>engines/engine[1]/running</property>
+          <greater-than>
+        <property>systems/electrical/volts</property>
+        <value>1</value>
+          </greater-than>
+        </and>
         </condition>
-	<emission>
-	  <red>   0.7 </red>
-	  <green> 0.6 </green>
-	  <blue>  0.6 </blue>
-	</emission>
+    <emission>
+      <red>   0.7 </red>
+      <green> 0.6 </green>
+      <blue>  0.6 </blue>
+    </emission>
      </animation>
      
      <!--Thrust reverse lights-->
@@ -1396,9 +1392,9 @@
 
     <animation>
         <type>translate</type>
-          <object-name>Brakelever</object-name>
-               <property>controls/gear/parkingbrake-lever</property>
-             <factor >0.04 </factor>
+        <object-name>Brakelever</object-name>
+        <property>controls/gear/parkingbrake-lever</property>
+        <factor >0.04 </factor>
         <axis>
             <x>1</x>
             <y>0</y>
@@ -1411,26 +1407,26 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
-	<condition>
-	  <or>
-	    <equals>
-	      <property>controls/autopilot/settings/iasflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/altsetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/vssetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/gssetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	  </or>
-	</condition>
+        <condition>
+            <or>
+                <equals>
+                    <property>controls/autopilot/settings/iasflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/altsetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/vssetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/gssetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+            </or>
+        </condition>
         <property>controls/flight/elevator-smooth</property>
         <factor>10.0</factor>
         <center>
@@ -1444,31 +1440,32 @@
             <z>0</z>
         </axis>
     </animation>
+
     <animation>
         <type>rotate</type>
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
-	<condition>
-	  <and>
-	    <equals>
-	      <property>controls/autopilot/settings/iasflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/altsetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/vssetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/gssetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	  </and>
-	</condition>
+        <condition>
+            <and>
+                <equals>
+                    <property>controls/autopilot/settings/iasflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/altsetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/vssetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/gssetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+            </and>
+        </condition>
         <property>controls/flight/elevator</property>
         <factor>10.0</factor>
         <center>
@@ -1486,22 +1483,22 @@
     <animation>
         <type>rotate</type>
         <object-name>Yoke1</object-name>
-		<condition>
-	  <or>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgsetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/navsetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	  </or>
-	</condition>
+        <condition>
+            <or>
+                <equals>
+                    <property>controls/autopilot/settings/hdgflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/hdgsetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/navsetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+            </or>
+        </condition>
         <property>controls/flight/aileron-smooth</property>
         <factor>40</factor>
         <center>
@@ -1515,25 +1512,26 @@
             <z>0</z>
         </axis>
     </animation>
-        <animation>
+
+    <animation>
         <type>rotate</type>
         <object-name>Yoke1</object-name>
-		<condition>
-	  <and>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgsetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/navsetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	  </and>
-	</condition>
+        <condition>
+            <and>
+                <equals>
+                    <property>controls/autopilot/settings/hdgflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/hdgsetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/navsetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+            </and>
+        </condition>
         <property>controls/flight/aileron</property>
         <factor>40</factor>
         <center>
@@ -1547,25 +1545,26 @@
             <z>0</z>
         </axis>
     </animation>
+
     <animation>
         <type>rotate</type>
         <object-name>Yoke2</object-name>
-		<condition>
-	  <or>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgsetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/navsetflag</property>
-	      <value type="bool">true</value>
-	    </equals>
-	  </or>
-	</condition>
+        <condition>
+            <or>
+                <equals>
+                    <property>controls/autopilot/settings/hdgflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/hdgsetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/navsetflag</property>
+                    <value type="bool">true</value>
+                </equals>
+            </or>
+        </condition>
         <property>controls/flight/aileron-smooth</property>
         <factor>40</factor>
         <center>
@@ -1583,22 +1582,22 @@
     <animation>
         <type>rotate</type>
         <object-name>Yoke2</object-name>
-	<condition>
-	  <and>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/hdgsetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	    <equals>
-	      <property>controls/autopilot/settings/navsetflag</property>
-	      <value type="bool">false</value>
-	    </equals>
-	  </and>
-	</condition>
+        <condition>
+            <and>
+                <equals>
+                    <property>controls/autopilot/settings/hdgflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/hdgsetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+                <equals>
+                    <property>controls/autopilot/settings/navsetflag</property>
+                    <value type="bool">false</value>
+                </equals>
+            </and>
+        </condition>
         <property>controls/flight/aileron</property>
         <factor>40</factor>
         <center>
@@ -1612,7 +1611,7 @@
             <z>0</z>
         </axis>
     </animation>
-	
+    
     <animation>
         <type>select</type>
         <object-name>LHengFire.001</object-name>
@@ -1674,37 +1673,37 @@
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>firebell-switch.cover</object-name>
-      <property>controls/switches/firebell-switch-cover</property>
-      <factor>86</factor>
-      <center>
-        <x-m>-3.9313</x-m>
-        <y-m>-0.700606</y-m>
-        <z-m>0.0784586</z-m>
-      </center>
-      <axis>
-        <x> 0</x>
-        <y>-1</y>
-        <z> 0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>firebell-switch.cover</object-name>
+        <property>controls/switches/firebell-switch-cover</property>
+        <factor>86</factor>
+        <center>
+            <x-m>-3.9313</x-m>
+            <y-m>-0.700606</y-m>
+            <z-m>0.0784586</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y>-1</y>
+            <z> 0</z>
+        </axis>
     </animation>
 
-      <animation>
-      <type>rotate</type>
-      <object-name>firebell-switch</object-name>
-      <property>controls/switches/firebell-switch</property>
-      <factor>60</factor>
-      <center>
-        <x-m>-3.93404</x-m>
-        <y-m>-0.700621</y-m>
-        <z-m>0.0485193</z-m>
-      </center>
-      <axis>
-        <x> 0</x>
-        <y>-1</y>
-        <z> 0</z>
-      </axis>
+    <animation>
+        <type>rotate</type>
+        <object-name>firebell-switch</object-name>
+        <property>controls/switches/firebell-switch</property>
+        <factor>60</factor>
+        <center>
+            <x-m>-3.93404</x-m>
+            <y-m>-0.700621</y-m>
+            <z-m>0.0485193</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y>-1</y>
+            <z> 0</z>
+        </axis>
     </animation>
 
     <animation>
@@ -1912,8 +1911,7 @@
         </axis>
     </animation>
 
-<!--                                       caution panel light panel                           -->
-
+    <!-- caution panel light panel -->
     <animation>
         <type>select</type>
         <object-name>lgenOheat.lit</object-name>
@@ -1949,7 +1947,7 @@
     <animation>
         <type>select</type>
         <object-name>boost1fwd.lit</object-name>
-		<condition>
+        <condition>
             <property>instrumentation/caution-panel/fwd-boost[0]</property>
         </condition>
     </animation>
@@ -1966,7 +1964,7 @@
         <type>select</type>
         <object-name>l400cycle.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/cycle400[0]</property>
+            <property>instrumentation/caution-panel/cycle400[0]</property>
         </condition>
     </animation>
 
@@ -1974,7 +1972,7 @@
         <type>select</type>
         <object-name>doors.lit</object-name>
         <condition>
-			<property>instrumentation/caution-panel/doors</property>
+            <property>instrumentation/caution-panel/doors</property>
         </condition>
     </animation>
 
@@ -1982,17 +1980,16 @@
         <type>select</type>
         <object-name>ductoheat.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/duct-oheat</property>
-		</condition>
+            <property>instrumentation/caution-panel/duct-oheat</property>
+        </condition>
     </animation>
 
-<!-- left bank -->
-
+    <!-- left bank -->
     <animation>
         <type>select</type>
         <object-name>r400cycle.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/cycle400[1]</property>
+            <property>instrumentation/caution-panel/cycle400[1]</property>
         </condition>
     </animation>
 
@@ -2007,7 +2004,7 @@
     <animation>
         <type>select</type>
         <object-name>boost2fwd.lit</object-name>
-		<condition>
+        <condition>
             <property>instrumentation/caution-panel/fwd-boost[1]</property>
         </condition>
     </animation>
@@ -2024,7 +2021,7 @@
         <type>select</type>
         <object-name>resetprops.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/prop-reset</property>
+            <property>instrumentation/caution-panel/prop-reset</property>
         </condition>
     </animation>
 
@@ -2032,7 +2029,7 @@
         <type>select</type>
         <object-name>aftfuel.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/low-fuel[1]</property>
+            <property>instrumentation/caution-panel/low-fuel[1]</property>
         </condition>
     </animation>
 
@@ -2040,7 +2037,7 @@
         <type>select</type>
         <object-name>rgenOheat.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/gen-oheat[1]</property>
+            <property>instrumentation/caution-panel/gen-oheat[1]</property>
         </condition>
     </animation>
 
@@ -2048,7 +2045,7 @@
         <type>select</type>
         <object-name>rgen.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/gen[1]</property>
+            <property>instrumentation/caution-panel/gen[1]</property>
         </condition>
     </animation>
 
@@ -2056,12 +2053,11 @@
         <type>select</type>
         <object-name>lopsi.lit</object-name>
         <condition>
-        <property>instrumentation/caution-panel/hydr-press</property>
+            <property>instrumentation/caution-panel/hydr-press</property>
         </condition>
     </animation>
 
-<!-- hotspots -->
-
+    <!-- hotspots -->
     <animation>
         <type>pick</type>
         <object-name>LFuel.off</object-name>
@@ -2069,13 +2065,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            <command>property-toggle</command>
-            <property>controls/engines/engine[0]/cutoff</property>
-        </binding>
-        <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[0]/cutoff</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
     </animation>
 
@@ -2086,13 +2082,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            <command>property-toggle</command>
-            <property>controls/engines/engine[1]/cutoff</property>
-        </binding>
-        <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[1]/cutoff</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
     </animation>
 
@@ -2106,47 +2102,47 @@
                 <property>controls/engines/fire-test</property>
             </binding>
             <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
     </animation>
 
     <animation>
-      <type>pick</type>
-      <object-name>firebell-switch.cover</object-name>
-      <action>
-        <button>0</button>
-          <binding>
-          <command>property-toggle</command>
-          <property>controls/switches/firebell-switch-cover</property>
-        </binding>
-        <binding>
-          <command>property-assign</command>
-          <property>controls/switches/firebell-switch</property>
-          <value type="bool">false</value>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>/sim/sound/click2</property>
-        </binding>
-      </action>
+        <type>pick</type>
+        <object-name>firebell-switch.cover</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/switches/firebell-switch-cover</property>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/switches/firebell-switch</property>
+                <value type="bool">false</value>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>/sim/sound/click2</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
-      <type>pick</type>
-      <object-name>firebell-switch</object-name>
-      <action>
-        <button>0</button>
-          <binding>
-          <command>property-toggle</command>
-          <property>controls/switches/firebell-switch</property>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>/sim/sound/click</property>
-        </binding>
-      </action>
+        <type>pick</type>
+        <object-name>firebell-switch</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/switches/firebell-switch</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>/sim/sound/click</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
@@ -2164,9 +2160,9 @@
                 <wrap>0</wrap>
             </binding>
             <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
         <action>
             <button>0</button>
@@ -2180,9 +2176,9 @@
                 <wrap>0</wrap>
             </binding>
             <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
     </animation>
 
@@ -2202,27 +2198,27 @@
                 <wrap>0</wrap>
             </binding>
             <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
         <action>
-      <name>decrease</name>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tank-selector</property>
-        <step>-1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-      <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
-    </action>
+            <name>decrease</name>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/fuel/tank-selector</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
+        </action>
         <action>
             <button>1</button>
             <repeatable>false</repeatable>
@@ -2235,27 +2231,27 @@
                 <wrap>0</wrap>
             </binding>
             <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
         </action>
         <action>
-      <name>increase</name>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tank-selector</property>
-        <step>1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-      <binding>
-            <command>property-toggle</command>
-            <property>sim/sound/click2</property>
-        </binding>
-    </action>
+            <name>increase</name>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/fuel/tank-selector</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
@@ -2263,24 +2259,24 @@
         <object-name>LHthrottle</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[0]/throttle</property>
-            <factor>-0.1</factor>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/throttle</property>
+                <factor>-0.1</factor>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>LH Throttle: %3d%%</label>
-            <measure-text>LH Throttle: 100%</measure-text>
-            <tooltip-id>lh-throttle</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[0]/throttle</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>LH Throttle: %3d%%</label>
+                <measure-text>LH Throttle: 100%</measure-text>
+                <tooltip-id>lh-throttle</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[0]/throttle</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2289,24 +2285,24 @@
         <object-name>RHthrottle</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[1]/throttle</property>
-            <factor>-0.1</factor>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/throttle</property>
+                <factor>-0.1</factor>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>RH Throttle: %3d%%</label>
-            <measure-text>RH Throttle: 100%</measure-text>
-            <tooltip-id>rh-throttle</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[1]/throttle</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>RH Throttle: %3d%%</label>
+                <measure-text>RH Throttle: 100%</measure-text>
+                <tooltip-id>rh-throttle</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[1]/throttle</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2315,24 +2311,24 @@
         <object-name>LHprop</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[0]/propeller-pitch</property>
-            <factor>-0.1</factor>
-            <min>0</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/propeller-pitch</property>
+                <factor>-0.1</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>LH Propeller: %3d%%</label>
-            <measure-text>LH Propeller: 100%</measure-text>
-            <tooltip-id>lh-propeller</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[0]/propeller-pitch</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>LH Propeller: %3d%%</label>
+                <measure-text>LH Propeller: 100%</measure-text>
+                <tooltip-id>lh-propeller</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[0]/propeller-pitch</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2341,24 +2337,24 @@
         <object-name>RHprop</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[1]/propeller-pitch</property>
-            <factor>-0.1</factor>
-            <min>0</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/propeller-pitch</property>
+                <factor>-0.1</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>RH Propeller: %3d%%</label>
-            <measure-text>RH Propeller: 100%</measure-text>
-            <tooltip-id>rh-propeller</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[1]/propeller-pitch</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>RH Propeller: %3d%%</label>
+                <measure-text>RH Propeller: 100%</measure-text>
+                <tooltip-id>rh-propeller</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[1]/propeller-pitch</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2367,24 +2363,24 @@
         <object-name>LHcondition</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[0]/condition</property>
-            <factor>-0.1</factor>
-            <min>0</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/condition</property>
+                <factor>-0.1</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>LH Condition: %3d%%</label>
-            <measure-text>LH Condition: 100%</measure-text>
-            <tooltip-id>lh-condition</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[0]/condition</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>LH Condition: %3d%%</label>
+                <measure-text>LH Condition: 100%</measure-text>
+                <tooltip-id>lh-condition</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[0]/condition</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2393,24 +2389,24 @@
         <object-name>RHcondition</object-name>
         <drag-direction>horizontal</drag-direction>
         <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/engines/engine[1]/condition</property>
-            <factor>-0.1</factor>
-            <min>0</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
+                <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/condition</property>
+                <factor>-0.1</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
         </action>
         <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>RH Condition: %3d%%</label>
-            <measure-text>RH Condition: 100%</measure-text>
-            <tooltip-id>rh-condition</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/engines/engine[1]/condition</property>
-          </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <label>RH Condition: %3d%%</label>
+                <measure-text>RH Condition: 100%</measure-text>
+                <tooltip-id>rh-condition</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine[1]/condition</property>
+            </binding>
         </hovered>
     </animation>
 
@@ -2437,8 +2433,8 @@
     </animation>
 
 
-<!--             overhead switches and animations                  -->
-<!--               rear                     -->
+    <!--  overhead switches and animations -->
+    <!-- rear -->
     <animation>
         <type>pick</type>
         <object-name>flaplever</object-name>
@@ -2516,7 +2512,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-       <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>R gen</tooltip-id>
@@ -2542,7 +2538,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-       <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>instr light</tooltip-id>
@@ -2568,7 +2564,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>taxi light</tooltip-id>
@@ -2594,7 +2590,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>intake deflector left</tooltip-id>
@@ -2620,7 +2616,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>intake deflector right</tooltip-id>
@@ -2646,7 +2642,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>prop deice</tooltip-id>
@@ -2672,7 +2668,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>pitot-heat</tooltip-id>
@@ -2698,7 +2694,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>no-smoking</tooltip-id>
@@ -2724,7 +2720,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>seat-belt</tooltip-id>
@@ -2735,43 +2731,41 @@
         </hovered>
     </animation>
 
-<!-- Cones Rembrandt -->
-
-   
-   <model>
-      <path>Aircraft/dhc6/Models/Lights/cabin-light.xml</path>
-      <offsets>
-        <x-m>0</x-m>
-         <y-m>0</y-m>
-         <z-m>0</z-m>
-         <roll-deg>0</roll-deg>
-         <pitch-deg>0</pitch-deg>
-         <heading-deg>0</heading-deg>
-      </offsets>
+    <!-- Cones Rembrandt -->
+    <model>
+        <path>Aircraft/dhc6/Models/Lights/cabin-light.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <roll-deg>0</roll-deg>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>0</heading-deg>
+        </offsets>
     </model>  
 
     <model>
       <path>Aircraft/dhc6/Models/Lights/oh-light.xml</path>
-      <offsets>
-        <x-m>0</x-m>
-         <y-m>0</y-m>
-         <z-m>0</z-m>
-         <roll-deg>0</roll-deg>
-         <pitch-deg>0</pitch-deg>
-         <heading-deg>0</heading-deg>
-      </offsets>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <roll-deg>0</roll-deg>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>0</heading-deg>
+        </offsets>
     </model>  
 
     <model>
-      <path>Aircraft/dhc6/Models/Lights/L-oh-light.xml</path>
-      <offsets>
-        <x-m>0</x-m>
-         <y-m>0</y-m>
-         <z-m>0</z-m>
-         <roll-deg>0</roll-deg>
-         <pitch-deg>0</pitch-deg>
-         <heading-deg>0</heading-deg>
-      </offsets>
+        <path>Aircraft/dhc6/Models/Lights/L-oh-light.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <roll-deg>0</roll-deg>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>0</heading-deg>
+        </offsets>
     </model>  
 
    <animation>
@@ -2789,7 +2783,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>cabin light</tooltip-id>
@@ -2904,8 +2898,7 @@
         </hovered>
     </animation>
 
-<!--                   animate    rear                      -->
-
+    <!-- animate rear -->
     <animation>
         <type>translate</type>
         <object-name>flaplever</object-name>
@@ -3208,8 +3201,7 @@
         </axis>
     </animation>
 
-<!--               forward                    -->
-
+    <!-- forward -->
    <animation>
         <type>pick</type>
         <object-name>master.sw</object-name>
@@ -3236,46 +3228,6 @@
         </hovered>
     </animation>
 
-<!--    AUTOSTART  
-
-    <model>
-        <name>autostart</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/autostart/autostart.xml</path>
-        <offsets>
-            <x-m> 0.000 </x-m>
-            <y-m> 0.000 </y-m>
-            <z-m> 0.000 </z-m>
-            <pitch-deg> 0 </pitch-deg>
-        </offsets>
-    </model>
--->
-<!--
-    <animation>
-        <type>pick</type>
-        <object-name>Autostart</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>property-toggle</command>
-                <property>sim/model/autostart</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>sim/sound/click</property>
-            </binding>
-        </action>
-        <hovered>
-            <binding>
-                <command>set-tooltip</command>
-                <tooltip-id>Autostart</tooltip-id>
-                <label>Autostart: %s</label>
-                <mapping>on-off</mapping>
-                <property>sim/model/autostart</property>
-            </binding>
-        </hovered>
-    </animation>
--->
     <animation>
         <type>pick</type>
         <object-name>L-Llight.sw</object-name>
@@ -3283,13 +3235,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-toggle</command>
-            	<property>controls/lighting/landing-light[0]</property>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/landing-light[0]</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <hovered>
             <binding>
@@ -3309,13 +3261,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-toggle</command>
-            	<property>controls/lighting/landing-light[1]</property>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/landing-light[1]</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <hovered>
             <binding>
@@ -3335,30 +3287,30 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-adjust</command>
-            	<property>controls/electric/power-source</property>
+                <command>property-adjust</command>
+                <property>controls/electric/power-source</property>
                 <step>1</step>
                 <min>-1</min>
                 <max>1</max>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <action>
-      <name>increase</name>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/electric/power-source</property>
-        <step>1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
+            <name>increase</name>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/electric/power-source</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
         <hovered>
             <binding>
                 <command>set-tooltip</command>
@@ -3377,30 +3329,30 @@
             <button>1</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-adjust</command>
-            	<property>controls/electric/power-source</property>
+                <command>property-adjust</command>
+                <property>controls/electric/power-source</property>
                 <step>-1</step>
                 <min>-1</min>
                 <max>1</max>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <action>
-      <name>decrease</name>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/electric/power-source</property>
-        <step>-1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
+            <name>decrease</name>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/electric/power-source</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
       <hovered>
             <binding>
                 <command>set-tooltip</command>
@@ -3419,11 +3371,11 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-adjust</command>
-		<property>controls/engines/internal-engine-starter</property>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
                 <step>1</step>
-		<min>-1</min>
-		<max>1</max>
+                <min>-1</min>
+                <max>1</max>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -3431,22 +3383,22 @@
             </binding>
         </action>
         <action>
-      <name>decrease</name>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/internal-engine-starter</property>
-        <step>1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-      <binding>
+            <name>decrease</name>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
                 <command>property-toggle</command>
                 <property>sim/sound/click</property>
             </binding>
-    </action>
+        </action>
        <hovered>
             <binding>
                 <command>set-tooltip</command>
@@ -3464,12 +3416,12 @@
         <action>
             <button>1</button>
             <repeatable>false</repeatable>
-	    <binding>
-              <command>property-adjust</command>
-	      <property>controls/engines/internal-engine-starter</property>
-              <step>-1</step>
-	      <min>-1</min>
-	      <max>1</max>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>1</max>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -3477,29 +3429,29 @@
             </binding>
         </action>
         <action>
-      <name>increase</name>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/internal-engine-starter</property>
-        <step>-1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-      <binding>
+            <name>increase</name>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/internal-engine-starter</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
                 <command>property-toggle</command>
                 <property>sim/sound/click</property>
             </binding>
-    </action>
+        </action>
        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>starter</tooltip-id>
                 <label>starter: %s</label>
                 <mapping>Starter</mapping>
-		<property>controls/engines/internal-engine-starter</property>
+                <property>controls/engines/internal-engine-starter</property>
             </binding>
         </hovered>
     </animation>
@@ -3511,13 +3463,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-toggle</command>
-            	<property>controls/electric/wipers/switch</property>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+                <command>property-toggle</command>
+                <property>controls/electric/wipers/switch</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <hovered>
             <binding>
@@ -3537,13 +3489,13 @@
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-            	<command>property-toggle</command>
-            	<property>controls/electric/wipers/delay-sec</property>
-        	</binding>
-			<binding>
-        		<command>property-toggle</command>
-        		 <property>sim/sound/click</property>
-        	</binding>
+                <command>property-toggle</command>
+                <property>controls/electric/wipers/delay-sec</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
         </action>
         <hovered>
             <binding>
@@ -3634,17 +3586,20 @@
         </hovered>
     </animation>
 
-      <animation>
+    <animation>
         <type>knob</type>
         <object-name>beta-range-nut-l</object-name>
         <property>engines/engine[0]/beta-range-nut-l</property>
         <center>
-            <x-m>-3.9235</x-m><y-m>-0.477435</y-m><z-m>0.425978</z-m>
+            <x-m>-3.9235</x-m>
+            <y-m>-0.477435</y-m>
+            <z-m>0.425978</z-m>
         </center>
         <axis>
-            <x>-1</x><y>0</y><z>0</z>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
         </axis>
- 
         <action>
             <binding>
                 <command>property-adjust</command>
@@ -3655,7 +3610,7 @@
                 <wrap>false</wrap>
             </binding>
         </action>
-	<hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>beta-range-l</tooltip-id>
@@ -3670,10 +3625,14 @@
         <object-name>beta-range-nut-r</object-name>
         <property>engines/engine[1]/beta-range-nut-r</property>
         <center>
-            <x-m>-3.9235</x-m><y-m>-0.4493</y-m><z-m>0.4259</z-m>
+            <x-m>-3.9235</x-m>
+            <y-m>-0.4493</y-m>
+            <z-m>0.4259</z-m>
         </center>
         <axis>
-            <x>-1</x><y>0</y><z>0</z>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
         </axis>
  
         <action>
@@ -3686,7 +3645,7 @@
                 <wrap>false</wrap>
             </binding>
         </action>
-	<hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>beta-range-r</tooltip-id>
@@ -3694,9 +3653,9 @@
                 <property>engines/engine[1]/beta-range-nut-r</property>
             </binding>
         </hovered>
-      </animation>
+    </animation>
 
-      <animation>
+    <animation>
         <type>pick</type>
         <object-name>windshield-heat</object-name>
         <action>
@@ -3711,7 +3670,7 @@
                 <property>sim/sound/click</property>
             </binding>
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>windshield-heat-switch</tooltip-id>
@@ -3723,8 +3682,7 @@
     </animation>
 
 
-<!--                   animate    fwd                     -->
-
+    <!-- animate fwd -->
     <animation>
         <type>rotate</type>
         <object-name>master.sw</object-name>
@@ -3762,7 +3720,7 @@
     <animation>
         <type>rotate</type>
         <object-name>starter.sw</object-name>
-	<property>controls/engines/internal-engine-starter</property>
+        <property>controls/engines/internal-engine-starter</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.615</x-m>
@@ -3811,107 +3769,107 @@
     </animation>
     
     <animation>
-      <type>rotate</type>
-      <object-name>AftBoostPump.sw</object-name>
-      <property>controls/electric/aft-boost-pump</property>
-      <factor>35.0</factor>
-      <center>
-        <x-m>-3.9384</x-m>
-        <y-m>-0.165903</y-m>
-        <z-m>0.150408</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>AftBoostPump.sw</object-name>
+        <property>controls/electric/aft-boost-pump</property>
+        <factor>35.0</factor>
+        <center>
+            <x-m>-3.9384</x-m>
+            <y-m>-0.165903</y-m>
+            <z-m>0.150408</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>FwdBoostPump.sw</object-name>
-      <property>controls/electric/fwd-boost-pump</property>
-      <factor>35.0</factor>
-      <center>
-        <x-m>-3.9382</x-m>
-        <y-m>-0.063177</y-m>
-        <z-m>0.150377</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>FwdBoostPump.sw</object-name>
+        <property>controls/electric/fwd-boost-pump</property>
+        <factor>35.0</factor>
+        <center>
+            <x-m>-3.9382</x-m>
+            <y-m>-0.063177</y-m>
+            <z-m>0.150377</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>AutoFthr.toggle</object-name>
-      <property>controls/engines/auto-feather</property>
-      <factor>35.0</factor>
-      <center>
-        <x-m>-3.9375</x-m>
-        <y-m>-0.481471</y-m>
-        <z-m>0.456843</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>AutoFthr.toggle</object-name>
+        <property>controls/engines/auto-feather</property>
+        <factor>35.0</factor>
+        <center>
+            <x-m>-3.9375</x-m>
+            <y-m>-0.481471</y-m>
+            <z-m>0.456843</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>windshield-heat</object-name>
-      <property>/controls/anti-ice/window-heat</property>
-      <factor>35.0</factor>
-      <center>
-        <x-m>-3.6148</x-m>
-        <y-m>0.274</y-m>
-        <z-m>0.904</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>windshield-heat</object-name>
+        <property>/controls/anti-ice/window-heat</property>
+        <factor>35.0</factor>
+        <center>
+            <x-m>-3.6148</x-m>
+            <y-m>0.274</y-m>
+            <z-m>0.904</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <!-- Trim console -->
     <!-- Elevator -->
     <animation>
-      <type>rotate</type>
-      <object-name>trimwheel-elevator</object-name>
-      <property>/controls/flight/elevator-trim</property>
-      <factor>360</factor>
-      <center>
-        <x-m>-3.07558</x-m>
-        <y-m>-0.20196</y-m>
-        <z-m>-0.046666</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimwheel-elevator</object-name>
+        <property>/controls/flight/elevator-trim</property>
+        <factor>360</factor>
+        <center>
+            <x-m>-3.07558</x-m>
+            <y-m>-0.20196</y-m>
+            <z-m>-0.046666</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>trimind-elevator</object-name>
-      <property>/controls/flight/elevator-trim</property>
-      <factor>21</factor>
-      <center>
-        <x-m>-3.06715</x-m>
-        <y-m>-0.191541</y-m>
-        <z-m>-0.05568</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimind-elevator</object-name>
+        <property>/controls/flight/elevator-trim</property>
+        <factor>21</factor>
+        <center>
+            <x-m>-3.06715</x-m>
+            <y-m>-0.191541</y-m>
+            <z-m>-0.05568</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
     </animation>
 
     <animation>
@@ -3981,7 +3939,7 @@
                 <property>sim/sound/</property>
             </binding-->
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>elevtor-trim</tooltip-id>
@@ -3993,37 +3951,37 @@
 
     <!-- Rudder -->
     <animation>
-      <type>rotate</type>
-      <object-name>trimwheel-rudder</object-name>
-      <property>/controls/flight/rudder-trim</property>
-      <factor>360</factor>
-      <center>
-        <x-m>-3.01584</x-m>
-        <y-m>-0.20658</y-m>
-        <z-m>-0.00436</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>0</y>
-        <z>-1</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimwheel-rudder</object-name>
+        <property>/controls/flight/rudder-trim</property>
+        <factor>360</factor>
+        <center>
+            <x-m>-3.01584</x-m>
+            <y-m>-0.20658</y-m>
+            <z-m>-0.00436</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
     </animation>
 
     <animation>
-      <type>rotate</type>
-      <object-name>trimind-rudder</object-name>
-      <property>/controls/flight/rudder-trim</property>
-      <factor>28</factor>
-      <center>
-        <x-m>-3.00849</x-m>
-        <y-m>-0.20656</y-m>
-        <z-m>-0.013465</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>0</y>
-        <z>-1</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimind-rudder</object-name>
+        <property>/controls/flight/rudder-trim</property>
+        <factor>28</factor>
+        <center>
+            <x-m>-3.00849</x-m>
+            <y-m>-0.20656</y-m>
+            <z-m>-0.013465</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
     </animation>
 
     <animation>
@@ -4093,7 +4051,7 @@
                 <property>sim/sound/</property>
             </binding-->
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>rudder-trim</tooltip-id>
@@ -4105,37 +4063,37 @@
 
     <!-- Aileron -->
     <!--animation>
-      <type>rotate</type>
-      <object-name>trimswitch-aileron</object-name>
-      <property>/controls/flight/aileron-trim</property>
-      <factor>360</factor>
-      <center>
-        <x-m>-3.01144</x-m>
-        <y-m>-0.2065636</y-m>
-        <z-m>-0.0069117</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>0</y>
-        <z>-1</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimswitch-aileron</object-name>
+        <property>/controls/flight/aileron-trim</property>
+        <factor>360</factor>
+        <center>
+            <x-m>-3.01144</x-m>
+            <y-m>-0.2065636</y-m>
+            <z-m>-0.0069117</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
     </animation-->
 
     <animation>
-      <type>rotate</type>
-      <object-name>trimind-aileron</object-name>
-      <property>/controls/flight/aileron-trim</property>
-      <factor>60</factor>
-      <center>
-        <x-m>-2.968</x-m>
-        <y-m>-0.208437</y-m>
-        <z-m>-0.0142938</z-m>
-      </center>
-      <axis>
-        <x>0</x>
-        <y>0</y>
-        <z>-1</z>
-      </axis>
+        <type>rotate</type>
+        <object-name>trimind-aileron</object-name>
+        <property>/controls/flight/aileron-trim</property>
+        <factor>60</factor>
+        <center>
+            <x-m>-2.968</x-m>
+            <y-m>-0.208437</y-m>
+            <z-m>-0.0142938</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
     </animation>
 
     <animation>
@@ -4205,7 +4163,7 @@
                 <property>sim/sound/</property>
             </binding-->
         </action>
-     <hovered>
+        <hovered>
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>aileron-trim</tooltip-id>
@@ -4216,34 +4174,34 @@
     </animation>
 
     <animation>
-      <type>shader</type>
-      <shader>chrome</shader>
-      <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-      <object-name>glass-elevator</object-name>
-      <object-name>glass-rudder</object-name>
-      <object-name>glass-aileron</object-name>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+        <object-name>glass-elevator</object-name>
+        <object-name>glass-rudder</object-name>
+        <object-name>glass-aileron</object-name>
     </animation>
     
     <animation>
-      <type>noshadow</type>
-      <object-name>glass-elevator</object-name>
-      <object-name>glass-rudder</object-name>
-      <object-name>glass-aileron</object-name>
+        <type>noshadow</type>
+        <object-name>glass-elevator</object-name>
+        <object-name>glass-rudder</object-name>
+        <object-name>glass-aileron</object-name>
     </animation>
 
     <effect>
-      <inherits-from>Effects/model-transparent</inherits-from>
-      <object-name>glass-elevator</object-name>
-      <object-name>glass-rudder</object-name>
-      <object-name>glass-aileron</object-name>
-      <condition>
-	<property>sim/rendering/rembrandt/enabled</property>
-      </condition>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>glass-elevator</object-name>
+        <object-name>glass-rudder</object-name>
+        <object-name>glass-aileron</object-name>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
     </effect>
 
     
     
-	<model>
+    <model>
         <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
         <offsets>
             <x-m>-3.89</x-m>
@@ -4259,28 +4217,28 @@
 
     <!-- Pilot -->
     <model>
-		<path>Aircraft/dhc6/Models/Pilot/pilot.xml</path>
-		<offsets>
-			<x-m>-3.15</x-m>
-			<y-m>-0.45</y-m>
-			<z-m>-0.03</z-m>
-		</offsets>
-		<condition>
-			<property>sim/pilots/pilots-enabled</property>
-		</condition>
-	</model>
+        <path>Aircraft/dhc6/Models/Pilot/pilot.xml</path>
+        <offsets>
+            <x-m>-3.15</x-m>
+            <y-m>-0.45</y-m>
+            <z-m>-0.03</z-m>
+        </offsets>
+        <condition>
+            <property>sim/pilots/pilots-enabled</property>
+        </condition>
+    </model>
 
-	<!-- Copilot -->
-	<model>
-		<path>Aircraft/dhc6/Models/Pilot/copilot.xml</path>
-		<offsets>
-			<x-m>-3.1888</x-m>
-			<y-m>0.43</y-m>
-			<z-m>-0.03</z-m>
-		</offsets>
-		<condition>
-			<property>sim/pilots/pilots-enabled</property>
-		</condition>
-	</model>
+    <!-- Copilot -->
+    <model>
+        <path>Aircraft/dhc6/Models/Pilot/copilot.xml</path>
+        <offsets>
+            <x-m>-3.1888</x-m>
+            <y-m>0.43</y-m>
+            <z-m>-0.03</z-m>
+        </offsets>
+        <condition>
+            <property>sim/pilots/pilots-enabled</property>
+        </condition>
+    </model>
 
 </PropertyList>

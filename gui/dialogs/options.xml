@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
     <name>options</name>
     <layout>vbox</layout>
 
@@ -68,7 +69,7 @@
         </binding>
     </checkbox>
 
-	<checkbox>
+    <checkbox>
         <halign>center</halign>
         <label>Show Garmin 196 GPS</label>
         <property>sim/model/show-garmin-196</property>

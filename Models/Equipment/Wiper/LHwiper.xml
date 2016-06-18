@@ -1,35 +1,36 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--###################################################################################
 February 2015
 #######################################################################################
 -->
+
 <PropertyList>
 
     <path>LHwiper.ac</path>
 
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
-      <object-name>LHwiper</object-name>
-      <object-name>LHwiper.arm</object-name>
-      <object-name>LHwiper.blade</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior</inherits-from>
+        <object-name>LHwiper</object-name>
+        <object-name>LHwiper.arm</object-name>
+        <object-name>LHwiper.blade</object-name>
     </effect>
 
     <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
-      <object-name>LHwiper</object-name>
-      <object-name>LHwiper.arm</object-name>
-      <object-name>LHwiper.blade</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-flashlight</inherits-from>
+        <object-name>LHwiper</object-name>
+        <object-name>LHwiper.arm</object-name>
+        <object-name>LHwiper.blade</object-name>
     </effect>
 
 
      <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
+        <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
         <object-name>LHwiper</object-name>
         <object-name>LHwiper.blade</object-name>
         <object-name>LHwiper.arm</object-name>
     </effect>
+
     <animation>
         <type>rotate</type>
         <object-name>LHwiper</object-name>

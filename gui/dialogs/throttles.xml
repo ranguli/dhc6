@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
     <name>throttles</name>
     <layout>vbox</layout>
 
@@ -22,11 +23,11 @@
             <live>true</live>
             <property>controls/engines/engine/throttle</property>
             <binding>
-                    <command>dialog-apply</command>
-                </binding>
-                <binding>
-                    <command>dialog-update</command>
-                </binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>dialog-update</command>
+            </binding>
         </slider>
 
         <slider>
@@ -35,11 +36,11 @@
             <live>true</live>
             <property>controls/engines/engine[1]/throttle</property>
             <binding>
-                    <command>dialog-apply</command>
-                </binding>
-                <binding>
-                    <command>dialog-update</command>
-                </binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>dialog-update</command>
+            </binding>
         </slider>
 
     </group>
@@ -67,10 +68,10 @@
             </binding>
         </checkbox>
 
-                <text>
-                    <label>RVRS</label>
-                    <halign>center</halign>
-                </text>
+        <text>
+            <label>RVRS</label>
+            <halign>center</halign>
+        </text>
 
         <checkbox>
             <width>30</width>
@@ -92,6 +93,7 @@
         </checkbox>
 
     </group>
+
     <group>
        <layout>hbox</layout>
 

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Custom Flight Recorder for the DHC-6 Twin Otter
-     Copyright (c) 2015 Jonathan Schellhase
-     Released under GNU GPL V2 and later -->
+<!--
+    Custom Flight Recorder for the DHC-6 Twin Otter
+    Copyright (c) 2015 Jonathan Schellhase
+    Released under GNU GPL V2 and later
+-->
 
 <PropertyList>
-	<replay-config type="int">0</replay-config>
+    <replay-config type="int">0</replay-config>
     <name type="string">Flight Recorder for the DHC-6 Twin Otter</name>
     <!-- Generic components -->
     <config n="0">
@@ -25,13 +27,13 @@
         <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
             <count type="int">7</count>
         </signals>
-   		<!-- Custom properties -->
-    	<signal>
-	       	<type>float</type>
-        	<property type="string">/controls/doors/Baggage.door/open</property>
-        	<interpolation>linear</interpolation>
-    	</signal>
-    	<signal>
+        <!-- Custom properties -->
+        <signal>
+            <type>float</type>
+            <property type="string">/controls/doors/Baggage.door/open</property>
+            <interpolation>linear</interpolation>
+        </signal>
+        <signal>
             <type>float</type>
             <property type="string">/controls/doors/Baggage.door/position-norm</property>
             <interpolation>linear</interpolation>

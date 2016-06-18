@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
+
 <PropertyList>
- 
-<path>wheels.ac</path>
- 
- 
-<!--    GEAR    -->
- 
+
+    <path>wheels.ac</path>
+
+    <!-- GEAR -->
     <animation>
         <type>select</type>
         <object-name>FrtSki</object-name>
@@ -19,20 +17,20 @@
             </equals>
         </condition>
     </animation>
- 
+
     <model>
-      <name>TaxiLight</name>
-      <path>Aircraft/dhc6/Models/Lights/TaxiLight-rembrandt.xml</path>
-      <offsets>
-         <x-m>-4.4422</x-m>
-         <y-m>-0.2040</y-m>
-         <z-m>-1.0681</z-m>
-         <roll-deg>0</roll-deg>
-         <pitch-deg>-8</pitch-deg>
-         <heading-deg>0</heading-deg>
-      </offsets>
+        <name>TaxiLight</name>
+        <path>Aircraft/dhc6/Models/Lights/TaxiLight-rembrandt.xml</path>
+        <offsets>
+           <x-m>-4.4422</x-m>
+           <y-m>-0.2040</y-m>
+           <z-m>-1.0681</z-m>
+           <roll-deg>0</roll-deg>
+           <pitch-deg>-8</pitch-deg>
+           <heading-deg>0</heading-deg>
+        </offsets>
     </model>
- 
+
     <model>
         <name>tyre-smoke-n</name>
         <path>Aircraft/dhc6/Models/Effects/tire-smoke-nose.xml</path>
@@ -42,7 +40,7 @@
             <z-m>-1.784</z-m>
         </offsets>
     </model>
- 
+
     <model>
         <name>tyre-smoke-n</name>
         <path>Aircraft/dhc6/Models/Effects/tire-smoke-left.xml</path>
@@ -52,7 +50,7 @@
             <z-m>-1.825</z-m>
         </offsets>
     </model>
- 
+
     <model>
         <name>tyre-smoke-n</name>
         <path>Aircraft/dhc6/Models/Effects/tire-smoke-right.xml</path>
@@ -62,7 +60,7 @@
             <z-m>-1.825</z-m>
         </offsets>
     </model>
- 
+
     <effect>
        <inherits-from>Effects/model-transparent</inherits-from>
             <object-name>taxilight.flare</object-name>
@@ -70,17 +68,17 @@
             <property>sim/rendering/rembrandt/enabled</property>
       </condition>
    </effect>
- 
+
    <effect>
-      <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
-         <object-name>FrtSki</object-name>
-         <object-name>Lski</object-name>
-         <object-name>Rski</object-name>
-         <object-name>LHstrut</object-name>
-         <object-name>RHstrut</object-name>
-         <object-name>FrtStrut</object-name>
+        <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
+        <object-name>FrtSki</object-name>
+        <object-name>Lski</object-name>
+        <object-name>Rski</object-name>
+        <object-name>LHstrut</object-name>
+        <object-name>RHstrut</object-name>
+        <object-name>FrtStrut</object-name>
     </effect>
- 
+
     <animation>
         <type>select</type>
         <object-name>taxilight.flare</object-name>
@@ -91,7 +89,7 @@
             </greater-than>
         </condition>
     </animation>
- 
+
     <animation>
         <type>flash</type>
         <object-name>taxilight.flare</object-name>
@@ -112,9 +110,8 @@
         <min>0.5</min>
         <max>2</max>
     </animation>
- 
-   
-<!--    FRONT GEAR -->
+
+    <!-- FRONT GEAR -->
     <animation>
         <type>translate</type>
         <object-name>FrtStrut</object-name>
@@ -131,7 +128,7 @@
             <z>0.996</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>rotate</type>
         <object-name>frt.d1</object-name>
@@ -142,13 +139,13 @@
             <y-m>0</y-m>
             <z-m>-1.036</z-m>
         </center>
-	    <axis>
+        <axis>
             <x>0</x>
-	        <y>-1</y>
+            <y>-1</y>
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>rotate</type>
         <object-name>frt.d2</object-name>
@@ -165,7 +162,7 @@
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>rotate</type>
         <object-name>FrtStrut</object-name>
@@ -189,7 +186,7 @@
             <z>-0.996</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>spin</type>
         <object-name>FrtWheel</object-name>
@@ -206,8 +203,8 @@
             <z>0.0</z>
         </axis>
     </animation>
- 
-<!--    RIGHT MAIN GEAR -->
+
+    <!-- RIGHT MAIN GEAR -->
     <animation>
         <type>rotate</type>
         <object-name>Rwheel</object-name>
@@ -229,7 +226,7 @@
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>spin</type>
         <object-name>Rwheel</object-name>
@@ -246,8 +243,8 @@
             <z>-0.0295</z>
         </axis>
     </animation>
- 
-<!--    LEFT MAIN GEAR -->
+
+    <!-- LEFT MAIN GEAR -->
     <animation>
         <type>rotate</type>
         <object-name>Lwheel</object-name>
@@ -269,7 +266,7 @@
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>spin</type>
         <object-name>Lwheel</object-name>
@@ -286,5 +283,5 @@
             <z>-0.0295</z>
         </axis>
     </animation>
- 
+
 </PropertyList>
