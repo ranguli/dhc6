@@ -82,7 +82,6 @@
     <animation>
         <type>pick</type>
         <object-name>OAT.face</object-name>
-        <object-name>OAT</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>

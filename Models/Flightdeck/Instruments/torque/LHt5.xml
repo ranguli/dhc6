@@ -79,7 +79,6 @@ Syd Adams
     <animation>
         <type>pick</type>
         <object-name>T5face</object-name>
-        <object-name>vitre</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>

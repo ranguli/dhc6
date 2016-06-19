@@ -151,6 +151,22 @@
     </effect-->
 
     <animation>
+        <type>pick</type>
+        <object-name>KI206card</object-name>
+        <object-name>KI206.face</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>selected-deg</tooltip-id>
+                <label>Selected radial: %3d deg</label>
+                <mapping>heading</mapping>
+                <property>instrumentation/nav[1]/radials/selected-deg</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
         <type>material</type>
         <object-name>KI206.gsflag</object-name>
         <object-name>KI206.toflag</object-name>

@@ -74,8 +74,6 @@
     <animation>
         <type>pick</type>
         <object-name>Airtemp.face</object-name>
-        <object-name>mount</object-name>
-        <object-name>vitre</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>

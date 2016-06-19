@@ -82,7 +82,21 @@ Syd Adams
             <property>sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect-->
-    
+
+    <animation>
+        <type>pick</type>
+        <object-name>FFface</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuelflow</tooltip-id>
+                <label>Fuel flow: %g gph</label>
+                <property>engines/engine[0]/fuel-flow-gph</property>
+            </binding>
+        </hovered>
+    </animation>
+
     <animation>
         <type>material</type>
         <object-name>FFface</object-name>

@@ -152,7 +152,6 @@
     <animation>
         <type>pick</type>
         <object-name>face</object-name>
-        <object-name>mount</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>
@@ -306,12 +305,12 @@
             </binding>
         </action>
         <hovered>
-        <binding>
-            <command>set-tooltip</command>
-            <tooltip-id>alt-setting</tooltip-id>
-            <label>Altimeter QNH: %.0f</label>
-            <property>instrumentation/altimeter[0]/setting-hpa</property>
-        </binding>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>alt-setting</tooltip-id>
+                <label>Altimeter QNH: %.0f</label>
+                <property>instrumentation/altimeter[0]/setting-hpa</property>
+            </binding>
         </hovered>   
     </animation>
 

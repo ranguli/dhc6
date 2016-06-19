@@ -87,7 +87,6 @@ Syd Adams
     <animation>
         <type>pick</type>
         <object-name>ggRPM.face</object-name>
-        <object-name>vitre</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>

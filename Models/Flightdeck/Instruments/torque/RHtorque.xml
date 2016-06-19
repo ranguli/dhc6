@@ -90,9 +90,7 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <type>material</type>
         <object-name>TQface</object-name>
-        <object-name>vitre</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>

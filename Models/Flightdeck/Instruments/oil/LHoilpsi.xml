@@ -85,7 +85,7 @@ Syd Adams
         <condition>
             <property>sim/rendering/rembrandt/enabled</property>
         </condition>
-    </effect--> 
+    </effect-->
 
     <!--effect>
         <inherits-from>Effects/model-transparent</inherits-from>
@@ -94,7 +94,7 @@ Syd Adams
             <property>sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect-->
-   
+
     <animation>
         <type>material</type>
         <object-name>OPface</object-name>

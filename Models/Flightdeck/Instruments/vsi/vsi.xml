@@ -91,7 +91,21 @@
         <condition>
             <property>sim/rendering/rembrandt/enabled</property>
         </condition>
-    </effect--> 
+    </effect-->
+
+    <animation>
+        <type>pick</type>
+        <object-name>Face</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>vert-speed</tooltip-id>
+                <label>Vertical speed: %3d fpm</label>
+                <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+            </binding>
+        </hovered>
+    </animation>
 
     <animation>
         <type>material</type>

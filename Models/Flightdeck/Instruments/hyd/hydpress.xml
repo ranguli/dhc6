@@ -75,7 +75,6 @@
         <type>pick</type>
         <type>material</type>
         <object-name>hydpress.face</object-name>
-        <object-name>vitre</object-name>         
         <visible>true</visible>
         <hovered>
             <binding>
