@@ -31,6 +31,7 @@
         <left-display>instrumentation/dme[0]/miles-display</left-display>
         <left-display-dot>instrumentation/dme[0]/left-dot</left-display-dot>
         <power-btn>instrumentation/dme[0]/power-btn</power-btn>
+        <power-btn-pos>instrumentation/dme[0]/power-btn-pos</power-btn-pos>
         <serviceable>instrumentation/dme[0]/serviceable</serviceable>
     </params>
 
@@ -161,7 +162,7 @@
     <animation>
         <type>rotate</type>
         <object-name>PowerSwitch.Lever</object-name>
-        <property alias="../../params/power-btn"/>
+        <property alias="../../params/power-btn-pos"/>
         <factor>-60</factor>
         <axis>
             <x>0</x>
@@ -227,7 +228,7 @@
     <animation>
         <type>rotate</type>
         <object-name>SourceSelectorKnob</object-name>
-        <property>instrumentation/dme/switch-position</property>
+        <property>instrumentation/dme/switch-position-pos</property>
         <factor>-30</factor>
         <min-deg>-60</min-deg>
         <max-deg>0</max-deg>
@@ -242,6 +243,121 @@
             <y-m>-0.0589436</y-m>
             <z-m>0</z-m>
         </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SourceSelectorKnob</object-name>
+        <visible>true</visible>
+        <action>
+            <button>3</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/dme/switch-position</property>
+                <step>1</step>
+                <min>1</min>
+                <max>3</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">1</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/source</property>
+                <value>instrumentation/nav[0]/frequencies/selected-mhz</value>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">2</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/source</property>
+                <value>instrumentation/dme/frequencies/selected-mhz</value>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">2</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/selected-mhz</property>
+                <property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">3</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/source</property>
+                <value>instrumentation/nav[1]/frequencies/selected-mhz</value>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/dme/switch-position</property>
+                <step>-1</step>
+                <min>1</min>
+                <max>3</max>
+                <wrap>0</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">1</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/source</property>
+                <value>instrumentation/nav[0]/frequencies/selected-mhz</value>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">2</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/source</property>
+                <value>instrumentation/dme/frequencies/selected-mhz</value>
+            </binding>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>instrumentation/dme/switch-position</property>
+                        <value type="int">2</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>instrumentation/dme/frequencies/selected-mhz</property>
+                <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click2</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
@@ -388,7 +504,7 @@
         <type>translate</type>
         <object-name>ModeSwitch</object-name>
         <factor>-0.003</factor>
-        <property>instrumentation/dme/switch-min-kts</property>
+        <property>instrumentation/dme/switch-min-kts-pos</property>
         <axis>
             <x>1.0</x>
             <y>0.0</y>

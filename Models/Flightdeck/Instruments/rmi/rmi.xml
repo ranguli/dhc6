@@ -443,7 +443,7 @@
     <animation>
         <type>translate</type>
         <object-name>NAV1BUTT</object-name>
-        <property>/controls/armament/station[5]/release-all</property>
+        <property>/controls/armament/station[5]/release-all-pos</property>
         <factor>-0.004</factor>
         <axis>
             <x>1</x>
@@ -480,7 +480,7 @@
     <animation>
         <type>translate</type>
         <object-name>NAV2BUTT</object-name>
-        <property>/controls/armament/station[6]/release-all</property>
+        <property>/controls/armament/station[6]/release-all-pos</property>
         <factor>-0.004</factor>
         <axis>
             <x>1</x>

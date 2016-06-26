@@ -1119,7 +1119,7 @@
     <animation>
         <type>translate</type>
         <object-name>Ind-test</object-name>
-        <property>controls/fuel/ind-test</property>
+        <property>controls/fuel/ind-test-pos</property>
         <factor>0.008</factor>
         <axis>
             <x>-1</x>
@@ -1393,7 +1393,7 @@
     <animation>
         <type>translate</type>
         <object-name>Brakelever</object-name>
-        <property>controls/gear/parkingbrake-lever</property>
+        <property>controls/gear/parkingbrake-lever-pos</property>
         <factor >0.04 </factor>
         <axis>
             <x>1</x>
@@ -1624,7 +1624,7 @@
     <animation>
         <type>rotate</type>
         <object-name>LFuel.off</object-name>
-        <property>controls/engines/engine[0]/cutoff</property>
+        <property>controls/engines/engine[0]/cutoff-pos</property>
         <factor>-40.0</factor>
         <center>
             <x-m>-3.939</x-m>
@@ -1641,7 +1641,7 @@
     <animation>
         <type>rotate</type>
         <object-name>RFuel.off</object-name>
-        <property>controls/engines/engine[1]/cutoff</property>
+        <property>controls/engines/engine[1]/cutoff-pos</property>
         <factor>-40.0</factor>
         <center>
             <x-m>-3.939</x-m>
@@ -1658,7 +1658,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Fire.test</object-name>
-        <property>controls/engines/fire-test</property>
+        <property>controls/engines/fire-test-pos</property>
         <factor>-40.0</factor>
         <center>
             <x-m>-3.939</x-m>
@@ -1675,7 +1675,7 @@
     <animation>
         <type>rotate</type>
         <object-name>firebell-switch.cover</object-name>
-        <property>controls/switches/firebell-switch-cover</property>
+        <property>controls/switches/firebell-switch-cover-pos</property>
         <factor>86</factor>
         <center>
             <x-m>-3.9313</x-m>
@@ -1692,7 +1692,7 @@
     <animation>
         <type>rotate</type>
         <object-name>firebell-switch</object-name>
-        <property>controls/switches/firebell-switch</property>
+        <property>controls/switches/firebell-switch-pos</property>
         <factor>60</factor>
         <center>
             <x-m>-3.93404</x-m>
@@ -1709,7 +1709,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Indselect.toggle</object-name>
-        <property>controls/electric/ammeter-switch</property>
+        <property>controls/electric/ammeter-switch-pos</property>
         <factor>30.0</factor>
         <center>
             <x-m>-3.939</x-m>
@@ -1897,7 +1897,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Fuel.select</object-name>
-        <property>controls/fuel/tank-selector</property>
+        <property>controls/fuel/tank-selector-pos</property>
         <factor>30.0</factor>
         <center>
             <x-m>-3.938</x-m>
@@ -2902,7 +2902,7 @@
     <animation>
         <type>translate</type>
         <object-name>flaplever</object-name>
-        <property>controls/flight/flaps</property>
+        <property>controls/flight/flaps-pos</property>
         <factor>0.0975</factor>
         <axis>
             <x>-0.956</x>
@@ -2914,7 +2914,7 @@
     <animation>
         <type>rotate</type>
         <object-name>L-Llight.sw</object-name>
-        <property>controls/lighting/landing-light[0]</property>
+        <property>controls/lighting/landing-light-pos[0]</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.649</x-m>
@@ -2931,7 +2931,7 @@
     <animation>
         <type>rotate</type>
         <object-name>R-Llight.sw</object-name>
-        <property>controls/lighting/landing-light[1]</property>
+        <property>controls/lighting/landing-light-pos[1]</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.649</x-m>
@@ -2948,7 +2948,7 @@
     <animation>
         <type>rotate</type>
         <object-name>LGen.sw</object-name>
-        <property>controls/electric/engine[0]/generator</property>
+        <property>controls/electric/engine[0]/generator-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.059</x-m>
@@ -2965,7 +2965,7 @@
     <animation>
         <type>rotate</type>
         <object-name>RGen.sw</object-name>
-        <property>controls/electric/engine[1]/generator</property>
+        <property>controls/electric/engine[1]/generator-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.059</x-m>
@@ -2982,7 +2982,7 @@
     <animation>
         <type>rotate</type>
         <object-name>inst_lt.sw</object-name>
-        <property>controls/lighting/instrument-lights</property>
+        <property>controls/lighting/instrument-lights-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.932</x-m>
@@ -3000,7 +3000,7 @@
     <animation>
         <type>rotate</type>
         <object-name>taxi.sw</object-name>
-        <property>controls/lighting/taxi-lights</property>
+        <property>controls/lighting/taxi-lights-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.020</x-m>
@@ -3017,7 +3017,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Posn.sw</object-name>
-        <property>controls/lighting/nav-lights</property>
+        <property>controls/lighting/nav-lights-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.978</x-m>
@@ -3034,7 +3034,7 @@
     <animation>
         <type>rotate</type>
         <object-name>beacon.sw</object-name>
-        <property>controls/lighting/beacon</property>
+        <property>controls/lighting/beacon-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.978</x-m>
@@ -3051,7 +3051,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Anticoll.sw</object-name>
-        <property>controls/lighting/strobe</property>
+        <property>controls/lighting/strobe-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.978</x-m>
@@ -3068,7 +3068,7 @@
     <animation>
         <type>rotate</type>
         <object-name>caution.sw</object-name>
-        <property>controls/electric/caution-test</property>
+        <property>controls/electric/caution-test-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.023</x-m>
@@ -3085,7 +3085,7 @@
    <animation>
         <type>rotate</type>
         <object-name>sw.009</object-name>
-        <property>controls/lighting/cabin-lights</property>
+        <property>controls/lighting/cabin-lights-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.931</x-m>
@@ -3102,7 +3102,7 @@
    <animation>
         <type>rotate</type>
         <object-name>intake-deflector-l</object-name>
-        <property>controls/engines/engine[0]/intake-deflector</property>
+        <property>controls/engines/engine[0]/intake-deflector-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.897</x-m>
@@ -3119,7 +3119,7 @@
     <animation>
         <type>rotate</type>
         <object-name>intake-deflector-r</object-name>
-        <property>controls/engines/engine[1]/intake-deflector</property>
+        <property>controls/engines/engine[1]/intake-deflector-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.897</x-m>
@@ -3136,7 +3136,7 @@
      <animation>
         <type>rotate</type>
         <object-name>propdeice</object-name>
-        <property>controls/anti-ice/prop-heat</property>
+        <property>controls/anti-ice/prop-heat-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.8928</x-m>
@@ -3153,7 +3153,7 @@
      <animation>
         <type>rotate</type>
         <object-name>pitot-heat</object-name>
-        <property>controls/anti-ice/pitot-heat</property>
+        <property>controls/anti-ice/pitot-heat-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.0199</x-m>
@@ -3170,7 +3170,7 @@
      <animation>
         <type>rotate</type>
         <object-name>smoking.sw</object-name>
-        <property>controls/lighting/no-smoking</property>
+        <property>controls/lighting/no-smoking-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.9783</x-m>
@@ -3187,7 +3187,7 @@
     <animation>
         <type>rotate</type>
         <object-name>stbelt.sw</object-name>
-        <property>controls/lighting/seat-belt</property>
+        <property>controls/lighting/seat-belt-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-2.9783</x-m>
@@ -3686,7 +3686,7 @@
     <animation>
         <type>rotate</type>
         <object-name>master.sw</object-name>
-        <property>controls/electric/battery-switch</property>
+        <property>controls/electric/battery-switch-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.573</x-m>
@@ -3703,7 +3703,7 @@
     <animation>
         <type>rotate</type>
         <object-name>power.sw</object-name>
-        <property>controls/electric/power-source</property>
+        <property>controls/electric/power-source-pos</property>
         <factor>30.0</factor>
         <center>
             <x-m>-3.573</x-m>
@@ -3720,7 +3720,7 @@
     <animation>
         <type>rotate</type>
         <object-name>starter.sw</object-name>
-        <property>controls/engines/internal-engine-starter</property>
+        <property>controls/engines/internal-engine-starter-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.615</x-m>
@@ -3737,7 +3737,7 @@
     <animation>
         <type>rotate</type>
         <object-name>wiper.park</object-name>
-        <property>controls/electric/wipers/switch</property>
+        <property>controls/electric/wipers/switch-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.584</x-m>
@@ -3754,7 +3754,7 @@
     <animation>
         <type>rotate</type>
         <object-name>wiper.speed</object-name>
-        <property>controls/electric/wipers/delay-sec</property>
+        <property>controls/electric/wipers/delay-sec-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.584</x-m>
@@ -3771,7 +3771,7 @@
     <animation>
         <type>rotate</type>
         <object-name>AftBoostPump.sw</object-name>
-        <property>controls/electric/aft-boost-pump</property>
+        <property>controls/electric/aft-boost-pump-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.9384</x-m>
@@ -3788,7 +3788,7 @@
     <animation>
         <type>rotate</type>
         <object-name>FwdBoostPump.sw</object-name>
-        <property>controls/electric/fwd-boost-pump</property>
+        <property>controls/electric/fwd-boost-pump-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.9382</x-m>
@@ -3805,7 +3805,7 @@
     <animation>
         <type>rotate</type>
         <object-name>AutoFthr.toggle</object-name>
-        <property>controls/engines/auto-feather</property>
+        <property>controls/engines/auto-feather-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.9375</x-m>
@@ -3822,7 +3822,7 @@
     <animation>
         <type>rotate</type>
         <object-name>windshield-heat</object-name>
-        <property>/controls/anti-ice/window-heat</property>
+        <property>/controls/anti-ice/window-heat-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.6148</x-m>

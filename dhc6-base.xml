@@ -44,8 +44,11 @@
             <path>/consumables/fuel/tank[0]/level-lbs</path>
             <path>/consumables/fuel/tank[1]/level-lbs</path>
             <path>/controls/anti-ice/window-heat</path>
+            <path>/controls/anti-ice/window-heat-pos</path>
             <path>/controls/armament/station[5]/release-all</path>
+            <path>/controls/armament/station[5]/release-all-pos</path>
             <path>/controls/armament/station[6]/release-all</path>
+            <path>/controls/armament/station[6]/release-all-pos</path>
             <path>/engines/engine[0]/beta-range-nut-l</path>
             <path>/engines/engine[1]/beta-range-nut-r</path>
             <path>/controls/flight/aileron-trim</path>
@@ -60,8 +63,11 @@
             <path>/instrumentation/comm[0]/volume</path>
             <path>/instrumentation/comm[1]/volume</path>
             <path>/instrumentation/dme[0]/power-btn</path>
+            <path>/instrumentation/dme[0]/power-btn-pos</path>
             <path>/instrumentation/dme[0]/switch-min-kts</path>
+            <path>/instrumentation/dme[0]/switch-min-kts-pos</path>
             <path>/instrumentation/dme[0]/switch-position</path>
+            <path>/instrumentation/dme[0]/switch-position-pos</path>
             <path>/instrumentation/heading-indicator-real-dg/heading-bug-deg</path>
             <path>/instrumentation/heading-indicator-real-dg/offsetdeg</path>
             <path>/instrumentation/nav[0]/radials/selected-deg</path>
@@ -313,35 +319,77 @@
     </consumables>
 
     <controls>
+        <anti-ice>
+            <pitot-heat-pos type="double">0</pitot-heat-pos>
+            <prop-heat-pos type="double">0</prop-heat-pos>
+            <window-heat-pos type="double">0</window-heat-pos>
+        </anti-ice>
+        <armament>
+            <station n="5">
+                <release-all-pos type="double">0</release-all-pos>
+            </station>
+            <station n="6">
+                <release-all-pos type="double">0</release-all-pos>
+            </station>
+        </armament>
         <electric>
+            <aft-boost-pump-pos type="double">0</aft-boost-pump-pos>
+            <fwd-boost-pump-pos type="double">0</fwd-boost-pump-pos>
             <battery-switch type = "bool">0</battery-switch>
+            <battery-switch-pos type = "double">0</battery-switch-pos>
+            <ammeter-switch-pos type="double">0</ammeter-switch-pos>
             <avionics-switch type = "bool">0</avionics-switch>
             <external-power type = "bool">0</external-power>
             <power-source type = "int">0</power-source>
+            <power-source-pos type = "double">0</power-source-pos>
             <caution-test type="bool">0</caution-test>
+            <caution-test-pos type="double">0</caution-test-pos>
             <engine n="0">
                 <generator>false</generator>
+                <generator-pos type="double">0</generator-pos>
             </engine>
             <engine n="1">
                 <generator>false</generator>
+                <generator-pos type="double">0</generator-pos>
             </engine>
+            <wipers>
+                <switch-pos type="double">0</switch-pos>
+                <delay-sec-pos type="double">0</delay-sec-pos>
+            </wipers>
         </electric>
         <lighting>
+            <beacon-pos type="double">0</beacon-pos>
+            <cabin-lights-pos type="double">0</cabin-lights-pos>
             <instrument-lights>0</instrument-lights>
+            <instrument-lights-pos type="double">0</instrument-lights-pos>
+            <landing-light-pos n="0" type="double">0</landing-light-pos>
+            <landing-light-pos n="1" type="double">0</landing-light-pos>
+            <nav-lights-pos type="double">0</nav-lights-pos>
+            <no-smoking-pos type="double">0</no-smoking-pos>
+            <seat-belt-pos type="double">0</seat-belt-pos>
+            <strobe-pos type="double">0</strobe-pos>
+            <taxi-lights-pos type="double">0</taxi-lights-pos>
         </lighting>
         <engines>
+            <auto-feather-pos type="double">0</auto-feather-pos>
+            <internal-engine-starter-pos type="double">0</internal-engine-starter-pos>
             <fire-test type="bool">0</fire-test>
+            <fire-test-pos type="double">0</fire-test-pos>
             <engine n="0">
                 <condition>0</condition>
                 <cutoff>0</cutoff>
+                <cutoff-pos type="double">0</cutoff-pos>
+                <intake-deflector-pos type="double">0</intake-deflector-pos>
                 <mixture>0</mixture>
                 <propeller-pitch>0</propeller-pitch>
                 <throttle-fwd type="double">0</throttle-fwd>
                 <throttle-rvrs type="double">0</throttle-rvrs>
-                </engine>
+            </engine>
             <engine n="1">
                 <condition>0</condition>
                 <cutoff>0</cutoff>
+                <cutoff-pos type="double">0</cutoff-pos>
+                <intake-deflector-pos type="double">0</intake-deflector-pos>
                 <mixture>0</mixture>
                 <propeller-pitch>0</propeller-pitch>
                 <throttle-fwd type="double">0</throttle-fwd>
@@ -378,13 +426,25 @@
                 <position-norm type="double">0</position-norm>
             </Baggage.door>        
         </doors>
+        <flight>
+            <flaps-pos type="double">0</flaps-pos>
+        </flight>
         <fuel>
             <tank-selector type="int">0</tank-selector>
+            <tank-selector-pos type="double">0</tank-selector-pos>
             <ind-test type="bool">0</ind-test>
+            <ind-test-pos type="double">0</ind-test-pos>
         </fuel>
         <gear>
             <parkingbrake-lever type="bool">1</parkingbrake-lever>
+            <parkingbrake-lever-pos type="double">1</parkingbrake-lever-pos>
         </gear>
+        <switches>
+            <firebell-switch type="bool">0</firebell-switch>
+            <firebell-switch-pos type="double">0</firebell-switch-pos>
+            <firebell-switch-cover type="bool">0</firebell-switch-cover>
+            <firebell-switch-cover-pos type="double">0</firebell-switch-cover-pos>
+        </switches>
     </controls>
 
     <engines>
@@ -474,6 +534,7 @@
         <transponder>
             <inputs>
                 <serviceable type="bool">true</serviceable>
+                <ident-btn-pos type="double">0</ident-btn-pos>
             </inputs>
         </transponder>
         <nav n="0">
@@ -491,8 +552,14 @@
         <elt>
             <armed type="bool">false</armed>
             <on type="bool">true</on>
+            <on-pos type="double">1</on-pos>
             <test type="bool">false</test>
         </elt>
+        <dme>
+            <power-btn-pos type="double">1</power-btn-pos>
+            <switch-min-kts-pos type="double">1</switch-min-kts-pos>
+            <switch-position-pos type="double">1</switch-position-pos>
+        </dme>
     </instrumentation>
 
     <limits>
@@ -547,6 +614,7 @@
             <file>Aircraft/dhc6/Models/Flightdeck/Instruments/ki266/ki266.nas</file>
             <file>Aircraft/dhc6/Nasal/vor-ils-catch.nas</file>
             <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
+            <file>Aircraft/dhc6/Nasal/interpolate.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>

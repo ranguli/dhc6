@@ -189,7 +189,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Switch</object-name>
-        <property>instrumentation/elt/on</property>
+        <property>instrumentation/elt/on-pos</property>
         <factor>10</factor>
         <center>
             <x-m>0.003</x-m>
