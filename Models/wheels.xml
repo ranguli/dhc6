@@ -173,7 +173,7 @@
         <object-name>taxilight.flare</object-name>
         <object-name>Cone</object-name>
         <object-name>TaxiLight</object-name>
-        <property>controls/flight/rudder</property>
+        <property>controls/gear/tiller</property>
         <factor>30.0</factor>
         <center>
             <x-m>-4.410</x-m>

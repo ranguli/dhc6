@@ -102,6 +102,16 @@
     </key>
 
     <key>
+        <name>q/e</name>
+        <desc>Nose wheel left/right</desc>
+    </key>
+
+    <key>
+        <name>Ctrl-w</name>
+        <desc>Center nose wheel</desc>
+    </key>
+
+    <key>
         <name>F11</name>
         <desc>Autopilot controls</desc>
     </key>
@@ -111,7 +121,8 @@
         <desc>Radio Stack</desc>
     </key>
 
-    <line>Tiller steering is controlled via rudder.</line>
+    <line>Nose wheel steering is controlled by the lever behind the pilot's yoke.</line>
+    <line>If it's disabled in the menu dialog (DHC-6 -> Nose wheel steering), the nose wheel is controlled via rudder</line>
     <line/>
     <line>To open/close the doors, just click on it.</line>
     <line/>

@@ -140,7 +140,7 @@
 
     <gear x="4.47" y="0.00" z="-1.76" compression=".4"
     spring="0.9" damp="1.0" sfric="0.3" dfric="0.2">
-        <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+        <control-input axis="/controls/gear/tiller" control="STEER" square="true"/>
     </gear>
 
     <gear x="-0.25" y="2.65" z="-1.8" compression=".3"

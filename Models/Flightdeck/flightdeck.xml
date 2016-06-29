@@ -82,6 +82,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <object-name>beta-range-nut-l</object-name>
         <object-name>beta-range-nut-r</object-name>
         <object-name>flightdeck</object-name>
@@ -288,6 +289,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <object-name>aftfuel.lit</object-name>
         <object-name>autofeather.arm.lit</object-name>
         <object-name>autofeather.sel.lit</object-name>
@@ -426,6 +428,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <object-name>aftfuel.lit</object-name>
         <object-name>autofeather.arm.lit</object-name>
         <object-name>autofeather.sel.lit</object-name>
@@ -1199,6 +1202,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <condition>
             <property>sim/yokes-visible</property>
         </condition>
@@ -1407,6 +1411,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <condition>
             <or>
                 <equals>
@@ -1446,6 +1451,7 @@
         <object-name>Yoke</object-name>
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
+        <object-name>tiller</object-name>
         <condition>
             <and>
                 <equals>
@@ -1610,6 +1616,83 @@
             <y>0</y>
             <z>0</z>
         </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>tiller</object-name>
+        <property>controls/gear/tiller</property>
+        <factor>50</factor>
+        <center>
+            <x-m>-3.65995</x-m>
+            <y-m>-0.51431</y-m>
+            <z-m>0.266248</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>tiller-center</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>property-interpolate</command>
+                <property>controls/gear/tiller</property>
+                <value type="double">0</value>
+                <time>0.25</time>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>tiller-center</tooltip-id>
+                <label>Center nose wheel</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>slider</type>
+        <object-name>tiller</object-name>
+        <drag-direction>vertical</drag-direction>
+        <action>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>controls/gear/tiller</property>
+                <factor>0.1</factor>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <release>
+            <binding>
+                <command>property-interpolate</command>
+                <property>controls/gear/tiller</property>
+                <value type="double">0</value>
+                <time>0.25</time>
+            </binding>
+        </release>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>tiller</tooltip-id>
+                <label>Nose wheel: %2.0f deg</label>
+                <property>sim/gui/dialogs/tiller/value</property>
+            </binding>
+        </hovered>
     </animation>
     
     <animation>

@@ -348,6 +348,104 @@
             </binding>
         </key>
 
+        <key n="113">
+            <name>q</name>
+            <desc>Nose wheel left</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>controls/gear/tiller</property>
+                <step>-0.1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip(sprintf("Nose wheel: %2.0f deg", 60*getprop("/controls/gear/tiller")));</script>
+            </binding>
+        </key>
+
+        <key n="23">
+            <name>Ctrl-w</name>
+            <desc>Center nose wheel</desc>
+            <repeatable type="bool">false</repeatable>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>property-interpolate</command>
+                <property>controls/gear/tiller</property>
+                <value type="double">0</value>
+                <time>0.25</time>
+            </binding>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip("Nose wheel centered");</script>
+            </binding>
+        </key>
+
+        <key n="101">
+            <name>e</name>
+            <desc>Nose wheel right</desc>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>controls/gear/tiller</property>
+                <step>0.1</step>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>controls/gear/tiller-enabled</property>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip(sprintf("Nose wheel: %2.0f deg", 60*getprop("/controls/gear/tiller")));</script>
+            </binding>
+        </key>
+
+        <key n="53">
+            <name>5</name>
+            <desc>Center aileron, elevator, rudder, and nose wheel</desc>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    interpolate("/controls/flight/aileron", 0, 0.25);
+                    interpolate("/controls/flight/elevator", 0, 0.25);
+                    interpolate("/controls/flight/rudder", 0, 0.25);
+                    interpolate("/controls/gear/tiller", 0, 0.25);
+                </script>
+            </binding>
+        </key>
+
+        <key n="309">
+            <name>Keypad 5</name>
+            <desc>Center aileron, elevator, rudder, and nose wheel</desc>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    interpolate("/controls/flight/aileron", 0, 0.25);
+                    interpolate("/controls/flight/elevator", 0, 0.25);
+                    interpolate("/controls/flight/rudder", 0, 0.25);
+                    interpolate("/controls/gear/tiller", 0, 0.25);
+                </script>
+            </binding>
+        </key>
+
     </keyboard>
 
     <mice include="dhc6-mice.xml"/>

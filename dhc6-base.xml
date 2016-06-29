@@ -49,6 +49,7 @@
             <path>/controls/armament/station[5]/release-all-pos</path>
             <path>/controls/armament/station[6]/release-all</path>
             <path>/controls/armament/station[6]/release-all-pos</path>
+            <path>/controls/gear/tiller-enabled</path>
             <path>/engines/engine[0]/beta-range-nut-l</path>
             <path>/engines/engine[1]/beta-range-nut-r</path>
             <path>/controls/flight/aileron-trim</path>
@@ -438,6 +439,8 @@
         <gear>
             <parkingbrake-lever type="bool">1</parkingbrake-lever>
             <parkingbrake-lever-pos type="double">1</parkingbrake-lever-pos>
+            <tiller type="double">0</tiller>
+            <tiller-enabled type="bool">1</tiller-enabled>
         </gear>
         <switches>
             <firebell-switch type="bool">0</firebell-switch>
@@ -631,6 +634,9 @@
         <garmin196>
           <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
         </garmin196>
+        <groundsteering>
+            <file>Aircraft/dhc6/Nasal/groundsteering.nas</file>
+        </groundsteering>
     </nasal>
 
     <systems>

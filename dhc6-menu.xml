@@ -37,6 +37,14 @@
             </item>
 
             <item>
+                <label>Nose wheel steering</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "tiller"}));</script>
+                </binding>
+            </item>
+
+            <item>
                 <label>Flashlight</label>
                 <binding>
                     <command>nasal</command>
