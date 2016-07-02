@@ -36,6 +36,7 @@
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash2.png</splash-texture>
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash3.png</splash-texture>
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash4.png</splash-texture>
+            <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash5.png</splash-texture>
         </startup>
         <model>
             <path>Aircraft/dhc6/Models/DHC6.xml</path>
