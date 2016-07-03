@@ -121,8 +121,13 @@
         <desc>Radio Stack</desc>
     </key>
 
+    <key>
+        <name>&lt;/&gt;</name>
+        <desc>Center Aileron/Rudder trim</desc>
+    </key>
+
     <line>Nose wheel steering is controlled by the lever behind the pilot's yoke.</line>
-    <line>If it's disabled in the menu dialog (DHC-6 -> Nose wheel steering), the nose wheel is controlled via rudder</line>
+    <line>If it's disabled in the menu dialog (DHC-6 -&gt; Nose wheel steering), the nose wheel is controlled via rudder</line>
     <line/>
     <line>To open/close the doors, just click on it.</line>
     <line/>

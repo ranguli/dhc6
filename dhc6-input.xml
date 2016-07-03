@@ -446,6 +446,36 @@
             </binding>
         </key>
 
+        <key n="60">
+            <name>&gt;</name>
+            <desc>Center aileron trim</desc>
+            <binding>
+                <command>property-interpolate</command>
+                <property>controls/flight/aileron-trim</property>
+                <value type="double">0</value>
+                <time>0.25</time>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>gui.popupTip("Aileron trim centered");</script>
+            </binding>
+        </key>
+
+        <key n="62">
+            <name>&lt;</name>
+            <desc>Center rudder trim</desc>
+            <binding>
+                <command>property-interpolate</command>
+                <property>controls/flight/rudder-trim</property>
+                <value type="double">0</value>
+                <time>0.25</time>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>gui.popupTip("Rudder trim centered");</script>
+            </binding>
+        </key>
+
     </keyboard>
 
     <mice include="dhc6-mice.xml"/>
