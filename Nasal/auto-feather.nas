@@ -9,14 +9,14 @@ var autoFeather = func {
 
     if (auto_feather == 1 and running1 == 0 and electrical_power>15) {
         setprop("controls/engines/engine[0]/propeller-feather",1);
-	setprop("controls/engines/engine[0]/propeller-pitch",0);
+        interpolate("controls/engines/engine[0]/propeller-pitch",0,2);
     } else if(electrical_power>15) {
         setprop("controls/engines/engine[0]/propeller-feather",0);
     }
 
     if (auto_feather == 1 and running2 == 0 and electrical_power>15) {
         setprop("controls/engines/engine[1]/propeller-feather",1);
-	setprop("controls/engines/engine[1]/propeller-pitch",0);
+        interpolate("controls/engines/engine[1]/propeller-pitch",0,2);
     } else if (electrical_power>15) {
         setprop("controls/engines/engine[1]/propeller-feather",0);
     }
