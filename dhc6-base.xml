@@ -428,7 +428,9 @@
             </Baggage.door>        
         </doors>
         <flight>
-            <flaps-pos type="double">0</flaps-pos>
+            <flaps type="double">0</flaps>
+            <flaplever type="double">0</flaplever>
+            <flaplever-pos type="double">0</flaplever-pos>
         </flight>
         <fuel>
             <tank-selector type="int">0</tank-selector>
@@ -653,6 +655,7 @@
             <serviceable type="bool">1</serviceable>
         </static>
         <hydraulic>
+            <indicated-pressure type="double">0</indicated-pressure>
             <pressure type="double">0.0</pressure>
             <serviceable type="bool">1</serviceable>
         </hydraulic>

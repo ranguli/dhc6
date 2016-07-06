@@ -113,6 +113,7 @@ var Startup = func{
             setprop("controls/lighting/nav-lights",1);
             setprop("controls/lighting/strobe",1);
             setprop("controls/engines/auto-feather",1);
+            setprop("controls/flight/flaplever",0.25);
             setprop("controls/flight/flaps",0.25);
             setprop("controls/gear/parkingbrake-lever",0);
             setprop("controls/flight/elevator-trim",-0.2);
@@ -155,6 +156,7 @@ var Shutdown = func{
     setprop("controls/engines/internal-engine-starter",0);
     setprop("controls/lighting/landing-light[0]",0);
     setprop("controls/lighting/landing-light[1]",0);
+    setprop("controls/flight/flaplever",0);
     setprop("controls/flight/flaps",0);
     setprop("controls/gear/parkingbrake-lever",1);
     setprop("controls/engines/engine[0]/intake-deflector",0);
@@ -485,6 +487,12 @@ var update_systems = func {
         if(getprop("controls/doors/RR-door/open"))setprop("controls/doors/RR-door/open",0);
         if(getprop("controls/doors/Baggage.door/open"))setprop("controls/doors/Baggage.door/",0);
     }
+
+    # Flap operation requires hydraulic presuure
+    if(getprop("systems/hydraulic/indicated-pressure")<1000)setprop("controls/flight/flaps-serviceable", 0);
+    if(getprop("systems/hydraulic/indicated-pressure")>1000)setprop("controls/flight/flaps-serviceable", 1);
+    # 1000 is only an estimated value
+    if(getprop("controls/flight/flaps-serviceable"))setprop("controls/flight/flaps", getprop("controls/flight/flaplever"));
     update_throttles();
     update_eng_sound();
     update_stall_sound();
@@ -519,6 +527,17 @@ controls.applyParkingBrake = func (v) {
     setprop(p, var i = !getprop(p));
     return i;
 };
+
+controls.flapsDown = func(step) {
+    if(step == 0) return;
+    if(props.globals.getNode("/sim/flaps") != nil and getprop("controls/flight/flaps-serviceable")) {
+        stepProps("/controls/flight/flaplever", "/sim/flaps", step);
+        return;
+    }
+    # Hard-coded flap lever movement in 8 equal steps:
+    var val = 0.125 * step + getprop("/controls/flight/flaplever");
+    setprop("/controls/flight/flaplever", val > 1 ? 1 : val < 0 ? 0 : val);
+}
 
 var DMEinit = func {
     ki266.new(0);

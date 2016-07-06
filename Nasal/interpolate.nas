@@ -154,8 +154,8 @@ setlistener("/controls/electric/engine[1]/generator", func(v) {
     }
 });
 
-setlistener("/controls/flight/flaps", func(v) {
-    interpolate("/controls/flight/flaps-pos", v.getValue(), 0.1);
+setlistener("/controls/flight/flaplever", func(v) {
+    interpolate("/controls/flight/flaplever-pos", v.getValue(), 0.1);
 });
 
 setlistener("/controls/engines/auto-feather", func(v) {

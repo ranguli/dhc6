@@ -322,13 +322,27 @@
             <repeatable type="bool">true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/flight/flaps</property>
-                <step type="double">-0.005</step>
+                <property>controls/flight/flaplever</property>
+                <step>-0.01</step>
                 <min>0</min>
+                <max>1</max>
+                <wrap>false</wrap>
             </binding>
             <binding>
+                <condition>
+                    <property>controls/flight/flaps-serviceable</property>
+                </condition>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Flaps: %3.1f deg", 37.5*getprop("/controls/flight/flaps")), 5);</script>
+                <script>gui.popupTip(sprintf("Flaps: %3.1f deg", 37.5*getprop("/controls/flight/flaps")));</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>controls/flight/flaps-serviceable</property>
+                    </not>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip("Flap operation requires hydraulic pressure!");</script>
             </binding>
         </key>
 
@@ -338,13 +352,27 @@
             <repeatable type="bool">true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/flight/flaps</property>
-                <step type="double">0.005</step>
+                <property>controls/flight/flaplever</property>
+                <step>0.01</step>
+                <min>0</min>
                 <max>1</max>
+                <wrap>false</wrap>
             </binding>
             <binding>
+                <condition>
+                    <property>controls/flight/flaps-serviceable</property>
+                </condition>
                 <command>nasal</command>
                 <script>gui.popupTip(sprintf("Flaps: %3.1f deg", 37.5*getprop("/controls/flight/flaps")));</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>controls/flight/flaps-serviceable</property>
+                    </not>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip("Flap operation requires hydraulic pressure!");</script>
             </binding>
         </key>
 
