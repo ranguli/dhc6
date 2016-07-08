@@ -141,6 +141,26 @@ Syd Adams
 
     <animation>
         <type>rotate</type>
+        <object-name>Prpm.1</object-name>
+        <property>engines/engine[0]/rpm</property>
+        <interpolation>
+            <entry><ind>   0.0</ind><dep>   0</dep></entry>
+            <entry><ind>2300.0</ind><dep>3763.6364</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.0129877</y-m>
+            <z-m>-0.00958555</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
         <object-name>PropRPMneedle</object-name>
         <property>engines/engine[0]/reverse</property>
         <interpolation>
@@ -151,6 +171,26 @@ Syd Adams
             <x>-1</x>
             <y>0</y>
             <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Prpm.1</object-name>
+        <property>engines/engine[0]/reverse</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>  0.0</dep></entry>
+            <entry><ind>1.0</ind><dep>400.0</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.0129877</y-m>
+            <z-m>-0.00958555</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>-</z>
         </axis>
     </animation>
 

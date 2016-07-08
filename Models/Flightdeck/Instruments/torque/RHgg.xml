@@ -142,12 +142,52 @@ Syd Adams
 
     <animation>
         <type>rotate</type>
+        <object-name>ggRpm</object-name>
+        <property>engines/engine[1]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>   0</dep></entry>
+            <entry><ind>105</ind><dep>3780</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.0129877</y-m>
+            <z-m>-0.00958555</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
         <object-name>ggRPMneedle</object-name>
         <property>engines/engine[1]/reverse</property>
         <interpolation>
             <entry><ind>0.0</ind><dep> 0.0</dep></entry>
             <entry><ind>1.0</ind><dep>60.0</dep></entry>
         </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ggRpm</object-name>
+        <property>engines/engine[1]/reverse</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep> 0.0</dep></entry>
+            <entry><ind>1.0</ind><dep>800.0</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.0129877</y-m>
+            <z-m>-0.00958555</z-m>
+        </center>
         <axis>
             <x>-1</x>
             <y>0</y>

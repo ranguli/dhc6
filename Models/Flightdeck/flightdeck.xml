@@ -2442,55 +2442,49 @@
     </animation>
 
     <animation>
-        <type>slider</type>
+        <type>pick</type>
         <object-name>LHcondition</object-name>
-        <drag-direction>horizontal</drag-direction>
         <action>
+            <button>0</button>
             <binding>
-                <command>property-adjust</command>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[0]/condition</property>
-                <factor>-0.1</factor>
-                <min>0</min>
-                <max>1</max>
-                <wrap>0</wrap>
+                <value type="double">1</value>
+                <time>1</time>
             </binding>
         </action>
-        <hovered>
+        <action>
+            <button>1</button>
             <binding>
-                <command>set-tooltip</command>
-                <label>LH Condition: %3d%%</label>
-                <measure-text>LH Condition: 100%</measure-text>
-                <tooltip-id>lh-condition</tooltip-id>
-                <mapping>percent</mapping>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[0]/condition</property>
+                <value type="double">0</value>
+                <time>1</time>
             </binding>
-        </hovered>
+        </action>
     </animation>
 
     <animation>
-        <type>slider</type>
+        <type>pick</type>
         <object-name>RHcondition</object-name>
-        <drag-direction>horizontal</drag-direction>
         <action>
-                <binding>
-                <command>property-adjust</command>
+            <button>0</button>
+            <binding>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[1]/condition</property>
-                <factor>-0.1</factor>
-                <min>0</min>
-                <max>1</max>
-                <wrap>0</wrap>
+                <value type="double">1</value>
+                <time>1</time>
             </binding>
         </action>
-        <hovered>
+        <action>
+            <button>1</button>
             <binding>
-                <command>set-tooltip</command>
-                <label>RH Condition: %3d%%</label>
-                <measure-text>RH Condition: 100%</measure-text>
-                <tooltip-id>rh-condition</tooltip-id>
-                <mapping>percent</mapping>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[1]/condition</property>
+                <value type="double">0</value>
+                <time>1</time>
             </binding>
-        </hovered>
+        </action>
     </animation>
 
     <animation>
@@ -2514,7 +2508,6 @@
             </binding>
         </hovered>
     </animation>
-
 
     <!--  overhead switches and animations -->
     <!-- rear -->

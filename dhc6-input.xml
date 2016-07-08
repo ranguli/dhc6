@@ -64,15 +64,14 @@
             <desc>Push the left condition</desc>
             <repeatable type="bool">true</repeatable>
             <binding>
-                <command>property-adjust</command>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[0]/condition</property>
-                <step>0.05</step>
-                <min>0</min>
-                <max>1</max>
+                <value type="double">1</value>
+                <time>1</time>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Left condition: %0.1f", getprop("/controls/engines/engine[0]/condition")), 5);</script>
+                <script>gui.popupTip("Left condition ON", 5);</script>
             </binding>
         </key>
 
@@ -81,15 +80,14 @@
             <desc>Push the right condition</desc>
             <repeatable type="bool">true</repeatable>
             <binding>
-                <command>property-adjust</command>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[1]/condition</property>
-                <step>0.05</step>
-                <min>0</min>
-                <max>1</max>
+                <value type="double">1</value>
+                <time>1</time>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Right condition: %0.1f", getprop("/controls/engines/engine[1]/condition")), 5);</script>
+                <script>gui.popupTip("Right condition ON", 5);</script>
             </binding>
         </key>
 
@@ -98,15 +96,14 @@
             <desc>Pull the left condition</desc>
             <repeatable type="bool">true</repeatable>
             <binding>
-                <command>property-adjust</command>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[0]/condition</property>
-                <step>-0.05</step>
-                <min>0</min>
-                <max>1</max>
+                <value type="double">0</value>
+                <time>1</time>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Left condition: %0.1f", getprop("/controls/engines/engine[0]/condition")), 5);</script>
+                <script>gui.popupTip("Left condition OFF", 5);</script>
             </binding>
         </key>
 
@@ -115,15 +112,14 @@
             <desc>Pull the right condition</desc>
             <repeatable type="bool">true</repeatable>
             <binding>
-                <command>property-adjust</command>
+                <command>property-interpolate</command>
                 <property>controls/engines/engine[1]/condition</property>
-                <step>-0.05</step>
-                <min>0</min>
-                <max>1</max>
+                <value type="double">0</value>
+                <time>1</time>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Right condition: %0.1f", getprop("/controls/engines/engine[1]/condition")), 5);</script>
+                <script>gui.popupTip("Right condition OFF", 5);</script>
             </binding>
         </key>
 

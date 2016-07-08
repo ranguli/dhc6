@@ -2047,7 +2047,7 @@
         <condition>
             <less-than> 
                 <property>engines/engine[0]/n2</property>
-                <value>62.0000</value>
+                <value>50.0000</value>
             </less-than>
         </condition> 
     </animation>
@@ -2069,7 +2069,7 @@
         <object-name>LpropParent</object-name>
         <object-name>SpinnerL</object-name>
         <property>engines/engine[0]/n2</property>
-        <factor>-8.0</factor>
+        <factor>-5.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>-2.857</y-m>
@@ -2223,7 +2223,7 @@
         <condition>
             <less-than> 
                 <property>engines/engine[1]/n2</property>
-                <value>62.000</value>
+                <value>50.000</value>
             </less-than>
         </condition> 
     </animation>
@@ -2245,7 +2245,7 @@
         <object-name>RpropParent</object-name>
         <object-name>SpinnerR</object-name>
         <property>engines/engine[1]/n2</property>
-        <factor>-8.0</factor>
+        <factor>-5.0</factor>
         <center>
             <x-m>-2.660</x-m>
             <y-m>2.857</y-m>
