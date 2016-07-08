@@ -539,6 +539,23 @@ controls.flapsDown = func(step) {
     setprop("/controls/flight/flaplever", val > 1 ? 1 : val < 0 ? 0 : val);
 }
 
+var stepProps = func(dst, array, delta) {
+    dst = props.globals.getNode(dst);
+    array = props.globals.getNode(array);
+    if(dst == nil or array == nil) { return; }
+
+    var sets = array.getChildren("setting");
+
+    var curr = array.getNode("current-setting", 1).getValue();
+    if(curr == nil) { curr = 0; }
+    curr = curr + delta;
+    if   (curr < 0)           { curr = 0; }
+    elsif(curr >= size(sets)) { curr = size(sets) - 1; }
+
+    array.getNode("current-setting").setIntValue(curr);
+    dst.setValue(sets[curr].getValue());
+}
+
 var DMEinit = func {
     ki266.new(0);
 };
