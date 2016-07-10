@@ -175,29 +175,36 @@
             <path>Aircraft/dhc6/Sounds/stall.wav</path>
             <property>sim/sound/stall-warning</property>
             <condition>
-                <and>
+                <or>
+                    <and>
+                        <greater-than>
+                            <property>systems/electrical/volts</property>
+                            <value>0</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>sim/sound/stall-warning</property>
+                            <value>4</value>
+                        </greater-than>
+                        <less-than>
+                            <property>sim/sound/stall-warning</property>
+                            <value>20</value>
+                        </less-than>
+                        <greater-than>
+                            <property>sim/time/elapsed-sec</property>
+                            <value>15</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>velocities/airspeed-kt</property>
+                            <value>30</value>
+                        </greater-than>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                    <!-- caution test activates stall horn -->
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/outputs/caution-test</property>
                         <value>0</value>
                     </greater-than>
-                    <greater-than>
-                        <property>sim/sound/stall-warning</property>
-                        <value>4</value>
-                    </greater-than>
-                    <less-than>
-                        <property>sim/sound/stall-warning</property>
-                        <value>20</value>
-                    </less-than>
-                    <greater-than>
-                        <property>sim/time/elapsed-sec</property>
-                        <value>15</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>velocities/airspeed-kt</property>
-                        <value>30</value>
-                    </greater-than>
-                    <property>sim/current-view/internal</property>
-                </and>
+                </or>
             </condition>
             <volume>
                 <property>sim/sound/stall-warning</property>

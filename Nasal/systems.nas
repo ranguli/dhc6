@@ -422,7 +422,7 @@ setprop("/instrumentation/clock/flight-meter-hour",fhour);
 var annunciators = func {
     Ctn_panel.update();
     settimer(annunciators, 0.5);
-    }
+}
 
 var update_eng_sound = func {
     var tst1 = (getprop("engines/engine[0]/n2") * 0.01)-0.5;
@@ -431,12 +431,16 @@ var update_eng_sound = func {
     tst2+=(getprop("engines/engine[1]/reverse") * 0.2);
     E1_volume.setValue(tst1);
     E2_volume.setValue(tst2);
-    }
+}
 
 var update_stall_sound = func {
+    if (getprop("controls/electric/caution-test")) {
+        interpolate("sim/sound/stall-warning", 10, 0.5);
+    } else {
     var stall = (getprop("orientation/alpha-deg"));
     stall_volume.setValue(stall);
     }
+}
 
 var update_hyd_pump_sound = func {
     var pressure = (getprop("systems/hydraulic/indicated-pressure"));
