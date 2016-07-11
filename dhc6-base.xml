@@ -49,6 +49,122 @@
             <path>/controls/armament/station[5]/release-all-pos</path>
             <path>/controls/armament/station[6]/release-all</path>
             <path>/controls/armament/station[6]/release-all-pos</path>
+            <path>/controls/electric/circuit-breakers/main/invr-cont</path>
+            <path>/controls/electric/circuit-breakers/main/va</path>
+            <path>/controls/electric/circuit-breakers/main/wing-insp-lt</path>
+            <path>/controls/electric/circuit-breakers/main/c400-fail</path>
+            <path>/controls/electric/circuit-breakers/main/beta-sys</path>
+            <path>/controls/electric/circuit-breakers/main/start-l</path>
+            <path>/controls/electric/circuit-breakers/main/start-r</path>
+            <path>/controls/electric/circuit-breakers/main/r-gen-fail</path>
+            <path>/controls/electric/circuit-breakers/main/l-gen-fail</path>
+            <path>/controls/electric/circuit-breakers/main/ign-l</path>
+            <path>/controls/electric/circuit-breakers/main/ign-r</path>
+            <path>/controls/electric/circuit-breakers/main/l-t5-temp</path>
+            <path>/controls/electric/circuit-breakers/main/r-t5-temp</path>
+            <path>/controls/electric/circuit-breakers/main/bleed-air-l</path>
+            <path>/controls/electric/circuit-breakers/main/bleed-air-r</path>
+            <path>/controls/electric/circuit-breakers/main/ws-wiper</path>
+            <path>/controls/electric/circuit-breakers/main/int-defl</path>
+            <path>/controls/electric/circuit-breakers/main/prop-deice</path>
+            <path>/controls/electric/circuit-breakers/main/over-speed-gov</path>
+            <path>/controls/electric/circuit-breakers/main/pitot-htr-l</path>
+            <path>/controls/electric/circuit-breakers/main/pitot-htr-r</path>
+            <path>/controls/electric/circuit-breakers/main/hyd-oil-pump</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-xfeed</path>
+            <path>/controls/electric/circuit-breakers/main/temp-comp-htr-l</path>
+            <path>/controls/electric/circuit-breakers/main/temp-comp-htr-r</path>
+            <path>/controls/electric/circuit-breakers/main/prop-auto-feath</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-fwd-1</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-fwd-2</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-sov-l</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-sov-r</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-aft-1</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-aft-2</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-l-level-aft</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-l-level-fwd</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-press-l</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-press-r</path>
+            <path>/controls/electric/circuit-breakers/main/fire-ext-l</path>
+            <path>/controls/electric/circuit-breakers/main/fire-ext-r</path>
+            <path>/controls/electric/circuit-breakers/main/oil-temp-l</path>
+            <path>/controls/electric/circuit-breakers/main/oil-temp-r</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-l</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-r</path>
+            <path>/controls/electric/circuit-breakers/main/oil-low-press-l</path>
+            <path>/controls/electric/circuit-breakers/main/oil-low-press-r</path>
+            <path>/controls/electric/circuit-breakers/main/stall-warn</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-fault-ind-l</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-fault-ind-r</path>
+            <path>/controls/electric/circuit-breakers/main/posn-lt</path>
+            <path>/controls/electric/circuit-breakers/main/caut-lt-dim</path>
+            <path>/controls/electric/circuit-breakers/main/anti-coll-lt</path>
+            <path>/controls/electric/circuit-breakers/main/flt-comp-lt</path>
+            <path>/controls/electric/circuit-breakers/main/pilot-eng-cons-trim-pnl-lt</path>
+            <path>/controls/electric/circuit-breakers/main/copilot-rad-va-pnl-lt</path>
+            <path>/controls/electric/circuit-breakers/main/cabin-ht-vent</path>
+            <path>/controls/electric/circuit-breakers/main/ldg-lt-l</path>
+            <path>/controls/electric/circuit-breakers/main/ldg-lt-r</path>
+            <path>/controls/electric/circuit-breakers/main/ail-trim-ind</path>
+            <path>/controls/electric/circuit-breakers/main/ail-trim-act</path>
+            <path>/controls/electric/circuit-breakers/main/invr-cont-pos</path>
+            <path>/controls/electric/circuit-breakers/main/va-pos</path>
+            <path>/controls/electric/circuit-breakers/main/wing-insp-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/c400-fail-pos</path>
+            <path>/controls/electric/circuit-breakers/main/beta-sys-pos</path>
+            <path>/controls/electric/circuit-breakers/main/start-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/start-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/r-gen-fail-pos</path>
+            <path>/controls/electric/circuit-breakers/main/l-gen-fail-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ign-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ign-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/l-t5-temp-pos</path>
+            <path>/controls/electric/circuit-breakers/main/r-t5-temp-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bleed-air-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bleed-air-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ws-wiper-pos</path>
+            <path>/controls/electric/circuit-breakers/main/int-defl-pos</path>
+            <path>/controls/electric/circuit-breakers/main/prop-deice-pos</path>
+            <path>/controls/electric/circuit-breakers/main/over-speed-gov-pos</path>
+            <path>/controls/electric/circuit-breakers/main/pitot-htr-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/pitot-htr-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/hyd-oil-pump-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-xfeed-pos</path>
+            <path>/controls/electric/circuit-breakers/main/temp-comp-htr-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/temp-comp-htr-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/prop-auto-feath-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-fwd-1-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-fwd-2-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-sov-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-sov-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-aft-1-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-aft-2-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-l-level-aft-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fuel-l-level-fwd-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-press-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/bst-pump-press-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-ext-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-ext-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/oil-temp-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/oil-temp-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/oil-low-press-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/oil-low-press-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/stall-warn-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-fault-ind-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/fire-det-fault-ind-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/posn-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/caut-lt-dim-pos</path>
+            <path>/controls/electric/circuit-breakers/main/anti-coll-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/flt-comp-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/pilot-eng-cons-trim-pnl-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/copilot-rad-va-pnl-lt-pos</path>
+            <path>/controls/electric/circuit-breakers/main/cabin-ht-vent-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ldg-lt-l-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ldg-lt-r-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ail-trim-ind-pos</path>
+            <path>/controls/electric/circuit-breakers/main/ail-trim-act-pos</path>
             <path>/controls/gear/tiller-enabled</path>
             <path>/engines/engine[0]/beta-range-nut-l</path>
             <path>/engines/engine[1]/beta-range-nut-r</path>
@@ -319,138 +435,7 @@
         </fuel>
     </consumables>
 
-    <controls>
-        <anti-ice>
-            <pitot-heat-pos type="double">0</pitot-heat-pos>
-            <prop-heat-pos type="double">0</prop-heat-pos>
-            <window-heat-pos type="double">0</window-heat-pos>
-        </anti-ice>
-        <armament>
-            <station n="5">
-                <release-all-pos type="double">0</release-all-pos>
-            </station>
-            <station n="6">
-                <release-all-pos type="double">0</release-all-pos>
-            </station>
-        </armament>
-        <electric>
-            <aft-boost-pump-pos type="double">0</aft-boost-pump-pos>
-            <fwd-boost-pump-pos type="double">0</fwd-boost-pump-pos>
-            <battery-switch type = "bool">0</battery-switch>
-            <battery-switch-pos type = "double">0</battery-switch-pos>
-            <ammeter-switch-pos type="double">0</ammeter-switch-pos>
-            <avionics-switch type = "bool">0</avionics-switch>
-            <external-power type = "bool">0</external-power>
-            <power-source type = "int">0</power-source>
-            <power-source-pos type = "double">0</power-source-pos>
-            <caution-test type="bool">0</caution-test>
-            <caution-test-pos type="double">0</caution-test-pos>
-            <engine n="0">
-                <generator>false</generator>
-                <generator-pos type="double">0</generator-pos>
-            </engine>
-            <engine n="1">
-                <generator>false</generator>
-                <generator-pos type="double">0</generator-pos>
-            </engine>
-            <wipers>
-                <switch-pos type="double">0</switch-pos>
-                <delay-sec-pos type="double">0</delay-sec-pos>
-            </wipers>
-        </electric>
-        <lighting>
-            <beacon-pos type="double">0</beacon-pos>
-            <cabin-lights-pos type="double">0</cabin-lights-pos>
-            <instrument-lights>0</instrument-lights>
-            <instrument-lights-pos type="double">0</instrument-lights-pos>
-            <landing-light-pos n="0" type="double">0</landing-light-pos>
-            <landing-light-pos n="1" type="double">0</landing-light-pos>
-            <nav-lights-pos type="double">0</nav-lights-pos>
-            <no-smoking-pos type="double">0</no-smoking-pos>
-            <seat-belt-pos type="double">0</seat-belt-pos>
-            <strobe-pos type="double">0</strobe-pos>
-            <taxi-lights-pos type="double">0</taxi-lights-pos>
-        </lighting>
-        <engines>
-            <auto-feather-pos type="double">0</auto-feather-pos>
-            <internal-engine-starter-pos type="double">0</internal-engine-starter-pos>
-            <fire-test type="bool">0</fire-test>
-            <fire-test-pos type="double">0</fire-test-pos>
-            <engine n="0">
-                <condition>0</condition>
-                <cutoff>0</cutoff>
-                <cutoff-pos type="double">0</cutoff-pos>
-                <intake-deflector-pos type="double">0</intake-deflector-pos>
-                <mixture>0</mixture>
-                <propeller-pitch>0</propeller-pitch>
-                <throttle-fwd type="double">0</throttle-fwd>
-                <throttle-rvrs type="double">0</throttle-rvrs>
-            </engine>
-            <engine n="1">
-                <condition>0</condition>
-                <cutoff>0</cutoff>
-                <cutoff-pos type="double">0</cutoff-pos>
-                <intake-deflector-pos type="double">0</intake-deflector-pos>
-                <mixture>0</mixture>
-                <propeller-pitch>0</propeller-pitch>
-                <throttle-fwd type="double">0</throttle-fwd>
-                <throttle-rvrs type="double">0</throttle-rvrs>  
-            </engine>
-        </engines>
-        <throttle-coupled type="bool">1</throttle-coupled>
-        <mixture-coupled type="bool">1</mixture-coupled>
-        <prop-coupled type="bool">1</prop-coupled>
-        <movement-scale>0.025</movement-scale>
-        <doors>
-            <LF-door>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </LF-door>
-            <RF-door>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </RF-door>
-            <RR-door>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </RR-door>
-            <LR-door-F>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </LR-door-F>
-            <LR-door-R>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </LR-door-R>
-            <Baggage.door>
-                <open type="bool">0</open>
-                <position-norm type="double">0</position-norm>
-            </Baggage.door>        
-        </doors>
-        <flight>
-            <flaps type="double">0</flaps>
-            <flaplever type="double">0</flaplever>
-            <flaplever-pos type="double">0</flaplever-pos>
-        </flight>
-        <fuel>
-            <tank-selector type="int">0</tank-selector>
-            <tank-selector-pos type="double">0</tank-selector-pos>
-            <ind-test type="bool">0</ind-test>
-            <ind-test-pos type="double">0</ind-test-pos>
-        </fuel>
-        <gear>
-            <parkingbrake-lever type="bool">1</parkingbrake-lever>
-            <parkingbrake-lever-pos type="double">1</parkingbrake-lever-pos>
-            <tiller type="double">0</tiller>
-            <tiller-enabled type="bool">1</tiller-enabled>
-        </gear>
-        <switches>
-            <firebell-switch type="bool">0</firebell-switch>
-            <firebell-switch-pos type="double">0</firebell-switch-pos>
-            <firebell-switch-cover type="bool">0</firebell-switch-cover>
-            <firebell-switch-cover-pos type="double">0</firebell-switch-cover-pos>
-        </switches>
-    </controls>
+    <controls include="dhc6-controls.xml"/>
 
     <engines>
         <engine n="0">

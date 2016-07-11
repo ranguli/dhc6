@@ -1222,6 +1222,52 @@
             <max-dist>10</max-dist>
         </click2>
 
+        <doubleclick>
+            <name>doubleclick-on</name>
+            <mode>once</mode>
+            <path>Sounds/doubleclick.wav</path>
+            <condition>
+                <property>sim/sound/doubleclick</property>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+            </volume>
+            <pitch>
+                <offset>1</offset>
+            </pitch>
+            <position>
+                <x>-3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
+        </doubleclick>
+
+        <doubleclick>
+            <name>doubleclick-off</name>
+            <mode>once</mode>
+            <path>Sounds/doubleclick.wav</path>
+            <condition>
+                <not>
+                    <property>sim/sound/doubleclick</property>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+            </volume>
+            <pitch>
+                <offset>1</offset>
+            </pitch>
+            <position>
+                <x>-3</x>
+                <y>0</y>
+                <z>1</z>
+            </position>
+            <reference-dist>3</reference-dist>
+            <max-dist>10</max-dist>
+        </doubleclick>
+
         <!-- rain sound -->
         <rain>
             <name>rain</name>
