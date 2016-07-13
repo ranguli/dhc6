@@ -294,8 +294,6 @@
         <object-name>extincteur</object-name>
         <object-name>flaplever</object-name>
         <object-name>flightdeck</object-name>
-        <object-name>fuse-panel</object-name>
-        <object-name>fuse-panel-2</object-name>
         <object-name>fwdfuel.lit</object-name>
         <object-name>inst_lt.sw</object-name>
         <object-name>intake-deflector-l</object-name>
@@ -433,8 +431,6 @@
         <object-name>extincteur</object-name>
         <object-name>flaplever</object-name>
         <object-name>flightdeck</object-name>
-        <object-name>fuse-panel</object-name>
-        <object-name>fuse-panel-2</object-name>
         <object-name>fwdfuel.lit</object-name>
         <object-name>inst_lt.sw</object-name>
         <object-name>intake-deflector-l</object-name>
@@ -1184,6 +1180,12 @@
             <roll-deg>-5</roll-deg>
             <heading-deg>-5</heading-deg>
         </offsets>
+    </model>
+
+    <!-- Center console -->
+    <model>
+        <name>center-circuit-breaker</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Circuit-breakers/center-breaker-panel.xml</path>
     </model>
 
     <!-- No smoking -->

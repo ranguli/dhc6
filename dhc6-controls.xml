@@ -151,6 +151,65 @@
                 <ail-trim-ind-pos type="double">1</ail-trim-ind-pos>
                 <ail-trim-act-pos type="double">1</ail-trim-act-pos>
             </main>
+            <center>
+                <lh-audio type="bool">true</lh-audio>
+                <lh-com1 type="bool">true</lh-com1>
+                <lh-nav1 type="bool">true</lh-nav1>
+                <lh-adf1 type="bool">true</lh-adf1>
+                <lh-vor1 type="bool">true</lh-vor1>
+                <lh-rmi1 type="bool">true</lh-rmi1>
+                <lh-hsi1 type="bool">true</lh-hsi1>
+                <rh-audio type="bool">true</rh-audio>
+                <rh-com2 type="bool">true</rh-com2>
+                <rh-nav2 type="bool">true</rh-nav2>
+                <rh-adf2 type="bool">true</rh-adf2>
+                <rh-vor2 type="bool">true</rh-vor2>
+                <rh-rmi2 type="bool">true</rh-rmi2>
+                <rh-hsi2 type="bool">true</rh-hsi2>
+                <xpdr type="bool">true</xpdr>
+                <tc1 type="bool">true</tc1>
+                <tc2 type="bool">true</tc2>
+                <dme type="bool">true</dme>
+                <ralt type="bool">true</ralt>
+                <gps type="bool">true</gps>
+                <ap type="bool">true</ap>
+                <unused1 type="bool">true</unused1>
+                <unused2 type="bool">true</unused2>
+                <unused3 type="bool">true</unused3>
+                <unused4 type="bool">true</unused4>
+                <unused5 type="bool">true</unused5>
+                <unused6 type="bool">true</unused6>
+                <unused7 type="bool">true</unused7>
+
+                <lh-audio-pos type="double">1</lh-audio-pos>
+                <lh-com1-pos type="double">1</lh-com1-pos>
+                <lh-nav1-pos type="double">1</lh-nav1-pos>
+                <lh-adf1-pos type="double">1</lh-adf1-pos>
+                <lh-vor1-pos type="double">1</lh-vor1-pos>
+                <lh-rmi1-pos type="double">1</lh-rmi1-pos>
+                <lh-hsi1-pos type="double">1</lh-hsi1-pos>
+                <rh-audio-pos type="double">1</rh-audio-pos>
+                <rh-com2-pos type="double">1</rh-com2-pos>
+                <rh-nav2-pos type="double">1</rh-nav2-pos>
+                <rh-adf2-pos type="double">1</rh-adf2-pos>
+                <rh-vor2-pos type="double">1</rh-vor2-pos>
+                <rh-rmi2-pos type="double">1</rh-rmi2-pos>
+                <rh-hsi2-pos type="double">1</rh-hsi2-pos>
+                <xpdr-pos type="double">1</xpdr-pos>
+                <tc1-pos type="double">1</tc1-pos>
+                <tc2-pos type="double">1</tc2-pos>
+                <dme-pos type="double">1</dme-pos>
+                <ralt-pos type="double">1</ralt-pos>
+                <gps-pos type="double">1</gps-pos>
+                <ap-pos type="double">1</ap-pos>
+                <unused1-pos type="double">1</unused1-pos>
+                <unused2-pos type="double">1</unused2-pos>
+                <unused3-pos type="double">1</unused3-pos>
+                <unused4-pos type="double">1</unused4-pos>
+                <unused5-pos type="double">1</unused5-pos>
+                <unused6-pos type="double">1</unused6-pos>
+                <unused7-pos type="double">1</unused7-pos>
+            </center>
         </circuit-breakers>
         <engine n="0">
             <generator>false</generator>

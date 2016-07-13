@@ -763,3 +763,228 @@ setlistener("/controls/electric/circuit-breakers/main/ail-trim-act", func(v) {
         interpolate("/controls/electric/circuit-breakers/main/ail-trim-act-pos", 0, 0.1);
     }
 });
+
+# Center console
+setlistener("/controls/electric/circuit-breakers/center/lh-audio", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-audio-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-audio-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-com1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-com1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-com1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-nav1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-nav1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-nav1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-adf1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-adf1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-adf1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-vor1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-vor1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-vor1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-rmi1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-rmi1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-rmi1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/lh-hsi1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/lh-hsi1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/lh-hsi1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-audio", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-audio-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-audio-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-com2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-com2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-com2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-nav2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-nav2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-nav2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-adf2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-adf2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-adf2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-vor2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-vor2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-vor2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-rmi2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-rmi2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-rmi2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/rh-hsi2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/rh-hsi2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/rh-hsi2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/xpdr", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/xpdr-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/xpdr-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/tc1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/tc1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/tc1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/tc2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/tc2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/tc2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/dme", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/dme-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/dme-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/ralt", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/ralt-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/ralt-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/gps", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/gps-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/gps-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/ap", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/ap-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/ap-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused3", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused3-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused3-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused4", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused4-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused4-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused5", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused5-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused5-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused6", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused6-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused6-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/center/unused7", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/center/unused7-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/center/unused7-pos", 0, 0.1);
+    }
+});

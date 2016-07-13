@@ -373,6 +373,49 @@
             </item>
 
             <item>
+                <name>Center console circuit breakers</name>
+                <value>CHECK ALL IN</value>
+                <marker>
+                    <x-m>-3.9099</x-m>
+                    <y-m>0.0248</y-m>
+                    <z-m>-0.1595</z-m>
+                    <scale>8.7190</scale>
+                </marker>
+                <condition>
+                    <and>
+                        <property>/controls/electric/circuit-breakers/center/lh-audio</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-com1</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-nav1</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-adf1</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-vor1</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-rmi1</property>
+                        <property>/controls/electric/circuit-breakers/center/lh-hsi1</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-audio</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-com2</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-nav2</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-adf2</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-vor2</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-rmi2</property>
+                        <property>/controls/electric/circuit-breakers/center/rh-hsi2</property>
+                        <property>/controls/electric/circuit-breakers/center/xpdr</property>
+                        <property>/controls/electric/circuit-breakers/center/tc1</property>
+                        <property>/controls/electric/circuit-breakers/center/tc2</property>
+                        <property>/controls/electric/circuit-breakers/center/dme</property>
+                        <property>/controls/electric/circuit-breakers/center/ralt</property>
+                        <property>/controls/electric/circuit-breakers/center/gps</property>
+                        <property>/controls/electric/circuit-breakers/center/ap</property>
+                        <property>/controls/electric/circuit-breakers/center/unused1</property>
+                        <property>/controls/electric/circuit-breakers/center/unused2</property>
+                        <property>/controls/electric/circuit-breakers/center/unused3</property>
+                        <property>/controls/electric/circuit-breakers/center/unused4</property>
+                        <property>/controls/electric/circuit-breakers/center/unused5</property>
+                        <property>/controls/electric/circuit-breakers/center/unused6</property>
+                        <property>/controls/electric/circuit-breakers/center/unused7</property>
+                    </and>
+                </condition>
+            </item>
+
+            <item>
                 <name>Generator switches</name>
                 <value>OFF</value>
                 <marker>
