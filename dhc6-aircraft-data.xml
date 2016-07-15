@@ -189,12 +189,48 @@
     <path>/controls/electric/circuit-breakers/main/ail-trim-ind-pos</path>
     <path>/controls/electric/circuit-breakers/main/ail-trim-act-pos</path>
 
+    <path>/controls/electric/circuit-breakers/overhead/gen-control-l</path>
+    <path>/controls/electric/circuit-breakers/overhead/gen-control-r</path>
+    <path>/controls/electric/circuit-breakers/overhead/inverter-1</path>
+    <path>/controls/electric/circuit-breakers/overhead/inverter-2</path>
+    <path>/controls/electric/circuit-breakers/overhead/unused</path>
+    <path>/controls/electric/circuit-breakers/overhead/ws-heat-l</path>
+    <path>/controls/electric/circuit-breakers/overhead/ws-heat-r</path>
+    <path>/controls/electric/circuit-breakers/overhead/flt-compt-fans</path>
+    <path>/controls/electric/circuit-breakers/overhead/doors-unlocked</path>
+    <path>/controls/electric/circuit-breakers/overhead/reading</path>
+    <path>/controls/electric/circuit-breakers/overhead/cabin-lts</path>
+    <path>/controls/electric/circuit-breakers/overhead/general</path>
+    <path>/controls/electric/circuit-breakers/overhead/emer-lts</path>
+    <path>/controls/electric/circuit-breakers/overhead/cabin-vent-fan</path>
+    <path>/controls/electric/circuit-breakers/overhead/pneumatic-press</path>
+    <path>/controls/electric/circuit-breakers/overhead/cockpit-fans</path>
+
+    <path>/controls/electric/circuit-breakers/overhead/gen-control-l-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/gen-control-r-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/inverter-1-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/inverter-2-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/unused-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/ws-heat-l-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/ws-heat-r-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/flt-compt-fans-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/doors-unlocked-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/reading-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/cabin-lts-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/general-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/emer-lts-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/cabin-vent-fan-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/pneumatic-press-pos</path>
+    <path>/controls/electric/circuit-breakers/overhead/cockpit-fans-pos</path>
+
     <path>/controls/gear/tiller-enabled</path>
     <path>/engines/engine[0]/beta-range-nut-l</path>
     <path>/engines/engine[1]/beta-range-nut-r</path>
     <path>/controls/flight/aileron-trim</path>
     <path>/controls/flight/elevator-trim</path>
     <path>/controls/flight/rudder-trim</path>
+    <path>/controls/lighting/overhead-light</path>
+    <path>/controls/lighting/overhead-light-pos</path>
     <path>/instrumentation/altimeter[0]/decision-height</path>
     <path>/instrumentation/altimeter[0]/setting-hpa</path>
     <path>/instrumentation/altimeter[1]/setting-hpa</path>

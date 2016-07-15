@@ -1188,6 +1188,12 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Circuit-breakers/center-breaker-panel.xml</path>
     </model>
 
+    <!-- Overhead breaker panel -->
+    <model>
+        <name>overhead-circuit-breakers</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Circuit-breakers/overhead-breaker-panel.xml</path>
+    </model>
+
     <!-- No smoking -->
     <model>
         <name>no-smoking</name>
@@ -1217,21 +1223,21 @@
         <type>select</type>
         <object-name>autofeather.sel.lit</object-name>
         <condition>
-        <and>
-            <property>controls/engines/auto-feather</property>
-            <or>
-          <not>
-              <property>engines/engine[0]/running</property>
-          </not>
-          <not>
-              <property>engines/engine[1]/running</property>
-          </not>
-       </or>
-      <greater-than>
-          <property>systems/electrical/volts</property>
-      <value>1</value>
-      </greater-than>
-    </and>
+            <and>
+                <property>controls/engines/auto-feather</property>
+                <or>
+                    <not>
+                        <property>engines/engine[0]/running</property>
+                    </not>
+                    <not>
+                        <property>engines/engine[1]/running</property>
+                    </not>
+                </or>
+                <greater-than>
+                    <property>systems/electrical/volts</property>
+                    <value>1</value>
+                </greater-than>
+            </and>
         </condition>
     </animation>
     
@@ -1239,43 +1245,45 @@
         <type>material</type>
         <object-name>autofeather.sel.lit</object-name>
         <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-        <and>
-              <property>controls/engines/auto-feather</property>
-          <or>
-        <not>
-          <property>engines/engine[0]/running</property>
-        </not>
-        <not>
-          <property>engines/engine[1]/running</property>
-        </not>
-          </or>
-          <greater-than>
-        <property>systems/electrical/volts</property>
-        <value>1</value>
-          </greater-than>
-        </and>
+            <not>
+                <property>sim/rendering/rembrandt/enabled</property>
+            </not>
+            <and>
+                <property>controls/engines/auto-feather</property>
+                <or>
+                    <not>
+                        <property>engines/engine[0]/running</property>
+                    </not>
+                    <not>
+                        <property>engines/engine[1]/running</property>
+                    </not>
+                </or>
+                <greater-than>
+                    <property>systems/electrical/volts</property>
+                    <value>1</value>
+                </greater-than>
+            </and>
         </condition>
-    <emission>
-      <red>   0.7 </red>
-      <green> 0.6 </green>
-      <blue>  0.6 </blue>
-    </emission>
+        <emission>
+            <red>   0.7 </red>
+            <green> 0.6 </green>
+            <blue>  0.6 </blue>
+        </emission>
     </animation>
        
     <animation>
         <type>select</type>
         <object-name>autofeather.arm.lit</object-name>
         <condition>
-        <and>
-              <property>controls/engines/auto-feather</property>
-          <property>engines/engine[0]/running</property>
-          <property>engines/engine[1]/running</property>
-          <greater-than>
-        <property>systems/electrical/volts</property>
-        <value>1</value>
-          </greater-than>
-        </and>
+            <and>
+                <property>controls/engines/auto-feather</property>
+                <property>engines/engine[0]/running</property>
+                <property>engines/engine[1]/running</property>
+                <greater-than>
+                    <property>systems/electrical/volts</property>
+                    <value>1</value>
+                </greater-than>
+            </and>
         </condition>
     </animation>
     
@@ -1283,23 +1291,25 @@
         <type>material</type>
         <object-name>autofeather.arm.lit</object-name>
         <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-        <and>
-              <property>controls/engines/auto-feather</property>
-          <property>engines/engine[0]/running</property>
-          <property>engines/engine[1]/running</property>
-          <greater-than>
-        <property>systems/electrical/volts</property>
-        <value>1</value>
-          </greater-than>
-        </and>
+            <not>
+                <property>sim/rendering/rembrandt/enabled</property>
+            </not>
+            <and>
+                <property>controls/engines/auto-feather</property>
+                <property>engines/engine[0]/running</property>
+                <property>engines/engine[1]/running</property>
+                <greater-than>
+                    <property>systems/electrical/volts</property>
+                    <value>1</value>
+                </greater-than>
+            </and>
         </condition>
-    <emission>
-      <red>   0.7 </red>
-      <green> 0.6 </green>
-      <blue>  0.6 </blue>
-    </emission>
-     </animation>
+        <emission>
+            <red>   0.7 </red>
+            <green> 0.6 </green>
+            <blue>  0.6 </blue>
+        </emission>
+    </animation>
      
      <!--Thrust reverse lights-->
      <animation>

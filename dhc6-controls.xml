@@ -210,6 +210,41 @@
                 <unused6-pos type="double">1</unused6-pos>
                 <unused7-pos type="double">1</unused7-pos>
             </center>
+            <overhead>
+                <gen-control-l type="bool">true</gen-control-l>
+                <gen-control-r type="bool">true</gen-control-r>
+                <inverter-1 type="bool">true</inverter-1>
+                <inverter-2 type="bool">true</inverter-2>
+                <unused type="bool">true</unused>
+                <ws-heat-l type="bool">true</ws-heat-l>
+                <ws-heat-r type="bool">true</ws-heat-r>
+                <flt-compt-fans type="bool">true</flt-compt-fans>
+                <doors-unlocked type="bool">true</doors-unlocked>
+                <reading type="bool">true</reading>
+                <cabin-lts type="bool">true</cabin-lts>
+                <general type="bool">true</general>
+                <emer-lts type="bool">true</emer-lts>
+                <cabin-vent-fan type="bool">true</cabin-vent-fan>
+                <pneumatic-press type="bool">true</pneumatic-press>
+                <cockpit-fans type="bool">true</cockpit-fans>
+
+                <gen-control-l-pos type="double">1</gen-control-l-pos>
+                <gen-control-r-pos type="double">1</gen-control-r-pos>
+                <inverter-1-pos type="double">1</inverter-1-pos>
+                <inverter-2-pos type="double">1</inverter-2-pos>
+                <unused-pos type="double">1</unused-pos>
+                <ws-heat-l-pos type="double">1</ws-heat-l-pos>
+                <ws-heat-r-pos type="double">1</ws-heat-r-pos>
+                <flt-compt-fans-pos type="double">1</flt-compt-fans-pos>
+                <doors-unlocked-pos type="double">1</doors-unlocked-pos>
+                <reading-pos type="double">1</reading-pos>
+                <cabin-lts-pos type="double">1</cabin-lts-pos>
+                <general-pos type="double">1</general-pos>
+                <emer-lts-pos type="double">1</emer-lts-pos>
+                <cabin-vent-fan-pos type="double">1</cabin-vent-fan-pos>
+                <pneumatic-press-pos type="double">1</pneumatic-press-pos>
+                <cockpit-fans-pos type="double">1</cockpit-fans-pos>
+            </overhead>
         </circuit-breakers>
         <engine n="0">
             <generator>false</generator>
@@ -234,6 +269,8 @@
         <landing-light-pos n="1" type="double">0</landing-light-pos>
         <nav-lights-pos type="double">0</nav-lights-pos>
         <no-smoking-pos type="double">0</no-smoking-pos>
+        <overhead-light type="bool">false</overhead-light>
+        <overhead-light-pos type="double">0</overhead-light-pos>
         <seat-belt-pos type="double">0</seat-belt-pos>
         <strobe-pos type="double">0</strobe-pos>
         <taxi-lights-pos type="double">0</taxi-lights-pos>

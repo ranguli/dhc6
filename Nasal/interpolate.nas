@@ -74,6 +74,14 @@ setlistener("/controls/lighting/instrument-lights", func(v) {
     interpolate("/controls/lighting/instrument-lights-pos", v.getValue(), 0.1);
 });
 
+setlistener("/controls/lighting/overhead-light", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/lighting/overhead-light-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/lighting/overhead-light-pos", 0, 0.1);
+    }
+});
+
 setlistener("/controls/lighting/cabin-lights", func(v) {
     if(v.getValue()){
         interpolate("/controls/lighting/cabin-lights-pos", 1, 0.1);
@@ -986,5 +994,134 @@ setlistener("/controls/electric/circuit-breakers/center/unused7", func(v) {
         interpolate("/controls/electric/circuit-breakers/center/unused7-pos", 1, 0.1);
     }else{
         interpolate("/controls/electric/circuit-breakers/center/unused7-pos", 0, 0.1);
+    }
+});
+
+# Overhead
+setlistener("/controls/electric/circuit-breakers/overhead/gen-control-l", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/gen-control-l-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/gen-control-l-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/gen-control-r", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/gen-control-r-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/gen-control-r-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/inverter-1", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/inverter-1-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/inverter-1-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/inverter-2", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/inverter-2-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/inverter-2-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/unused", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/unused-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/unused-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/ws-heat-l", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/ws-heat-l-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/ws-heat-l-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/ws-heat-r", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/ws-heat-r-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/ws-heat-r-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/flt-compt-fans", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/flt-compt-fans-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/flt-compt-fans-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/doors-unlocked", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/doors-unlocked-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/doors-unlocked-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/reading", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/reading-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/reading-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/cabin-lts", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/cabin-lts-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/cabin-lts-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/general", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/general-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/general-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/emer-lts", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/emer-lts-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/emer-lts-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/cabin-vent-fan", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/cabin-vent-fan-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/cabin-vent-fan-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/pneumatic-press", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/pneumatic-press-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/pneumatic-press-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/circuit-breakers/overhead/cockpit-fans", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/circuit-breakers/overhead/cockpit-fans-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/circuit-breakers/overhead/cockpit-fans-pos", 0, 0.1);
     }
 });

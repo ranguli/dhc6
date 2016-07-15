@@ -605,6 +605,98 @@
     </step>
 
     <step>
+        <message>All circuit breakers on the overhead C/B panel have to be in</message>
+        <view>
+            <heading-offset-deg>306.9</heading-offset-deg>
+            <pitch-offset-deg>48.8</pitch-offset-deg>
+            <roll-offset-deg>0.0</roll-offset-deg>
+            <x-offset-m>0.0</x-offset-m>
+            <y-offset-m>0.7</y-offset-m>
+            <z-offset-m>-2.9</z-offset-m>
+            <field-of-view>75.9</field-of-view>
+        </view>
+        <marker>
+            <x-m>-2.9901</x-m>
+            <y-m>0.2355</y-m>
+            <z-m>0.9628</z-m>
+            <scale>7.9091</scale>
+        </marker>
+        <error>
+            <message>Insert ALL circuit breakers!</message>
+            <condition>
+                <or>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/gen-control-l</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/gen-control-r</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/inverter-1</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/inverter-2</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/unused</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/ws-heat-l</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/ws-heat-r</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/doors-unlocked</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/reading</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/cabin-lts</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/general</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/emer-lts</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/cabin-vent-fan</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/pneumatic-press</property>
+                    </not>
+                    <not>
+                        <property>/controls/electric/circuit-breakers/overhead/cockpit-fans</property>
+                    </not>
+                </or>
+            </condition>
+        </error>
+        <exit>
+            <condition>
+                <and>
+                    <property>/controls/electric/circuit-breakers/overhead/gen-control-l</property>
+                    <property>/controls/electric/circuit-breakers/overhead/gen-control-r</property>
+                    <property>/controls/electric/circuit-breakers/overhead/inverter-1</property>
+                    <property>/controls/electric/circuit-breakers/overhead/inverter-2</property>
+                    <property>/controls/electric/circuit-breakers/overhead/unused</property>
+                    <property>/controls/electric/circuit-breakers/overhead/ws-heat-l</property>
+                    <property>/controls/electric/circuit-breakers/overhead/ws-heat-r</property>
+                    <property>/controls/electric/circuit-breakers/overhead/doors-unlocked</property>
+                    <property>/controls/electric/circuit-breakers/overhead/reading</property>
+                    <property>/controls/electric/circuit-breakers/overhead/cabin-lts</property>
+                    <property>/controls/electric/circuit-breakers/overhead/general</property>
+                    <property>/controls/electric/circuit-breakers/overhead/emer-lts</property>
+                    <property>/controls/electric/circuit-breakers/overhead/cabin-vent-fan</property>
+                    <property>/controls/electric/circuit-breakers/overhead/pneumatic-press</property>
+                    <property>/controls/electric/circuit-breakers/overhead/cockpit-fans</property>
+                </and>
+            </condition>
+        </exit>
+    </step>
+
+    <step>
         <set>
             <property>sim/yokes-visible</property>
             <value>true</value>
@@ -864,6 +956,12 @@
             </condition>
         </error>
         <error>
+            <message>Turn off the overhead light</message>
+            <condition>
+                <property>/controls/lighting/overhead-light</property>
+            </condition>
+        </error>
+        <error>
             <message>Turn off the instrument lights</message>
             <condition>
                 <equals>
@@ -916,6 +1014,9 @@
                     </not>
                     <not>
                         <property>/controls/lighting/cabin-lights</property>
+                    </not>
+                    <not>
+                        <property>/controls/lighting/overhead-light</property>
                     </not>
                     <not-equals>
                             <property>/controls/lighting/instrument-lights</property>
@@ -1072,6 +1173,38 @@
         <exit>
             <condition>
                 <property>/controls/lighting/cabin-lights</property>
+            </condition>
+        </exit>
+    </step>
+
+    <step>
+        <message>Also switch on the overhead light</message>
+        <view>
+            <heading-offset-deg>267.3</heading-offset-deg>
+            <pitch-offset-deg>26.2</pitch-offset-deg>
+            <roll-offset-deg>0.0</roll-offset-deg>
+            <x-offset-m>-0.2</x-offset-m>
+            <y-offset-m>0.8</y-offset-m>
+            <z-offset-m>-3.1</z-offset-m>
+            <field-of-view>30.8</field-of-view>
+        </view>
+        <marker>
+            <x-m>-3.1198</x-m>
+            <y-m>0.2603</y-m>
+            <z-m>0.9537</z-m>
+            <scale>1.3802</scale>
+        </marker>
+        <error>
+            <message>Switch on the overhead light</message>
+            <condition>
+                <not>
+                    <property>/controls/lighting/overhead-light</property>
+                </not>
+            </condition>
+        </error>
+        <exit>
+            <condition>
+                <property>/controls/lighting/overhead-light</property>
             </condition>
         </exit>
     </step>

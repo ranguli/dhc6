@@ -434,6 +434,7 @@
             <file>Aircraft/dhc6/Nasal/als-taxi-lights.nas</file>
             <file>Nasal/flashlight.nas</file>
             <file>Aircraft/dhc6/Nasal/cabin-light.nas</file>
+            <file>Aircraft/dhc6/Nasal/overhead-light.nas</file>
             <file>Aircraft/dhc6/Nasal/limits.nas</file>
             <file>Aircraft/dhc6/Nasal/ground-services.nas</file>
             <file>Aircraft/dhc6/Models/Flightdeck/Instruments/ki266/ki266.nas</file>

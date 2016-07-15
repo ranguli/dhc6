@@ -416,6 +416,36 @@
             </item>
 
             <item>
+                <name>Overhead panel circuit breakers</name>
+                <value>CHECK ALL IN</value>
+                <marker>
+                    <x-m>-2.9901</x-m>
+                    <y-m>0.2355</y-m>
+                    <z-m>0.9628</z-m>
+                    <scale>7.9091</scale>
+                </marker>
+                <condition>
+                    <and>
+                        <property>/controls/electric/circuit-breakers/overhead/gen-control-l</property>
+                        <property>/controls/electric/circuit-breakers/overhead/gen-control-r</property>
+                        <property>/controls/electric/circuit-breakers/overhead/inverter-1</property>
+                        <property>/controls/electric/circuit-breakers/overhead/inverter-2</property>
+                        <property>/controls/electric/circuit-breakers/overhead/unused</property>
+                        <property>/controls/electric/circuit-breakers/overhead/ws-heat-l</property>
+                        <property>/controls/electric/circuit-breakers/overhead/ws-heat-r</property>
+                        <property>/controls/electric/circuit-breakers/overhead/doors-unlocked</property>
+                        <property>/controls/electric/circuit-breakers/overhead/reading</property>
+                        <property>/controls/electric/circuit-breakers/overhead/cabin-lts</property>
+                        <property>/controls/electric/circuit-breakers/overhead/general</property>
+                        <property>/controls/electric/circuit-breakers/overhead/emer-lts</property>
+                        <property>/controls/electric/circuit-breakers/overhead/cabin-vent-fan</property>
+                        <property>/controls/electric/circuit-breakers/overhead/pneumatic-press</property>
+                        <property>/controls/electric/circuit-breakers/overhead/cockpit-fans</property>
+                    </and>
+                </condition>
+            </item>
+
+            <item>
                 <name>Generator switches</name>
                 <value>OFF</value>
                 <marker>
@@ -528,8 +558,9 @@
 
             <item>
                 <name>Lights</name>
-                <value>Anti Coll,Posn, Beacon,</value>
+                <value>Anti Coll, Posn, Beacon,</value>
                 <value>Caution, Taxi, Landing</value>
+                <value>Cabin, Overhead, Instruments</value>
                 <value>OFF</value>
                 <condition>
                     <and>
@@ -538,6 +569,9 @@
                         </not>
                         <not>
                             <property>/controls/lighting/cabin-lights</property>
+                        </not>
+                        <not>
+                            <property>/controls/lighting/overhead-light</property>
                         </not>
                         <not-equals>
                             <property>/controls/lighting/instrument-lights</property>
@@ -626,6 +660,20 @@
                 </marker>
                 <condition>
                     <property>/controls/lighting/cabin-lights</property>
+                </condition>
+            </item>
+
+            <item>
+                <name>Overhead light</name>
+                <value>ON</value>
+                <marker>
+                    <x-m>-3.1198</x-m>
+                    <y-m>0.2603</y-m>
+                    <z-m>0.9537</z-m>
+                    <scale>1.3802</scale>
+                </marker>
+                <condition>
+                    <property>/controls/lighting/overhead-light</property>
                 </condition>
             </item>
 
@@ -2836,6 +2884,22 @@
                         <property>/controls/lighting/instrument-lights</property>
                         <value>0</value>
                     </equals>
+                </condition>
+            </item>
+
+            <item>
+                <name>Overhead light</name>
+                <value>OFF</value>
+                <marker>
+                    <x-m>-3.1198</x-m>
+                    <y-m>0.2603</y-m>
+                    <z-m>0.9537</z-m>
+                    <scale>1.3802</scale>
+                </marker>
+                <condition>
+                    <not>
+                        <property>/controls/lighting/overhead-light</property>
+                    </not>
                 </condition>
             </item>
 

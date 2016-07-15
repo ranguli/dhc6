@@ -183,6 +183,8 @@ init_switches = func() {
     append(output_list,"nav-lights");
     append(switch_list,"controls/lighting/cabin-lights");
     append(output_list,"cabin-lights");
+    append(switch_list,"controls/lighting/overhead-light");
+    append(output_list,"overhead-light");
     append(switch_list,"controls/lighting/wing-lights");
     append(output_list,"wing-lights");
     append(switch_list,"controls/lighting/recog-lights");
