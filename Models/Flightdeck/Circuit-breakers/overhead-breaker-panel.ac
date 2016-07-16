@@ -1486,7 +1486,7 @@ kids 0
 OBJECT poly
 name "fuse-panel"
 loc -3.21119 0.961697 -0.222139
-texture "E:/FlightGear Aircraft/dhc6/Models/Flightdeck/ohpanel.png"
+texture "ohpanel.png"
 crease 114.000000
 numvert 49
 0.0871518 -0.000696361 0.0397817
@@ -38533,7 +38533,7 @@ kids 0
 OBJECT poly
 name "throttleQ"
 loc -3.07614 1.01723 -0.24143
-texture "E:/FlightGear Aircraft/dhc6/Models/Flightdeck/ohpanel.png"
+texture "ohpanel.png"
 crease 92.000000
 numvert 93
 0.208477 -0.0487432 -0.065656
@@ -39222,7 +39222,7 @@ kids 0
 OBJECT poly
 name "ohpanel-light.base"
 loc -3.12194 0.962204 -0.222483
-texture "E:/FlightGear Aircraft/dhc6/Models/Flightdeck/ohpanel.png"
+texture "ohpanel.png"
 crease 114.000000
 numvert 357
 0.00162935 -0.00202692 -0.0392834
@@ -43405,7 +43405,7 @@ name "ohpanel-light.switch"
 loc -3.53308 0.118442 -0.195825
 data 10
 switch.003
-texture "E:/FlightGear Aircraft/dhc6/Models/Flightdeck/ohpanel.png"
+texture "ohpanel.png"
 crease 80.000000
 numvert 65
 0.415728 0.828353 -0.0643007
