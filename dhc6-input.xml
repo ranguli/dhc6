@@ -500,6 +500,15 @@
             </binding>
         </key>
 
+        <key n="5">
+            <name>Ctrl-E</name>
+            <desc>Toggle external power</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/model/equipment/ground-services/external-power/enable</property>
+            </binding>
+        </key>
+
     </keyboard>
 
     <mice include="dhc6-mice.xml"/>
