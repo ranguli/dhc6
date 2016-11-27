@@ -117,10 +117,10 @@
             </item>
 
             <item>
-                <label>DHC-6 wiki page</label>
+                <label>About this aircraft</label>
                 <binding>
-                    <command>open-browser</command>
-                    <path>http://wiki.flightgear.org/De_Havilland_Canada_DHC-6_Twin_Otter</path>
+                    <command>dialog-show</command>
+                    <dialog-name>dhc6-about</dialog-name>
                 </binding>
             </item>
 

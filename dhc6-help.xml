@@ -157,19 +157,4 @@
     <line>Maximum Operating Speed (Vmo) up to 25,000 ft MSL: 115 KIAS</line>
     <line>Typical Cruise Speed (up to 10000 ft MSL): around 150 KIAS</line>
 
-    <text>
-Some information about the Twin Otter:
-The DHC-6 Twin Otter is a Canadian 19-passenger STOL aircraft developed by de Havilland Canada.
-It's first flight was on May 20th, 1965 and it was produced until 1988. Since 2008 Viking Air produces the Twin Otter in License as DHC-6-400 Series.
-Till today there were built more than 900 Twin Otters.
-It's STOL abilities and high rate of climb have made it ideal for regional cargo/passenger transport and for MEDEVAC flights. In USA and in Europe it is a popular aircraft in the commercial skydiving sector.
-The aircraft's powerful engines make the DHC-6 a suitable bush plane for inaccessible and remote terrain in many development countries.
-The version of the Twin Otter in FlightGear is the DHC-6-300 Series
-
----
-From Wikipedia, the free encyclopedia
-en.wikipedia.org/wiki/De_Havilland_Canada_DHC_6_Twin_Otter (Oct 31th, 2014)
-de.wikipedia.org/wiki/De_Havilland_Canada_DHC_6 (Oct 31th, 2014)
-    </text>
-
 </PropertyList>
