@@ -78,15 +78,6 @@
         </binding>
       </checkbox>
 
-    <button>
-        <legend>Ground Services</legend>
-        <padding>5</padding>
-        <binding>
-            <command>nasal</command>
-            <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "ground-services"}));</script>
-        </binding>
-    </button>
-
       <group>
         <layout>hbox</layout>
         <hrule>

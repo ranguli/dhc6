@@ -37,11 +37,67 @@
             </item>
 
             <item>
-                <label>Nose wheel steering</label>
+                <label>Nose wheel</label>
                 <binding>
                     <command>nasal</command>
                     <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "tiller"}));</script>
                 </binding>
+            </item>
+
+            <item>
+                <label>---Ground Services---</label>
+                <enabled>false</enabled>
+            </item>
+
+            <item>
+                <label>Fuel truck</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "fuel-truck"}));</script>
+                </binding>
+            </item>
+
+            <item>
+                <label>Securing</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>fgcommand("dialog-show", props.Node.new({"dialog-name": "equipment"}));</script>
+                </binding>
+            </item>
+
+            <item>
+                <label>External power</label>
+                <binding>
+                    <condition>
+                        <and>
+                            <or>
+                                <and>
+                                    <property>gear/gear[1]/ground-is-solid</property>
+                                    <property>gear/gear[1]/wow</property>
+                                </and>
+                                <and>
+                                    <property>gear/gear[6]/ground-is-solid</property>
+                                    <property>gear/gear[6]/wow</property>
+                                </and>
+                            </or>
+                            <less-than>
+                                <property>velocities/airspeed-kt</property>
+                                <value>1.0</value>
+                            </less-than>
+                        </and>
+                    </condition>
+                    <command>property-toggle</command>
+                    <property>sim/model/equipment/ground-services/external-power/enable</property>
+                </binding>
+            <binding>
+                <command>nasal</command>
+                <script>gui.popupTip(sprintf("External power: %i", getprop("/sim/model/equipment/ground-services/external-power/enable")), 5);</script>
+            </binding>
+            </item>
+
+            <item>
+                <label>-----------------</label>
+                <enabled>false</enabled>
             </item>
 
             <item>

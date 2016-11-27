@@ -507,6 +507,10 @@
                 <command>property-toggle</command>
                 <property>sim/model/equipment/ground-services/external-power/enable</property>
             </binding>
+            <binding>
+                <command>nasal</command>
+                <script>gui.popupTip(sprintf("External power: %i", getprop("/sim/model/equipment/ground-services/external-power/enable")), 5);</script>
+            </binding>
         </key>
 
     </keyboard>
