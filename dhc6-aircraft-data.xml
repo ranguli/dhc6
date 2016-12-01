@@ -263,6 +263,7 @@
     <path>/sim/pilots/pilots-enabled</path>
     <path>/sim/pilots/show-copilot</path>
     <path>/sim/pilots/show-pilot</path>
+    <path>/sim/rendering/show-shadow</path>
     <path>/sim/weight[0]/weight-lb</path>
     <path>/sim/weight[1]/weight-lb</path>
 </PropertyList>

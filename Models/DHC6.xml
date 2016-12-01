@@ -1231,6 +1231,7 @@
     <model>
         <name>shadow</name>
         <condition>
+            <property>sim/rendering/show-shadow</property>
             <not-equals>
                 <property>sim/multiplay/generic/string</property>
                 <value>dhc6F</value>
@@ -1248,6 +1249,7 @@
     <model>
         <name>shadowF</name>
         <condition>
+            <property>sim/rendering/show-shadow</property>
             <equals>
                 <property>sim/multiplay/generic/string</property>
                 <value>dhc6F</value>
