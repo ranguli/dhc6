@@ -36,13 +36,13 @@ props.globals.initNode("controls/switches/dme-gps-slave", 0);
 ###################################
 
 var Startup = func{
-	setprop("sim/model/equipment/ground-services/external-power/enable",1);
-	setprop("sim/model/equipment/ground-services/fuel-truck/clean",0);
-	setprop("sim/model/equipment/ground-services/fuel-truck/transfer",0);
-	setprop("sim/model/equipment/ground-services/fuel-truck/connect-aft",0);
-	setprop("sim/model/equipment/ground-services/fuel-truck/connect-fwd",0);
-	setprop("sim/model/equipment/ground-services/fuel-truck/disconnect",1);
-	setprop("sim/model/equipment/ground-services/fuel-truck/enable",0);
+    setprop("sim/model/equipment/ground-services/external-power/enable",1);
+    setprop("sim/model/equipment/ground-services/fuel-truck/clean",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/transfer",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/connect-aft",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/connect-fwd",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/disconnect",1);
+    setprop("sim/model/equipment/ground-services/fuel-truck/enable",0);
     setprop("controls/electric/avionics-switch",1);
     setprop("controls/electric/battery-switch",1);
     setprop("controls/electric/power-source",-1);
@@ -82,26 +82,26 @@ var Startup = func{
     
         if (getprop("engines/engine[0]/running") == 0 and getprop("engines/engine[1]/running") == 0) {
         }
-        
+
         if (getprop("engines/engine[0]/n2") > 12.0) {
             setprop("controls/engines/engine[0]/condition",1);
             setprop("controls/engines/engine[0]/mixture",1);
-            
+
         }
-    
+
         if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 0) {
         setprop("controls/engines/internal-engine-starter",-1);
-        }    
+        }
         if (getprop("engines/engine[1]/n2") > 12.0) {
             setprop("controls/engines/engine[1]/condition",1);
             setprop("controls/engines/engine[1]/mixture",1);
-            
+
         }
         if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1 and getprop("engines/engine[1]/rpm") > 200) {
-			setprop("sim/model/equipment/ground-services/external-power/enable",0);
+            setprop("sim/model/equipment/ground-services/external-power/enable",0);
             setprop("controls/engines/internal-engine-starter",0);
             setprop("controls/electric/ammeter-switch",1);
-    		setprop("controls/electric/power-source",1);
+            setprop("controls/electric/power-source",1);
             setprop("controls/engines/engine[0]/propeller-pitch",1);
             setprop("controls/engines/engine[1]/propeller-pitch",1);
             setprop("controls/lighting/no-smoking",1);
@@ -390,15 +390,15 @@ if(tnk == -1){
 
 
 setlistener("/sim/model/autostart", func(idle){
-      if(idle.getBoolValue())Startup() else Shutdown();
+    if(idle.getBoolValue())Startup() else Shutdown();
 },0,0);
 
 setlistener("controls/engines/engine[0]/cutoff", func(c1){
-      setprop("controls/engines/engine[0]/internal-condition",1-c1.getValue());
+    setprop("controls/engines/engine[0]/internal-condition",1-c1.getValue());
 },0,0);
 
 setlistener("controls/engines/engine[1]/cutoff", func(c1){
-      setprop("controls/engines/engine[1]/internal-condition",1-c1.getValue());
+    setprop("controls/engines/engine[1]/internal-condition",1-c1.getValue());
 },0,0);
 
 setlistener("/gear/gear[1]/wow", func(gr){
@@ -507,17 +507,18 @@ var update_systems = func {
 
 # Thrust reverse info
 var reverse_chg = func {
-   if (getprop("/controls/engines/engine[0]/reverser")) {
-      mess_e0="Left engine active"
-   } else {
-      mess_e0="Left engine inactive"
-   }
-   if (getprop("/controls/engines/engine[1]/reverser")) {
-      mess_e1="Right engine active"
-   } else {
-      mess_e1="Right engine inactive"
-   }
-   gui.popupTip(sprintf("Thrust reverse:\n%s\n%s", mess_e0, mess_e1), 30, nil, {x: 1, y: 1});
+    if(getprop("/sim/replay/replay-state") == 1) return;
+    if (getprop("/controls/engines/engine[0]/reverser")) {
+        mess_e0="Left engine active"
+    } else {
+        mess_e0="Left engine inactive"
+    }
+    if (getprop("/controls/engines/engine[1]/reverser")) {
+        mess_e1="Right engine active"
+    } else {
+        mess_e1="Right engine inactive"
+    }
+    gui.popupTip(sprintf("Thrust reverse:\n%s\n%s", mess_e0, mess_e1), 30, nil, {x: 1, y: 1});
 }
 setlistener("/controls/engines/engine[0]/reverser", reverse_chg);
 setlistener("/controls/engines/engine[1]/reverser", reverse_chg);
@@ -567,13 +568,13 @@ var DMEinit = func {
 setlistener("/sim/signals/fdm-initialized", DMEinit );
 
 var DMESources = {
-  1 : "/instrumentation/nav[0]/frequencies/selected-mhz",
-  2 : "/instrumentation/dme/frequencies/selected-mhz",
-  3 : "/instrumentation/nav[1]/frequencies/selected-mhz"
+    1 : "/instrumentation/nav[0]/frequencies/selected-mhz",
+    2 : "/instrumentation/dme/frequencies/selected-mhz",
+    3 : "/instrumentation/nav[1]/frequencies/selected-mhz"
 };
 
 setlistener( "/instrumentation/dme/switch-position", func(n) {
-  var v = n.getValue();
-  v == nil and return;
-  n.getParent().getNode( "frequencies/source", 1 ).setValue(DMESources[v]);
+    var v = n.getValue();
+    v == nil and return;
+    n.getParent().getNode( "frequencies/source", 1 ).setValue(DMESources[v]);
 }, 1, 0 );
