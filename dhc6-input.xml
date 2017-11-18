@@ -9,27 +9,52 @@
         <key n="127">
             <name>Delete</name>
             <desc>Toggle Reversers</desc>
+            <!-- Yasim version -->
             <binding>
                 <condition>
-                    <equals>
-                        <property>controls/engines/engine[0]/throttle</property>
-                        <value>0</value>
-                    </equals>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>yasim</value>
+                        </equals>
+                        <equals>
+                            <property>controls/engines/engine[0]/throttle</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
                 </condition>
                 <command>property-toggle</command>
                 <property>controls/engines/engine[0]/reverser</property>
             </binding>
             <binding>
                 <condition>
-                    <equals>
-                        <property>controls/engines/engine[1]/throttle</property>
-                        <value>0</value>
-                    </equals>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>yasim</value>
+                        </equals>
+                        <equals>
+                            <property>controls/engines/engine[1]/throttle</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
                 </condition>
                 <command>property-toggle</command>
                 <property>controls/engines/engine[1]/reverser</property>
             </binding>
+            <!-- JSBSim version -->
+            <binding>
+                <condition>
+                    <equals>
+                        <property>sim/flight-model</property>
+                        <value>jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>gui.popupTip(sprintf("Thrust reverse not yet implemented!"), 5);</script>
+            </binding>
         </key>
+
 
         <key n="79">
             <name>O</name>
@@ -188,19 +213,64 @@
 
         <key n="109">
             <name>m</name>
-            <desc>Toggle intake deflectors on/off</desc>
+            <desc>Extend intake deflectors</desc>
             <binding>
-            <command>property-toggle</command>
-            <property>controls/engines/engine/intake-deflector</property>
+                <command>property-assign</command>
+                <property>controls/engines/engine[0]/intake-deflector-extend</property>
+                <value type="int">1</value>
             </binding>
             <binding>
-                <command>property-toggle</command>
-                <property>controls/engines/engine[1]/intake-deflector</property>
+                <command>property-assign</command>
+                <property>controls/engines/engine[1]/intake-deflector-extend</property>
+                <value type="int">1</value>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Intake deflactors: %i", getprop("/controls/engines/engine/intake-deflector")), 5);</script>
+                <script>gui.popupTip(sprintf("Intake deflectors: %1.2f", getprop("/controls/engines/engine/intake-deflector")), 5);</script>
             </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[0]/intake-deflector-extend</property>
+                    <value type="int">0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[1]/intake-deflector-extend</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </key>
+
+        <key n="77">
+            <name>m</name>
+            <desc>Retract intake deflectors</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/engines/engine[0]/intake-deflector-extend</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/engines/engine[1]/intake-deflector-extend</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>gui.popupTip("Intake deflectors RETRACTED", 5);</script>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[0]/intake-deflector-extend</property>
+                    <value type="int">0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[1]/intake-deflector-extend</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
         </key>
 
         <key n="121">

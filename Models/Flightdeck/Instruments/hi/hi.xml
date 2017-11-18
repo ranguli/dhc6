@@ -66,10 +66,10 @@
         <object-name>front</object-name>
         <object-name>robin</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -154,7 +154,7 @@
             <red>   0.07 </red>
             <green> 0.04 </green>
             <blue>  0.04 </blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -215,7 +215,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>heading-bug</tooltip-id>
                 <mapping>heading</mapping>
-                <label>Heading Bug: %3d</label>
+                <label>Heading Bug: %3d deg</label>
                 <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
         </binding>
         </hovered>
@@ -242,7 +242,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>heading-offset</tooltip-id>
-                <label>Current Heading : %3d</label>
+                <label>Current Heading : %3d deg</label>
                 <mapping>heading</mapping>
                 <property>instrumentation/heading-indicator-real-dg/indicated-heading-deg</property>
             </binding>
@@ -311,7 +311,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>heading-bug</tooltip-id>
                 <mapping>heading</mapping>
-                <label>Heading Bug: %3d</label>
+                <label>Heading Bug: %3d deg</label>
                 <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
             </binding>
         </hovered>
@@ -378,7 +378,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>heading-bug</tooltip-id>
                 <mapping>heading</mapping>
-                <label>Heading Bug: %3d</label>
+                <label>Heading Bug: %3d deg</label>
                 <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
             </binding>
         </hovered>
@@ -445,7 +445,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>heading-offset</tooltip-id>
-                <label>Current Heading: %3d</label>
+                <label>Current Heading: %3d deg</label>
                 <mapping>heading</mapping>
                 <property>instrumentation/heading-indicator-real-dg/indicated-heading-deg</property>
             </binding>
@@ -512,7 +512,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>heading-offset</tooltip-id>
-                <label>Current Heading: %3d</label>
+                <label>Current Heading: %3d deg</label>
                 <mapping>heading</mapping>
                 <property>instrumentation/heading-indicator-real-dg/indicated-heading-deg</property>
             </binding>

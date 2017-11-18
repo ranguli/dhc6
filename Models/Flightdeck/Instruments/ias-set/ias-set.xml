@@ -25,10 +25,10 @@
         <object-name>ias.100</object-name>
         <object-name>ias.knob</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -45,10 +45,10 @@
         <object-name>ias.10</object-name>
         <object-name>ias.1</object-name>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -65,7 +65,7 @@
             <red>0.8</red>
             <green>0.8</green>
             <blue>0.8</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -184,7 +184,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>ap-ias-setting</tooltip-id>
-                <label>AP IAS Speed: %.0f</label>
+                <label>AP Airspeed: %.0f kts</label>
                 <property>autopilot/settings/target-speed-kt</property>
             </binding>
         </hovered>   

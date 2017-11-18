@@ -20,7 +20,7 @@
                         <value>1</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/outputs/fire-bell</property>
                         <value>0</value>
                     </greater-than>
                     <not>
@@ -53,13 +53,13 @@
                         <value>1</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/outputs/seatbelt</property>
                         <value>0</value>
                     </greater-than>
                 </and>
             </condition>
             <volume>
-                <factor>0.5</factor>
+                <factor>0.3</factor>
             </volume>
             <position>
                 <x>-2.8</x>
@@ -85,13 +85,13 @@
                         <value>0</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/buses/R-28V-DC-volts</property>
                         <value>0</value>
                     </greater-than>
                 </and>
             </condition>
             <volume>
-                <factor>0.5</factor>
+                <factor>0.3</factor>
             </volume>
             <position>
                 <x>-2.8</x>
@@ -117,13 +117,13 @@
                         <value>1</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/outputs/no-smoking</property>
                         <value>0</value>
                     </greater-than>
                 </and>
             </condition>
             <volume>
-                <factor>0.5</factor>
+                <factor>0.3</factor>
             </volume>
             <position>
                 <x>-2.8</x>
@@ -149,13 +149,13 @@
                         <value>0</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/buses/R-28V-DC-volts</property>
                         <value>0</value>
                     </greater-than>
                 </and>
             </condition>
             <volume>
-                <factor>0.5</factor>
+                <factor>0.3</factor>
             </volume>
             <position>
                 <x>-2.8</x>
@@ -178,7 +178,7 @@
                 <or>
                     <and>
                         <greater-than>
-                            <property>systems/electrical/volts</property>
+                            <property>systems/electrical/outputs/stall-warn</property>
                             <value>0</value>
                         </greater-than>
                         <greater-than>
@@ -199,11 +199,17 @@
                         </greater-than>
                         <property>sim/current-view/internal</property>
                     </and>
-                    <!-- caution test activates stall horn -->
-                    <greater-than>
-                        <property>systems/electrical/outputs/caution-test</property>
-                        <value>0</value>
-                    </greater-than>
+                    <!-- caution test activates stall horn if circuit breaker is in -->
+                    <and>
+                        <greater-than>
+                            <property>controls/electric/caution-test</property>
+                            <value>0</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>systems/electrical/outputs/stall-warn</property>
+                            <value>0</value>
+                        </greater-than>
+                    </and>
                 </or>
             </condition>
             <volume>
@@ -265,6 +271,7 @@
                         <property>systems/electrical/volts</property>
                         <value>0</value>
                     </greater-than>
+                    <property>sim/current-view/internal</property>
                 </and>
             </condition>
             <volume>
@@ -287,6 +294,7 @@
                         <property>systems/electrical/volts</property>
                         <value>0</value>
                     </greater-than>
+                    <property>sim/current-view/internal</property>
                 </and>
             </condition>
             <volume>
@@ -313,10 +321,16 @@
                             <value>0</value>
                         </equals>
                     </not>
-                    <greater-than>
-                        <property>systems/electrical/volts</property>
-                        <value>0</value>
-                    </greater-than>
+                    <or>
+                        <greater-than>
+                            <property>systems/electrical/outputs/starter-l</property>
+                            <value>0</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>systems/electrical/outputs/starter-r</property>
+                            <value>0</value>
+                        </greater-than>
+                    </or>
                 </and>
             </condition>
             <volume>
@@ -343,12 +357,13 @@
             </condition>
             <volume>
                 <property>sim/sound/engine[0]</property>
-                <factor>1.2</factor>
+                <factor>5</factor>
+                <offset>0</offset>
             </volume>
             <pitch>
                 <property>sim/sound/engine[0]</property>
                 <factor>1.1</factor>
-                <offset>0.5</offset>
+                <offset>0</offset>
             </pitch>
             <position>
                 <x>-1.5</x>
@@ -367,30 +382,50 @@
             <path>Aircraft/dhc6/Sounds/fullpower-int.wav</path>
             <property>sim/sound/engine[0]</property>
             <condition>
-                <and>
-                    <greater-than>
-                        <property>controls/engines/engine[0]/condition</property>
-                        <value>0.001</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>engines/engine[0]/n2</property>
-                        <value>10</value>
-                    </greater-than>
-                    <not>
-                        <property>controls/engines/engine[0]/cutoff</property>
-                    </not>
-                    <property>sim/current-view/internal</property>
-                 </and>
+                <or>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>jsb</value>
+                        </equals>
+                        <greater-than>
+                            <property>controls/engines/engine[0]/condition</property>
+                            <value>0.001</value>
+                        </greater-than>
+                        <not>
+                            <property>controls/engines/engine[0]/cutoff</property>
+                        </not>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>yasim</value>
+                        </equals>
+                        <greater-than>
+                            <property>controls/engines/engine[0]/condition</property>
+                            <value>0.001</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>engines/engine[0]/n2</property>
+                            <value>10</value>
+                        </greater-than>
+                        <not>
+                            <property>controls/engines/engine[0]/cutoff</property>
+                        </not>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                </or>
             </condition>
             <volume>
                 <property>sim/sound/engine[0]</property>
-                <factor>1.0</factor>
-                <offset>0.3</offset>
+                <factor>5</factor>
+                <offset>0</offset>
             </volume>
             <pitch>
                 <property>sim/sound/engine[0]</property>
                 <factor>1.1</factor>
-                <offset>0.5</offset>
+                <offset>0</offset>
             </pitch>
             <position>
                 <x>-1.5</x>
@@ -420,13 +455,13 @@
             </condition>
             <volume>
                 <property>sim/sound/engine[1]</property>
-                <factor>1.2</factor>
-                <offset>0.0</offset>
+                <factor>5</factor>
+                <offset>0</offset>
             </volume>
             <pitch>
                 <property>sim/sound/engine[1]</property>
                 <factor>1.1</factor>
-                <offset>0.5</offset>
+                <offset>0</offset>
             </pitch>
             <position>
                 <x>-1.5</x>
@@ -443,30 +478,50 @@
             <path>Aircraft/dhc6/Sounds/fullpower-int.wav</path>
             <property>sim/sound/engine[1]</property>
             <condition>
-                <and>
-                    <greater-than>
-                        <property>controls/engines/engine[1]/condition</property>
-                        <value>0.001</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>engines/engine[1]/n2</property>
-                        <value>10</value>
-                    </greater-than>
-                    <not>
-                        <property>controls/engines/engine[1]/cutoff</property>
-                    </not>
-                    <property>sim/current-view/internal</property>
-                 </and>
+                <or>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>jsb</value>
+                        </equals>
+                        <greater-than>
+                            <property>controls/engines/engine[1]/condition</property>
+                            <value>0.001</value>
+                        </greater-than>
+                        <not>
+                            <property>controls/engines/engine[1]/cutoff</property>
+                        </not>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                    <and>
+                        <equals>
+                            <property>sim/flight-model</property>
+                            <value>yasim</value>
+                        </equals>
+                        <greater-than>
+                            <property>controls/engines/engine[1]/condition</property>
+                            <value>0.001</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>engines/engine[1]/n2</property>
+                            <value>10</value>
+                        </greater-than>
+                        <not>
+                            <property>controls/engines/engine[1]/cutoff</property>
+                        </not>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                </or>
             </condition>
             <volume>
                 <property>sim/sound/engine[1]</property>
-                <factor>1.0</factor>
-                <offset>0.3</offset>
+                <factor>5</factor>
+                <offset>0</offset>
             </volume>
             <pitch>
                 <property>sim/sound/engine[1]</property>
                 <factor>1.1</factor>
-                <offset>0.5</offset>
+                <offset>0</offset>
             </pitch>
             <position>
                 <x>-1.5</x>

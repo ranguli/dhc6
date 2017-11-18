@@ -37,10 +37,10 @@
         <object-name>alt.knob</object-name>
         <object-name>vs.knob</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -112,10 +112,10 @@
         <object-name>vs.1</object-name>
         <object-name>AltSet.cancel</object-name>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -358,25 +358,25 @@
     </animation>
 
     <animation>
-    <type>knob</type>
-    <object-name>alt.knob</object-name>
-    <action>
-        <binding>
-            <command>property-adjust</command>
-            <property>autopilot/settings/target-altitude-ft</property>
-            <factor>100</factor>
-            <min>1000</min>
-            <max>30000</max>
-            <wrap>false</wrap>
-        </binding>
-    </action>
-    <hovered>
-        <binding>
-            <command>set-tooltip</command>
-            <tooltip-id>ap-alt-setting</tooltip-id>
-            <label>AP Altitude: %.0f</label>
-            <property>autopilot/settings/target-altitude-ft</property>
-        </binding>
+        <type>knob</type>
+        <object-name>alt.knob</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-altitude-ft</property>
+                <factor>100</factor>
+                <min>1000</min>
+                <max>30000</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>ap-alt-setting</tooltip-id>
+                <label>AP Altitude: %.0f ft</label>
+                <property>autopilot/settings/target-altitude-ft</property>
+            </binding>
         </hovered>
     </animation>
 

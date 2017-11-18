@@ -46,10 +46,10 @@ Syd Adams
         <object-name>FuelQTY.needle</object-name>
         <object-name>FuelQTY.tank</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -86,9 +86,9 @@ Syd Adams
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>FuelQTY</tooltip-id>
-                <label>Fuel Qty: %g lbs</label>
-                <property>consumables/fuel/tank[0]/indicated-level-lbs</property>
+                <tooltip-id>FWDFuelQTY</tooltip-id>
+                <label>Forward Fuel Level: %d lbs</label>
+                <property>instrumentation/engine-instruments/fuel-qty-fwd/indicated-fuelqty-lbs</property>
             </binding>
         </hovered>
     </animation>
@@ -112,14 +112,12 @@ Syd Adams
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
-
-
 
     <animation>
         <type>textranslate</type>
@@ -128,15 +126,14 @@ Syd Adams
         <factor>0.0755</factor>
         <axis>
             <x>0</x>
-            <y>0</y>
-            <z>-1</z>
+            <y>-1</y>
         </axis>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>FuelQTY.needle</object-name>
-        <property>consumables/fuel/tank[0]/indicated-level-lbs</property>
+        <property>instrumentation/engine-instruments/fuel-qty-fwd/indicated-fuelqty-lbs</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
             <entry><ind>1400</ind><dep>320</dep></entry>

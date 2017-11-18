@@ -910,10 +910,16 @@
     <model>
         <name>left-chock-fwd</name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/chocks/left-chock-fwd.xml</path>
     </model>
@@ -990,10 +996,16 @@
     <model>
         <name>left-chock-aft</name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/chocks/left-chock-aft.xml</path>
     </model>
@@ -1071,10 +1083,16 @@
     <model>
         <name>right-chock-fwd</name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/chocks/right-chock-fwd.xml</path>
     </model>
@@ -1151,10 +1169,16 @@
     <model>
         <name>right-chock-aft</name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/chocks/right-chock-aft.xml</path>
     </model>
@@ -1915,9 +1939,78 @@
         <object-name>Lprop.1</object-name>
     </animation>
 
+    <!-- Blade angle: JSBSim version -->
     <animation>
         <object-name>Lprop.1</object-name>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <factor>1</factor>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>-2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>-2.8529</y2-m>
+            <z2-m>2.2496</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <object-name>Lprop.2</object-name>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>-2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>-1.7868</y2-m>
+            <z2-m>0.390561</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <object-name>Lprop.3</object-name>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>-2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>-3.9301</y2-m>
+            <z2-m>0.396365</z2-m>
+        </axis>
+    </animation>
+
+    <!-- Blade angle: Yasim version -->
+    <animation>
+        <object-name>Lprop.1</object-name>
+        <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[0]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -1938,10 +2031,16 @@
         <type>rotate</type>
         <property>controls/engines/engine[0]/propeller-pitch</property>
         <condition>
-            <greater-than>
-                <property>engines/engine[0]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than>
+                    <property>engines/engine[0]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -1960,6 +2059,12 @@
     <animation>
         <object-name>Lprop.2</object-name>
         <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[0]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -1980,10 +2085,16 @@
         <type>rotate</type>
         <property>controls/engines/engine[0]/propeller-pitch</property>
         <condition>
-            <greater-than> 
-                <property>engines/engine[0]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than> 
+                    <property>engines/engine[0]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -2002,6 +2113,12 @@
     <animation>
         <object-name>Lprop.3</object-name>
         <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[0]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -2022,10 +2139,16 @@
         <type>rotate</type>
         <property>controls/engines/engine[0]/propeller-pitch</property>
         <condition>
-            <greater-than> 
-                <property>engines/engine[0]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than> 
+                    <property>engines/engine[0]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -2041,6 +2164,7 @@
         </axis>
     </animation>
 
+    <!-- Select prop blades or prop disk -->
     <animation>
         <type>select</type>
         <object-name>LpropParent</object-name>
@@ -2048,7 +2172,7 @@
         <object-name>SpinnerInteriorL</object-name>
         <condition>
             <less-than> 
-                <property>engines/engine[0]/n2</property>
+                <property>engines/engine[0]/turbine-rpm</property>
                 <value>50.0000</value>
             </less-than>
         </condition> 
@@ -2060,16 +2184,48 @@
         <object-name>SpinnerLRot</object-name>
         <condition>
             <greater-than> 
-                <property>engines/engine[0]/n2</property>
+                <property>engines/engine[0]/turbine-rpm</property>
                 <value>28.000</value>
             </greater-than>
         </condition> 
     </animation>
 
+    <!-- Prop spin animation: JSBSim version -->
     <animation>
         <type>spin</type>
         <object-name>LpropParent</object-name>
         <object-name>SpinnerL</object-name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>engines/engine[0]/thruster/rpm</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>-2.660</x-m>
+            <y-m>-2.857</y-m>
+            <z-m>1.012</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <!-- Prop spin animation: Yasim version -->
+    <animation>
+        <type>spin</type>
+        <object-name>LpropParent</object-name>
+        <object-name>SpinnerL</object-name>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[0]/n2</property>
         <factor>-5.0</factor>
         <center>
@@ -2084,6 +2240,7 @@
         </axis>
     </animation>
 
+
     <animation>
         <name>RpropParent</name>
         <object-name>Rprop.1</object-name>
@@ -2091,9 +2248,78 @@
         <object-name>Rprop.3</object-name>
     </animation>
 
+    <!-- Blade angle: JSBSim version -->
     <animation>
         <object-name>Rprop.1</object-name>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <factor>1</factor>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>2.85019</y2-m>
+            <z2-m>2.25</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <object-name>Rprop.2</object-name>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>3.9266</y2-m>
+            <z2-m>0.390466</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <object-name>Rprop.3</object-name>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <axis>
+            <x1-m>-2.660</x1-m>
+            <y1-m>2.857</y1-m>
+            <z1-m>1.012</z1-m>
+            <x2-m>-2.660</x2-m>
+            <y2-m>1.7836</y2-m>
+            <z2-m>0.396336</z2-m>
+        </axis>
+    </animation>
+
+    <!-- Blade angle: Yasim version -->
+    <animation>
+        <object-name>Rprop.1</object-name>
+        <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[1]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -2114,10 +2340,16 @@
         <type>rotate</type>
         <property>controls/engines/engine[1]/propeller-pitch</property>
         <condition>
-            <greater-than> 
-                <property>engines/engine[1]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than>
+                    <property>engines/engine[1]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -2132,10 +2364,16 @@
             <z2-m>2.25</z2-m>
         </axis>
     </animation>
-
+    
     <animation>
         <object-name>Rprop.2</object-name>
         <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[1]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -2156,10 +2394,16 @@
         <type>rotate</type>
         <property>controls/engines/engine[1]/propeller-pitch</property>
         <condition>
-            <greater-than> 
-                <property>engines/engine[1]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than> 
+                    <property>engines/engine[1]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -2178,6 +2422,12 @@
     <animation>
         <object-name>Rprop.3</object-name>
         <type>rotate</type>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[1]/n2</property>
         <interpolation>
             <entry><ind> 0</ind><dep>61</dep></entry>
@@ -2192,16 +2442,22 @@
             <z2-m>0.396336</z2-m>
         </axis>
     </animation>
-    
+
     <animation>
         <object-name>Rprop.3</object-name>
         <type>rotate</type>
         <property>controls/engines/engine[1]/propeller-pitch</property>
         <condition>
-            <greater-than> 
-                <property>engines/engine[1]/n2</property>
-                <value>30</value>
-            </greater-than>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value type="string">dhc6jsb</value>
+                </not-equals>
+                <greater-than> 
+                    <property>engines/engine[1]/n2</property>
+                    <value>30</value>
+                </greater-than>
+            </and>
         </condition>
         <interpolation>
             <entry><ind>0</ind><dep>20</dep></entry>
@@ -2216,7 +2472,8 @@
             <z2-m>0.396336</z2-m>
       </axis>
     </animation>
-    
+
+    <!-- Select prop blades or prop disk -->
     <animation>
         <type>select</type>
         <object-name>RpropParent</object-name>
@@ -2224,7 +2481,7 @@
         <object-name>SpinnerInteriorR</object-name>
         <condition>
             <less-than> 
-                <property>engines/engine[1]/n2</property>
+                <property>engines/engine[1]/turbine-rpm</property>
                 <value>50.000</value>
             </less-than>
         </condition> 
@@ -2236,16 +2493,48 @@
         <object-name>SpinnerRRot</object-name>
         <condition>
             <greater-than> 
-                <property>engines/engine[1]/n2</property>
+                <property>engines/engine[1]/turbine-rpm</property>
                 <value>28.000</value>
             </greater-than>
         </condition> 
     </animation>
 
+    <!-- Prop spin animation: JSBSim version -->
     <animation>
         <type>spin</type>
         <object-name>RpropParent</object-name>
         <object-name>SpinnerR</object-name>
+        <condition>
+            <equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </equals>
+        </condition>
+        <property>engines/engine[1]/thruster/rpm</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>-2.660</x-m>
+            <y-m>2.857</y-m>
+            <z-m>1.012</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <!-- Prop spin animation: Yasim version -->
+    <animation>
+        <type>spin</type>
+        <object-name>RpropParent</object-name>
+        <object-name>SpinnerR</object-name>
+        <condition>
+            <not-equals>
+                <property>sim/multiplay/generic/string</property>
+                <value type="string">dhc6jsb</value>
+            </not-equals>
+        </condition>
         <property>engines/engine[1]/n2</property>
         <factor>-5.0</factor>
         <center>
@@ -2381,7 +2670,24 @@
         <object-name>Lrdoor-frt.001</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.LR_door_F.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/LR-door-F/open</property>
             </binding>
@@ -2394,7 +2700,24 @@
         <object-name>Lrdoor-rear.001</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.LR_door_R.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/LR-door-R/open</property>
             </binding>
@@ -2407,7 +2730,24 @@
         <object-name>LHdoor.inner</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.LF_door.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/LF-door/open</property>
             </binding>
@@ -2420,7 +2760,24 @@
         <object-name>RHdoor.inner</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.RF_door.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/RF-door/open</property>
             </binding>
@@ -2433,7 +2790,24 @@
         <object-name>RRdoor.inner</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.RR_door.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/RR-door/open</property>
             </binding>
@@ -2446,7 +2820,24 @@
         <object-name>Baggage.door.inn</object-name>
         <action>
             <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
+                <condition>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </equals>
+                </condition>
+                <command>nasal</command>
+                <script>dhc6.Baggage_door.toggle();</script>
+            </binding>
+            <binding>
+                <condition>
+                    <not-equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value type="string">dhc6jsb</value>
+                    </not-equals>
+                </condition>
                 <command>property-toggle</command>
                 <property>controls/doors/Baggage.door/open</property>
             </binding>
@@ -2463,11 +2854,17 @@
                 <condition>
                     <or>
                         <and>
-                            <property>gear/gear[1]/ground-is-solid</property>
+                            <or>
+                                <property>gear/gear[1]/ground-is-solid</property>
+                                <property>fdm/jsbsim/ground/solid</property>
+                            </or>
                             <property>gear/gear[1]/wow</property>
                         </and>
                         <and>
-                            <property>gear/gear[6]/ground-is-solid</property>
+                            <or>
+                                <property>gear/gear[6]/ground-is-solid</property>
+                                <property>fdm/jsbsim/ground/solid</property>
+                            </or>
                             <property>gear/gear[6]/wow</property>
                         </and>
                     </or>

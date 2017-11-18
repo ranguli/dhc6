@@ -10,6 +10,14 @@ setlistener("/controls/electric/battery-switch", func(v) {
     }
 });
 
+setlistener("/controls/electric/dc-master", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/dc-master-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/dc-master-pos", 0, 0.1);
+    }
+});
+
 setlistener("/controls/electric/power-source", func(v) {
     interpolate("/controls/electric/power-source-pos", v.getValue(), 0.1);
 });
@@ -62,12 +70,12 @@ setlistener("/controls/anti-ice/prop-heat", func(v) {
     }
 });
 
-setlistener("/controls/engines/engine[0]/intake-deflector", func(v) {
-    interpolate("/controls/engines/engine[0]/intake-deflector-pos", v.getValue(), 0.1);
+setlistener("/controls/engines/engine[0]/intake-deflector-extend", func(v) {
+    interpolate("/controls/engines/engine[0]/intake-deflector-extend-pos", v.getValue(), 0.1);
 });
 
-setlistener("/controls/engines/engine[1]/intake-deflector", func(v) {
-    interpolate("/controls/engines/engine[1]/intake-deflector-pos", v.getValue(), 0.1);
+setlistener("/controls/engines/engine[1]/intake-deflector-extend", func(v) {
+    interpolate("/controls/engines/engine[1]/intake-deflector-extend-pos", v.getValue(), 0.1);
 });
 
 setlistener("/controls/lighting/instrument-lights", func(v) {
@@ -88,6 +96,18 @@ setlistener("/controls/lighting/cabin-lights", func(v) {
     }else{
         interpolate("/controls/lighting/cabin-lights-pos", 0, 0.1);
     }
+});
+
+setlistener("/controls/lighting/entrance-lights", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/lighting/entrance-lights-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/lighting/entrance-lights-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/inverter", func(v) {
+    interpolate("/controls/electric/inverter-pos", v.getValue()-1, 0.1);
 });
 
 setlistener("/controls/lighting/strobe", func(v) {
@@ -119,6 +139,38 @@ setlistener("/controls/lighting/beacon", func(v) {
         interpolate("/controls/lighting/beacon-pos", 1, 0.1);
     }else{
         interpolate("/controls/lighting/beacon-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/lighting/flight-comp", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/lighting/flight-comp-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/lighting/flight-comp-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/pneumatic/engine[0]/bleed", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/pneumatic/engine[0]/bleed-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/pneumatic/engine[0]/bleed-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/pneumatic/engine[1]/bleed", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/pneumatic/engine[1]/bleed-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/pneumatic/engine[1]/bleed-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/bus-tie", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/bus-tie-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/bus-tie-pos", 0, 0.1);
     }
 });
 
@@ -162,6 +214,22 @@ setlistener("/controls/electric/engine[1]/generator", func(v) {
     }
 });
 
+setlistener("/controls/electric/engine[0]/generator-active", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/engine[0]/generator-active-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/engine[0]/generator-active-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/electric/engine[1]/generator-active", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/electric/engine[1]/generator-active-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/electric/engine[1]/generator-active-pos", 0, 0.1);
+    }
+});
+
 setlistener("/controls/flight/flaplever", func(v) {
     interpolate("/controls/flight/flaplever-pos", v.getValue(), 0.1);
 });
@@ -183,6 +251,22 @@ setlistener("/controls/engines/engine[1]/cutoff", func(v) {
         interpolate("/controls/engines/engine[1]/cutoff-pos", 1, 0.1);
     }else{
         interpolate("/controls/engines/engine[1]/cutoff-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/engines/engine[0]/emerg-cutoff", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/engines/engine[0]/emerg-cutoff-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/engines/engine[0]/emerg-cutoff-pos", 0, 0.1);
+    }
+});
+
+setlistener("/controls/engines/engine[1]/emerg-cutoff", func(v) {
+    if(v.getValue()){
+        interpolate("/controls/engines/engine[1]/emerg-cutoff-pos", 1, 0.1);
+    }else{
+        interpolate("/controls/engines/engine[1]/emerg-cutoff-pos", 0, 0.1);
     }
 });
 
@@ -222,13 +306,27 @@ setlistener("/controls/fuel/ind-test", func(v) {
     }
 });
 
-setlistener("/controls/electric/ammeter-switch", func(v) {
+setlistener("/controls/electric/master-avionics", func(v) {
     if(v.getValue()){
-        interpolate("/controls/electric/ammeter-switch-pos", 1, 0.1);
+        interpolate("/controls/electric/master-avionics-pos", 1, 0.1);
     }else{
-        interpolate("/controls/electric/ammeter-switch-pos", 0, 0.1);
+        interpolate("/controls/electric/master-avionics-pos", 0, 0.1);
     }
 });
+
+if (getprop("sim/flight-model") == "yasim") {
+    setlistener("/controls/electric/ammeter-switch", func(v) {
+        if(v.getValue()){
+            interpolate("/controls/electric/ammeter-switch-pos", 1, 0.1);
+        }else{
+            interpolate("/controls/electric/ammeter-switch-pos", 0, 0.1);
+        }
+    });
+} else {
+    setlistener("/controls/electric/ammeter-switch", func(v) {
+        interpolate("/controls/electric/ammeter-switch-pos", v.getValue(), 0.1);
+    });
+}
 
 setlistener("/controls/switches/firebell-switch-cover", func(v) {
     if(v.getValue()){

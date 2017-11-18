@@ -19,13 +19,11 @@
         <type>material</type>
         <object-name>volt.face</object-name>
         <object-name>voltneedle</object-name>
-        <object-name>voltneedle.001</object-name>
-        <object-name>voltneedle.002</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/coplt-radio-va-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -39,13 +37,11 @@
         <type>material</type>
         <object-name>volt.face</object-name>
         <object-name>voltneedle</object-name>
-        <object-name>voltneedle.001</object-name>
-        <object-name>voltneedle.002</object-name>
         <emission>
             <red>0.07</red>
             <green>0.04</green>
             <blue>0.04</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/coplt-radio-va-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -54,8 +50,6 @@
         <object-name>volt.face</object-name>
         <object-name>voltbezel</object-name>
         <object-name>voltneedle</object-name>
-        <object-name>voltneedle.001</object-name>
-        <object-name>voltneedle.002</object-name>
     </effect>
 
     <effect>
@@ -63,101 +57,40 @@
         <object-name>volt.face</object-name>
         <object-name>voltbezel</object-name>
         <object-name>voltneedle</object-name>
-        <object-name>voltneedle.001</object-name>
-        <object-name>voltneedle.002</object-name>
     </effect>
 
     <animation>
+        <type>pick</type>
+        <object-name>volt.face</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>Volts</tooltip-id>
+                <label>DC Voltage: %d Volts</label>
+                <property>instrumentation/volt-amp-meter/indicated-volts</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
         <type>rotate</type>
         <object-name>voltneedle</object-name>
-        <property>engines/engine[0]/amp-v</property>
+        <property>instrumentation/volt-amp-meter/indicated-volts</property>
         <interpolation>
             <entry><ind> 0.0</ind><dep> 0.0</dep></entry>
-            <entry><ind>30.0</ind><dep>88.2</dep></entry>
+            <entry><ind>30.0</ind><dep>86.2</dep></entry>
         </interpolation>
         <center>
-            <x-m>0.0</x-m>
-            <y-m>0.0</y-m>
-            <z-m>-0.007</z-m>
+            <x-m>0.00148</x-m>
+            <y-m>-0.00029</y-m>
+            <z-m>-0.00855</z-m>
         </center>
         <axis>
             <x>-1</x>
             <y>0</y>
             <z>0</z>
         </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>voltneedle.002</object-name>
-        <property>engines/engine[1]/amp-v</property>
-        <interpolation>
-            <entry><ind> 0.0</ind><dep> 0.0</dep></entry>
-            <entry><ind>30.0</ind><dep>88.2</dep></entry>
-        </interpolation>
-        <center>
-            <x-m>0.0</x-m>
-            <y-m>0.0</y-m>
-            <z-m>-0.007</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>voltneedle.001</object-name>
-        <property>systems/electrical/batt-volts</property>
-        <interpolation>
-            <entry><ind> 0.0</ind><dep> 0.0</dep></entry>
-            <entry><ind>30.0</ind><dep>88.2</dep></entry>
-        </interpolation>
-        <center>
-            <x-m>0.0</x-m>
-            <y-m>0.0</y-m>
-            <z-m>-0.007</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>voltneedle</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>-1</value>
-            </equals>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>voltneedle.001</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>0</value>
-            </equals>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>voltneedle.002</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>1</value>
-            </equals>
-        </condition>
     </animation>
 
     <!-- TEXT OSG -->

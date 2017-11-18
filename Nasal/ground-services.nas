@@ -45,9 +45,9 @@ var ground_services = {
 
 			if (getprop("/sim/model/equipment/ground-services/fuel-truck/transfer")) {
 
-				if (getprop("/consumables/fuel/tank[0]/level-lbs") >= 1000) {
+				if (getprop("/consumables/fuel/tank[0]/level-lbs") >= 1233) {
 					setprop("/sim/model/equipment/ground-services/fuel-truck/transfer", 0);
-					setprop("/consumables/fuel/tank[0]/level-lbs", 1000);
+					setprop("/consumables/fuel/tank[0]/level-lbs", 1233);
 					setprop("/consumables/fuel/tank[0]/selected", 1);
 					screen.log.write("Forward tank is full! Refuelling complete. Have a nice flight... :)", 0.8, 1, 0,);
 				}
@@ -80,9 +80,9 @@ var ground_services = {
 
 			if (getprop("/sim/model/equipment/ground-services/fuel-truck/transfer")) {
 
-				if (getprop("/consumables/fuel/tank[1]/level-lbs") >= 1400) {
+				if (getprop("/consumables/fuel/tank[1]/level-lbs") >= 1349) {
 					setprop("/sim/model/equipment/ground-services/fuel-truck/transfer", 0);
-					setprop("/consumables/fuel/tank[1]/level-lbs", 1400);
+					setprop("/consumables/fuel/tank[1]/level-lbs", 1349);
 					setprop("/consumables/fuel/tank[1]/selected", 1);
 					screen.log.write("Rear tank is full! Refuelling complete. Have a nice flight... :)", 0.8, 1, 0,);
 				}

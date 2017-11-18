@@ -45,10 +45,10 @@ Syd Adams
         <object-name>T5face</object-name>
         <object-name>T5needle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -83,9 +83,9 @@ Syd Adams
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>L-T5</tooltip-id>
-                <label>L-T5: %g </label>
-                <property>engines/engine[0]/t5</property>
+                <tooltip-id>Left T5 Temp</tooltip-id>
+                <label>Left T5 Temp: %d °C</label>
+                <property>instrumentation/engine-instruments/t5[0]/indicated-t5-degc</property>
             </binding>
         </hovered>
     </animation> 
@@ -108,17 +108,17 @@ Syd Adams
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>T5needle</object-name>
-        <property>engines/engine[0]/t5</property>
+        <property>instrumentation/engine-instruments/t5[0]/indicated-t5-degc</property>
         <interpolation>
             <entry><ind>  0.0</ind><dep>   0.0</dep></entry>
             <entry><ind> 300.0</ind><dep> 28.0</dep></entry>

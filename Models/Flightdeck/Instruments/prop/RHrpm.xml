@@ -48,10 +48,10 @@ Syd Adams
         <object-name>PropRPMneedle</object-name>
         <object-name>Prpm.1</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -98,9 +98,9 @@ Syd Adams
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>Left Prop-Speed</tooltip-id>
-                <label>Left Prop-Speed: %3d RPM</label>
-                <property>engines/engine[1]/rpm</property>
+                <tooltip-id>Right Propeller</tooltip-id>
+                <label>Right Propeller: %3d RPM</label>
+                <property>instrumentation/engine-instruments/propeller[1]/indicated-rpm</property>
             </binding>
         </hovered>
     </animation>
@@ -117,17 +117,17 @@ Syd Adams
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>PropRPMneedle</object-name>
-        <property>engines/engine[1]/rpm</property>
+        <property>instrumentation/engine-instruments/propeller[1]/indicated-rpm</property>
         <interpolation>
             <entry><ind>   0.0</ind><dep>  0.000</dep></entry>
             <entry><ind>2300.0</ind><dep>282.273</dep></entry>
@@ -142,7 +142,7 @@ Syd Adams
     <animation>
         <type>rotate</type>
         <object-name>Prpm.1</object-name>
-        <property>engines/engine[1]/rpm</property>
+        <property>instrumentation/engine-instruments/propeller[1]/indicated-rpm</property>
         <interpolation>
             <entry><ind>   0.0</ind><dep>   0</dep></entry>
             <entry><ind>2300.0</ind><dep>3763.6364</dep></entry>

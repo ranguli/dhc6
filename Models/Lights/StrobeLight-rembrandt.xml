@@ -66,7 +66,7 @@
                 <property>sim/multiplay/generic/int[6]</property>
                 <greater-than>
                     <property>sim/multiplay/generic/float[7]</property>
-                    <value>8</value>
+                    <value>0.1</value>
                 </greater-than>
             </and>
         </condition>
@@ -82,7 +82,7 @@
             <red>   0.027 </red>
             <green> 0.027 </green>
             <blue>  0.027 </blue>
-            <factor-prop>sim/multiplay/generic/float[9]</factor-prop>
+            <factor-prop>sim/multiplay/generic/float[7]</factor-prop>
         </emission>
     </animation>
 
@@ -149,7 +149,7 @@
         <object-name>light-volume</object-name>
         <condition>
             <and>
-                <property>sim/multiplay/generic/int[13]</property>
+                <property>sim/multiplay/generic/int[6]</property>
                 <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>

@@ -40,10 +40,10 @@
         <object-name>hydpress.face</object-name>
         <object-name>Needle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -80,7 +80,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>Hydpress</tooltip-id>
-                <label>Hydraulic Pressure: %d PSI</label>
+                <label>Hydraulic Pressure: %d psi</label>
                 <property>systems/hydraulic/indicated-pressure</property>
             </binding>
         </hovered>
@@ -104,10 +104,10 @@
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 

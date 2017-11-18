@@ -1,11 +1,12 @@
 props.globals.initNode("controls/engines/auto-feather", 0);
+props.globals.initNode("systems/electrical/outputs/auto-feather", 0.0, "DOUBLE");
 
 var autoFeather = func {
 
     var auto_feather = getprop("controls/engines/auto-feather");
     var running1 = getprop("engines/engine[0]/running");
     var running2 = getprop("engines/engine[1]/running");
-    var electrical_power = getprop("systems/electrical/volts");
+    var electrical_power = getprop("systems/electrical/outputs/auto-feather");
 
     if (auto_feather == 1 and running1 == 0 and electrical_power>15) {
         setprop("controls/engines/engine[0]/propeller-feather",1);

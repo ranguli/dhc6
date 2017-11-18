@@ -65,8 +65,8 @@
             <and>
                 <property>sim/multiplay/generic/int[2]</property>
                 <greater-than>
-                    <property>sim/multiplay/generic/float[9]</property>
-                    <value>8</value>
+                    <property>sim/multiplay/generic/float[3]</property>
+                    <value>0.1</value>
                 </greater-than>
             </and>
         </condition>
@@ -101,7 +101,7 @@
 
     <animation>
         <type>light</type>
-        <light-type>spot</light-type>
+        <light-type>point</light-type>
         <object-name>light-volume</object-name>
         <position>
             <x> 0 </x>
@@ -157,10 +157,7 @@
         <object-name>light-volume</object-name>
         <condition>
             <and>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[3]</property>
-                    <value>9</value>
-                </greater-than>
+                <property>sim/multiplay/generic/int[2]</property>
                 <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>

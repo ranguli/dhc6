@@ -120,7 +120,7 @@
         <object-name>hyd-oil-pump-breaker</object-name>
         <object-name>fuel-xfeed-breaker</object-name>
         <object-name>temp-comp-htr-l-breaker</object-name>
-        <object-name>temp-comp-htr-l-breaker</object-name>
+        <object-name>temp-comp-htr-r-breaker</object-name>
         <object-name>prop-auto-feath-breaker</object-name>
         <object-name>bst-pump-fwd-1-breaker</object-name>
         <object-name>bst-pump-fwd-2-breaker</object-name>
@@ -175,7 +175,7 @@
         <object-name>invr-cont-breaker</object-name>
         <object-name>va-breaker</object-name>
         <object-name>wing-insp-lt-breaker</object-name>
-        <object-name>400-fail-breaker</object-name>
+        <object-name>c400-fail-breaker</object-name>
         <object-name>beta-sys-breaker</object-name>
         <object-name>start-l-breaker</object-name>
         <object-name>start-r-breaker</object-name>
@@ -196,7 +196,7 @@
         <object-name>hyd-oil-pump-breaker</object-name>
         <object-name>fuel-xfeed-breaker</object-name>
         <object-name>temp-comp-htr-l-breaker</object-name>
-        <object-name>temp-comp-htr-l-breaker</object-name>
+        <object-name>temp-comp-htr-r-breaker</object-name>
         <object-name>prop-auto-feath-breaker</object-name>
         <object-name>bst-pump-fwd-1-breaker</object-name>
         <object-name>bst-pump-fwd-2-breaker</object-name>
@@ -243,7 +243,7 @@
         <object-name>invr-cont-breaker</object-name>
         <object-name>va-breaker</object-name>
         <object-name>wing-insp-lt-breaker</object-name>
-        <object-name>400-fail-breaker</object-name>
+        <object-name>c400-fail-breaker</object-name>
         <object-name>beta-sys-breaker</object-name>
         <object-name>start-l-breaker</object-name>
         <object-name>start-r-breaker</object-name>
@@ -264,7 +264,7 @@
         <object-name>hyd-oil-pump-breaker</object-name>
         <object-name>fuel-xfeed-breaker</object-name>
         <object-name>temp-comp-htr-l-breaker</object-name>
-        <object-name>temp-comp-htr-l-breaker</object-name>
+        <object-name>temp-comp-htr-r-breaker</object-name>
         <object-name>prop-auto-feath-breaker</object-name>
         <object-name>bst-pump-fwd-1-breaker</object-name>
         <object-name>bst-pump-fwd-2-breaker</object-name>

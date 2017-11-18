@@ -65,8 +65,8 @@
             <and>
                 <property>sim/multiplay/generic/int[7]</property>
                 <greater-than>
-                    <property>sim/multiplay/generic/float[9]</property>
-                    <value>8</value>
+                    <property>sim/multiplay/generic/float[8]</property>
+                    <value>0.1</value>
                 </greater-than>
             </and>
         </condition>
@@ -149,7 +149,7 @@
         <object-name>light-volume</object-name>
         <condition>
             <and>
-                <property>sim/multiplay/generic/int[14]</property>
+                <property>sim/multiplay/generic/int[7]</property>
                 <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>

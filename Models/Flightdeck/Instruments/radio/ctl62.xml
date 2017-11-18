@@ -26,8 +26,8 @@
         <object-name>freq.knob</object-name>
         <object-name>freq.up</object-name>
         <object-name>mem.annun</object-name>
-        <object-name>pwr.off</object-name>
-        <object-name>pwr.on</object-name>
+        <!--object-name>pwr.off</object-name>
+        <object-name>pwr.on</object-name-->
         <object-name>sto.btn</object-name>
         <object-name>test.btn</object-name>
         <object-name>xmt.annun</object-name>
@@ -58,8 +58,8 @@
         <object-name>freq.knob</object-name>
         <object-name>freq.up</object-name>
         <object-name>mem.annun</object-name>
-        <object-name>pwr.off</object-name>
-        <object-name>pwr.on</object-name>
+        <!--object-name>pwr.off</object-name>
+        <object-name>pwr.on</object-name-->
         <object-name>stby.001</object-name>
         <object-name>stby.002</object-name>
         <object-name>stby.003</object-name>
@@ -90,8 +90,8 @@
         <object-name>freq.knob</object-name>
         <object-name>freq.up</object-name>
         <object-name>mem.annun</object-name>
-        <object-name>pwr.off</object-name>
-        <object-name>pwr.on</object-name>
+        <!--object-name>pwr.off</object-name>
+        <object-name>pwr.on</object-name-->
         <object-name>stby.001</object-name>
         <object-name>stby.002</object-name>
         <object-name>stby.003</object-name>
@@ -110,12 +110,72 @@
         <object-name>freq.004</object-name>
         <object-name>freq.dec</object-name>
         <object-name>freq.005</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>stby.005</object-name>
         <condition>
             <greater-than>
                 <property>systems/electrical/outputs/adf</property>
                 <value>1</value>
             </greater-than>
         </condition>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.005</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>stby.005</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/coplt-radio-va-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
+        </condition>
+        <ambient>
+            <red>0.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </ambient>
+        <diffuse>
+            <red>0.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </diffuse>
+        <emission>
+            <red>0.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.005</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>stby.005</object-name>
+        <emission>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/coplt-radio-va-pnl-lts</factor-prop>
+        </emission>
     </animation>
 
     <animation>
@@ -135,7 +195,7 @@
         </condition>
     </animation>
 
-    <animation>
+    <!--animation>
         <type>select</type>
         <object-name>stby.002</object-name>
         <object-name>stby.003</object-name>
@@ -148,7 +208,7 @@
                 <value>1</value>
             </greater-than>
         </condition>
-    </animation>
+    </animation-->
 
     <animation>
         <type>select</type>
@@ -360,7 +420,7 @@
         </action>
     </animation>
 
-    <animation>
+    <!--animation>
         <type>pick</type>
         <object-name>pwr.off</object-name>
         <action>
@@ -404,13 +464,13 @@
                 <property>instrumentation/adf/serviceable</property>
             </binding>
         </hovered>
-    </animation>
+    </animation-->
  
     <animation>
         <type>pick</type>
         <object-name>CTL-62.pwr</object-name>
         <action>
-            <button>3</button>
+            <button>0</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>

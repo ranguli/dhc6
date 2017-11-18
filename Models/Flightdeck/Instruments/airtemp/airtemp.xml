@@ -40,10 +40,10 @@
         <object-name>Airtemp.face</object-name>
         <object-name>Airtemp.needle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/coplt-radio-va-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -79,7 +79,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>Air temperature</tooltip-id>
-                <label>Air-Temp-deg: %3.2f degree C°</label>
+                <label>Air Temperature: %d °C</label>
                 <property>/environment/temperature-degc</property>
             </binding>
         </hovered>
@@ -98,7 +98,7 @@
             <red>   0.07 </red>
             <green> 0.04 </green>
             <blue>  0.04 </blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/coplt-radio-va-pnl-lts</factor-prop>
         </emission>
     </animation>
 

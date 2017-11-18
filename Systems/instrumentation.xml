@@ -102,6 +102,13 @@
     <turn-indicator>
         <name>turn-indicator</name>
         <number>0</number>
+        <electrical>0</electrical>
+    </turn-indicator>
+
+    <turn-indicator>
+        <name>turn-indicator</name>
+        <number>1</number>
+        <electrical>1</electrical>
     </turn-indicator>
 
     <vertical-speed-indicator>

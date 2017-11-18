@@ -46,10 +46,10 @@ Syd Adams
         <object-name>OPface</object-name>
         <object-name>OPneedle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -96,6 +96,20 @@ Syd Adams
     </effect-->
 
     <animation>
+        <type>pick</type>
+        <object-name>OPface</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>Right Oil Pressure</tooltip-id>
+                <label>Right Oil Pressure: %d psi</label>
+                <property>instrumentation/engine-instruments/oil-press[1]/indicated-pressure-psi</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
         <type>material</type>
         <object-name>OPface</object-name>
         <object-name>OPneedle</object-name>
@@ -106,22 +120,20 @@ Syd Adams
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>OPneedle</object-name>
-        <property>engines/engine[1]/n2</property>
+        <property>instrumentation/engine-instruments/oil-press[1]/indicated-pressure-psi</property>
         <interpolation>
             <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-            <entry><ind> 30.0</ind><dep>  0.0</dep></entry>
-            <entry><ind> 70.0</ind><dep>210.0</dep></entry>
-            <entry><ind>100.0</ind><dep>250.0</dep></entry>
+            <entry><ind>120.0</ind><dep>307.5</dep></entry>
         </interpolation>
         <axis>
             <x>-1</x>

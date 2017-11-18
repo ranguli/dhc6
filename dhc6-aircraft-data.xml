@@ -223,6 +223,12 @@
     <path>/controls/electric/circuit-breakers/overhead/pneumatic-press-pos</path>
     <path>/controls/electric/circuit-breakers/overhead/cockpit-fans-pos</path>
 
+    <path>/controls/electric/bus-tie</path>
+    <path>/controls/electric/bus-tie-pos</path>
+    <path>/controls/electric/inverter</path>
+    <path>/controls/electric/inverter-pos</path>
+    <path>/controls/electric/master-avionics</path>
+    <path>/controls/electric/master-avionics-pos</path>
     <path>/controls/gear/tiller-enabled</path>
     <path>/engines/engine[0]/beta-range-nut-l</path>
     <path>/engines/engine[1]/beta-range-nut-r</path>
@@ -231,6 +237,9 @@
     <path>/controls/flight/rudder-trim</path>
     <path>/controls/lighting/overhead-light</path>
     <path>/controls/lighting/overhead-light-pos</path>
+    <path>/controls/lighting/coplt-radio-va-pnl-lts</path>
+    <path>/controls/lighting/flap-cons-trim-pnl-lts</path>
+    <path>/controls/lighting/plt-eng-inst-emer-pnl-lts</path>
     <path>/instrumentation/altimeter[0]/decision-height</path>
     <path>/instrumentation/altimeter[0]/setting-hpa</path>
     <path>/instrumentation/altimeter[1]/setting-hpa</path>
@@ -245,6 +254,8 @@
     <path>/instrumentation/dme[0]/switch-min-kts-pos</path>
     <path>/instrumentation/dme[0]/switch-position</path>
     <path>/instrumentation/dme[0]/switch-position-pos</path>
+    <path>/instrumentation/engine-instruments/fuel-qty-aft/indicated-fuelqty-lbs</path>
+    <path>/instrumentation/engine-instruments/fuel-qty-fwd/indicated-fuelqty-lbs</path>
     <path>/instrumentation/heading-indicator-real-dg/heading-bug-deg</path>
     <path>/instrumentation/heading-indicator-real-dg/offsetdeg</path>
     <path>/instrumentation/nav[0]/radials/selected-deg</path>
@@ -252,6 +263,10 @@
     <path>/instrumentation/nav[1]/radials/selected-deg</path>
     <path>/instrumentation/nav[1]/volume</path>
     <path>/instrumentation/transponder/id-code</path>
+    <path>/instrumentation/transponder/inputs/digit[0]</path>
+    <path>/instrumentation/transponder/inputs/digit[1]</path>
+    <path>/instrumentation/transponder/inputs/digit[2]</path>
+    <path>/instrumentation/transponder/inputs/digit[3]</path>
     <path>/instrumentation/transponder/inputs/knob-mode</path>
     <path>/limits/warnings-enabled</path>
     <path>/sim/hitches/aerotow/open</path>
@@ -266,4 +281,5 @@
     <path>/sim/rendering/show-shadow</path>
     <path>/sim/weight[0]/weight-lb</path>
     <path>/sim/weight[1]/weight-lb</path>
+    <path>/systems/electrical/batt-volts</path>
 </PropertyList>

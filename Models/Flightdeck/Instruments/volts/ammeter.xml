@@ -19,13 +19,11 @@
         <type>material</type>
         <object-name>amp.face</object-name>
         <object-name>ampneedle</object-name>
-        <object-name>gen1needle</object-name>
-        <object-name>gen2needle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/coplt-radio-va-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -39,13 +37,11 @@
         <type>material</type>
         <object-name>amp.face</object-name>
         <object-name>ampneedle</object-name>
-        <object-name>gen1needle</object-name>
-        <object-name>gen2needle</object-name>
         <emission>
             <red>0.07</red>
             <green>0.04</green>
             <blue>0.04</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/coplt-radio-va-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -54,8 +50,6 @@
         <object-name>amp.face</object-name>
         <object-name>ampbezel</object-name>
         <object-name>ampneedle</object-name>
-        <object-name>gen1needle</object-name>
-        <object-name>gen2needle</object-name>
     </effect>
 
     <effect>
@@ -63,17 +57,29 @@
         <object-name>amp.face</object-name>
         <object-name>ampbezel</object-name>
         <object-name>ampneedle</object-name>
-        <object-name>gen1needle</object-name>
-        <object-name>gen2needle</object-name>
     </effect>
+
+    <animation>
+        <type>pick</type>
+        <object-name>amp.face</object-name>
+        <visible>true</visible>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>Load</tooltip-id>
+                <label>DC Load: %d Ampere</label>
+                <property>instrumentation/volt-amp-meter/indicated-amps</property>
+            </binding>
+        </hovered>
+    </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>ampneedle</object-name>
-        <property>systems/electrical/amps</property>
+        <property>instrumentation/volt-amp-meter/indicated-amps</property>
         <interpolation>
-            <entry><ind>-30.0</ind><dep>-45.0</dep></entry>
-            <entry><ind> 30.0</ind><dep> 45.0</dep></entry>
+            <entry><ind>-100.0</ind><dep>-42.5</dep></entry>
+            <entry><ind> 100.0</ind><dep> 42.5</dep></entry>
         </interpolation>
         <center>
             <x-m>0.0</x-m>
@@ -85,79 +91,6 @@
             <y>0</y>
             <z>0</z>
         </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>gen1needle</object-name>
-        <property>systems/electrical/gen-load[0]</property>
-        <interpolation>
-            <entry><ind>-1.0</ind><dep>-45.0</dep></entry>
-            <entry><ind> 1.0</ind><dep> 45.0</dep></entry>
-        </interpolation>
-            <center>
-            <x-m>0.0</x-m>
-            <y-m>0.0</y-m>
-            <z-m>-0.007</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>gen2needle</object-name>
-        <property>systems/electrical/gen-load[1]</property>
-        <interpolation>
-            <entry><ind>-1.0</ind><dep>-45.0</dep></entry>
-            <entry><ind> 1.0</ind><dep> 45.0</dep></entry>
-        </interpolation>
-            <center>
-            <x-m>0.0</x-m>
-            <y-m>0.0</y-m>
-            <z-m>-0.007</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>gen1needle</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>-1</value>
-            </equals>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>ampneedle</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>0</value>
-            </equals>
-        </condition>
-    </animation>
-    
-    <animation>
-        <type>select</type>
-        <object-name>gen2needle</object-name>
-        <condition>
-            <equals>
-                <property>controls/electric/ammeter-switch</property>
-                <value>1</value>
-            </equals>
-        </condition>
     </animation>
 
     <!-- TEXT OSG -->

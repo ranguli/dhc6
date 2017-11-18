@@ -50,10 +50,10 @@
         <object-name>RALT.flag</object-name>
         <object-name>RALT.knob</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>   0.381924    </red>
@@ -115,7 +115,7 @@
             <red>   0.07 </red>
             <green> 0.04 </green>
             <blue>  0.04 </blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -123,10 +123,13 @@
         <type>select</type>
         <object-name>DH.lamp.lit</object-name>
         <condition>
-            <less-than>
-                <property>position/altitude-agl-ft</property>
-                <property>instrumentation/altimeter/decision-height</property>
-            </less-than>
+            <and>
+                <property>instrumentation/engine-instruments/radar-altimeter/serviceable</property>
+                <less-than>
+                    <property>instrumentation/engine-instruments/radar-altimeter/indicated-agl-ft</property>
+                    <property>instrumentation/altimeter/decision-height</property>
+                </less-than>
+            </and>
         </condition>
     </animation>
 
@@ -134,10 +137,9 @@
         <type>select</type>
         <object-name>RALT.flag</object-name>
         <condition>
-            <less-than>
-                <property>systems/electrical/volts</property>
-                <value>1</value>
-            </less-than>
+            <not>
+                <property>instrumentation/engine-instruments/radar-altimeter/serviceable</property>
+            </not>
         </condition>
     </animation>
 
@@ -160,7 +162,7 @@
     <animation>
         <type>rotate</type>
         <object-name>RALT.needle</object-name>
-        <property>position/altitude-agl-ft</property>
+        <property>instrumentation/radar-altimeter/indicated-agl-ft</property>
         <interpolation>
             <entry><ind>  -20 </ind><dep>  -7.5 </dep></entry>
             <entry><ind>    0 </ind><dep>   0   </dep></entry>
@@ -340,8 +342,8 @@
             <binding>
               <command>set-tooltip</command>
               <tooltip-id>agl-ft</tooltip-id>
-              <label>Altitude above ground:% 3dft</label>
-              <property>tooltips-custom/radar-alt</property>
+              <label>Altitude: %3d ft AGL</label>
+              <property>instrumentation/radar-altimeter/indicated-agl-ft</property>
             </binding>
           </hovered>
     </animation>

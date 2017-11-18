@@ -26,6 +26,8 @@ var prop_icing_index = 0;
 var engine0_completely_broken = func {
     setprop("/engines/engine[0]/serviceable", 0);
     setprop("/engines/engine[0]/running", 0);
+    setprop("/engines/engine[0]/cutoff", 1);
+    setprop("/fdm/jsbsim/propulsion/engine[0]/set-running", 0);
     setprop("controls/engines/engine[0]/internal-condition", 0);
     settimer(engine0_completely_broken, 0);
 }
@@ -33,6 +35,8 @@ var engine0_completely_broken = func {
 var engine1_completely_broken = func {
     setprop("/engines/engine[1]/serviceable", 0);
     setprop("/engines/engine[1]/running", 0);
+    setprop("/engines/engine[1]/cutoff", 1);
+    setprop("/fdm/jsbsim/propulsion/engine[1]/set-running", 0);
     setprop("controls/engines/engine[1]/internal-condition", 0);
     settimer(engine1_completely_broken, 0);
 }
@@ -43,19 +47,21 @@ var sands_stones = func {
     var engine1_running = getprop("engines/engine[1]/running");
     var intake_deflector0 = getprop("controls/engines/engine[0]/intake-deflector");
     var gear1_ground_type = getprop("gear/gear[1]/ground-friction-factor");
+    var ggrpm1 = getprop("instrumentation/engine-instruments/turbine[0]/indicated-speed");
     var wow1 = getprop("gear/gear[1]/wow");
     var intake_deflector1 = getprop("controls/engines/engine[1]/intake-deflector");
     var gear2_ground_type = getprop("gear/gear[2]/ground-friction-factor");
+    var ggrpm2 = getprop("instrumentation/engine-instruments/turbine[1]/indicated-speed");
     var wow2 = getprop("gear/gear[2]/wow");
     
-    if (intake_deflector0 == 0 and gear1_ground_type < 1 and engine0_running and wow1 and rand()>0.8) {
+    if (intake_deflector0 == 0 and gear1_ground_type < 1 and engine0_running and ggrpm1 > 85 and wow1 and rand()>0.6) {
         print("Your left engine is damaged by sands and stones!");
-	engine0_completely_broken();
+	   engine0_completely_broken();
     }
     
-    if (intake_deflector1 == 0 and gear2_ground_type < 1 and engine1_running and wow2 and rand()>0.8) {
+    if (intake_deflector1 == 0 and gear2_ground_type < 1 and engine1_running and ggrpm2 > 85 and wow2 and rand()>0.6) {
         print("Your right engine is damaged by sands and stones!");
-	engine1_completely_broken();
+	   engine1_completely_broken();
     }
     settimer(sands_stones, 10);
 }

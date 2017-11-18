@@ -63,10 +63,10 @@
         <object-name>needle1000</object-name>
         <object-name>needle10000</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
               <red>0.381924</red>
@@ -133,7 +133,7 @@
              <red>   0.07 </red>
              <green> 0.04 </green>
              <blue>  0.04 </blue>
-             <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+             <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
@@ -156,8 +156,8 @@
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>Altimeter-ft</tooltip-id>
-                <label> Altitude-ft:% 3d ft </label>
+                <tooltip-id>Altimeter0-ft</tooltip-id>
+                <label>Altitude: %3d ft</label>
                 <property>instrumentation/altimeter[0]/indicated-altitude-ft</property>
             </binding>
         </hovered>
@@ -243,8 +243,8 @@
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>alt-setting</tooltip-id>
-                <label>Altimeter QNH: %.0f</label>
+                <tooltip-id>alt1-setting</tooltip-id>
+                <label>Altimeter QNH: %.0f hPa</label>
                 <property>instrumentation/altimeter[0]/setting-hpa</property>
             </binding>
         </hovered>   

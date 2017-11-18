@@ -1,6 +1,7 @@
 props.globals.initNode("instrumentation/heading-indicator-real-dg/heading-bug-deg", 0);
 props.globals.initNode("instrumentation/heading-indicator-real-dg/heading-bug-error-deg", 0);
 props.globals.initNode("instrumentation/heading-indicator-real-dg/indicated-heading-deg", 0);
+props.globals.initNode("systems/electrical/outputs/DG", 0.0, "DOUBLE");
 srand();
 var hdg_stop = rand() * 360;
 var init_true_heading = getprop("orientation/heading-deg");
@@ -22,7 +23,7 @@ var gyro = func {
         hdg = hdg - 360;
     }
 
-    if (getprop("systems/electrical/volts") > 0) {
+    if (getprop("systems/electrical/outputs/DG") > 8) {
         init_true_heading = hdg - offset;
         setprop("instrumentation/heading-indicator-real-dg/indicated-heading-deg", hdg);
     } else {

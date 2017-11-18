@@ -24,7 +24,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>Heading-deg</tooltip-id>
-                <label>Magnetic heading-deg: %3d deg</label>
+                <label>Magnetic Heading: %3d deg</label>
                 <mapping>heading</mapping>
                 <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
             </binding>
@@ -47,10 +47,10 @@
         <object-name>Compass</object-name>
         <object-name>Compass.ball</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/flap-cons-trim-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -73,7 +73,7 @@
             <red>   0.07 </red>
             <green> 0.04 </green>
             <blue>  0.04 </blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <factor-prop>systems/electrical/outputs/flap-cons-trim-pnl-lts</factor-prop>
         </emission>
     </animation>
 

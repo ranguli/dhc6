@@ -44,10 +44,10 @@ Syd Adams
         <object-name>FFface</object-name>
         <object-name>FFneedle</object-name>
         <condition>
-            <equals>
-                <property>controls/lighting/instrument-lights</property>
-                <value>0</value>
-            </equals>
+            <less-than>
+                <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
+                <value>0.05</value>
+            </less-than>
         </condition>
         <emission>
             <red>0.381924</red>
@@ -90,9 +90,9 @@ Syd Adams
         <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>fuelflow</tooltip-id>
-                <label>Fuel flow: %g gph</label>
-                <property>engines/engine[1]/fuel-flow-gph</property>
+                <tooltip-id>Right Fuel Flow</tooltip-id>
+                <label>Right Fuel Flow: %d pph</label>
+                <property>instrumentation/engine-instruments/fuel-flow[1]/indicated-fuel-flow-pph</property>
             </binding>
         </hovered>
     </animation>
@@ -107,21 +107,20 @@ Syd Adams
             </not>
         </condition>
         <emission>
-            <red>0.7</red>
-            <green>0.4</green>
-            <blue>0.4</blue>
-            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.07</red>
+            <green>0.04</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/plt-eng-inst-emer-pnl-lts</factor-prop>
         </emission>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>FFneedle</object-name>
-        <property>engines/engine[1]/fuel-flow-gph</property>
+        <property>instrumentation/engine-instruments/fuel-flow[1]/indicated-fuel-flow-pph</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>20.0</ind><dep>90.0</dep></entry>
-            <entry><ind>50.0</ind><dep>255.0</dep></entry>
+            <entry><ind>500.0</ind><dep>255.0</dep></entry>
         </interpolation>
         <axis>
             <x>-1</x>

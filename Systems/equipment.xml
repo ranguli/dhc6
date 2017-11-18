@@ -257,10 +257,16 @@
                     <property>velocities/groundspeed-kt</property>
                     <value>1.0</value>
                 </less-than>
-                <less-than>
-                    <property>engines/engine/n2</property>
-                    <value>1.0</value>
-                </less-than>
+                <or>
+                    <less-than>
+                        <property>engines/engine[0]/n1</property>
+                        <value>1.0</value>
+                    </less-than>
+                    <less-than>
+                        <property>engines/engine[0]/n2</property>
+                        <value>1.0</value>
+                    </less-than>
+                </or>
             </and>
         </input>
         <output>
@@ -277,10 +283,16 @@
                     <property>velocities/groundspeed-kt</property>
                     <value>1.0</value>
                 </less-than>
-                <less-than>
-                    <property>engines/engine/n2</property>
-                    <value>1.0</value>
-                </less-than>
+                <or>
+                    <less-than>
+                        <property>engines/engine[1]/n1</property>
+                        <value>1.0</value>
+                    </less-than>
+                    <less-than>
+                        <property>engines/engine[1]/n2</property>
+                        <value>1.0</value>
+                    </less-than>
+                </or>
             </and>
         </input>
         <output>
@@ -299,10 +311,16 @@
                     <property>velocities/groundspeed-kt</property>
                     <value>1.0</value>
                 </less-than>
-                <less-than>
-                    <property>engines/engine[1]/n2</property>
-                    <value>1.0</value>
-                </less-than>
+                <or>
+                    <less-than>
+                        <property>engines/engine[0]/n1</property>
+                        <value>1.0</value>
+                    </less-than>
+                    <less-than>
+                        <property>engines/engine[0]/n2</property>
+                        <value>1.0</value>
+                    </less-than>
+                </or>
             </and>
         </input>
         <output>
@@ -319,10 +337,16 @@
                     <property>velocities/groundspeed-kt</property>
                     <value>1.0</value>
                 </less-than>
-                <less-than>
-                    <property>engines/engine[1]/n2</property>
-                    <value>1.0</value>
-                </less-than>
+                <or>
+                    <less-than>
+                        <property>engines/engine[0]/n1</property>
+                        <value>1.0</value>
+                    </less-than>
+                    <less-than>
+                        <property>engines/engine[0]/n2</property>
+                        <value>1.0</value>
+                    </less-than>
+                </or>
             </and>
         </input>
         <output>
@@ -336,10 +360,20 @@
         <name>Left Forward Chock Addable</name>
         <input>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6jsb</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>DHC6jsb_Erik</value>
+                    </equals>
+                </or>
                 <not>
                     <property>sim/model/equipment/left-chock-fwd</property>
                 </not>
@@ -358,10 +392,20 @@
         <name>Left Rear Chock Addable</name>
         <input>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6jsb</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>DHC6jsb_Erik</value>
+                    </equals>
+                </or>
                 <not>
                     <property>sim/model/equipment/left-chock-aft</property>
                 </not>
@@ -381,10 +425,20 @@
         <name>Right Forward Chock Addable</name>
         <input>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6jsb</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>DHC6jsb_Erik</value>
+                    </equals>
+                </or>
                 <not>
                     <property>sim/model/equipment/right-chock-fwd</property>
                 </not>
@@ -403,10 +457,20 @@
         <name>Right Rear Chock Addable</name>
         <input>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6jsb</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>DHC6jsb_Erik</value>
+                    </equals>
+                </or>
                 <not>
                     <property>sim/model/equipment/right-chock-aft</property>
                 </not>

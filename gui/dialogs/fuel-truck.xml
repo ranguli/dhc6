@@ -92,11 +92,17 @@
                     <property>sim/model/equipment/ground-services/fuel-truck/disconnect</property>
                     <or>
                         <and>
-                            <property>gear/gear[6]/ground-is-solid</property>
+                            <or>
+                                <property>gear/gear[6]/ground-is-solid</property>
+                                <property>fdm/jsbsim/ground/solid</property>
+                            </or>
                             <property>gear/gear[6]/wow</property>
                         </and>
                         <and>
-                            <property>gear/gear[1]/ground-is-solid</property>
+                            <or>
+                                <property>gear/gear[1]/ground-is-solid</property>
+                                <property>fdm/jsbsim/ground/solid</property>
+                            </or>
                             <property>gear/gear[1]/wow</property>
                         </and>
                     </or>
