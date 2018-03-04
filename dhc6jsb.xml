@@ -330,7 +330,7 @@
     <system file="Landing_Gear.xml"/>
     <system file="Flaps.xml"/>
     <system file="Fuel.xml"/>
-    <!--system file="Engine.xml"/-->
+    <system file="Engine.xml"/>
 
     <flight_control name="FCS: DHC-6 Twin Otter">
         <!-- Flight control system is defined in "Systems/Conventional Controls" --> 

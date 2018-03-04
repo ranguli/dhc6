@@ -631,9 +631,9 @@
         <groundsteering>
             <file>Aircraft/dhc6/Nasal/groundsteering.nas</file>
         </groundsteering>
-        <!--reversethrust>
+        <reversethrust>
             <file>Aircraft/dhc6/Nasal/thrust-reverse.nas</file>
-        </reversethrust-->
+        </reversethrust>
     </nasal>
 
     <payload>

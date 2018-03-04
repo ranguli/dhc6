@@ -12,7 +12,7 @@
 <PropertyList include="dhc6-base.xml">
 
     <sim>
-        <description>De Havilland Canada DHC-6-300 Twin Otter (wheels)</description>
+        <description>de Havilland Canada DHC-6-300 Twin Otter (wheels)</description>
         <long-description>The DHC-6 Twin Otter is a 20 seat, twin turboprop, high wing aircraft with STOL abilities and a fixed tricycle gear. Originally developed by de Haviland Canada (Series -100 to -300) nowadays Viking Air produces and distributes the Twin Otter series -400. Since it's first flight in 1996 there were built more then 900 Twin Otters and the aircraft still enjoys great popularity among skydivers and as a bush plane due to it's powerful engines and it's robustness and versatility. Moreover it can easily be equipped with floats and skis. This version for FlighGear is the DHC-6-300 series. Have fun!
         </long-description>
         <de>
@@ -23,7 +23,85 @@
         <flight-model>yasim</flight-model>
         <aero>dhc6</aero>
         <fuel-fraction>0.5</fuel-fraction>
+        <previews>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/wheels01.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/wheels02.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/wheels03.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/wheels04.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/floats01.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/floats02.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/floats03.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/floats04.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/skis01.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/skis02.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/skis03.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Pics/skis04.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>cockpit</type>
+                <path>Pics/cockpit01.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>cockpit</type>
+                <path>Pics/cockpit02.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+            <preview>
+                <type>cockpit</type>
+                <path>Pics/cockpit03.jpg</path>
+                <splash type="bool">false</splash>
+            </preview>
+        </previews>
         <startup>
+            <splash-logo-image>Pics/logo.png</splash-logo-image>
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash1.png</splash-texture>
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash2.png</splash-texture>
             <splash-texture>Aircraft/dhc6/Splash_screens/dhc6-splash3.png</splash-texture>

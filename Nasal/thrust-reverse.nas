@@ -1,15 +1,37 @@
+props.globals.initNode("controls/engines/engine[0]/throttle",0.0);
+props.globals.initNode("controls/engines/engine[1]/throttle",0.0);
+props.globals.initNode("controls/engines/engine[0]/reverser",0);
+props.globals.initNode("controls/engines/engine[1]/reverser",0);
+props.globals.initNode("/fdm/jsbsim/propulsion/engine[0]/constant-speed-mode",1);
+props.globals.initNode("/fdm/jsbsim/propulsion/engine[1]/constant-speed-mode",1);
+
 var L_reverse = func {
     var throttle = getprop("controls/engines/engine[0]/throttle");
     var reverse = getprop("controls/engines/engine[0]/reverser");
 
-    if (throttle < 0.001 and reverse) {
-        setprop("/fdm/jsbsim/propulsion/engine/constant-speed-mode",0);
+    if (reverse) {
+        setprop("/fdm/jsbsim/propulsion/engine[0]/constant-speed-mode",0);
     } else {
-        setprop("/fdm/jsbsim/propulsion/engine/constant-speed-mode",1);
+        setprop("/fdm/jsbsim/propulsion/engine[0]/constant-speed-mode",1);
     }
-}
 
-setlistener("controls/engines/engine[0]/reverser", L_reverse);
+    settimer(L_reverse,0);
+}
+setlistener("/sim/signals/fdm-initialized", L_reverse);
+
+var R_reverse = func {
+    var throttle = getprop("controls/engines/engine[1]/throttle");
+    var reverse = getprop("controls/engines/engine[1]/reverser");
+
+    if (reverse) {
+        setprop("/fdm/jsbsim/propulsion/engine[1]/constant-speed-mode",0);
+    } else {
+        setprop("/fdm/jsbsim/propulsion/engine[1]/constant-speed-mode",1);
+    }
+
+    settimer(R_reverse,0);
+}
+setlistener("/sim/signals/fdm-initialized", R_reverse);
 
 #togglereverser = func {
 #    r1 = props.globals.getNode("/fdm/jsbsim/propulsion/engine[0]");
