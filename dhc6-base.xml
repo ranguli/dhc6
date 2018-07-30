@@ -39,6 +39,7 @@
                 </default_exit>
             </map>
             <show-garmin-196 type="bool">false</show-garmin-196>
+            <fallback-model-index type="int">157</fallback-model-index>
         </model>
 
         <aircraft-data include="dhc6-aircraft-data.xml"/>
