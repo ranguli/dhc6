@@ -357,6 +357,8 @@
         </axis>
     </animation>
 
+<!-- SurferTim -->
+
     <animation>
         <type>knob</type>
         <object-name>alt.knob</object-name>
@@ -365,7 +367,7 @@
                 <command>property-adjust</command>
                 <property>autopilot/settings/target-altitude-ft</property>
                 <factor>100</factor>
-                <min>1000</min>
+                <min>100</min>
                 <max>30000</max>
                 <wrap>false</wrap>
             </binding>

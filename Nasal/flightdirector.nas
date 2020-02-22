@@ -157,6 +157,8 @@ var update_lnav=func{
 
 ####  Set AP vertical mode ####
 
+# SurferTim
+
 var update_vnav=func{
     var vnav = arg[0];
     if(vnav ==nil)vnav=0;
@@ -164,6 +166,7 @@ var update_vnav=func{
     if(vnav==3)setprop("autopilot/settings/vertical-speed-fpm",getprop("velocities/vertical-speed-fps") * 60);
     setprop(AP_alt,VN_txt[vnav]);
 }
+
 ####  Set correct FD mode ####
 
 var set_fdmode = func{
@@ -243,6 +246,8 @@ handle_nav_inputs = func {
 }
 
 ####    update nav gps or nav setting    ####
+
+# SurferTim
 
 update = func {
     handle_nav_inputs();

@@ -25,6 +25,7 @@ var torque = func {
 
     torque0 = torque0 + ias_effect - intake_deflector_effect0 - propdeice_effect;
     torque1 = torque1 + ias_effect - intake_deflector_effect1 - propdeice_effect;
+
     setprop("engines/engine[0]/torque-ftlb", torque0);
     setprop("engines/engine[1]/torque-ftlb", torque1);
     setprop("tooltips-custom/torque-ftlb[0]", torque0);

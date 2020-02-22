@@ -68,10 +68,10 @@
         <number>0</number>
     </heading-indicator-dg>
 
-    <!-- heading-indicator-real-dg>
+    <heading-indicator-real-dg>
         <name>heading-indicator-real-dg</name>
         <number>0</number>
-    </heading-indicator-real-dg -->
+    </heading-indicator-real-dg>
 
     <magnetic-compass>
         <name>magnetic-compass</name>

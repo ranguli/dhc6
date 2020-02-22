@@ -248,8 +248,26 @@
         </interpolation>
         <center>
             <x-m>0.0</x-m>
-            <y-m>-0.014</y-m>
-            <z-m>-0.018</z-m>
+            <y-m>-0.0138</y-m>
+            <z-m>-0.0183</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!-- SurferTim -->
+    <animation>
+        <type>rotate</type>
+        <object-name>CTL-62.vol</object-name>
+        <property>instrumentation/adf/volume-norm</property>
+        <factor>300</factor>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>-0.0138</y-m>
+            <z-m>-0.0183</z-m>
         </center>
         <axis>
             <x>-1</x>
@@ -487,6 +505,85 @@
             </binding>
         </hovered>
     </animation>
+
+
+<!-- SurferTim -->
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-62.vol</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/volume-norm</property>
+                <step>0.050</step>
+                <min>0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-62.vol</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/volume-norm</property>
+                <step>-0.050</step>
+                <min>0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-62.vol</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/volume-norm</property>
+                <step>0.050</step>
+                <min>0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-62.vol</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/adf/volume-norm</property>
+                <step>-0.050</step>
+                <min>0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>CTL62-vol</tooltip-id>
+                <label>Volume: %g</label>
+                <property>instrumentation/adf/volume-norm</property>
+            </binding>
+        </hovered>
+    </animation>
+
 
     <animation>
         <type>pick</type>

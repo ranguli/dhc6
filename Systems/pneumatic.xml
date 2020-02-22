@@ -276,10 +276,10 @@
                         <property>controls/engines/engine[0]/intake-deflector-extend</property>
                         <value>1</value>
                     </equals>
-                    <!-- Left bleed air pressure more than 50 psi -->
+                    <!-- Left bleed air pressure more than 50 (15) psi -->
                     <greater-than>
                         <property>systems/pneumatic/bleed-air-psi[0]</property>
-                        <value>50</value>
+                        <value>15</value>
                     </greater-than>
                     <!-- Electrical power available, to transmit signal from cockpit to engine -->
                     <greater-than>
@@ -343,10 +343,10 @@
                         <property>controls/engines/engine[1]/intake-deflector-extend</property>
                         <value>1</value>
                     </equals>
-                    <!-- Right bleed air pressure more than 50 psi -->
+                    <!-- Right bleed air pressure more than 50 (15) psi -->
                     <greater-than>
                         <property>systems/pneumatic/bleed-air-psi[1]</property>
-                        <value>50</value>
+                        <value>15</value>
                     </greater-than>
                     <!-- Electrical power available, to transmit signal from cockpit to engine -->
                     <greater-than>

@@ -229,6 +229,68 @@
             </position>
         </stall>
 
+        <dh>
+            <name>decision height</name>
+            <mode>looped</mode>
+            <path>Aircraft/dhc6/Sounds/terrain.wav</path>
+            <condition>
+                <or>
+                    <and>
+                        <greater-than>
+                            <property>sim/time/elapsed-sec</property>
+                            <value>15</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>velocities/airspeed-kt</property>
+                            <value>30</value>
+                        </greater-than>
+                        <less-than>
+                            <property>instrumentation/radar-altimeter/indicated-agl-ft</property>
+                            <property>instrumentation/altimeter/decision-height</property>
+                        </less-than>
+                        <less-than>
+                            <property>instrumentation/radar-altimeter/alarm-alt</property>
+                            <value>0</value>
+                        </less-than>
+                        <less-than>
+                            <property>velocities/vertical-speed-fps</property>
+                            <value>-20</value>
+                        </less-than>
+                        <less-than>
+                            <property>instrumentation/radar-altimeter/impact-time-sec</property>
+                            <value>0</value>
+                        </less-than>
+                        <greater-than>
+                            <property>instrumentation/radar-altimeter/impact-time-sec</property>
+                            <value>-10</value>
+                        </greater-than>
+                        <property>sim/current-view/internal</property>
+                    </and>
+                    <!-- caution test activates stall horn if circuit breaker is in -->
+                    <and>
+                        <greater-than>
+                            <property>controls/electric/caution-test</property>
+                            <value>0</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>systems/electrical/outputs/stall-warn</property>
+                            <value>0</value>
+                        </greater-than>
+                    </and>
+                </or>
+            </condition>
+            <volume>
+                <factor>0.5</factor>
+            </volume>
+            <reference-dist>3.0</reference-dist>
+            <max-dist>10.0</max-dist>
+            <position>
+                <x>-4</x>
+                <y>0</y>
+                <z>-0.6</z>
+            </position>
+        </dh>
+
         <!-- WIPERS -->
         <wipers>
             <name>wiper</name>
@@ -529,6 +591,7 @@
                 <z>-0.33</z>
             </position>
         </prop>
+
 
         <rumble>
             <name>rumble</name>

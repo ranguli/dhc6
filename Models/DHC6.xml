@@ -163,6 +163,18 @@
         </offsets>
     </model>
 
+# SurferTim added
+
+    <model>
+        <name>LandingLights</name>
+        <path>Aircraft/dhc6/Models/Lights/light-coneLR.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </offsets>
+    </model>
+
     <model>
         <name>wheels</name>
         <condition>

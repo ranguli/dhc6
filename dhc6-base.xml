@@ -266,6 +266,8 @@
         </settings>
     </autopilot>
 
+<!-- SurferTim -->
+
     <consumables>
         <fuel>
             <tank n="0">
@@ -361,7 +363,7 @@
         <altimeter n="0">
             <serviceable type="bool">1</serviceable>
             <setting-inhg type="double">29.92</setting-inhg>
-            <deciion-height type="double">100</deciion-height>
+            <decision-height type="double">100</decision-height>
         </altimeter>
         <altimeter n="1">
             <serviceable type="bool">1</serviceable>
@@ -523,6 +525,7 @@
             <file>Aircraft/dhc6/Nasal/vor-ils-catch.nas</file>
             <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
             <file>Aircraft/dhc6/Nasal/interpolate.nas</file>
+            <file>Aircraft/dhc6/Nasal/light-manager.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>

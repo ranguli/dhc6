@@ -59,12 +59,12 @@
         <object-name>resetprops.lit</object-name>
         <object-name>boost2aft.lit</object-name>
         <object-name>roilpsi.lit</object-name>
-        <condition>
+        <!--condition>
             <equals>
                 <property>sim/multiplay/generic/float[10]</property>
                 <value>0</value>
             </equals>
-        </condition>
+        </condition-->
         <emission>
             <red>0.3</red>
             <green>0.3</green>

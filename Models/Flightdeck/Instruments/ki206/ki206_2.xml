@@ -217,6 +217,9 @@
                 <not>
                     <property>instrumentation/nav[1]/has-gs</property>
                 </not>
+                <not>
+                    <property>instrumentation/nav[1]/gs-in-range</property>
+                </not>
                 <less-than>
                     <property>systems/electrical/outputs/nav[1]</property>
                     <value>8</value>

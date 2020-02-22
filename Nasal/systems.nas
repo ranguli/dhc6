@@ -54,6 +54,28 @@ props.globals.initNode("controls/switches/dme-gps-slave", 0);
 
 ###################################
 
+controls.removeTiedowns = func{
+    setprop("sim/model/equipment/left-pitot-cover",0);
+    setprop("sim/model/equipment/right-pitot-cover",0);
+    setprop("sim/model/equipment/left-tiedown-wheels",0);
+    setprop("sim/model/equipment/right-tiedown-wheels",0);
+    setprop("sim/model/equipment/rear-tiedown-wheels",0);
+    setprop("sim/model/equipment/left-engine-cover",0);
+    setprop("sim/model/equipment/right-engine-cover",0);
+    setprop("sim/model/equipment/left-chock-fwd",0);
+    setprop("sim/model/equipment/left-chock-aft",0);
+    setprop("sim/model/equipment/right-chock-fwd",0);
+    setprop("sim/model/equipment/right-chock-aft",0);
+    setprop("sim/model/equipment/ground-services/external-power/enable",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/clean",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/transfer",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/connect-aft",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/connect-fwd",0);
+    setprop("sim/model/equipment/ground-services/fuel-truck/disconnect",1);
+    setprop("sim/model/equipment/ground-services/fuel-truck/enable",0);
+}
+
+
 var Startup_yasim = func{
     setprop("sim/model/equipment/left-pitot-cover",0);
     setprop("sim/model/equipment/right-pitot-cover",0);
@@ -66,7 +88,6 @@ var Startup_yasim = func{
     setprop("sim/model/equipment/left-chock-aft",0);
     setprop("sim/model/equipment/right-chock-fwd",0);
     setprop("sim/model/equipment/right-chock-aft",0);
-    setprop("sim/model/equipment/ground-services/external-power/enable",1);
     setprop("sim/model/equipment/ground-services/fuel-truck/clean",0);
     setprop("sim/model/equipment/ground-services/fuel-truck/transfer",0);
     setprop("sim/model/equipment/ground-services/fuel-truck/connect-aft",0);
@@ -74,12 +95,21 @@ var Startup_yasim = func{
     setprop("sim/model/equipment/ground-services/fuel-truck/disconnect",1);
     setprop("sim/model/equipment/ground-services/fuel-truck/enable",0);
     setprop("controls/electric/dc-master",1);
-    setprop("controls/electric/power-source",-1);
+
+    if (getprop("sim/aircraft") == "dhc6F") {
+        setprop("sim/model/equipment/ground-services/external-power/enable",0);
+        setprop("controls/electric/power-source",1);
+    } else {
+        setprop("sim/model/equipment/ground-services/external-power/enable",1);
+        setprop("controls/electric/power-source",-1);
+    }
+
     if (getprop("controls/electric/inverter") == 1) {
         setprop("controls/electric/inverter", 2);
     } else {
         setprop("controls/electric/inverter", 1);
     }
+
     setprop("controls/electric/master-avionics",0);
     setprop("controls/electric/ammeter-switch",0);
     setprop("controls/lighting/instrument-lights",1);
@@ -90,14 +120,15 @@ var Startup_yasim = func{
     setprop("controls/electric/fwd-boost-pump",1);
     setprop("controls/engines/engine[0]/cutoff",0);
     setprop("controls/engines/engine[1]/cutoff",0);
-    setprop("controls/engines/engine[0]/intake-deflector",1);
-    setprop("controls/engines/engine[1]/intake-deflector",1);
+    setprop("controls/engines/engine[0]/intake-deflector",1.0);
+    setprop("controls/engines/engine[1]/intake-deflector",1.0);
     setprop("controls/engines/internal-engine-starter",1);
     setprop("controls/engines/engine[0]/throttle",0);
     setprop("controls/engines/engine[1]/throttle",0);
     setprop("controls/anti-ice/pitot-heat",1);
     setprop("controls/anti-ice/prop-heat",1);
     setprop("controls/anti-ice/window-heat",1);
+
     screen.log.write("Starting the engines. Please wait...", 1, 1, 1);
     
     var check_loop1 = func {
@@ -122,7 +153,6 @@ var Startup_yasim = func{
 
         }
         if (getprop("engines/engine[0]/running") == 1 and getprop("engines/engine[1]/running") == 1 and getprop("engines/engine[1]/rpm") > 200) {
-            setprop("sim/model/equipment/ground-services/external-power/enable",0);
             setprop("controls/engines/internal-engine-starter",0);
             setprop("controls/electric/ammeter-switch",1);
             setprop("controls/electric/power-source",1);
@@ -133,6 +163,7 @@ var Startup_yasim = func{
             setprop("controls/lighting/seat-belt",1);
             setprop("controls/electric/engine[0]/generator-active",1);
             setprop("controls/electric/engine[1]/generator-active",1);
+
             setprop("controls/lighting/landing-light[0]",1);
             setprop("controls/lighting/landing-light[1]",1);
             setprop("controls/lighting/nav-lights",1);
@@ -140,13 +171,24 @@ var Startup_yasim = func{
             setprop("controls/engines/auto-feather",1);
             setprop("controls/flight/flaplever",0.25);
             setprop("controls/flight/flaps",0.25);
-            setprop("controls/gear/parkingbrake-lever",0);
+
+# SurferTim changed
+            setprop("controls/gear/parkingbrake-lever",1);
+            setprop("instrumentation/garmin196/light",0.2);
+            setprop("instrumentation/adf/ident-audible",1);
+
             setprop("controls/flight/elevator-trim",-0.2);
             setprop("controls/flight/rudder-trim",0.12);
             setprop("controls/pneumatic/engine[0]/bleed", 1);
             setprop("controls/pneumatic/engine[1]/bleed", 1);
-            screen.log.write("Startup procedure finished. - You are now ready for Take Off!", 1, 1, 1);
-            print("Startup complete");
+
+            setprop("sim/model/equipment/ground-services/external-power/enable",0);
+
+            screen.log.write("Startup procedure finished!", 1, 1, 1);
+            screen.log.write("Press Shift-B to release parking brake", 0.1, 1, 0.6);
+            screen.log.write("when you're ready for takeoff.", 0.1, 1, 0.6);
+
+            print("YASIM Startup complete");
         }
         settimer(check_loop1, 0.1);
         }
@@ -232,7 +274,7 @@ var Startup_jsb = func{
     setprop("controls/pneumatic/engine[0]/bleed", 1);
     setprop("controls/pneumatic/engine[1]/bleed", 1);
     print("Startup complete");
-}
+};
 
 var Shutdown = func{
     setprop("controls/electric/engine[0]/generator",0);
@@ -269,8 +311,8 @@ var Shutdown = func{
     setprop("controls/flight/flaplever",0);
     setprop("controls/flight/flaps",0);
     setprop("controls/gear/parkingbrake-lever",1);
-    setprop("controls/engines/engine[0]/intake-deflector",0);
-    setprop("controls/engines/engine[1]/intake-deflector",0);
+    setprop("controls/engines/engine[0]/intake-deflector",0.0);
+    setprop("controls/engines/engine[1]/intake-deflector",0.0);
     setprop("controls/lighting/flightcomp-lights",0);
     setprop("controls/lighting/cabin-lights",0);
     setprop("controls/lighting/no-smoking",0);
@@ -362,7 +404,7 @@ var Caution_panel = {
         return m;
     },
     update: func{
-        
+
         if(me.power.getValue()>5.0 and getprop("controls/electric/dc-master")==1 and getprop("controls/electric/power-source")!=0)me.volts=1 else me.volts=0;
         if(me.test.getValue()>5.0)me.caution_test=1 else me.caution_test=0;
         if(me.volts == 0){me.reset();return;} 
@@ -527,7 +569,10 @@ var update_engines = func {
     var FDM ="";
     FDM=getprop("sim/flight-model");
 
-    if (FDM == "yasim") return;
+    if (FDM == "yasim") {
+        return;
+    }
+
     setprop("engines/engine[0]/rpm", getprop("engines/engine[0]/thruster/rpm"));
     setprop("engines/engine[1]/rpm", getprop("engines/engine[1]/thruster/rpm"));
 
@@ -857,3 +902,30 @@ var battery_switch = func{
 }
 
 setlistener("/controls/electric/power-source", battery_switch);
+
+# SurferTim added
+props.globals.initNode("/autopilot/settings/heading-bug-deg", 0.0,"DOUBLE");
+props.globals.initNode("/instrumentation/heading-indicator-real-dg/heading-bug-deg", 0.0,"DOUBLE");
+props.globals.initNode("/instrumentation/radar-altimeter/alarm-alt", 0.0,"DOUBLE");
+
+setlistener("/instrumentation/radar-altimeter/indicated-agl-ft", func(test){
+     thisalt = test.getValue();
+     targetalt = getprop("/instrumentation/altimeter/decision-height");
+     alarm = thisalt - targetalt;
+     impactTime = getprop("/instrumentation/radar-altimeter/indicated-agl-ft") / getprop("velocities/vertical-speed-fps");
+     setprop("/instrumentation/radar-altimeter/impact-time-sec",impactTime);
+     setprop("/instrumentation/radar-altimeter/alarm-alt",alarm);
+},0,0);
+
+setlistener("/instrumentation/heading-indicator-real-dg/heading-bug-deg", func(test){
+     setprop("/autopilot/settings/heading-bug-deg",test.getValue());
+},0,0);
+
+setlistener("/autopilot/settings/heading-bug-deg", func(test){
+     setprop("/instrumentation/heading-indicator-real-dg/heading-bug-deg",test.getValue());
+},0,0);
+
+setlistener("/sim/signals/fdm-initialized", func(){
+     setprop("/instrumentation/adf/volume-norm",0.0);
+     setprop("/autopilot/settings/heading-bug-deg",getprop("/instrumentation/heading-indicator-real-dg/heading-bug-deg"));
+},0,0);

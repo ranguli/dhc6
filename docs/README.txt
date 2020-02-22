@@ -7,6 +7,7 @@
     * Bo Lan (lanbo64):                 Systems, Nasal scripting, FDM, Autopilot, Instruments, etc.
     * Jonathan Schellhase (dg-505):     Current maintenance, 3D modelling, Systems, Checklists, Tutorials,
                                         Sound, Nasal, 2D panel, Artwork, etc.
+    * Tim Dicus (SurferTim):            Engine upgrade, autopilot, nasal, etc.
 
     Other contributors:
     Clément de l'Hamaide, (f-jjth), PAF Team, Zdenal, Erik, abassign, primtala2,

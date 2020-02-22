@@ -90,6 +90,14 @@
             </item>
 
             <item>
+                <label>Remove Tiedowns etc.</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.removeTiedowns();</script>
+                </binding>
+            </item>
+
+            <item>
                 <label>Securing</label>
                 <binding>
                     <command>nasal</command>
