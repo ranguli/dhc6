@@ -10,7 +10,7 @@
 
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
-    <sim include="dhc6-views.xml">
+    <sim include="Config/dhc6-views.xml">
 
         <model>
             <autostart type="bool">0</autostart>
@@ -42,7 +42,7 @@
             <fallback-model-index type="int">157</fallback-model-index>
         </model>
 
-        <aircraft-data include="dhc6-aircraft-data.xml"/>
+        <aircraft-data include="Config/dhc6-aircraft-data.xml"/>
 
         <status>advanced production</status>
 
@@ -128,7 +128,7 @@
 
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
-        <help include="dhc6-help.xml"/>
+        <help include="Config/dhc6-help.xml"/>
 
         <checklists include="Tutorials/dhc6-checklists.xml"/>
         
@@ -202,7 +202,7 @@
             </generic>
         </multiplay>
 
-        <menubar include="dhc6-menu.xml"/>
+        <menubar include="Config/dhc6-menu.xml"/>
 
         <rendering>
             <als-secondary-lights>
@@ -279,7 +279,7 @@
         </fuel>
     </consumables>
 
-    <controls include="dhc6-controls.xml"/>
+    <controls include="Config/dhc6-controls.xml"/>
 
     <engines>
         <engine n="0">
@@ -322,7 +322,7 @@
         </gear>
     </gear>
 
-    <input include="dhc6-input.xml"/>
+    <input include="Config/dhc6-input.xml"/>
 
     <instrumentation>
         <flightdirector>

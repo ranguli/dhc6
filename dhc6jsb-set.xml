@@ -11,7 +11,7 @@
 
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
-    <sim include="dhc6-views.xml">
+    <sim include="Config/dhc6-views.xml">
         <description>De Havilland Canada DHC-6-300 Twin Otter (JSBSim)</description>
 
         <long-description>The DHC-6 Twin Otter is a 20 seat, twin turboprop, high wing aircraft with STOL abilities and a fixed tricycle gear. Originally developed by de Haviland Canada (Series -100 to -300) nowadays Viking Air produces and distributes the Twin Otter series -400. Since it's first flight in 1996 there were built more then 900 Twin Otters and the aircraft still enjoys great popularity among skydivers and as a bush plane due to it's powerful engines and it's robustness and versatility. Moreover it can easily be equipped with floats and skis. This version for FlighGear is the DHC-6-300 series. Have fun!
@@ -73,7 +73,7 @@
             <show-garmin-196 type="bool">false</show-garmin-196>
         </model>
 
-        <aircraft-data include="dhc6-aircraft-data.xml"/>
+        <aircraft-data include="Config/dhc6-aircraft-data.xml"/>
 
         <status>advanced production</status>
 
@@ -163,7 +163,7 @@
 
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
-        <help include="dhc6-help.xml"/>
+        <help include="Config/dhc6-help.xml"/>
 
         <checklists include="Tutorials/dhc6-checklists.xml"/>
         
@@ -223,7 +223,7 @@
             </generic>
         </multiplay>
 
-        <menubar include="dhc6-menu.xml"/>
+        <menubar include="Config/dhc6-menu.xml"/>
 
         <rendering>
             <als-secondary-lights>
@@ -330,7 +330,7 @@
         </fuel>
     </consumables>
 
-    <controls include="dhc6-controls.xml"/>
+    <controls include="Config/dhc6-controls.xml"/>
 
     <engines>
         <engine n="0">
@@ -398,7 +398,7 @@
         </gear>
     </gear>
 
-    <input include="dhc6-input.xml"/>
+    <input include="Config/dhc6-input.xml"/>
 
     <instrumentation>
         <flightdirector>
