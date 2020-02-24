@@ -635,10 +635,16 @@
 
     <model>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
         <name>Gear CTL</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/gear/gear-ctl.xml</path>

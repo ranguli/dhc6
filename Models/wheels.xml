@@ -11,10 +11,16 @@
         <object-name>Lski</object-name>
         <object-name>Rski</object-name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6S</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6S</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pS</value>
+                </equals>
+            </or>
         </condition>
     </animation>
 

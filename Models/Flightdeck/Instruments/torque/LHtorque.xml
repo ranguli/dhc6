@@ -150,6 +150,35 @@ Syd Adams
         </axis>
     </animation>
 
+    <!-- place the red torque limit marker at 60 for the PT6A-34 engines of the dhc6p variant -->
+    <animation>
+        <type>rotate</type>
+        <object-name>TQneedle.001</object-name>
+        <condition>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6p</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pS</value>
+                </equals>
+            </or>
+        </condition>
+        <property>sim/signals/fdm-initialized</property>
+        <factor>35</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
     <!-- TEXT OSG -->
     <text>
         <name>textosg</name>

@@ -491,7 +491,6 @@
             <maximum-takeoff-mass-lbs>12500</maximum-takeoff-mass-lbs>
             <maximum-landing-mass-lbs>12300</maximum-landing-mass-lbs>
         </mass-and-balance>
-        <max-torque-ftlb>1530</max-torque-ftlb>
         <max-prop-rpm>2200</max-prop-rpm>
         <max-exhaust-temp>725</max-exhaust-temp>
         <max-n2>101.5</max-n2>

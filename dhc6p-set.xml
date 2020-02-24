@@ -12,17 +12,17 @@
 <PropertyList include="dhc6-base.xml">
 
     <sim>
-        <description>de Havilland Canada DHC-6-300 Twin Otter (PT6A-27), Wheels</description>
-        <long-description>The DHC-6 Twin Otter is a 20 seat, twin turboprop, high wing aircraft with STOL abilities and a fixed tricycle gear. Originally developed by de Haviland Canada (Series -100 to -300) nowadays Viking Air produces and distributes the Twin Otter series -400. Since it's first flight in 1996 there were built more then 900 Twin Otters and the aircraft still enjoys great popularity among skydivers and as a bush plane due to it's powerful engines and it's robustness and versatility. Moreover it can easily be equipped with floats and skis. This version for FlightGear is the DHC-6-300 series equipped with Pratt &amp; Whithey PT6A-27 engines with 620 HP of shaft power. Have fun!
+        <description>de Havilland Canada DHC-6-300 Twin Otter (PT6A-34), Wheels</description>
+        <long-description>The DHC-6 Twin Otter is a 20 seat, twin turboprop, high wing aircraft with STOL abilities and a fixed tricycle gear. Originally developed by de Haviland Canada (Series -100 to -300) nowadays Viking Air produces and distributes the Twin Otter series -400. Since it's first flight in 1996 there were built more then 900 Twin Otters and the aircraft still enjoys great popularity among skydivers and as a bush plane due to it's powerful engines and it's robustness and versatility. Moreover it can easily be equipped with floats and skis. This version for FlightGear is the DHC-6-300 series equipped with Pratt &amp; Whithey PT6A-34 engines with 750 HP of shaft power. Have fun!
         </long-description>
         <de>
-            <long-description>Die DHC-6 Twin Otter ist ein 20-sitziger Hochdecker mit zwei Turboprop-Triebwerken, einem festen Dreibeinfahrwerk und STOL-Fähigkeiten. Ursprünglich von de Havilland Canada entwickelt (Baureihen -100 bis -300), wird die Twin Otter heutzutage als Baureihe -400 von Viking Air produziert und vertrieben. Seit ihrem Erstflug 1996 wurden mehr als 900 Twin Otters gebaut und auch heute noch erfreut sie sich dank ihrer starken Treibwerke und ihrer Robustheit und Vielseitigkeit großer Beliebtheit bei Fallschirmspringern und als Buschflugzeug. Zudem kann sie einfach mit Schwimmern und Skiern ausgestattet werden. Diese Version für FlightGear stellt die Baureihe DHC-6-300 dar, ausgestattet mit Pratt &amp; Whithey PT6A-27-Triebwerken mit 620 PS Wellenleistung . Viel Spaß!
+            <long-description>Die DHC-6 Twin Otter ist ein 20-sitziger Hochdecker mit zwei Turboprop-Triebwerken, einem festen Dreibeinfahrwerk und STOL-Fähigkeiten. Ursprünglich von de Havilland Canada entwickelt (Baureihen -100 bis -300), wird die Twin Otter heutzutage als Baureihe -400 von Viking Air produziert und vertrieben. Seit ihrem Erstflug 1996 wurden mehr als 900 Twin Otters gebaut und auch heute noch erfreut sie sich dank ihrer starken Treibwerke und ihrer Robustheit und Vielseitigkeit großer Beliebtheit bei Fallschirmspringern und als Buschflugzeug. Zudem kann sie einfach mit Schwimmern und Skiern ausgestattet werden. Diese Version für FlightGear stellt die Baureihe DHC-6-300 dar, ausgestattet mit Pratt &amp; Whithey PT6A-34-Triebwerken mit 750 PS Wellenleistung . Viel Spaß!
             </long-description>
         </de>
         <author>Syd Adams (Initial model), Christian Thiriot (3D, Textures), Bo Lan (Nasal, FDM, Systems), Jonathan Schellhase (3D, Nasal, Systems, Sound, misc), Tim Dicus (Engine upgrade)</author>
         <flight-model>yasim</flight-model>
-        <aero>dhc6</aero>
-        <fuel-fraction>0.6</fuel-fraction>
+        <aero>dhc6p</aero>
+        <fuel-fraction>0.5</fuel-fraction>
         <previews>
             <preview>
                 <type>exterior</type>
@@ -146,7 +146,7 @@
     </sim>
 
     <limits>
-        <max-torque-ftlb>1530</max-torque-ftlb>
+        <max-torque-ftlb>1830</max-torque-ftlb>
     </limits>
 
     <controls>
@@ -154,6 +154,7 @@
             <brake-parking>1</brake-parking>
         </gear>
     </controls>
+
 
     <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
         <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>

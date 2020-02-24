@@ -178,10 +178,16 @@
     <model>
         <name>wheels</name>
         <condition>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
         <path>Aircraft/dhc6/Models/wheels.xml</path>
         <offsets>
@@ -195,10 +201,16 @@
     <model>
         <name>floats</name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/floats.xml</path>
         <offsets>
@@ -356,10 +368,16 @@
     <model>
         <name>left-tiedown-wheels</name>
         <condition>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/tiedowns/left-tiedown-wheels.xml</path>
     </model>
@@ -497,12 +515,18 @@
 
     <!-- Right tiedown (wheels/ski) -->
     <model>
-      <name>right-tiedown-wheels</name>
-      <condition>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+        <name>right-tiedown-wheels</name>
+        <condition>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/tiedowns/right-tiedown-wheels.xml</path>
     </model>
@@ -642,10 +666,16 @@
     <model>
         <name>rear-tiedown-wheels</name>
         <condition>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
         <path>Aircraft/dhc6/Models/Equipment/tiedowns/rear-tiedown-wheels.xml</path>
     </model>
@@ -1267,11 +1297,17 @@
     <model>
         <name>shadow</name>
         <condition>
-            <property>sim/rendering/show-shadow</property>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+            <and>
+                <property>sim/rendering/show-shadow</property>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
         <path>Aircraft/dhc6/Models/shadow.xml</path>
         <offsets>
@@ -1286,10 +1322,16 @@
         <name>shadowF</name>
         <condition>
             <property>sim/rendering/show-shadow</property>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
         <path>Aircraft/dhc6/Models/shadowF.xml</path>
         <offsets>
@@ -1501,10 +1543,16 @@
         <type>select</type>
         <object-name>float.fairing</object-name>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
     </animation>
 
@@ -1512,10 +1560,16 @@
         <type>select</type>
         <object-name>wheel.fairing</object-name>
         <condition>
-            <not-equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </not-equals>
+            <and>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
+            </and>
         </condition>
     </animation>
 
@@ -2939,10 +2993,16 @@
         <object-name>handle</object-name>
         <property>sim/signals/fdm-initialized</property>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
         <factor>0.5</factor>
         <axis>
@@ -2969,6 +3029,10 @@
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6F</value>
                 </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
                 <property>sim/model/equipment/ground-services/fuel-truck/connect-fwd</property>
             </and>
         </condition>
@@ -2983,6 +3047,10 @@
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6F</value>
                 </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
                 <property>sim/model/equipment/ground-services/fuel-truck/connect-aft</property>
             </and>
         </condition>
@@ -2993,10 +3061,16 @@
         <object-name>pipe-fwd-floats</object-name>
         <condition>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6F</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6F</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6pF</value>
+                    </equals>
+                </or>
                 <property>sim/model/equipment/ground-services/fuel-truck/connect-fwd</property>
             </and>
         </condition>
@@ -3007,10 +3081,16 @@
         <object-name>pipe-aft-floats</object-name>
         <condition>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6F</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6F</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6pF</value>
+                    </equals>
+                </or>
                 <property>sim/model/equipment/ground-services/fuel-truck/connect-aft</property>
             </and>
         </condition>
@@ -3040,10 +3120,16 @@
         <object-name>external-power-unit</object-name>
         <property>sim/signals/fdm-initialized</property>
         <condition>
-            <equals>
-                <property>sim/multiplay/generic/string</property>
-                <value>dhc6F</value>
-            </equals>
+            <or>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6F</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </equals>
+            </or>
         </condition>
         <factor>0.5</factor>
         <axis>
@@ -3062,6 +3148,10 @@
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6F</value>
                 </not-equals>
+                <not-equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6pF</value>
+                </not-equals>
                 <property>sim/model/equipment/ground-services/external-power/enable</property>
             </and>
         </condition>
@@ -3072,10 +3162,16 @@
         <object-name>cable-f</object-name>
         <condition>
             <and>
-                <equals>
-                    <property>sim/multiplay/generic/string</property>
-                    <value>dhc6F</value>
-                </equals>
+                <or>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6F</value>
+                    </equals>
+                    <equals>
+                        <property>sim/multiplay/generic/string</property>
+                        <value>dhc6pF</value>
+                    </equals>
+                </or>
                 <property>sim/model/equipment/ground-services/external-power/enable</property>
             </and>
         </condition>
