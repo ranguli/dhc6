@@ -51,6 +51,10 @@
                     <property>/sim/current-view/name</property>
                     <value>Walk View</value>
                 </not-equals>
+                <not-equals>
+                    <property>/sim/current-view/name</property>
+                    <value>Bird's eye</value>
+                </not-equals>
             </and>
         </input>
         <output>

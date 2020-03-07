@@ -525,6 +525,7 @@
             <file>Aircraft/dhc6/Nasal/tooltips.nas</file>
             <file>Aircraft/dhc6/Nasal/interpolate.nas</file>
             <file>Aircraft/dhc6/Nasal/light-manager.nas</file>
+            <file>Aircraft/dhc6/Nasal/views.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>

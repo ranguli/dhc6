@@ -330,7 +330,7 @@
                         <value>1</value>
                     </equals>
                     <greater-than>
-                        <property>systems/electrical/volts</property>
+                        <property>systems/electrical/outputs/boost-pump-main-aft</property>
                         <value>0</value>
                     </greater-than>
                     <property>sim/current-view/internal</property>
@@ -348,10 +348,10 @@
             <property>sim/sound/fwd-boost-pump</property>
             <condition>
                 <and>
-                    <equals>
-                        <property>controls/electric/fwd-boost-pump</property>
+                    <greater-than>
+                        <property>systems/electrical/outputs/boost-pump-main-fwd</property>
                         <value>1</value>
-                    </equals>
+                    </greater-than>
                     <greater-than>
                         <property>systems/electrical/volts</property>
                         <value>0</value>
@@ -1502,7 +1502,7 @@
             <mode>looped</mode>
             <volume>
                 <property>sim/sound/hyd-pump</property>
-                <factor>0.0007</factor>
+                <factor>0.0003</factor>
             </volume>
             <pitch>
                 <property>sim/sound/hyd-pump</property>
