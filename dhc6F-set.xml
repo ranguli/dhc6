@@ -21,7 +21,7 @@
         <author>Syd Adams (Initial model), Christian Thiriot (3D, Textures), Bo Lan (Nasal, FDM, Systems), Jonathan Schellhase (3D, Nasal, Systems, Sound, misc), Tim Dicus (Engine upgrade)</author>
         <flight-model>yasim</flight-model>
         <aero>dhc6F</aero>
-        <type type="string">seaplane</type>
+        <type type="string">amphibious</type>
         <variant-of>dhc6</variant-of>
         <fuel-fraction>0.5</fuel-fraction>
         <previews>
