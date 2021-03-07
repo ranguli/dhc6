@@ -412,8 +412,10 @@
             </binding>
         </checkbox>
 
+<!-- ADF2 added by Simworld2020 -->
+
         <!-- ADF 2 -->
-        <!--text>
+        <text>
             <row>5</row>
             <col>0</col>
             <label>Adf2</label>
@@ -476,7 +478,7 @@
             <binding>
                 <command>dialog-apply</command>
             </binding>
-        </checkbox-->
+        </checkbox>
 
         <!-- Transponder (with SquawkGear/VATSIM) -->
         <text>

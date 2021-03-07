@@ -260,6 +260,8 @@
     <path>/instrumentation/heading-indicator-real-dg/offsetdeg</path>
     <path>/instrumentation/nav[0]/radials/selected-deg</path>
     <path>/instrumentation/nav[0]/volume</path>
+    <path>/instrumentation/nav[0]/slaved-to-gps</path>
+    <path>/instrumentation/nav[0]/slaved-to-gps-pos</path>
     <path>/instrumentation/nav[1]/radials/selected-deg</path>
     <path>/instrumentation/nav[1]/volume</path>
     <path>/instrumentation/transponder/id-code</path>

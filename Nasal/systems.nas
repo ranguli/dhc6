@@ -175,8 +175,7 @@ var Startup_yasim = func{
 # SurferTim changed
             setprop("controls/gear/parkingbrake-lever",1);
             setprop("instrumentation/garmin196/light",0.2);
-            setprop("instrumentation/adf/ident-audible",1);
-
+#           setprop("instrumentation/adf/ident-audible",1);  (now controlled by KMA20 audio panel, see KMA20_AudioPanel.nas)
             setprop("controls/flight/elevator-trim",-0.2);
             setprop("controls/flight/rudder-trim",0.12);
             setprop("controls/pneumatic/engine[0]/bleed", 1);
@@ -926,6 +925,6 @@ setlistener("/autopilot/settings/heading-bug-deg", func(test){
 },0,0);
 
 setlistener("/sim/signals/fdm-initialized", func(){
-     setprop("/instrumentation/adf/volume-norm",0.0);
+#    setprop("/instrumentation/adf/volume-norm",0.0);  (now controlled by KMA20_AudioPanel.nas)
      setprop("/autopilot/settings/heading-bug-deg",getprop("/instrumentation/heading-indicator-real-dg/heading-bug-deg"));
 },0,0);

@@ -1155,12 +1155,14 @@ Right_28V_DC_bus = func(dt) {
     }
 
     # Right ADF (doesn't exist yet)
-#    if (getprop("controls/electric/circuit-breakers/center/lh-adf2") and getprop("instrumentation/adf[1]/serviceable") and getprop("controls/electric/master-avionics")) {
-#        setprop(outPut~"adf[1]", bus_volts);
-#        load += bus_volts / 50;
-#    } else {
-#        setprop(outPut~"adf[1]", 0);
-#    }
+	# Following function uncommented by Simworld2020 for ADF2 installation
+
+    if (getprop("controls/electric/circuit-breakers/center/rh-adf2") and getprop("instrumentation/adf[1]/serviceable") and getprop("controls/electric/master-avionics")) {
+       setprop(outPut~"adf[1]", bus_volts);
+        load += bus_volts / 50;
+    } else {
+        setprop(outPut~"adf[1]", 0);
+    }
 
     return load;
 

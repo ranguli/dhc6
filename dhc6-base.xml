@@ -95,10 +95,10 @@
             </property-rule>
         </systems>
 
-        <instrumentation>
+		<instrumentation>
             <path>Aircraft/dhc6/Systems/instrumentation.xml</path>
         </instrumentation>
-
+		
         <sound>
             <path>Aircraft/dhc6/Sounds/dhc6-sound.xml</path>
             <click-thunder1 type="bool">false</click-thunder1>
@@ -445,31 +445,88 @@
                 <ident-btn-pos type="double">0</ident-btn-pos>
             </inputs>
         </transponder>
+<!-- Initialize volumes, Simworld2020 -->
+<!-- Initialization of comm and nav volume and type settings not working, another process must be
+overriding the settings entered here. -->
         <nav n="0">
             <serviceable type="bool">1</serviceable>
+			<volume type="double">0.5</volume>
+            <slaved-to-gps type="bool">false</slaved-to-gps>
+            <slaved-to-gps-pos type="double">0</slaved-to-gps-pos>
         </nav>
         <nav n="1">
             <serviceable type="bool">1</serviceable>
-        </nav>
+			<volume type="double">0.5</volume>
+        </nav>/
         <comm n="0">
             <serviceable type="bool">1</serviceable>
+			<add-noise type="bool">1</add-noise>
+			<volume type="double">0.5</volume>
+			<ptt type="bool">0</ptt>
         </comm>
         <comm n="1">
             <serviceable type="bool">1</serviceable>
+			<add-noise type="bool">1</add-noise>
+			<volume type="double">0.5</volume>
+			<ptt type="bool">0</ptt>
         </comm>
+		
+<!-- ADF2 added by Simworld2020 then ADF1 moved here for init -->	
+	
+        <adf n="0">
+            <serviceable type="bool">1</serviceable>
+            <ident-audible type="bool">1</ident-audible>
+			<volume type="double">0.5</volume>
+        </adf>
+        <adf n="1">
+            <serviceable type="bool">1</serviceable>
+            <ident-audible type="bool">1</ident-audible>
+			<volume type="double">0.5</volume>
+        </adf>
+        <dme>
+            <power-btn-pos type="double">1</power-btn-pos>
+            <switch-min-kts-pos type="double">1</switch-min-kts-pos>
+            <switch-position-pos type="double">1</switch-position-pos>
+        </dme>
         <elt>
             <armed type="bool">false</armed>
             <on type="bool">true</on>
             <on-pos type="double">1</on-pos>
             <test type="bool">false</test>
         </elt>
-        <dme>
-            <power-btn-pos type="double">1</power-btn-pos>
-            <switch-min-kts-pos type="double">1</switch-min-kts-pos>
-            <switch-position-pos type="double">1</switch-position-pos>
-        </dme>
-    </instrumentation>
+		
+<!-- KMA20 audio panel by Simworld2020 -->
 
+        <kma20>
+            <serviceable type="bool">1</serviceable>
+			<!-- -1: COM1, 0: COM2, 1: EXT  -->
+			<knob type="int" archive="y">-1</knob>
+			<!-- -1: SPEAKER, 0: OFF, 1: PHONE  -->
+			<auto type="int" archive="y">0</auto>
+			<com1 type="int" archive="y">0</com1>
+			<com2 type="int" archive="y">0</com2>
+			<nav1 type="int" archive="y">0</nav1>
+			<nav2 type="int" archive="y">0</nav2>
+			<adf  type="int" archive="y">0</adf>
+			<dme  type="int" archive="y">0</dme>
+			<mkr  type="int" archive="y">0</mkr>
+			<sens type="int" archive="y">0</sens>
+			<!-- flag for marker lights test -->
+			<test type="int" archive="y">0</test>
+        </kma20>
+
+<!--	<marker-beacon>
+			<audio-btn type="bool">1</audio-btn>
+			<name type="string">marker-beacon</name>
+			<number type="int">0</number>
+			<serviceable type="bool">1</serviceable>
+			<inner type="bool">0</inner>
+			<middle type="bool">0</middle>
+			<outer type="bool">0</outer>
+			<test type="bool">0</test>
+		</marker-beacon>
+-->
+    </instrumentation>
     <limits>
         <max-flap-extension-speed>
             <flaps>0.0</flaps>
@@ -526,6 +583,7 @@
             <file>Aircraft/dhc6/Nasal/interpolate.nas</file>
             <file>Aircraft/dhc6/Nasal/light-manager.nas</file>
             <file>Aircraft/dhc6/Nasal/views.nas</file>
+			<file>Aircraft/dhc6/Nasal/KMA20_AudioPanel.nas</file>
         </dhc6>
         <dialogs>
             <file>Aircraft/dhc6/Nasal/dialogs.nas</file>

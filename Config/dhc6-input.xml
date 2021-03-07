@@ -582,9 +582,60 @@
                 <script>gui.popupTip(sprintf("External power: %i", getprop("/sim/model/equipment/ground-services/external-power/enable")), 5);</script>
             </binding>
         </key>
+		
+<!--
+Simworld2020 : START : kma20 audio panel COM1/COM2 PTT control modifications.
+-->
 
-    </keyboard>
-
+	<key n="32">
+		<name>space</name>
+		<desc>COM PTT Control</desc>
+		
+		<!-- COM1 Transmit -->
+		
+		<binding>
+			<condition>
+				<equals>
+					<property>instrumentation/kma20/knob</property>
+					<value>-1</value>
+				</equals>
+			</condition>
+			<command>property-assign</command>
+			<property>instrumentation/comm/ptt</property>
+			<value>1</value>
+		</binding>
+		
+		<!-- COM2 Transmit -->
+		
+		<binding>
+			<condition>
+				<equals>
+					<property>instrumentation/kma20/knob</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<command>property-assign</command>
+			<property>instrumentation/comm[1]/ptt</property>
+			<value>1</value>
+		</binding>
+		<!-- Unkey transmitters -->
+		<mod-up>
+			<binding>
+					<command>property-assign</command>
+					<property>instrumentation/comm/ptt</property>
+					<value>0</value>
+			</binding>
+			<binding>
+					<command>property-assign</command>
+					<property>instrumentation/comm[1]/ptt</property>
+					<value>0</value>
+			</binding>
+		</mod-up>
+		</key>
+	</keyboard>
+<!--
+Simworld2020 : END : kma20 audio panel COM1/COM2 PTT control modifications.
+-->
     <mice include="dhc6-mice.xml"/>
 
 </PropertyList>

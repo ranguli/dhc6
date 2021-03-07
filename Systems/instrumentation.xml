@@ -12,6 +12,11 @@
         <name>adf</name>
         <number>0</number>
     </adf>
+<!-- ADF2 added by Simworld2020 -->
+    <adf>
+        <name>adf</name>
+        <number>1</number>
+    </adf>
 
     <airspeed-indicator>
         <name>airspeed-indicator</name>

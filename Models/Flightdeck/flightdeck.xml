@@ -648,10 +648,11 @@
         </condition>
         <name>Gear CTL</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/gear/gear-ctl.xml</path>
+<!-- Moved by Simworld2020 -->
         <offsets>
             <x-m>-3.936</x-m>
-            <y-m>0.050</y-m>
-            <z-m>0.062</z-m>
+            <y-m>0.010</y-m>
+            <z-m>-0.055</z-m>  <!-- original 0.062 -->
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -677,6 +678,8 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
+	
+<!-- Pilot's Panel -->
 
     <model>
         <name>Pilot Airspeed</name>
@@ -797,8 +800,112 @@
          <z-m> 0.21788 </z-m>
        </offsets>
    </model>
+   
+<!-- Simworld2020: Add Pilot NAV1 GPS Slave switch and indicator lamp -->
 
-    <!--AP commands-->
+    <model>
+        <name>Pilot NAV1 Slave Switch</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/nav1_gps_slave.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>-0.564</y-m>
+            <z-m>0.160</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Pilot NAV1 Slave Lamp</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/slave_lamp.xml</path>
+        <offsets>
+            <x-m>-3.9476</x-m>
+            <y-m>-0.584</y-m>
+            <z-m>0.232</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Pilot Comm1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com1.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.089</y-m>
+            <z-m>0.447</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot Comm2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com2.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.194</y-m>
+            <z-m>0.447</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot Nav1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav1.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.089</y-m>
+            <z-m>0.367</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot ADF1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl62.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.089</y-m>
+            <z-m>0.287</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+<!-- Simworld2020 : add Pilot ADF2 -->
+
+	<model>
+        <name>Pilot ADF2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl62-2.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.194</y-m>
+            <z-m>0.287</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot Nav2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav2.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.194</y-m>
+            <z-m>0.367</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Pilot OAT</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/oat/oat.xml</path>
+        <offsets>
+            <x-m>-3.353</x-m>
+            <y-m>-0.416</y-m>
+            <z-m>1.001</z-m>
+            <pitch-deg>80</pitch-deg>
+        </offsets>
+    </model>
+	
+	<!-- Pilot AP commands-->
+	
     <model>
         <name>apcomm</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
@@ -843,74 +950,8 @@
         </offsets>
     </model>
 
-    <model>
-        <name>Pilot Comm1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com1.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.089</y-m>
-            <z-m>0.447</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>Pilot Comm2</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com2.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.194</y-m>
-            <z-m>0.447</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>Pilot Nav1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav1.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.089</y-m>
-            <z-m>0.367</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>Pilot ADF1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl62.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.089</y-m>
-            <z-m>0.287</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>Pilot Nav2</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav2.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.194</y-m>
-            <z-m>0.367</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>airtemp</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/airtemp/airtemp.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.321</y-m>
-            <z-m>0.357</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-
-    <!-- GTX320A -->
+    <!-- GTX320A Transponder -->
+	
     <model>
       <path>Aircraft/dhc6/Models/Flightdeck/Instruments/transponder/gtx320a.xml</path>
       <offsets>
@@ -920,20 +961,63 @@
       </offsets>
     </model>
 
+
+<!-- Copilot Panel -->
+
     <model>
-        <name>OAT</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/oat/oat.xml</path>
+        <name>Copilot OAT</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/airtemp/airtemp.xml</path>
         <offsets>
-            <x-m>-3.353</x-m>
-            <y-m>-0.416</y-m>
-            <z-m>1.001</z-m>
-            <pitch-deg>80</pitch-deg>
+            <x-m>-3.936</x-m>
+            <y-m>0.421</y-m>
+            <z-m>0.453</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>CoPilot Clock</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/clock/m877.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.521</y-m>
+            <z-m>0.437</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>	
+	
+<!--
+Simworld2020: Add Copilot VOR1 and VOR2 for full IFR from the right seat.
+Also For IFR training and dual control in the Multiplayer space (pending).
+-->
+
+    <model>
+        <name>Copilot VOR 1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki206/ki206_1.xml</path>
+        <offsets>
+            <x-m>-3.933</x-m>
+            <y-m>0.321</y-m>
+            <z-m>0.443</z-m>
+            <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
     <model>
+        <name>Copilot VOR 2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ki206/ki206_2.xml</path>
+        <offsets>
+            <x-m>-3.933</x-m>
+            <y-m>0.321</y-m>
+            <z-m>0.347</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+<!-- Copilot RMI modified by Simworld2020 to slave its ADF needle to ADF2 -->
+
+    <model>
         <name>CoPilot RMI</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/rmi/rmi.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/rmi/rmi-2.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.321</y-m>
@@ -948,7 +1032,7 @@
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.421</y-m>
-            <z-m>0.357</z-m>
+            <z-m>0.347</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -959,7 +1043,7 @@
         <offsets>
             <x-m>-3.92806</x-m>
             <y-m>0.521</y-m>
-            <z-m>0.357</z-m>
+            <z-m>0.347</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -969,8 +1053,8 @@
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt/alt1-3d1.xml</path>
         <offsets>
             <x-m>-3.934</x-m>
-            <y-m>0.628</y-m>
-            <z-m>0.357</z-m>
+            <y-m>0.620</y-m>
+            <z-m>0.347</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -981,18 +1065,7 @@
         <offsets>
             <x-m>-3.929</x-m>
             <y-m>0.622</y-m>
-            <z-m>0.247</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>CoPilot Clock</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/clock/m877.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.321</y-m>
-            <z-m>0.457</z-m>
+            <z-m>0.240</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -1003,7 +1076,7 @@
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.521</y-m>
-            <z-m>0.247</z-m>
+            <z-m>0.240</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
@@ -1014,23 +1087,113 @@
         <offsets>
             <x-m>-3.933</x-m>
             <y-m>0.421</y-m>
-            <z-m>0.247</z-m>
+            <z-m>0.240</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
+<!-- Simworld2020: Add Copilot NAV1 GPS Slave switch and indicator lamp -->
+
+    <model>
+        <name>Copilot NAV1 Slave Switch</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/nav1_gps_slave.xml</path>
+        <offsets>
+			<!-- +X back, +Y right, +Z up -->
+            <x-m>-3.936</x-m>
+            <y-m> 0.523</y-m>
+            <z-m> 0.157</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>	
+	
+    <model>
+        <name>Copilot NAV1 Slave Lamp</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/slave_lamp.xml</path>
+        <offsets>
+            <x-m>-3.9476</x-m><!-- -3.936 -->
+            <y-m> 0.503</y-m>
+            <z-m> 0.229</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+	<!-- Copilot Autopilot Controls -->
+	
+    <model>
+        <name>Copilot apcomm</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
+        <offsets>
+            <x-m>-3.94</x-m>
+            <y-m>-0.463</y-m>
+            <z-m>0.147</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+   <model>
+        <name>Copilot ias set</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ias-set/ias-set.xml</path>
+        <offsets>
+            <x-m>-3.937</x-m>
+            <y-m>-0.332</y-m>
+            <z-m>0.517</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+   <model>
+        <name>Copilot alt set</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/alt-set/alt-selt.xml</path>
+        <offsets>
+            <x-m>-3.937</x-m>
+            <y-m>-0.332</y-m>
+            <z-m>0.483</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+
+	<!-- Center -->
+	
+	<!-- Simworld2020 - add kma20 audio panel mounting/support plate and kma20 audio panel  -->
+	
+	<model>
+        <name>Audio Panel Support Plate</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/kma20_AudioPanel/audiopanel_support.xml</path>
+        <offsets>
+		<!-- X back , Y right , Z up -->
+            <x-m>-3.93554</x-m>
+		    <y-m>-0.0012</y-m>
+            <z-m> 0.07</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+	</model>
+	<model>
+        <name>kma20 Audio Panel</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/kma20_AudioPanel/kma20.xml</path>
+        <offsets>
+		<!-- X back , Y right , Z up --> 
+            <x-m>-3.9490</x-m>
+		    <y-m>-0.0012</y-m>
+            <z-m> 0.0720</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
     <model>
         <name>Emergency Locator Transmitter</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ELT/ArtexELT.xml</path>
         <offsets>
+		<!-- Moved by Simworld2020 to make room for Audio Panel -->
+		<!-- X back , Y right , Z up -->
             <x-m>-3.93554</x-m>
-            <y-m>-0.0489615</y-m>
-            <z-m>0.0615385</z-m>
+		    <y-m>-0.07700</y-m>
+            <z-m>-0.17000</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
     <!--center panel-->
+	
     <model>
         <name>Center LHtorque</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/torque/LHtorque.xml</path>
@@ -1335,6 +1498,7 @@
         <object-name>Yoke1</object-name>
         <object-name>Yoke2</object-name>
         <object-name>tiller</object-name>
+        <object-name>tiller-center</object-name>
         <condition>
             <property>sim/yokes-visible</property>
         </condition>
@@ -4964,7 +5128,8 @@
         </condition>
     </model>
 
-    <!-- Pilot -->
+    <!-- Human Pilot Model -->
+	
     <model>
         <path>Aircraft/dhc6/Models/Pilot/pilot.xml</path>
         <offsets>
@@ -4977,7 +5142,7 @@
         </condition>
     </model>
 
-    <!-- Copilot -->
+    <!-- Human Copilot Model -->
     <model>
         <path>Aircraft/dhc6/Models/Pilot/copilot.xml</path>
         <offsets>

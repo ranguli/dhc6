@@ -388,6 +388,14 @@ setlistener("/instrumentation/dme/switch-min-kts", func(v) {
     }
 });
 
+setlistener("/instrumentation/nav/slaved-to-gps", func(v) {
+    if(v.getValue()){
+        interpolate("/instrumentation/nav/slaved-to-gps-pos", 1, 0.1);
+    }else{
+        interpolate("/instrumentation/nav/slaved-to-gps-pos", 0, 0.1);
+    }
+});
+
 setlistener("/instrumentation/transponder/inputs/ident-btn", func(v) {
     if(v.getValue()){
         interpolate("/instrumentation/transponder/inputs/ident-btn-pos", 1, 0.1);
