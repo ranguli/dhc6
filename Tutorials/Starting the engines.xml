@@ -64,7 +64,7 @@
             <value>0</value>
         </set>
         <set>
-            <property>/controls/lighting/beacon</property>
+            <property>/controls/lighting/beacon-light</property>
             <value>false</value>
         </set>
         <set>
@@ -80,11 +80,11 @@
             <value>false</value>
         </set>
         <set>
-            <property>/controls/lighting/strobe</property>
+            <property>/controls/lighting/strobe-light</property>
             <value>false</value>
         </set>
         <set>
-            <property>/controls/lighting/taxi-lights</property>
+            <property>/controls/lighting/taxi-light</property>
             <value>false</value>
         </set>
         <set>
@@ -143,13 +143,13 @@
             <message>Before you can start the engines you must turn on the beacon to warn everyone near that soon the engines will start</message>
             <condition>
                 <not>
-                    <property>/controls/lighting/beacon</property>
+                    <property>/controls/lighting/beacon-light</property>
                 </not>
             </condition>
         </error>
         <exit>
             <condition>
-                <property>/controls/lighting/beacon</property>
+                <property>/controls/lighting/beacon-light</property>
             </condition>
         </exit>
     </step>

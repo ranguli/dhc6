@@ -12,7 +12,7 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.														
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###########################################################################
 
 # Nasal functions for KMA20 audio panel
@@ -23,8 +23,8 @@ var COM1Noise  	= ("instrumentation/comm/add-noise");
 var COM1Sig 	= ("instrumentation/comm/cutoff-signal-quality");
 var COM2Noise  	= ("instrumentation/comm[1]/add-noise");
 var COM2Sig 	= ("instrumentation/comm[1]/cutoff-signal-quality");
-var nav1Audio	= ("instrumentation/nav/audio-btn");
-var nav2Audio	= ("instrumentation/nav[1]/audio-btn");
+var nav1Audio	= ("instrumentation/nav/ident");
+var nav2Audio	= ("instrumentation/nav[1]/ident");
 var adfAudio	= ("instrumentation/adf/ident-audible");
 var dmeAudio	= ("instrumentation/dme/ident");
 var mkrAudio	= ("instrumentation/marker-beacon/audio-btn");

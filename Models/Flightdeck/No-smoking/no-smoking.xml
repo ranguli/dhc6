@@ -7,7 +7,7 @@
     <animation>
         <object-name>safety-signs-stand</object-name>
         <object-name>nosmoking-lit</object-name>
-        <object-name>seatbelt-lit</object-name>         
+        <object-name>seatbelt-lit</object-name>
     </animation>
 
     <animation>
@@ -23,7 +23,7 @@
             </and>
         </condition>
     </animation>
-    
+
     <animation>
         <type>material</type>
         <object-name>nosmoking-lit</object-name>
@@ -68,7 +68,7 @@
                 <property>sim/rendering/rembrandt/enabled</property>
             </not>
             <and>
-                <property>controls/lighting/no-smoking</property>
+                <property>controls/lighting/seat-belt</property>
                 <greater-than>
                     <property>systems/electrical/volts</property>
                     <value>5</value>

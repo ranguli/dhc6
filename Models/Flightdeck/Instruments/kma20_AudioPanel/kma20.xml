@@ -449,7 +449,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			<property>instrumentation/kma20/nav1</property>
 			</condition>
 			<command>property-assign</command>
-			<property>instrumentation/nav/audio-btn</property>
+			<property>instrumentation/nav[0]/ident</property>
 			<value>1</value>
 		</binding> 
 		<binding>
@@ -459,7 +459,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			</not>
 			</condition> 
 			<command>property-assign</command>
-			<property>instrumentation/nav/audio-btn</property>
+			<property>instrumentation/nav[0]/ident</property>
 			<value>0</value>
 		</binding>
     </action>
@@ -489,7 +489,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			<property>instrumentation/kma20/nav1</property>
 			</condition>
 			<command>property-assign</command>
-			<property>instrumentation/nav/audio-btn</property>
+			<property>instrumentation/nav[0]/ident</property>
 			<value>1</value>
 		</binding> 
 		<binding>
@@ -499,7 +499,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			</not>
 			</condition> 
 			<command>property-assign</command>
-			<property>instrumentation/nav/audio-btn</property>
+			<property>instrumentation/nav[0]/ident</property>
 			<value>0</value>
 		</binding>
     </action>
@@ -546,7 +546,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			<property>instrumentation/kma20/nav2</property>
 			</condition>
 			<command>property-assign</command>
-			<property>instrumentation/nav[1]/audio-btn</property>
+			<property>instrumentation/nav[1]/ident</property>
 			<value>1</value>
 		</binding> 
 		<binding>
@@ -556,7 +556,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			</not>
 			</condition> 
 			<command>property-assign</command>
-			<property>instrumentation/nav[1]/audio-btn</property>
+			<property>instrumentation/nav[1]/ident</property>
 			<value>0</value>
 		</binding>
     </action>
@@ -586,7 +586,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			<property>instrumentation/kma20/nav2</property>
 			</condition>
 			<command>property-assign</command>
-			<property>instrumentation/nav[1]/audio-btn</property>
+			<property>instrumentation/nav[1]/ident</property>
 			<value>1</value>
 		</binding> 
 		<binding>
@@ -596,7 +596,7 @@ Simworld2020: Taken from Cessna208B and modified for installation in the Twin Ot
 			</not>
 			</condition> 
 			<command>property-assign</command>
-			<property>instrumentation/nav[1]/audio-btn</property>
+			<property>instrumentation/nav[1]/ident</property>
 			<value>0</value>
 		</binding>
     </action>

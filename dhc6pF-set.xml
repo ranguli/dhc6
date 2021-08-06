@@ -20,11 +20,11 @@
             </long-description>
         </de>
         </localized>
-        <author>Syd Adams (Initial model), Christian Thiriot (3D, Textures), Bo Lan (Nasal, FDM, Systems), Jonathan Schellhase (3D, Nasal, Systems, Sound, misc), Tim Dicus (Engine upgrade), Simworld2020 (COM/NAV systems)</author>
+        <author>Syd Adams (Initial model), Christian Thiriot (3D, Textures), Bo Lan (Nasal, FDM, Systems), Jonathan Schellhase (3D, Nasal, Systems, Sound, misc), Tim Dicus (Engine upgrade), Simworld2020 (COM/NAV systems), Sascha Reißner (Lights, Radios)</author>
         <flight-model>yasim</flight-model>
         <aero>dhc6pF</aero>
         <type type="string">seaplane</type>
-        <variant-of>dhc6p</variant-of>
+        <variant-of>dhc6</variant-of>
         <fuel-fraction>0.5</fuel-fraction>
         <previews>
             <preview>

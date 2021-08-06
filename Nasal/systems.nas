@@ -312,7 +312,7 @@ var Shutdown = func{
     setprop("controls/gear/parkingbrake-lever",1);
     setprop("controls/engines/engine[0]/intake-deflector",0.0);
     setprop("controls/engines/engine[1]/intake-deflector",0.0);
-    setprop("controls/lighting/flightcomp-lights",0);
+    setprop("controls/lighting/flight-comp",0);
     setprop("controls/lighting/cabin-lights",0);
     setprop("controls/lighting/no-smoking",0);
     setprop("controls/lighting/seat-belt",0);

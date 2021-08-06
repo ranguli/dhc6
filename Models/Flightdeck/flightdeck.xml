@@ -592,7 +592,7 @@
         <object-name>int-defl-ind-l.lit</object-name>
         <object-name>int-defl-ind-r.lit</object-name>
     </effect>
-    
+
     <effect>
         <inherits-from>Aircraft/dhc6/Models/Effects/skin-reflect</inherits-from>
         <object-name>Seatframe</object-name>
@@ -618,9 +618,9 @@
         <object-name>LHengfire</object-name>
         <object-name>RHengfire</object-name>
         <object-name>LFuel.off</object-name>
-        <object-name>RFuel.off</object-name>      
-        <object-name>AftBoostPump.sw</object-name>      
-        <object-name>FwdBoostPump.sw</object-name>      
+        <object-name>RFuel.off</object-name>
+        <object-name>AftBoostPump.sw</object-name>
+        <object-name>FwdBoostPump.sw</object-name>
         <object-name>smoking.sw</object-name>
         <object-name>AutoFthr.toggle</object-name>
         <object-name>autofeather.arm.lit</object-name>
@@ -631,7 +631,7 @@
         <object-name>sockle</object-name>
         <object-name>firebell-switch</object-name>
         <object-name>master-avionics.switch</object-name>
-    </effect> 
+    </effect>
 
     <model>
         <condition>
@@ -678,7 +678,7 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
-	
+
 <!-- Pilot's Panel -->
 
     <model>
@@ -800,7 +800,7 @@
          <z-m> 0.21788 </z-m>
        </offsets>
    </model>
-   
+
 <!-- Simworld2020: Add Pilot NAV1 GPS Slave switch and indicator lamp -->
 
     <model>
@@ -813,7 +813,7 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
-	
+
     <model>
         <name>Pilot NAV1 Slave Lamp</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/slave_lamp.xml</path>
@@ -824,10 +824,10 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
-	
+
     <model>
-        <name>Pilot Comm1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com1.xml</path>
+        <name>Pilot COMM1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/VHF-22/ctl22-comm0.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.089</y-m>
@@ -837,8 +837,8 @@
     </model>
 
     <model>
-        <name>Pilot Comm2</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl22-com2.xml</path>
+        <name>Pilot COMM2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/VHF-22/ctl22-comm1.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.194</y-m>
@@ -848,11 +848,22 @@
     </model>
 
     <model>
-        <name>Pilot Nav1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav1.xml</path>
+        <name>Pilot NAV1</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/VIR-32/ctl32-nav0.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.089</y-m>
+            <z-m>0.367</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pilot NAV2</name>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/VIR-32/ctl32-nav1.xml</path>
+        <offsets>
+            <x-m>-3.936</x-m>
+            <y-m>0.194</y-m>
             <z-m>0.367</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
@@ -860,7 +871,7 @@
 
     <model>
         <name>Pilot ADF1</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl62.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ADF-462/ctl62-adf0.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.089</y-m>
@@ -868,12 +879,12 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
-	
+
 <!-- Simworld2020 : add Pilot ADF2 -->
 
-	<model>
+    <model>
         <name>Pilot ADF2</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl62-2.xml</path>
+        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ADF-462/ctl62-adf1.xml</path>
         <offsets>
             <x-m>-3.936</x-m>
             <y-m>0.194</y-m>
@@ -882,17 +893,6 @@
         </offsets>
     </model>
 
-    <model>
-        <name>Pilot Nav2</name>
-        <path>Aircraft/dhc6/Models/Flightdeck/Instruments/radio/ctl32-nav2.xml</path>
-        <offsets>
-            <x-m>-3.936</x-m>
-            <y-m>0.194</y-m>
-            <z-m>0.367</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-	
     <model>
         <name>Pilot OAT</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/oat/oat.xml</path>
@@ -903,9 +903,9 @@
             <pitch-deg>80</pitch-deg>
         </offsets>
     </model>
-	
-	<!-- Pilot AP commands-->
-	
+
+<!-- Pilot AP commands-->
+
     <model>
         <name>apcomm</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
@@ -945,13 +945,13 @@
         <offsets>
             <x-m>-3.933</x-m>
             <y-m>-0.634</y-m>
-            <z-m>0.247</z-m> 
+            <z-m>0.247</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
-    <!-- GTX320A Transponder -->
-	
+<!-- GTX320A Transponder -->
+
     <model>
       <path>Aircraft/dhc6/Models/Flightdeck/Instruments/transponder/gtx320a.xml</path>
       <offsets>
@@ -960,7 +960,6 @@
         <z-m>0.1638</z-m>
       </offsets>
     </model>
-
 
 <!-- Copilot Panel -->
 
@@ -974,7 +973,7 @@
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
-	
+
     <model>
         <name>CoPilot Clock</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/clock/m877.xml</path>
@@ -984,8 +983,8 @@
             <z-m>0.437</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
-    </model>	
-	
+    </model>
+
 <!--
 Simworld2020: Add Copilot VOR1 and VOR2 for full IFR from the right seat.
 Also For IFR training and dual control in the Multiplayer space (pending).
@@ -1098,14 +1097,13 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <name>Copilot NAV1 Slave Switch</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/nav1_gps_slave.xml</path>
         <offsets>
-			<!-- +X back, +Y right, +Z up -->
             <x-m>-3.936</x-m>
             <y-m> 0.523</y-m>
             <z-m> 0.157</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
-    </model>	
-	
+    </model>
+
     <model>
         <name>Copilot NAV1 Slave Lamp</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/nav1_gps_slave/slave_lamp.xml</path>
@@ -1117,8 +1115,8 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         </offsets>
     </model>
 
-	<!-- Copilot Autopilot Controls -->
-	
+<!-- Copilot Autopilot Controls -->
+
     <model>
         <name>Copilot apcomm</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ap/apcomm.xml</path>
@@ -1153,28 +1151,26 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     </model>
 
 
-	<!-- Center -->
-	
-	<!-- Simworld2020 - add kma20 audio panel mounting/support plate and kma20 audio panel  -->
-	
-	<model>
+<!-- Center -->
+
+<!-- Simworld2020 - add kma20 audio panel mounting/support plate and kma20 audio panel  -->
+
+    <model>
         <name>Audio Panel Support Plate</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/kma20_AudioPanel/audiopanel_support.xml</path>
         <offsets>
-		<!-- X back , Y right , Z up -->
             <x-m>-3.93554</x-m>
-		    <y-m>-0.0012</y-m>
+            <y-m>-0.0012</y-m>
             <z-m> 0.07</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
-	</model>
-	<model>
+    </model>
+    <model>
         <name>kma20 Audio Panel</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/kma20_AudioPanel/kma20.xml</path>
         <offsets>
-		<!-- X back , Y right , Z up --> 
             <x-m>-3.9490</x-m>
-		    <y-m>-0.0012</y-m>
+            <y-m>-0.0012</y-m>
             <z-m> 0.0720</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
@@ -1183,17 +1179,16 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <name>Emergency Locator Transmitter</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/ELT/ArtexELT.xml</path>
         <offsets>
-		<!-- Moved by Simworld2020 to make room for Audio Panel -->
-		<!-- X back , Y right , Z up -->
+            <!-- Moved by Simworld2020 to make room for Audio Panel -->
             <x-m>-3.93554</x-m>
-		    <y-m>-0.07700</y-m>
+            <y-m>-0.07700</y-m>
             <z-m>-0.17000</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
-    <!--center panel-->
-	
+<!--center panel-->
+
     <model>
         <name>Center LHtorque</name>
         <path>Aircraft/dhc6/Models/Flightdeck/Instruments/torque/LHtorque.xml</path>
@@ -1526,7 +1521,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </and>
         </condition>
     </animation>
-    
+
     <animation>
         <type>material</type>
         <object-name>autofeather.sel.lit</object-name>
@@ -1556,7 +1551,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <blue>  0.6 </blue>
         </emission>
     </animation>
-       
+
     <animation>
         <type>select</type>
         <object-name>autofeather.arm.lit</object-name>
@@ -1572,7 +1567,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </and>
         </condition>
     </animation>
-    
+
      <animation>
         <type>material</type>
         <object-name>autofeather.arm.lit</object-name>
@@ -1596,7 +1591,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <blue>  0.6 </blue>
         </emission>
     </animation>
-     
+
      <!-- Intake deflector indicators -->
      <animation>
         <type>select</type>
@@ -1906,7 +1901,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
     </animation>
-    
+
     <animation>
         <type>rotate</type>
         <object-name>Yoke2</object-name>
@@ -2174,7 +2169,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
     </animation>
-    
+
     <animation>
         <type>rotate</type>
         <object-name>LHthrottle</object-name>
@@ -2991,7 +2986,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/taxi-lights</property>
+                <property>controls/lighting/taxi-light</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -3004,7 +2999,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <tooltip-id>taxi light</tooltip-id>
                 <label>Taxi light: %s</label>
                 <mapping>on-off</mapping>
-                <property>controls/lighting/taxi-lights</property>
+                <property>controls/lighting/taxi-light</property>
             </binding>
         </hovered>
     </animation>
@@ -3222,7 +3217,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </binding>
         </hovered>
     </animation>
-    
+
     <animation>
         <type>pick</type>
         <object-name>stbelt.sw</object-name>
@@ -3260,7 +3255,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <pitch-deg>0</pitch-deg>
             <heading-deg>0</heading-deg>
         </offsets>
-    </model>  
+    </model>
 
     <model>
       <path>Aircraft/dhc6/Models/Lights/oh-light.xml</path>
@@ -3272,7 +3267,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <pitch-deg>0</pitch-deg>
             <heading-deg>0</heading-deg>
         </offsets>
-    </model>  
+    </model>
 
     <model>
         <path>Aircraft/dhc6/Models/Lights/L-oh-light.xml</path>
@@ -3284,7 +3279,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <pitch-deg>0</pitch-deg>
             <heading-deg>0</heading-deg>
         </offsets>
-    </model>  
+    </model>
 
    <animation>
         <type>pick</type>
@@ -3372,7 +3367,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/beacon</property>
+                <property>controls/lighting/beacon-light</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -3385,7 +3380,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <tooltip-id>beacon</tooltip-id>
                 <label>Beacon: %s</label>
                 <mapping>on-off</mapping>
-                <property>controls/lighting/beacon</property>
+                <property>controls/lighting/beacon-light</property>
             </binding>
         </hovered>
     </animation>
@@ -3489,7 +3484,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <property>controls/lighting/plt-eng-inst-emer-pnl-lts</property>
                 <factor>-0.1</factor>
                 <min>0</min>
-                <max>1.0</max>                
+                <max>1.0</max>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -3525,7 +3520,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <property>controls/lighting/flap-cons-trim-pnl-lts</property>
                 <factor>-0.1</factor>
                 <min>0</min>
-                <max>1.0</max>                
+                <max>1.0</max>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -3561,7 +3556,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <property>controls/lighting/coplt-radio-va-pnl-lts</property>
                 <factor>-0.1</factor>
                 <min>0</min>
-                <max>1.0</max>                
+                <max>1.0</max>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -3611,7 +3606,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/strobe</property>
+                <property>controls/lighting/strobe-light</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -3624,7 +3619,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <tooltip-id>strobe</tooltip-id>
                 <label>Strobe: %s</label>
                 <mapping>on-off</mapping>
-                <property>controls/lighting/strobe</property>
+                <property>controls/lighting/strobe-light</property>
             </binding>
         </hovered>
     </animation>
@@ -3794,7 +3789,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>taxi.sw</object-name>
-        <property>controls/lighting/taxi-lights-pos</property>
+        <property>controls/lighting/taxi-light-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.020</x-m>
@@ -4028,7 +4023,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
     </animation>
-    
+
      <animation>
         <type>rotate</type>
         <object-name>propdeice</object-name>
@@ -4045,7 +4040,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
      </animation>
-     
+
      <animation>
         <type>rotate</type>
         <object-name>pitot-heat</object-name>
@@ -4062,7 +4057,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
      </animation>
-     
+
      <animation>
         <type>rotate</type>
         <object-name>smoking.sw</object-name>
@@ -4079,7 +4074,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
     </animation>
-  
+
     <animation>
         <type>rotate</type>
         <object-name>stbelt.sw</object-name>
@@ -4463,7 +4458,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </binding>
         </hovered>
     </animation>
-    
+
     <animation>
         <type>pick</type>
         <object-name>AutoFthr.toggle</object-name>
@@ -4510,7 +4505,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <property>engines/engine[0]/beta-range-nut-l</property>
                 <factor>0.1</factor>
                 <min>0</min>
-                <max>1.0</max>                
+                <max>1.0</max>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -4538,14 +4533,14 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <y>0</y>
             <z>0</z>
         </axis>
- 
+
         <action>
             <binding>
                 <command>property-adjust</command>
                 <property>engines/engine[1]/beta-range-nut-r</property>
                 <factor>0.1</factor>
                 <min>0</min>
-                <max>1.0</max>                
+                <max>1.0</max>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -4671,7 +4666,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <z>0</z>
         </axis>
     </animation>
-    
+
     <animation>
         <type>rotate</type>
         <object-name>AftBoostPump.sw</object-name>
@@ -5096,7 +5091,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>glass-rudder</object-name>
         <object-name>glass-aileron</object-name>
     </animation>
-    
+
     <animation>
         <type>noshadow</type>
         <object-name>glass-elevator</object-name>
@@ -5113,7 +5108,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <property>sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect>
-    
+
     <model>
         <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
         <offsets>
@@ -5129,7 +5124,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     </model>
 
     <!-- Human Pilot Model -->
-	
+
     <model>
         <path>Aircraft/dhc6/Models/Pilot/pilot.xml</path>
         <offsets>

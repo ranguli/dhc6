@@ -946,7 +946,7 @@
         <error>
             <message>Turn off the Beacon</message>
             <condition>
-                <property>/controls/lighting/beacon</property>
+                <property>/controls/lighting/beacon-light</property>
             </condition>
         </error>
         <error>
@@ -991,13 +991,13 @@
         <error>
             <message>Turn off ANTI-COLL light</message>
             <condition>
-                <property>/controls/lighting/strobe</property>
+                <property>/controls/lighting/strobe-light</property>
             </condition>
         </error>
         <error>
             <message>Turn off Taxi light</message>
             <condition>
-                <property>/controls/lighting/taxi-lights</property>
+                <property>/controls/lighting/taxi-light</property>
             </condition>
         </error>
         <error>
@@ -1010,7 +1010,7 @@
             <condition>
                 <and>
                     <not>
-                        <property>/controls/lighting/beacon</property>
+                        <property>/controls/lighting/beacon-light</property>
                     </not>
                     <not>
                         <property>/controls/lighting/cabin-lights</property>
@@ -1032,10 +1032,10 @@
                         <property>/controls/lighting/nav-lights</property>
                     </not>
                     <not>
-                        <property>/controls/lighting/strobe</property>
+                        <property>/controls/lighting/strobe-light</property>
                     </not>
                     <not>
-                        <property>/controls/lighting/taxi-lights</property>
+                        <property>/controls/lighting/taxi-light</property>
                     </not>
                     <not>
                         <property>/controls/electric/caution-test</property>

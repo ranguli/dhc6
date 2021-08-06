@@ -206,9 +206,9 @@ var light_manager = {
         setprop("/sim/rendering/als-secondary-lights/lightspot/dir", heading);
         setprop("/sim/rendering/als-secondary-lights/lightspot/size", new1_size);
 
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r", me.light1_r * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g", me.light1_g * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b", me.light1_b * light_bright);
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r", me.light1_r * light_bright * getprop("sim/multiplay/generic/float[4]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g", me.light1_g * light_bright * getprop("sim/multiplay/generic/float[4]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b", me.light1_b * light_bright * getprop("sim/multiplay/generic/float[4]"));
     }
 
         # light 2 position
@@ -231,13 +231,13 @@ var light_manager = {
         setprop("/sim/rendering/als-secondary-lights/lightspot/dir[1]", heading);
         setprop("/sim/rendering/als-secondary-lights/lightspot/size[1]", new2_size);
 
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r[1]", me.light2_r * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g[1]", me.light2_g * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b[1]", me.light2_b * light_bright);
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r[1]", me.light2_r * light_bright * getprop("sim/multiplay/generic/float[5]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g[1]", me.light2_g * light_bright * getprop("sim/multiplay/generic/float[5]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b[1]", me.light2_b * light_bright * getprop("sim/multiplay/generic/float[5]"));
     }
 
         # light 3 position
-    if(getprop("controls/lighting/taxi-lights")) {
+    if(getprop("controls/lighting/taxi-light")) {
 
         var new3_xpos = me.light3_xpos * lightscale;
         var new3_ypos = me.light3_ypos * lightscale;
@@ -257,12 +257,12 @@ var light_manager = {
         setprop("/sim/rendering/als-secondary-lights/lightspot/dir[2]", heading);
         setprop("/sim/rendering/als-secondary-lights/lightspot/size[2]", new3_size);
 
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r[2]", me.light3_r * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g[2]", me.light3_g * light_bright);
-        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b[2]", me.light3_b * light_bright);
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r[2]", me.light3_r * light_bright * getprop("sim/multiplay/generic/float[6]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-g[2]", me.light3_g * light_bright * getprop("sim/multiplay/generic/float[6]"));
+        setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-b[2]", me.light3_b * light_bright * getprop("sim/multiplay/generic/float[6]"));
     }
 
-    },   
+    },
 
     switch_position: func(light, lightr, lightg, lightb) {
         setprop("/sim/rendering/als-secondary-lights/lightspot/lightspot-r["~light~"]", lightr);
@@ -293,51 +293,39 @@ setlistener("/sim/signals/fdm-initialized", func {
 
     light_manager.init();
 
-#    setlistener("/sim/rendering/als-secondary-lights/use-landing-light-ext", func (node) {
-#        light_manager.enable_or_disable(node.getValue(), 0);
-#    }, 1, 0);
-
-#	light_manager.enable_or_disable(1,0);
-
-#    setlistener("/sim/rendering/als-secondary-lights/use-taxi-light-ext", func (node) {
-#        light_manager.enable_or_disable(node.getValue(), 1);
-#    }, 1, 0);
-
-
 # SurferTim added
-setlistener("/controls/lighting/landing-light", func(bp){
-    if(bp.getBoolValue()){
-	setprop("/controls/lighting/landlight","LANDING LIGHT");
-	light_manager.enable_or_disable(1,0);
-    }else{
-	light_manager.enable_or_disable(0,0);
-	if(getprop("/controls/lighting/landing-light[1]") == 0) {
-          setprop("/controls/lighting/landlight","");
-	}
-    }
-},0,0);
-
-# SurferTim added
-setlistener("/controls/lighting/landing-light[1]", func(bp1){
-    if(bp1.getBoolValue()){
-	setprop("/controls/lighting/landlight","LANDING LIGHT");
-	light_manager.enable_or_disable(1,1);
-    }else{
-	light_manager.enable_or_disable(0,1);
-	if(getprop("/controls/lighting/landing-light") == 0) {
-          setprop("/controls/lighting/landlight","");
+    setlistener("/controls/lighting/landing-light", func(bp) {
+        if(bp.getBoolValue()) {
+            setprop("/controls/lighting/landlight","LANDING LIGHT");
+            light_manager.enable_or_disable(1,0);
+        } else {
+            light_manager.enable_or_disable(0,0);
+            if(getprop("/controls/lighting/landing-light[1]") == 0) {
+                setprop("/controls/lighting/landlight","");
+            }
         }
-    }
-},0,0);
+    }, 0, 0);
 
 # SurferTim added
-setlistener("/controls/lighting/taxi-lights", func(bp2){
-    if(bp2.getBoolValue()){
-	light_manager.enable_or_disable(1,2);
-    }else{
-	light_manager.enable_or_disable(0,2);
-    }
-},0,0);
+    setlistener("/controls/lighting/landing-light[1]", func(bp1) {
+        if(bp1.getBoolValue()) {
+            setprop("/controls/lighting/landlight","LANDING LIGHT");
+            light_manager.enable_or_disable(1,1);
+        } else {
+            light_manager.enable_or_disable(0,1);
+            if(getprop("/controls/lighting/landing-light") == 0) {
+                setprop("/controls/lighting/landlight","");
+            }
+        }
+    }, 0, 0);
 
+# SurferTim added
+    setlistener("/controls/lighting/taxi-light", func(bp2) {
+        if(bp2.getBoolValue()) {
+            light_manager.enable_or_disable(1,2);
+        } else {
+            light_manager.enable_or_disable(0,2);
+        }
+    }, 0, 0);
 
 });

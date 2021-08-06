@@ -163,18 +163,6 @@
         </offsets>
     </model>
 
-# SurferTim added
-
-    <model>
-        <name>LandingLights</name>
-        <path>Aircraft/dhc6/Models/Lights/light-coneLR.xml</path>
-        <offsets>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-        </offsets>
-    </model>
-
     <model>
         <name>wheels</name>
         <condition>
@@ -959,6 +947,10 @@
                 </equals>
                 <equals>
                     <property>sim/multiplay/generic/string</property>
+                    <value>dhc6p</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
                     <value type="string">dhc6jsb</value>
                 </equals>
             </or>
@@ -1042,6 +1034,10 @@
                 <equals>
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6p</value>
                 </equals>
                 <equals>
                     <property>sim/multiplay/generic/string</property>
@@ -1132,6 +1128,10 @@
                 </equals>
                 <equals>
                     <property>sim/multiplay/generic/string</property>
+                    <value>dhc6p</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
                     <value type="string">dhc6jsb</value>
                 </equals>
             </or>
@@ -1215,6 +1215,10 @@
                 <equals>
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6</value>
+                </equals>
+                <equals>
+                    <property>sim/multiplay/generic/string</property>
+                    <value>dhc6p</value>
                 </equals>
                 <equals>
                     <property>sim/multiplay/generic/string</property>
@@ -1470,10 +1474,9 @@
         <object-name>RHEngine</object-name>
         <object-name>float.fairing</object-name>
         <object-name>wheel.fairing</object-name>
-        <object-name>FrrtStrut</object-name>
+        <object-name>FrtStrut</object-name>
         <object-name>LHstrut</object-name>
         <object-name>RHstrut</object-name>
-        <object-name>FrtStrut</object-name>
         <object-name>left-pitot-tube</object-name>
         <object-name>right-pitot-tube</object-name>
         <object-name>frt.d1</object-name>
@@ -1609,11 +1612,13 @@
         </condition>
     </animation>
 
+<!-- not used -->
     <animation>
         <type>select</type>
         <object-name>strobe.1</object-name>
         <object-name>strobe.2</object-name>
-        <object-name>beacon</object-name>
+        <object-name>LHLNDlight</object-name>
+        <object-name>RHLNDlight</object-name>
     </animation>
 
     <!-- animation>
@@ -1625,237 +1630,61 @@
             <value>8</value>
             </greater-than>
         </condition>
-    </animation>
+    </animation-->
 
     <animation>
         <type>select</type>
         <object-name>beacon</object-name>
         <condition>
             <and>
+                <property>sim/multiplay/generic/int[7]</property>
                 <greater-than>
                     <property>sim/multiplay/generic/float[8]</property>
                     <value>8</value>
                 </greater-than>
-                <property>sim/multiplay/generic/int[7]</property>
             </and>
         </condition>
     </animation>
 
-    <animation>
-        <type>select</type>
-        <object-name>strobe.1</object-name>
-        <object-name>strobe.2</object-name>
-        <condition>
-            <and>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[7]</property>
-                    <value>8</value>
-                </greater-than>
-                <property>sim/multiplay/generic/int[6]</property>
-            </and>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>strobe.1</object-name>
-        <offset-m>9.95</offset-m>
-        <axis>
-            <x>-0.054</x>
-            <y>-0.988</y>
-            <z>0.147</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>billboard</type>
-        <object-name>strobe.1</object-name>
-    </animation>
-
-    <animation>
-        <type>dist-scale</type>
-        <object-name>strobe.1</object-name>
-        <interpolation>
-        <entry><ind>0</ind><dep>1</dep></entry>
-        <entry><ind>500</ind><dep>2.5</dep></entry>
-        <entry><ind>16000</ind><dep>10</dep></entry>
-        </interpolation>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>strobe.2</object-name>
-        <offset-m>9.95</offset-m>
-        <axis>
-            <x>-0.054</x>
-            <y>0.988</y>
-            <z>0.147</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>billboard</type>
-        <object-name>strobe.2</object-name>
-    </animation>
-
-    <animation>
-        <type>dist-scale</type>
-        <object-name>strobe.2</object-name>
-        <interpolation>
-        <entry><ind>0</ind><dep>1</dep></entry>
-        <entry><ind>500</ind><dep>2.5</dep></entry>
-        <entry><ind>16000</ind><dep>10</dep></entry>
-        </interpolation>
-    </animation-->
-
-    <!-- Cones Rembrandt -->
     <model>
-        <path>Aircraft/dhc6/Models/Lights/StrobeLight-rembrandt.xml</path>
-        <offsets>
-            <x-m>-0.6158</x-m>
-            <y-m>-9.7998</y-m>
-            <z-m>1.4547</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>strobe-light-left</name>
+        <path>Aircraft/dhc6/Models/Lights/strobe-light-left.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/StrobeLight-rembrandt.xml</path>
-        <offsets>
-            <x-m>-0.6158</x-m>
-            <y-m>9.7998</y-m>
-            <z-m>1.4547</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>strobe-light-right</name>
+        <path>Aircraft/dhc6/Models/Lights/strobe-light-right.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/BeaconLight-rembrandt.xml</path>
-        <offsets>
-            <x-m>8.1327</x-m>
-            <y-m>0.0000</y-m>
-            <z-m>3.9350</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>beacon-light</name>
+        <path>Aircraft/dhc6/Models/Lights/beacon-light.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/NavLightL-rembrandt.xml</path>
-        <offsets>
-            <x-m>-0.6158</x-m>
-            <y-m>-9.7698</y-m>
-            <z-m>1.4547</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>nav-light-left</name>
+        <path>Aircraft/dhc6/Models/Lights/nav-light-left.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/NavLightR-rembrandt.xml</path>
-        <offsets>
-            <x-m>-0.6158</x-m>
-            <y-m>9.7698</y-m>
-            <z-m>1.4547</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>nav-light-right</name>
+        <path>Aircraft/dhc6/Models/Lights/nav-light-right.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/L-LandingLight-rembrandt.xml</path>
-        <offsets>
-            <x-m>-1.0473</x-m>
-            <y-m>-3.7436</y-m>
-            <z-m>1.1280</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>-8</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>nav-light-tail</name>
+        <path>Aircraft/dhc6/Models/Lights/nav-light-tail.xml</path>
     </model>
 
     <model>
-        <path>Aircraft/dhc6/Models/Lights/R-LandingLight-rembrandt.xml</path>
-        <offsets>
-            <x-m>-1.0473</x-m>
-            <y-m>3.7436</y-m>
-            <z-m>1.1280</z-m>
-            <roll-deg>0</roll-deg>
-            <pitch-deg>-8</pitch-deg>
-            <heading-deg>0</heading-deg>
-        </offsets>
+        <name>landing-light-left</name>
+        <path>Aircraft/dhc6/Models/Lights/landing-light-left.xml</path>
     </model>
 
-    <animation>
-        <type>select</type>
-        <object-name>LHLNDlight</object-name>
-        <condition>
-            <greater-than>
-            <property>sim/multiplay/generic/float[4]</property>
-            <value>8</value>
-            </greater-than>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>RHLNDlight</object-name>
-        <condition>
-            <greater-than>
-            <property>sim/multiplay/generic/float[5]</property>
-            <value>8</value>
-            </greater-than>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>flash</type>
-        <object-name>RHLNDlight</object-name>
-        <center>
-            <x-m>-1.017</x-m>
-            <y-m>3.744</y-m>
-            <z-m>1.128</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-        <power>2</power>
-        <factor>2</factor>
-        <offset>0</offset>
-        <two-sides type="bool">false</two-sides>
-        <min>0.5</min>
-        <max>2</max>
-    </animation>
-
-    <animation>
-        <type>flash</type>
-        <object-name>LHLNDlight</object-name>
-        <center>
-            <x-m>-1.017</x-m>
-            <y-m>-3.744</y-m>
-            <z-m>1.128</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-        <power>2</power>
-        <factor>2</factor>
-        <offset>0</offset>
-        <two-sides type="bool">false</two-sides>
-        <min>0.5</min>
-        <max>2</max>
-    </animation>
+    <model>
+        <name>landing-light-right</name>
+        <path>Aircraft/dhc6/Models/Lights/landing-light-right.xml</path>
+    </model>
 
     <animation>
         <type>rotate</type>
@@ -1877,6 +1706,7 @@
     <animation>
         <type>rotate</type>
         <object-name>rudder</object-name>
+        <object-name>nav-light-tail</object-name>
         <property alias="../../params/flight-controls/rudder/property"/>
         <factor>17.0</factor>
         <center>
@@ -2905,7 +2735,7 @@
                     </not-equals>
                 </condition>
                 <command>property-toggle</command>
-                <property>controls/doors/Baggage.door/open</property>
+                <property>controls/doors/Baggage-door/open</property>
             </binding>
         </action>
     </animation>

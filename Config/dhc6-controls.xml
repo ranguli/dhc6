@@ -298,7 +298,8 @@
         <seat-belt type="bool">0</seat-belt>
         <seat-belt-pos type="double">0</seat-belt-pos>
         <strobe-pos type="double">0</strobe-pos>
-        <taxi-lights-pos type="double">0</taxi-lights-pos>
+        <taxi-light type="bool">0</taxi-light>
+        <taxi-light-pos type="double">0</taxi-light-pos>
     </lighting>
 
     <engines>
