@@ -91,11 +91,8 @@
         <object-name>lnd-light-plate</object-name>
         <condition>
             <and>
-                <not><property>sim/rendering/shaders/skydome</property></not>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[4]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
+                <property>sim/multiplay/generic/int[3]</property>
             </and>
         </condition>
     </animation>
@@ -130,11 +127,8 @@
         <object-name>landing-light-left-p</object-name>
         <condition>
             <and>
-                <property>sim/rendering/shaders/skydome</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[4]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <property>/sim/rendering/shaders/skydome</property>
+                <property>sim/multiplay/generic/int[3]</property>
             </and>
         </condition>
     </animation>
@@ -210,10 +204,7 @@
         <condition>
             <and>
                 <property>/sim/rendering/rembrandt/enabled</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[4]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <property>sim/multiplay/generic/int[3]</property>
             </and>
         </condition>
     </animation>
@@ -268,10 +259,7 @@
         <type>select</type>
         <object-name>landing-light-left-c</object-name>
         <condition>
-            <greater-than>
-                <property>sim/multiplay/generic/float[4]</property>
-                <value>0.01</value>
-            </greater-than>
+            <property>sim/multiplay/generic/int[3]</property>
         </condition>
     </animation>
 

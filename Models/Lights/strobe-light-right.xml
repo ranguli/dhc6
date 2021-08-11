@@ -76,12 +76,8 @@
         <object-name>white-light-plate</object-name>
         <condition>
             <and>
-                <not><property>sim/rendering/shaders/skydome</property></not>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
                 <property>sim/multiplay/generic/int[6]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[7]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -116,12 +112,8 @@
         <object-name>strobe-light-right-p</object-name>
         <condition>
             <and>
-                <property>sim/rendering/shaders/skydome</property>
+                <property>/sim/rendering/shaders/skydome</property>
                 <property>sim/multiplay/generic/int[6]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[7]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -133,6 +125,7 @@
         <name>strobe-light-right-r</name>
         <light-type>spot</light-type>
         <object-name>light-volume</object-name>
+        <nopreview/>
         <position>
             <x>-0.0</x>
             <y> 0.0</y>

@@ -200,13 +200,14 @@
                 <float n="0" alias="/controls/flight/aileron">                                   0 </float>
                 <float n="1" alias="/controls/flight/elevator">                                  0 </float>
                 <float n="2" alias="/controls/flight/rudder">                                    0 </float>
-
+<!-- effects dont like aliases, values will be directly assigned
                 <float n="3" alias="/sim/model/lights/nav-light-intens">                         0 </float>
                 <float n="4" alias="/sim/model/lights/landing-light-intens[0]">                  0 </float>
                 <float n="5" alias="/sim/model/lights/landing-light-intens[1]">                  0 </float>
                 <float n="6" alias="/sim/model/lights/taxi-light-intens">                        0 </float>
                 <float n="7" alias="/sim/model/lights/strobe-light-intens">                      0 </float>
                 <float n="8" alias="/sim/model/lights/beacon-light-intens">                      0 </float>
+-->
                 <float n="9" alias="/systems/electrical/volts">                                  0 </float>
                 <float n="10" alias="/systems/electrical/outputs/flight-comp-lights-dim-factor"> 0 </float>
 
@@ -217,6 +218,7 @@
                 <float n="15" alias="/controls/doors/RF-door/position-norm">                     0 </float>
                 <float n="16" alias="/controls/doors/RR-door/position-norm">                     0 </float>
                 <float n="17" alias="/systems/electrical/outputs/cabin-lights-dim-factor">       0 </float>
+                <float n="18" alias="/controls/gear/tiller">                                     0 </float>
             </generic>
         </multiplay>
 

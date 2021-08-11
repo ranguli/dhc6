@@ -91,12 +91,8 @@
         <object-name>lnd-light-plate</object-name>
         <condition>
             <and>
-                <not><property>sim/rendering/shaders/skydome</property></not>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
                 <property>sim/multiplay/generic/int[5]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[6]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -131,12 +127,8 @@
         <object-name>taxi-light-p</object-name>
         <condition>
             <and>
-                <property>sim/rendering/shaders/skydome</property>
+                <property>/sim/rendering/shaders/skydome</property>
                 <property>sim/multiplay/generic/int[5]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[6]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>

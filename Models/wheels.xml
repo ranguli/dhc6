@@ -134,7 +134,7 @@
         <object-name>frt.d2</object-name>
         <object-name>FrtSki</object-name>
         <object-name>taxi-light</object-name>
-        <property>controls/gear/tiller</property>
+        <property>sim/multiplay/generic/float[18]</property>
         <factor>30.0</factor>
         <center>
             <x-m>-4.410</x-m>

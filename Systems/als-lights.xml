@@ -72,11 +72,12 @@
         </output>
     </logic>
 -->
+
     <filter>
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/nav-lights</input>
-        <output>sim/model/lights/nav-light-intens</output>
+        <output>sim/multiplay/generic/float[3]</output>
         <max>1.0</max>
     </filter>
 
@@ -84,7 +85,7 @@
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/landing-light[0]</input>
-        <output>sim/model/lights/landing-light-intens[0]</output>
+        <output>sim/multiplay/generic/float[4]</output>
         <max>1.0</max>
     </filter>
 
@@ -92,7 +93,7 @@
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/landing-light[1]</input>
-        <output>sim/model/lights/landing-light-intens[1]</output>
+        <output>sim/multiplay/generic/float[5]</output>
         <max>1.0</max>
     </filter>
 
@@ -100,7 +101,7 @@
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/taxi-light</input>
-        <output>sim/model/lights/taxi-light-intens</output>
+        <output>sim/multiplay/generic/float[6]</output>
         <max>1.0</max>
     </filter>
 
@@ -108,7 +109,7 @@
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/strobe-light</input>
-        <output>sim/model/lights/strobe-light-intens</output>
+        <output>sim/multiplay/generic/float[7]</output>
         <max>1.0</max>
     </filter>
 
@@ -116,7 +117,7 @@
         <type>gain</type>
         <gain>0.036</gain>
         <input>systems/electrical/outputs/beacon-light</input>
-        <output>sim/model/lights/beacon-light-intens</output>
+        <output>sim/multiplay/generic/float[8]</output>
         <max>1.0</max>
     </filter>
 

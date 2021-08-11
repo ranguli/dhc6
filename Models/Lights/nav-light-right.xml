@@ -76,11 +76,8 @@
         <object-name>green-light-plate</object-name>
         <condition>
             <and>
-                <not><property>sim/rendering/shaders/skydome</property></not>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[3]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
+                <property>sim/multiplay/generic/int[2]</property>
             </and>
         </condition>
     </animation>
@@ -115,11 +112,8 @@
         <object-name>nav-light-right-p</object-name>
         <condition>
             <and>
-                <property>sim/rendering/shaders/skydome</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[3]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <property>/sim/rendering/shaders/skydome</property>
+                <property>sim/multiplay/generic/int[2]</property>
             </and>
         </condition>
     </animation>
@@ -131,13 +125,11 @@
         <name>nav-light-right-r</name>
         <light-type>spot</light-type>
         <object-name>light-volume</object-name>
+        <nopreview/>
         <position>
             <x> 0.0</x>
             <y> 0.0</y>
             <z> 0.0</z>
-            <!--x>-0.620</x>
-            <y> 9.790</y>
-            <z> 1.455</z-->
         </position>
         <direction>
             <x>-0.573576</x>
@@ -186,10 +178,7 @@
         <condition>
             <and>
                 <property>/sim/rendering/rembrandt/enabled</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[3]</property>
-                    <value>0.01</value>
-                </greater-than>
+                <property>sim/multiplay/generic/int[2]</property>
             </and>
         </condition>
     </animation>
@@ -227,14 +216,14 @@
             <b>0.4</b>
             <a>0.0</a>
         </specular>
+        <dim-factor>
+            <property>sim/multiplay/generic/float[3]</property>
+        </dim-factor>
         <attenuation>
             <c>1.0</c>
             <l>0.225</l>
             <q>0.1875</q>
         </attenuation>
-        <dim-factor>
-            <property>sim/multiplay/generic/float[3]</property>
-        </dim-factor>
         <spot-cutoff>75</spot-cutoff>
         <spot-exponent>3</spot-exponent>
         <range-m>20</range-m>
@@ -244,10 +233,7 @@
         <type>select</type>
         <object-name>nav-light-right-c</object-name>
         <condition>
-            <greater-than>
-                <property>sim/multiplay/generic/float[3]</property>
-                <value>0.01</value>
-            </greater-than>
+            <property>sim/multiplay/generic/int[2]</property>
         </condition>
     </animation>
 

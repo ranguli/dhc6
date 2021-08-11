@@ -77,12 +77,8 @@
         <object-name>red-light-plate</object-name>
         <condition>
             <and>
-                <not><property>sim/rendering/shaders/skydome</property></not>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
                 <property>sim/multiplay/generic/int[7]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[8]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -128,12 +124,8 @@
         <object-name>beacon-light-p</object-name>
         <condition>
             <and>
-                <property>sim/rendering/shaders/skydome</property>
+                <property>/sim/rendering/shaders/skydome</property>
                 <property>sim/multiplay/generic/int[7]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[8]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -150,9 +142,6 @@
             <x> 0.0</x>
             <y> 0.0</y>
             <z> 0.0</z>
-            <!--x> 8.130</x>
-            <y> 0.000</y>
-            <z> 3.980</z-->
         </position>
         <direction>
             <x>  1.0 </x>
@@ -202,10 +191,6 @@
             <and>
                 <property>/sim/rendering/rembrandt/enabled</property>
                 <property>sim/multiplay/generic/int[7]</property>
-                <greater-than>
-                    <property>sim/multiplay/generic/float[8]</property>
-                    <value>0.01</value>
-                </greater-than>
             </and>
         </condition>
     </animation>
@@ -254,10 +239,6 @@
         <object-name>beacon-light-c</object-name>
         <condition>
             <property>sim/multiplay/generic/int[7]</property>
-            <greater-than>
-                <property>sim/multiplay/generic/float[8]</property>
-                <value>0.01</value>
-            </greater-than>
         </condition>
     </animation>
 
