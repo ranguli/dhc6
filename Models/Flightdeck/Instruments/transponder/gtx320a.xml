@@ -47,12 +47,10 @@
         <max-m> 45 </max-m>
     </animation>
 
-    <animation>
-        <type>shader</type>
-        <shader>chrome</shader>
-        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
         <object-name>vitre</object-name>
-    </animation>
+    </effect>
 
     <animation>
         <type>noshadow</type>
