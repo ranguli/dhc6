@@ -158,7 +158,7 @@
 
     <controls>
         <gear>
-            <brake-parking>1</brake-parking>
+            <brake-parking-out>1</brake-parking-out>
         </gear>
     </controls>
 

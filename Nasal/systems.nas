@@ -173,7 +173,7 @@ var Startup_yasim = func{
             setprop("controls/flight/flaps",0.25);
 
 # SurferTim changed
-            setprop("controls/gear/parkingbrake-lever",1);
+            setprop("controls/gear/brake-parking",1);
             setprop("instrumentation/garmin196/light",0.2);
 #           setprop("instrumentation/adf/ident-audible",1);  (now controlled by KMA20 audio panel, see KMA20_AudioPanel.nas)
             setprop("controls/flight/elevator-trim",-0.2);
@@ -257,7 +257,7 @@ var Startup_jsb = func{
     setprop("controls/lighting/strobe",1);
     setprop("controls/flight/flaplever",0.25);
     setprop("controls/flight/flaps",0.25);
-    setprop("controls/gear/parkingbrake-lever",0);
+    setprop("controls/gear/brake-parking",0);
     setprop("controls/flight/elevator-trim",-0.2);
     setprop("controls/flight/rudder-trim",0.12);
     setprop("controls/engines/engine[0]/condition",1);
@@ -309,7 +309,7 @@ var Shutdown = func{
     setprop("controls/lighting/landing-light[1]",0);
     setprop("controls/flight/flaplever",0);
     setprop("controls/flight/flaps",0);
-    setprop("controls/gear/parkingbrake-lever",1);
+    setprop("controls/gear/brake-parking",1);
     setprop("controls/engines/engine[0]/intake-deflector",0.0);
     setprop("controls/engines/engine[1]/intake-deflector",0.0);
     setprop("controls/lighting/flight-comp",0);
@@ -841,7 +841,7 @@ var close_reverse_info = func {
 #        return;
 #    }
 #
-#    var p = "/controls/gear/parkingbrake-lever";
+#    var p = "/controls/gear/brake-parking";
 #    setprop(p, var i = !getprop(p));
 #    return i;
 #};

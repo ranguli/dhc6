@@ -811,7 +811,7 @@
             <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
             <condition>
                 <not>
-                    <property>controls/gear/parkingbrake-lever</property>
+                    <property>controls/gear/brake-parking</property>
                 </not>
             </condition>
             <volume>
@@ -835,7 +835,7 @@
             <path>Aircraft/dhc6/Sounds/dhc6-brake-lever.wav</path>
             <condition>
                 <and>
-                    <property>controls/gear/parkingbrake-lever</property>
+                    <property>controls/gear/brake-parking</property>
                     <value>0</value>
                 </and>
             </condition>

@@ -382,7 +382,7 @@
     </fuel>
 
     <gear>
-        <parkingbrake-lever type="bool">1</parkingbrake-lever>
+        <brake-parking type="bool">1</brake-parking>
         <parkingbrake-lever-pos type="double">1</parkingbrake-lever-pos>
         <tiller type="double">0</tiller>
         <tiller-enabled type="bool">1</tiller-enabled>

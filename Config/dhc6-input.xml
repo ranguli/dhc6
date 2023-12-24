@@ -365,11 +365,11 @@
             <desc>Parking Brakes</desc>
             <binding>
                 <command>property-toggle</command>
-                <property>/controls/gear/parkingbrake-lever</property>
+                <property>/controls/gear/brake-parking</property>
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>gui.popupTip(sprintf("Parking brake: %i", getprop("/controls/gear/parkingbrake-lever")), 5);</script>
+                <script>gui.popupTip(sprintf("Parking brake: %i", getprop("/controls/gear/brake-parking")), 5);</script>
             </binding>
         </key>
 

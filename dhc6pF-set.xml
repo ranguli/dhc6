@@ -154,7 +154,7 @@
 
     <controls>
         <gear>
-            <brake-parking>1</brake-parking>
+            <brake-parking-out>1</brake-parking-out>
             <water-rudder-pos type="double">0</water-rudder-pos>
             <water-rudder-down type="bool">0</water-rudder-down>
         </gear>

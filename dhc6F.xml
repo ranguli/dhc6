@@ -174,7 +174,7 @@
     </gear>
 
     <gear x="-1.26" y="1.75" z="-2.68" compression="0.4" spring = "3.5" sfric = "0.5" dfric=".45" retract-time="4" initial-load="1" damp="10.1">
-        <control-input control="BRAKE" axis="/controls/gear/brake-parking" />
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking-out" />
         <control-input control="BRAKE" axis="/controls/gear/brake-left" />
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[6]/position-norm"/>
@@ -182,7 +182,7 @@
     </gear>
 
     <gear x="-1.26" y="-1.75" z="-2.68" compression="0.4" spring = "3.5" sfric = "0.5" dfric=".45" retract-time="4" initial-load="1" damp="10.1">
-        <control-input control="BRAKE" axis="/controls/gear/brake-parking" />
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking-out" />
         <control-input control="BRAKE" axis="/controls/gear/brake-right" />
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[7]/position-norm"/>
