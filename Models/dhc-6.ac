@@ -16800,6 +16800,7 @@ refs 4
 kids 0
 OBJECT poly
 name "RHdoor.glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 8
 -3.61642 0.35381 -0.813848
@@ -16866,6 +16867,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Lprop.disk"
+texture "transparent.png"
 crease 45.000000
 numvert 18
 -2.60891 1.01225 2.857
@@ -17082,6 +17084,7 @@ refs 3
 kids 0
 OBJECT poly
 name "LHLNDlight"
+texture "transparent.png"
 crease 45.000000
 numvert 4
 -1.01732 1.72806 3.14362
@@ -17099,6 +17102,7 @@ refs 4
 kids 0
 OBJECT poly
 name "LHdoor.glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 8
 -3.61642 0.353811 0.818928
@@ -17132,6 +17136,7 @@ refs 4
 kids 0
 OBJECT poly
 name "glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 16
 -3.99801 0.544064 -0.501308
@@ -17637,6 +17642,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Rprop.disk"
+texture "transparent.png"
 crease 45.000000
 numvert 18
 -2.66047 1.91612 -3.76087
@@ -17853,6 +17859,7 @@ refs 3
 kids 0
 OBJECT poly
 name "RHLNDlight"
+texture "transparent.png"
 crease 45.000000
 numvert 4
 -1.01732 1.72806 -4.34362
@@ -17870,6 +17877,7 @@ refs 4
 kids 0
 OBJECT poly
 name "RRdoor.glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 8
 2.11112 0.325395 -0.798688
@@ -17940,6 +17948,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Lrdoor.glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 8
 2.15593 0.541519 0.794125
@@ -18010,6 +18019,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cabin-glass_interior"
+texture "glass-trans-texture-dummy.png"
 crease 45.000000
 numvert 104
 -1.0151 0.262212 -0.891063
@@ -44120,6 +44130,7 @@ refs 3
 kids 0
 OBJECT poly
 name "strobe.1"
+texture "transparent.png"
 crease 45.000000
 numvert 4
 -0.6 0.6 0
@@ -44137,6 +44148,7 @@ refs 4
 kids 0
 OBJECT poly
 name "strobe.2"
+texture "transparent.png"
 crease 45.000000
 numvert 4
 -0.6 0.6 0
