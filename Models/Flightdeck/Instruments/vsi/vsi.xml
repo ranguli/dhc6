@@ -23,7 +23,7 @@
     </animation>
 
     <effect>
-        <inherits-from>Effects/glass</inherits-from>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior-vitre-reflection</inherits-from>
         <object-name>vitre</object-name>
     </effect>
 
