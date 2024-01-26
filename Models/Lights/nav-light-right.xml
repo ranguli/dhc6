@@ -216,6 +216,19 @@
             <b>0.4</b>
             <a>0.0</a>
         </specular>
+        <color>
+            <r>0.4</r>
+            <g>1.0</g>
+            <b>0.4</b>
+        </color>
+        <intensity>
+            <expression>
+                <product>
+                    <value>100</value>
+                    <property>sim/multiplay/generic/float[3]</property>
+                </product>
+            </expression>
+        </intensity>
         <dim-factor>
             <property>sim/multiplay/generic/float[3]</property>
         </dim-factor>
