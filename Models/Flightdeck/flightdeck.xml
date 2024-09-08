@@ -280,7 +280,7 @@
         <object-name>ruddertrim-scale</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -1527,7 +1527,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>autofeather.sel.lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <and>
                 <property>controls/engines/auto-feather</property>
@@ -1573,7 +1573,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>autofeather.arm.lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <and>
                 <property>controls/engines/auto-feather</property>
@@ -1626,7 +1626,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>int-defl-ind-l.lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <greater-than>
                 <property>controls/engines/engine[0]/intake-deflector</property>
@@ -1673,7 +1673,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>int-defl-ind-r.lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <greater-than>
                 <property>controls/engines/engine[1]/intake-deflector</property>
@@ -2537,7 +2537,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </binding>
             <binding>
                 <command>property-toggle</command>
-                <property>/sim/sound/click2</property>
+                <property>sim/sound/click2</property>
             </binding>
         </action>
     </animation>
@@ -2553,7 +2553,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             </binding>
             <binding>
                 <command>property-toggle</command>
-                <property>/sim/sound/click</property>
+                <property>sim/sound/click</property>
             </binding>
         </action>
     </animation>
@@ -4562,7 +4562,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>/controls/anti-ice/window-heat</property>
+                <property>controls/anti-ice/window-heat</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -4575,7 +4575,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <tooltip-id>windshield-heat-switch</tooltip-id>
                 <label>Windshield Heat: %s</label>
                 <mapping>on-off</mapping>
-                <property>/controls/anti-ice/window-heat</property>
+                <property>controls/anti-ice/window-heat</property>
             </binding>
         </hovered>
     </animation>
@@ -4738,7 +4738,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>windshield-heat</object-name>
-        <property>/controls/anti-ice/window-heat-pos</property>
+        <property>controls/anti-ice/window-heat-pos</property>
         <factor>35.0</factor>
         <center>
             <x-m>-3.6148</x-m>
@@ -4757,7 +4757,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>trimwheel-elevator</object-name>
-        <property>/controls/flight/elevator-trim</property>
+        <property>controls/flight/elevator-trim</property>
         <factor>360</factor>
         <center>
             <x-m>-3.07558</x-m>
@@ -4774,7 +4774,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>trimind-elevator</object-name>
-        <property>/controls/flight/elevator-trim</property>
+        <property>controls/flight/elevator-trim</property>
         <factor>21</factor>
         <center>
             <x-m>-3.06715</x-m>
@@ -4796,7 +4796,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/elevator-trim</property>
+                <property>controls/flight/elevator-trim</property>
                 <step>0.01</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4812,7 +4812,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/elevator-trim</property>
+                <property>controls/flight/elevator-trim</property>
                 <step>-0.01</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4828,7 +4828,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/elevator-trim</property>
+                <property>controls/flight/elevator-trim</property>
                 <step>0.02</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4844,7 +4844,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/elevator-trim</property>
+                <property>controls/flight/elevator-trim</property>
                 <step>-0.02</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4860,7 +4860,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <command>set-tooltip</command>
                 <tooltip-id>elevtor-trim</tooltip-id>
                 <label>Elevator trim: %3g</label>
-                <property>/controls/flight/elevator-trim</property>
+                <property>controls/flight/elevator-trim</property>
             </binding>
         </hovered>
     </animation>
@@ -4869,7 +4869,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>trimwheel-rudder</object-name>
-        <property>/controls/flight/rudder-trim</property>
+        <property>controls/flight/rudder-trim</property>
         <factor>360</factor>
         <center>
             <x-m>-3.01584</x-m>
@@ -4886,7 +4886,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>trimind-rudder</object-name>
-        <property>/controls/flight/rudder-trim</property>
+        <property>controls/flight/rudder-trim</property>
         <factor>28</factor>
         <center>
             <x-m>-3.00849</x-m>
@@ -4908,7 +4908,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/rudder-trim</property>
+                <property>controls/flight/rudder-trim</property>
                 <step>0.01</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4924,7 +4924,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/rudder-trim</property>
+                <property>controls/flight/rudder-trim</property>
                 <step>-0.01</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4940,7 +4940,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/rudder-trim</property>
+                <property>controls/flight/rudder-trim</property>
                 <step>0.02</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4956,7 +4956,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/flight/rudder-trim</property>
+                <property>controls/flight/rudder-trim</property>
                 <step>-0.02</step>
                 <min>-1</min>
                 <max>1</max>
@@ -4972,7 +4972,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
                 <command>set-tooltip</command>
                 <tooltip-id>rudder-trim</tooltip-id>
                 <label>Rudder trim: %3g</label>
-                <property>/controls/flight/rudder-trim</property>
+                <property>controls/flight/rudder-trim</property>
             </binding>
         </hovered>
     </animation>
@@ -4982,7 +4982,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <type>rotate</type>
         <object-name>trimswitch-aileron-lwdn</object-name>
         <object-name>trimswitch-aileron-rwdn</object-name>
-        <property>/controls/flight/aileron-trim-actuated</property>
+        <property>controls/flight/aileron-trim-actuated</property>
         <factor>-8</factor>
         <center>
             <x-m>-2.94659</x-m>
@@ -5004,13 +5004,13 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/controls/flight/aileron-trim-actuated</property>
+                <property>controls/flight/aileron-trim-actuated</property>
                 <value type="int">-1</value>
             </binding>
             <mod-up>
                 <binding>
                     <command>property-assign</command>
-                    <property>/controls/flight/aileron-trim-actuated</property>
+                    <property>controls/flight/aileron-trim-actuated</property>
                     <value type="int">0</value>
                 </binding>
             </mod-up>
@@ -5039,13 +5039,13 @@ Also For IFR training and dual control in the Multiplayer space (pending).
             <repeatable>true</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/controls/flight/aileron-trim-actuated</property>
+                <property>controls/flight/aileron-trim-actuated</property>
                 <value type="int">1</value>
             </binding>
             <mod-up>
                 <binding>
                     <command>property-assign</command>
-                    <property>/controls/flight/aileron-trim-actuated</property>
+                    <property>controls/flight/aileron-trim-actuated</property>
                     <value type="int">0</value>
                 </binding>
             </mod-up>
@@ -5069,7 +5069,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
     <animation>
         <type>rotate</type>
         <object-name>trimind-aileron</object-name>
-        <property>/controls/flight/indicated-aileron-trim</property>
+        <property>controls/flight/indicated-aileron-trim</property>
         <factor>60</factor>
         <center>
             <x-m>-2.968</x-m>
@@ -5105,7 +5105,7 @@ Also For IFR training and dual control in the Multiplayer space (pending).
         <object-name>glass-rudder</object-name>
         <object-name>glass-aileron</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect>
 

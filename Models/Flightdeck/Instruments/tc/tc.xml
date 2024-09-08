@@ -92,7 +92,7 @@
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>vitre</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect--> 
 
@@ -104,7 +104,7 @@
         <object-name>Ball</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -118,7 +118,7 @@
     <animation>
         <type>rotate</type>
         <object-name>TCneedle</object-name>
-        <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+        <property>instrumentation/turn-indicator/indicated-turn-rate</property>
         <interpolation>
             <entry><ind>  -5</ind><dep>-30</dep></entry>
             <entry><ind>-1.5</ind><dep>-30</dep></entry>
@@ -140,7 +140,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Ball</object-name>
-        <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+        <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
         <min>-2.5</min>
         <max> 2.5</max>
         <interpolation>
@@ -260,7 +260,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

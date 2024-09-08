@@ -156,7 +156,7 @@
         <object-name>ail-trim-act-breaker</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>

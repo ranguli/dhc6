@@ -90,7 +90,7 @@
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>vitre</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect-->
 
@@ -100,7 +100,7 @@
         <object-name>Needle</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -228,7 +228,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

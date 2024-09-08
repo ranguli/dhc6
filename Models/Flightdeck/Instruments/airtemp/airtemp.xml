@@ -80,7 +80,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>Air temperature</tooltip-id>
                 <label>Air Temperature: %d °C</label>
-                <property>/environment/temperature-degc</property>
+                <property>environment/temperature-degc</property>
             </binding>
         </hovered>
     </animation> 
@@ -91,7 +91,7 @@
         <object-name>Airtemp.needle</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -105,7 +105,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Airtemp.needle</object-name>
-        <property>/environment/temperature-degc</property>
+        <property>environment/temperature-degc</property>
         <interpolation>
             <entry><ind>-250</ind><dep>-169.48</dep></entry>
             <entry><ind>-100</ind><dep>-169.48</dep></entry>
@@ -221,7 +221,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

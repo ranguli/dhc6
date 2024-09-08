@@ -29,7 +29,7 @@
         <object-name>nosmoking-lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <and>
                 <property>controls/lighting/no-smoking</property>
@@ -65,7 +65,7 @@
         <object-name>seatbelt-lit</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
             <and>
                 <property>controls/lighting/seat-belt</property>

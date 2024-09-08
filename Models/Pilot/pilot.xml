@@ -54,7 +54,7 @@
         <object-name>Head</object-name>
         <condition>
             <not-equals>
-                <property>sim/current-view/view-number</property>
+                <property>/sim/current-view/view-number</property>
                 <value>0</value>
             </not-equals>
         </condition>
@@ -86,7 +86,7 @@
                         <property>sim/pilots/hide-pilot-cockpit-view</property>
                     </not>
                     <equals>
-                        <property>sim/current-view/view-number</property>
+                        <property>/sim/current-view/view-number</property>
                         <value>0</value>
                     </equals>
                 </and>
@@ -94,7 +94,7 @@
                     <property>sim/pilots/pilots-enabled</property>
                     <property>sim/pilots/show-pilot</property>
                     <not-equals>
-                        <property>sim/current-view/view-number</property>
+                        <property>/sim/current-view/view-number</property>
                         <value>0</value>
                     </not-equals>
                 </and>
@@ -107,7 +107,7 @@
         <object-name>glasses</object-name>
         <condition>
             <less-than>
-                <property>/sim/time/sun-angle-rad</property>
+                <property>sim/time/sun-angle-rad</property>
                 <value>1.57</value>
             </less-than>
         </condition>

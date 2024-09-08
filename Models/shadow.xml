@@ -20,7 +20,7 @@
         <object-name>shadow</object-name>
         <condition>
             <equals>
-                <property>/sim/replay/replay-state</property>
+                <property>sim/replay/replay-state</property>
                 <value>0</value>
             </equals>
         </condition>
@@ -35,7 +35,7 @@
     <animation>
         <type>rotate</type>
         <object-name>shadow</object-name>
-        <property>/orientation/pitch-deg</property>
+        <property>orientation/pitch-deg</property>
         <factor>-1.0</factor>
         <center>
             <x-m>0</x-m>
@@ -53,7 +53,7 @@
     <animation>
         <type>rotate</type>
         <object-name>shadow</object-name>
-        <property>/orientation/roll-deg</property>
+        <property>orientation/roll-deg</property>
         <factor>1.0</factor>
         <center>
             <x-m>0</x-m>
@@ -77,12 +77,12 @@
                     <property>/sim/rendering/shaders/skydome</property>
                 </not>
                 <equals>
-                    <property>/sim/replay/replay-state</property>
+                    <property>sim/replay/replay-state</property>
                     <value>1</value>
                 </equals>
             </or>
         </condition>
-        <property>/position/gear-agl-m</property>
+        <property>position/gear-agl-m</property>
         <factor>-1</factor>
         <center>
             <x-m>0</x-m>

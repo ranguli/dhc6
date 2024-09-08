@@ -147,7 +147,7 @@
         <object-name>VS-onM</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -281,7 +281,7 @@
             <!-- sp DHC6 -->
             <binding>
                 <command>property-assign</command>
-                <property>/autopilot/locks/passive-mode/</property>
+                <property>autopilot/locks/passive-mode/</property>
                 <value type="bool">false</value>
             </binding>
         </action>
@@ -497,7 +497,7 @@
             <!-- sp DHC6 -->
             <binding>
                 <command>property-cycle</command>
-                <property>/autopilot/locks/passive-mode/</property>
+                <property>autopilot/locks/passive-mode/</property>
                 <value type="bool">false</value>
             </binding>
         </action>
@@ -561,7 +561,7 @@
             <!-- sp DHC6 -->
             <binding>
                 <command>property-assign</command>
-                <property>/autopilot/locks/passive-mode/</property>
+                <property>autopilot/locks/passive-mode/</property>
                 <value type="bool">false</value>
             </binding>
         </action>

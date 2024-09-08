@@ -236,17 +236,17 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-pitot-cover-removable</property>
+                    <property>sim/model/equipment/left-pitot-cover-removable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-pitot-cover</property>
+                <property>sim/model/equipment/left-pitot-cover</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-pitot-cover-removable</property>
+                    <property>sim/model/equipment/left-pitot-cover-removable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-left-pitot-cover</tooltip-id>
@@ -263,22 +263,22 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-pitot-cover-addable</property>
+                    <property>sim/model/equipment/left-pitot-cover-addable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-pitot-cover</property>
+                <property>sim/model/equipment/left-pitot-cover</property>
                 <value>true</value>
             </binding>
             <binding>
                 <command>property-assign</command>
-                <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
                 <value>0.0</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-pitot-cover-addable</property>
+                    <property>sim/model/equipment/left-pitot-cover-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>put-left-pitot-cover</tooltip-id>
@@ -313,7 +313,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-pitot-cover</property>
+                <property>sim/model/equipment/right-pitot-cover</property>
                 <value>false</value>
             </binding>
         </action>
@@ -334,12 +334,12 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-pitot-cover</property>
+                <property>sim/model/equipment/right-pitot-cover</property>
                 <value>true</value>
             </binding>
             <binding>
                 <command>property-assign</command>
-                <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
                 <value>0.0</value>
             </binding>
         </action>
@@ -386,14 +386,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-tiedown-wheels</property>
+                <property>sim/model/equipment/left-tiedown-wheels</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                    <property>sim/model/equipment/left-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-left-tiedown-wheels</tooltip-id>
@@ -406,7 +406,7 @@
         <type>select</type>
         <object-name>left-tiedown-remove-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/left-tiedown-wheels</property>
+            <property>sim/model/equipment/left-tiedown-wheels</property>
         </condition>
     </animation>
 
@@ -419,7 +419,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                    <property>sim/model/equipment/left-tiedown-wheels</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/left-tiedown-wheels</property>
@@ -429,7 +429,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels</property>
+                    <property>sim/model/equipment/left-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
@@ -442,7 +442,7 @@
         <type>select</type>
         <object-name>left-tiedown-add-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+            <property>sim/model/equipment/left-tiedown-wheels-addable</property>
         </condition>
     </animation>
 
@@ -454,7 +454,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/left-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/left-tiedown-wheels</property>
@@ -464,7 +464,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/left-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
@@ -482,7 +482,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/left-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/left-tiedown-wheels</property>
@@ -492,7 +492,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/left-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-left-tiedown-wheels</tooltip-id>
@@ -535,14 +535,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-tiedown-wheels</property>
+                <property>sim/model/equipment/right-tiedown-wheels</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                    <property>sim/model/equipment/right-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-right-tiedown-wheels</tooltip-id>
@@ -555,7 +555,7 @@
         <type>select</type>
         <object-name>right-tiedown-remove-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/right-tiedown-wheels</property>
+            <property>sim/model/equipment/right-tiedown-wheels</property>
         </condition>
     </animation>
 
@@ -568,7 +568,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                    <property>sim/model/equipment/right-tiedown-wheels</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/right-tiedown-wheels</property>
@@ -578,7 +578,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels</property>
+                    <property>sim/model/equipment/right-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-right-tiedown-wheels</tooltip-id>
@@ -591,7 +591,7 @@
         <type>select</type>
         <object-name>right-tiedown-add-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+            <property>sim/model/equipment/right-tiedown-wheels-addable</property>
         </condition>
     </animation>
 
@@ -603,7 +603,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/right-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/right-tiedown-wheels</property>
@@ -613,7 +613,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/right-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-right-tiedown-wheels</tooltip-id>
@@ -631,7 +631,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/right-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/right-tiedown-wheels</property>
@@ -641,7 +641,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/right-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-right-left-tiedown-wheels</tooltip-id>
@@ -684,14 +684,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                <property>sim/model/equipment/rear-tiedown-wheels</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-rear-tiedown-wheels</tooltip-id>
@@ -704,7 +704,7 @@
         <type>select</type>
         <object-name>rear-tiedown-remove-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/rear-tiedown-wheels</property>
+            <property>sim/model/equipment/rear-tiedown-wheels</property>
         </condition>
     </animation>
 
@@ -717,7 +717,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/rear-tiedown-wheels</property>
@@ -727,7 +727,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-rear-tiedown-wheels</tooltip-id>
@@ -740,7 +740,7 @@
         <type>select</type>
         <object-name>rear-tiedown-add-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+            <property>sim/model/equipment/rear-tiedown-wheels-addable</property>
         </condition>
     </animation>
 
@@ -752,7 +752,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/rear-tiedown-wheels</property>
@@ -762,7 +762,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-with-rear-tiedown-wheels</tooltip-id>
@@ -780,7 +780,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/rear-tiedown-wheels</property>
@@ -790,7 +790,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/rear-tiedown-wheels-addable</property>
+                    <property>sim/model/equipment/rear-tiedown-wheels-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>secure-rear-left-tiedown-wheels</tooltip-id>
@@ -821,17 +821,17 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-engine-cover-removable</property>
+                    <property>sim/model/equipment/left-engine-cover-removable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-engine-cover</property>
+                <property>sim/model/equipment/left-engine-cover</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
               <condition>
-                    <property>/sim/model/equipment/left-engine-cover-removable</property>
+                    <property>sim/model/equipment/left-engine-cover-removable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-left-engine-cover</tooltip-id>
@@ -848,17 +848,17 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-engine-cover-addable</property>
+                    <property>sim/model/equipment/left-engine-cover-addable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-engine-cover</property>
+                <property>sim/model/equipment/left-engine-cover</property>
                 <value>true</value>
             </binding>
         </action>
         <hovered>
             <binding>
               <condition>
-                    <property>/sim/model/equipment/left-engine-cover-addable</property>
+                    <property>sim/model/equipment/left-engine-cover-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>put-left-engine-cover</tooltip-id>
@@ -889,17 +889,17 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-engine-cover-removable</property>
+                    <property>sim/model/equipment/right-engine-cover-removable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-engine-cover</property>
+                <property>sim/model/equipment/right-engine-cover</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
               <condition>
-                    <property>/sim/model/equipment/right-engine-cover-removable</property>
+                    <property>sim/model/equipment/right-engine-cover-removable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-right-engine-cover</tooltip-id>
@@ -916,17 +916,17 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-engine-cover-addable</property>
+                    <property>sim/model/equipment/right-engine-cover-addable</property>
                 </condition>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-engine-cover</property>
+                <property>sim/model/equipment/right-engine-cover</property>
                 <value>true</value>
             </binding>
         </action>
         <hovered>
             <binding>
               <condition>
-                    <property>/sim/model/equipment/right-engine-cover-addable</property>
+                    <property>sim/model/equipment/right-engine-cover-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>put-right-engine-cover</tooltip-id>
@@ -974,14 +974,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-chock-fwd</property>
+                <property>sim/model/equipment/left-chock-fwd</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-fwd</property>
+                    <property>sim/model/equipment/left-chock-fwd</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-left-chock-fwd</tooltip-id>
@@ -994,7 +994,7 @@
         <type>select</type>
         <object-name>left-chock-fwd-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/left-chock-fwd-addable</property>
+            <property>sim/model/equipment/left-chock-fwd-addable</property>
         </condition>
     </animation>
 
@@ -1007,7 +1007,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-fwd-addable</property>
+                    <property>sim/model/equipment/left-chock-fwd-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/left-chock-fwd</property>
@@ -1017,7 +1017,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-fwd-addable</property>
+                    <property>sim/model/equipment/left-chock-fwd-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>place-left-chock-fwd</tooltip-id>
@@ -1064,14 +1064,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/left-chock-aft</property>
+                <property>sim/model/equipment/left-chock-aft</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-aft</property>
+                    <property>sim/model/equipment/left-chock-aft</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-left-chock-fwd</tooltip-id>
@@ -1084,7 +1084,7 @@
         <type>select</type>
         <object-name>left-chock-aft-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/left-chock-aft-addable</property>
+            <property>sim/model/equipment/left-chock-aft-addable</property>
         </condition>
     </animation>
 
@@ -1097,7 +1097,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-aft-addable</property>
+                    <property>sim/model/equipment/left-chock-aft-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/left-chock-aft</property>
@@ -1107,7 +1107,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/left-chock-aft-addable</property>
+                    <property>sim/model/equipment/left-chock-aft-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>place-left-chock-aft</tooltip-id>
@@ -1155,14 +1155,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-chock-fwd</property>
+                <property>sim/model/equipment/right-chock-fwd</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-fwd</property>
+                    <property>sim/model/equipment/right-chock-fwd</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-right-chock-fwd</tooltip-id>
@@ -1175,7 +1175,7 @@
         <type>select</type>
         <object-name>right-chock-fwd-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/right-chock-fwd-addable</property>
+            <property>sim/model/equipment/right-chock-fwd-addable</property>
         </condition>
     </animation>
 
@@ -1188,7 +1188,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-fwd-addable</property>
+                    <property>sim/model/equipment/right-chock-fwd-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/right-chock-fwd</property>
@@ -1198,7 +1198,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-fwd-addable</property>
+                    <property>sim/model/equipment/right-chock-fwd-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>place-right-chock-fwd</tooltip-id>
@@ -1245,14 +1245,14 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/sim/model/equipment/right-chock-aft</property>
+                <property>sim/model/equipment/right-chock-aft</property>
                 <value>false</value>
             </binding>
         </action>
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-aft</property>
+                    <property>sim/model/equipment/right-chock-aft</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>remove-right-chock-fwd</tooltip-id>
@@ -1265,7 +1265,7 @@
         <type>select</type>
         <object-name>right-chock-aft-hotspot</object-name>
         <condition>
-            <property>/sim/model/equipment/right-chock-aft-addable</property>
+            <property>sim/model/equipment/right-chock-aft-addable</property>
         </condition>
     </animation>
 
@@ -1278,7 +1278,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-aft-addable</property>
+                    <property>sim/model/equipment/right-chock-aft-addable</property>
                 </condition>
                 <command>property-assign</command>
                 <property>sim/model/equipment/right-chock-aft</property>
@@ -1288,7 +1288,7 @@
         <hovered>
             <binding>
                 <condition>
-                    <property>/sim/model/equipment/right-chock-aft-addable</property>
+                    <property>sim/model/equipment/right-chock-aft-addable</property>
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>place-right-chock-aft</tooltip-id>
@@ -1302,7 +1302,7 @@
         <name>shadow</name>
         <condition>
             <and>
-                <property>sim/rendering/show-shadow</property>
+                <property>/sim/rendering/show-shadow</property>
                 <not-equals>
                     <property>sim/multiplay/generic/string</property>
                     <value>dhc6F</value>
@@ -1325,7 +1325,7 @@
     <model>
         <name>shadowF</name>
         <condition>
-            <property>sim/rendering/show-shadow</property>
+            <property>/sim/rendering/show-shadow</property>
             <or>
                 <equals>
                     <property>sim/multiplay/generic/string</property>
@@ -1498,7 +1498,7 @@
         <object-name>Rprop.disk</object-name>
         <object-name>landing_light_cover</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect>
 
@@ -1845,7 +1845,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
         <factor>1</factor>
         <axis>
             <x1-m>-2.660</x1-m>
@@ -1866,7 +1866,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
         <axis>
             <x1-m>-2.660</x1-m>
             <y1-m>-2.857</y1-m>
@@ -1886,7 +1886,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/blade-angle</property>
         <axis>
             <x1-m>-2.660</x1-m>
             <y1-m>-2.857</y1-m>
@@ -2154,7 +2154,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
         <factor>1</factor>
         <axis>
             <x1-m>-2.660</x1-m>
@@ -2175,7 +2175,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
         <axis>
             <x1-m>-2.660</x1-m>
             <y1-m>2.857</y1-m>
@@ -2195,7 +2195,7 @@
                 <value type="string">dhc6jsb</value>
             </equals>
         </condition>
-        <property>/fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
+        <property>fdm/jsbsim/propulsion/engine[1]/blade-angle</property>
         <axis>
             <x1-m>-2.660</x1-m>
             <y1-m>2.857</y1-m>

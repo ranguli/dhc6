@@ -66,7 +66,7 @@
         <object-name>Compass.ball</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -191,7 +191,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

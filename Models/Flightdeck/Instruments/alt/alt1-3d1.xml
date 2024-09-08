@@ -110,7 +110,7 @@
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>vitre</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect--> 
 
@@ -126,7 +126,7 @@
         <object-name>inhgknob</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -233,7 +233,7 @@
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>/instrumentation/altimeter[1]/setting-hpa</property>
+                <property>instrumentation/altimeter[1]/setting-hpa</property>
                  <factor>1</factor>
                  <min>950.0</min>
                  <max>1050.0</max>
@@ -481,7 +481,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

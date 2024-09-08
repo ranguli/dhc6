@@ -300,7 +300,7 @@
     <animation>
         <type>translate</type>
         <object-name>AltSet.cancel</object-name>
-        <property>/instrumentation/alt-set/knob-pos</property>
+        <property>instrumentation/alt-set/knob-pos</property>
         <factor>-0.003</factor>
         <axis>
             <x> 1.0</x>
@@ -322,18 +322,18 @@
             <button>0</button>
             <binding>
                 <command>property-assign</command>
-                <property>/autopilot/settings/target-altitude-ft</property>
+                <property>autopilot/settings/target-altitude-ft</property>
                 <value>0.0</value>
             </binding>
             <binding>
                 <command>property-assign</command>
-                <property>/instrumentation/alt-set/knob-pos</property>
+                <property>instrumentation/alt-set/knob-pos</property>
                 <value>1.0</value>
             </binding>
             <mod-up>
                 <binding>
                     <command>property-assign</command>
-                    <property>/instrumentation/alt-set/knob-pos</property>
+                    <property>instrumentation/alt-set/knob-pos</property>
                     <value>0.0</value>
                 </binding>
             </mod-up>
@@ -527,7 +527,7 @@
             <interval-sec>0.2</interval-sec>
             <binding>
                 <command>property-adjust</command>
-                <property>/autopilot/settings/vertical-speed-fpm</property>
+                <property>autopilot/settings/vertical-speed-fpm</property>
                 <step>-100</step>
                 <min>-6000</min>
                 <max>6000</max>

@@ -102,7 +102,7 @@ Syd Adams
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>vitre</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
+            <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
     </effect--> 
    
@@ -114,7 +114,7 @@ Syd Adams
         <object-name>gg.ind1</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -297,7 +297,7 @@ Syd Adams
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

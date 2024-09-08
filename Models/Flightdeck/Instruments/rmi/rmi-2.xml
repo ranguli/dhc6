@@ -170,7 +170,7 @@
         <object-name>NAV2BUTT</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -187,7 +187,7 @@
         <object-name>NAV2BUTT</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -203,7 +203,7 @@
         <object-name>V1on</object-name>
         <object-name>RMI.brgN1</object-name>
         <condition>
-            <property>/controls/armament/station[5]/release-all</property>
+            <property>controls/armament/station[5]/release-all</property>
         </condition>
     </animation>
 
@@ -212,7 +212,7 @@
         <object-name>V2on</object-name>
         <object-name>RMI.brgN2</object-name>
         <condition>
-            <property>/controls/armament/station[6]/release-all</property>
+            <property>controls/armament/station[6]/release-all</property>
         </condition>
     </animation>
 
@@ -290,7 +290,7 @@
     <animation>
         <type>rotate</type>
         <object-name>RMI-bug</object-name>
-        <property>/instrumentation/heading-indicator-real-dg/indicated-heading-deg</property>
+        <property>instrumentation/heading-indicator-real-dg/indicated-heading-deg</property>
         <factor>-1</factor>
         <axis>
             <x> -1 </x>
@@ -321,7 +321,7 @@
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
+                <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
@@ -334,7 +334,7 @@
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
+                <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
                 <step>-5</step>
                 <min>0</min>
                 <max>360</max>
@@ -353,7 +353,7 @@
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
+                <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -366,7 +366,7 @@
             <repeatable>true</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>/instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
+                <property>instrumentation/heading-indicator-real-dg/heading-bug-deg</property>
                 <step>5</step>
                 <min>0</min>
                 <max>360</max>
@@ -426,13 +426,13 @@
             <binding>
                 <command>property-assign</command>
                 <!-- NAV1 on -->
-                <property>/controls/armament/station[5]/release-all</property>
+                <property>controls/armament/station[5]/release-all</property>
                 <value type="bool">true</value>
             </binding>
             <binding>
                 <command>property-assign</command>
                 <!-- NAV2 off -->
-                <property>/controls/armament/station[6]/release-all</property>
+                <property>controls/armament/station[6]/release-all</property>
                 <value type="bool">false</value>
             </binding>
             <binding>
@@ -445,7 +445,7 @@
     <animation>
         <type>translate</type>
         <object-name>NAV1BUTT</object-name>
-        <property>/controls/armament/station[5]/release-all-pos</property>
+        <property>controls/armament/station[5]/release-all-pos</property>
         <factor>-0.004</factor>
         <axis>
             <x>1</x>
@@ -463,13 +463,13 @@
             <binding>
                 <command>property-assign</command>
                 <!-- NAV1 off -->
-                <property>/controls/armament/station[5]/release-all</property>
+                <property>controls/armament/station[5]/release-all</property>
                 <value type="bool">false</value>
             </binding>
             <binding>
                 <command>property-assign</command>
                 <!-- NAV2 on -->
-                <property>/controls/armament/station[6]/release-all</property>
+                <property>controls/armament/station[6]/release-all</property>
                 <value type="bool">true</value>
             </binding>
             <binding>
@@ -482,7 +482,7 @@
     <animation>
         <type>translate</type>
         <object-name>NAV2BUTT</object-name>
-        <property>/controls/armament/station[6]/release-all-pos</property>
+        <property>controls/armament/station[6]/release-all-pos</property>
         <factor>-0.004</factor>
         <axis>
             <x>1</x>
@@ -593,7 +593,7 @@
         <condition>
             <and>
                 <property>controls/electric/battery-switch</property>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </and>
         </condition>
     </animation>

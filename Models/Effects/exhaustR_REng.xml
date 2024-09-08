@@ -19,7 +19,7 @@
                     <value>1</value>
                 </greater-than>
                 <less-than>
-                    <property>/controls/engines/engine[1]/condition</property>
+                    <property>controls/engines/engine[1]/condition</property>
                     <value>0.5</value>
                 </less-than>
                 <not>

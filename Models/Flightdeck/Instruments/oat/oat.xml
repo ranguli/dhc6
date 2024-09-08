@@ -53,7 +53,7 @@
         <object-name>OAT.needle</object-name>
         <condition>
             <not>
-                <property>sim/rendering/rembrandt/enabled</property>
+                <property>/sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
         <emission>
@@ -88,7 +88,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>Temperature degf</tooltip-id>
                 <label>Air Temperature: %d °F</label>
-                <property>/environment/temperature-degf</property>
+                <property>environment/temperature-degf</property>
             </binding>
         </hovered>
     </animation>
