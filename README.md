@@ -3,12 +3,12 @@
 Simulation of the DHC-6-300 Twin Otter for the Flight Gear flight simulator.
 
 ## Ideas and To-Do list
-- [] Flight deck re-texturing
-- [] Cabin re-texturing
-- [] Implementation of [IntegratedSystems](https://wiki.flightgear.org/IntegratedSystems)
-- [] Convert amphibious, ski, and float configurations to JSBSim
-- [] Add tundra tire configuration
-- [] Implement reverse thrusters in JSBSim
+- [ ] Flight deck re-texturing
+- [ ] Cabin re-texturing
+- [ ] Implementation of [IntegratedSystems](https://wiki.flightgear.org/IntegratedSystems)
+- [ ] Convert amphibious, ski, and float configurations to JSBSim
+- [ ] Add tundra tire configuration
+- [ ] Implement reverse thrusters in JSBSim
 
 ## Credits (Original)
 * Syd Adams (syd_cyyf):             Initial model, 3D modelling, Textures, FDM, Sound, Systems,
