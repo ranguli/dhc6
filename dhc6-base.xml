@@ -246,14 +246,6 @@
             <visibility>false</visibility>
         </panel>
 
-        <pilots>
-            <pilots-enabled type="bool">true</pilots-enabled>
-            <show-pilot type="bool">true</show-pilot>
-            <hide-pilot-cockpit-view type="bool">false</hide-pilot-cockpit-view>
-            <show-copilot type="bool">true</show-copilot>
-            <hide-copilot-cockpit-view type="bool">false</hide-copilot-cockpit-view>
-        </pilots>
-
         <tags>
             <tag>ga</tag>
             <tag>cargo</tag>

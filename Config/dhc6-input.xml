@@ -373,15 +373,6 @@
             </binding>
         </key>
 
-        <key n="89">
-            <name>Shift-Y</name>
-            <desc>Show/hide pilots</desc>
-            <binding>
-                <command>property-toggle</command>
-                <property>sim/pilots/pilots-enabled</property>
-            </binding>
-        </key>
-
         <key n="91">
             <name>[</name>
             <desc>Decrease flaps</desc>

@@ -457,10 +457,6 @@
             <property>sim/yokes-visible</property>
             <value>false</value>
         </set>
-        <set>
-            <property>sim/pilots/pilots-enabled</property>
-            <value>false</value>
-        </set>
         <message>All circuit breakers on the center console C/B panel have to be in</message>
         <view>
             <heading-offset-deg>341.1</heading-offset-deg>

@@ -77,11 +77,6 @@
     </key>
 
     <key>
-        <name>Y</name>
-        <desc>Show/hide pilots</desc>
-    </key>
-
-    <key>
         <name>F5</name>
         <desc>Aileron trim left</desc>
     </key>
