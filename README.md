@@ -25,7 +25,7 @@ environment sounds!
 Several hundred pages of real-world technical information on the Twin Otter has been collected and archived on the Internet Archive.
 
 - [Standard Operating Procedures](https://web.archive.org/web/20170224162942/https://www.blm.gov/style/medialib/blm/nifc/av.Par.70826.File.tmp/SOPA_otter.pdf)
-- [FAA Type Certificate Data Sheet](https://web.archive.org/web/20231216223735/http://man.fas.org/dod-101/sys/ac/docs/a9ea.pdf)
+- [FAA Type Certificate Data Sheet (2018)](https://ia804507.us.archive.org/4/items/a-9-ea-rev-21/A9EA_Rev_21.pdf)
 - [Twin Otter Pilot Training Manual Series 100/200/300](https://ia803205.us.archive.org/28/items/dhc-6-ptm/DHC-6%20Pilot%20Training%20Materials/DHC-6%20PTM.pdf)
 - [Pratt & Whitney PT-6A Pilot Familiarization](https://web.archive.org/web/20200719205147/https://rwrpilottraining.com/uploads/3/0/3/7/3037605/pt6_pilot_familiarization.pdf)
 
