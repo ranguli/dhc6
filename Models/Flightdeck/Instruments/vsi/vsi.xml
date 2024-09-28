@@ -22,12 +22,10 @@
         <object-name>vitre</object-name>
     </animation>
 
-    <animation>
-        <type>shader</type>
-        <shader>chrome</shader>
-        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <effect>
+        <inherits-from>Aircraft/dhc6/Models/Effects/interior/dhc6-interior-vitre-reflection</inherits-from>
         <object-name>vitre</object-name>
-    </animation>
+    </effect>
 
     <animation>
         <type>noshadow</type>

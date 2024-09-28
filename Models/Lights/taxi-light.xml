@@ -242,6 +242,19 @@
             <b>0.95</b>
             <a>0</a>
         </specular>
+        <color>
+            <r>1.00</r>
+            <g>0.95</g>
+            <b>0.95</b>
+        </color>
+        <intensity>
+            <expression>
+                <product>
+                    <value>10000</value>
+                    <property>sim/multiplay/generic/float[6]</property>
+                </product>
+            </expression>
+        </intensity>
         <dim-factor>
             <property>sim/multiplay/generic/float[6]</property>
         </dim-factor>
@@ -251,7 +264,7 @@
             <q>0.0002</q>
         </attenuation>
         <spot-cutoff>89</spot-cutoff>
-        <spot-exponent>10</spot-exponent>
+        <spot-exponent>20</spot-exponent>
         <range-m>300</range-m>
     </light>
 

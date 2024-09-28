@@ -1530,17 +1530,15 @@
         <object-name>SpinnerRRot</object-name>
     </animation-->
 
-    <animation>
-        <type>shader</type>
-        <shader>chrome</shader>
-        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
         <object-name>Lrdoor.glass</object-name>
         <object-name>glass</object-name>
         <object-name>LHdoor.glass</object-name>
         <object-name>RHdoor.glass</object-name>
         <object-name>RRdoor.glass</object-name>        
         <object-name>landing_light_cover</object-name>
-    </animation>
+    </effect>
 
     <animation>
         <type>select</type>

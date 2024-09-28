@@ -344,7 +344,7 @@ setlistener("/controls/switches/firebell-switch", func(v) {
     }
 });
 
-setlistener("/controls/gear/parkingbrake-lever", func(v) {
+setlistener("/controls/gear/brake-parking", func(v) {
     if(v.getValue()){
         interpolate("/controls/gear/parkingbrake-lever-pos", 1, 0.1);
     }else{

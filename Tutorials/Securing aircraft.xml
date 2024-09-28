@@ -33,7 +33,7 @@
             <message>Set the parking brake</message>
             <condition>
                 <equals>
-                    <property>/controls/gear/parkingbrake-lever</property>
+                    <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                 </equals>
             </condition>
@@ -41,7 +41,7 @@
         <exit>
             <condition>
                 <equals>
-                    <property>/controls/gear/parkingbrake-lever</property>
+                    <property>/controls/gear/brake-parking</property>
                     <value>1</value>
                 </equals>
             </condition>
