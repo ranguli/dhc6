@@ -145,13 +145,13 @@
     <gear x="-1" y="2.65" z="-1.83" compression=".3"
         spring="1.0" damp="0.6" sfric="1.4" dfric="1.2">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking-out" control="BRAKE"/>
     </gear>
 
     <gear x="-1" y="-2.65" z="-1.83" compression=".3"
         spring="1.0" damp="0.6" sfric="1.4" dfric="1.2">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking-out" control="BRAKE"/>
     </gear>
 
     <!--

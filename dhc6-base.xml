@@ -262,6 +262,7 @@
             <tag>2-engine</tag>
         </tags>
 
+        <minimum-fg-version>2020.3.0</minimum-fg-version>
     </sim>
 
     <autopilot>

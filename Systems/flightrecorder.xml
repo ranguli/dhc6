@@ -280,11 +280,6 @@
         </signal>
         <signal>
             <type>float</type>
-            <property type="string">/controls/gear/parkingbrake-lever</property>
-            <interpolation>linear</interpolation>
-        </signal>
-        <signal>
-            <type>float</type>
             <property type="string">/controls/lighting/beacon</property>
             <interpolation>linear</interpolation>
         </signal>

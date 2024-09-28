@@ -159,7 +159,7 @@
         <input>
             <or>
                 <!-- The actual parking brake controlled by the pilot -->
-                <property>/controls/gear/parkingbrake-lever</property>
+                <property>/controls/gear/brake-parking</property>
 
                 <property>/sim/model/equipment/left-tiedown-wheels</property>
                 <property>/sim/model/equipment/right-tiedown-wheels</property>
@@ -174,7 +174,7 @@
             </or>
         </input>
         <output>
-            <property>/controls/gear/brake-parking</property>
+            <property>/controls/gear/brake-parking-out</property>
         </output>
     </logic>
 

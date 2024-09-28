@@ -216,7 +216,7 @@
                 </marker>
                 <condition>
                     <equals>
-                        <property>/controls/gear/parkingbrake-lever</property>
+                        <property>/controls/gear/brake-parking</property>
                         <value>1</value>
                     </equals>
                 </condition>
@@ -2289,7 +2289,7 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/gear/parkingbrake-lever</property>
+                    <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                 </equals>
             </condition>
@@ -2367,7 +2367,7 @@
                 </marker>
                 <condition>
                     <equals>
-                        <property>/controls/gear/parkingbrake-lever</property>
+                        <property>/controls/gear/brake-parking</property>
                         <value>1</value>
                     </equals>
                 </condition>
@@ -2552,7 +2552,7 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/gear/parkingbrake-lever</property>
+                    <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                 </equals>
             </condition>
@@ -3261,7 +3261,7 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/gear/parkingbrake-lever</property>
+                    <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                 </equals>
             </condition>
@@ -3515,7 +3515,7 @@
                 </marker>
                 <condition>
                     <equals>
-                        <property>/controls/gear/parkingbrake-lever</property>
+                        <property>/controls/gear/brake-parking</property>
                         <value>1</value>
                     </equals>
                 </condition>
