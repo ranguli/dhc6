@@ -21,13 +21,38 @@ the ALS framework and to the Cessna 172P development team for the
 pioneering work they did regarding the securing procedures and the
 environment sounds!
 
+
+## Technical Specifications
+
+These are the data points collected on the Twin Otter that form the basis of our 
+simulation. Wherever possible, these data points should have a minimum of two, ideally three,
+reliable sources, with one being authoritative.
+
+
+_This is for a DHC-6-300 with two PT6A-27 engines_
+
+| Data                                           | Value | Source |
+|------------------------------------------------|-------|--------|
+| Stall Speed VS1 (Clean Configuration, No Flaps)|       |        |
+| Maximum Takeoff Weight                         | 5670kg  | (2),(5)    |
+| Empty Weight                                   | 3363kg  | (6) pg. 100 |
+| Length                                         | 15.77m|    (6) pg. 100   |
+| Height                                         | 5.94m     | (6) pg. 100            |
+| Wingspan                                       | 19.812m      | (6) pg. 100           |
+| Wing Area                                      | 39m²|    (6) pg. 100   |
+
+| Moment of Intertia (x-axis)                    |       |             |
+
+
 ## Reference Data
 Several hundred pages of real-world technical information on the Twin Otter has been collected and archived on the Internet Archive.
 
-- [Standard Operating Procedures](https://web.archive.org/web/20170224162942/https://www.blm.gov/style/medialib/blm/nifc/av.Par.70826.File.tmp/SOPA_otter.pdf)
-- [FAA Type Certificate Data Sheet (2018)](https://ia804507.us.archive.org/4/items/a-9-ea-rev-21/A9EA_Rev_21.pdf)
-- [Twin Otter Pilot Training Manual Series 100/200/300](https://ia803205.us.archive.org/28/items/dhc-6-ptm/DHC-6%20Pilot%20Training%20Materials/DHC-6%20PTM.pdf)
-- [Pratt & Whitney PT-6A Pilot Familiarization](https://web.archive.org/web/20200719205147/https://rwrpilottraining.com/uploads/3/0/3/7/3037605/pt6_pilot_familiarization.pdf)
+1. [Standard Operating Procedures](https://web.archive.org/web/20170224162942/https://www.blm.gov/style/medialib/blm/nifc/av.Par.70826.File.tmp/SOPA_otter.pdf)
+2. [FAA Type Certificate Data Sheet (2018)](https://ia804507.us.archive.org/4/items/a-9-ea-rev-21/A9EA_Rev_21.pdf)
+3. [Twin Otter Pilot Training Manual Series 100/200/300](https://ia803205.us.archive.org/28/items/dhc-6-ptm/DHC-6%20Pilot%20Training%20Materials/DHC-6%20PTM.pdf)
+4. [Pratt & Whitney PT-6A Pilot Familiarization](https://web.archive.org/web/20200719205147/https://rwrpilottraining.com/uploads/3/0/3/7/3037605/pt6_pilot_familiarization.pdf)
+5. [Airliners.net](https://web.archive.org/web/20240706165434/https://www.airliners.net/aircraft-data/de-havilland-canada-dhc-6-twin-otter/181)
+6. [The International Directory Of Civil Aircraft](https://archive.org/details/internationaldir0000fraw_q7f4/)
 
 ### Performance data
 
