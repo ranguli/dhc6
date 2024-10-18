@@ -10,7 +10,7 @@
     name:                   PT6A-27
     type:                   Turboprop Engine
     power:                  620.0 hp
-    inlet temperature:      1713.2 degrees C
+    inlet temperature:      1713.2 degrees F
     overall pressure ratio: 6.7:1
 
   Outputs:
@@ -21,34 +21,34 @@
 -->
 
 <turboprop_engine name="PT6A-27">
-  <milthrust unit="LBS">       1388.80   </milthrust>
+  <milthrust unit="LBS">1388.80</milthrust>
 
   <!-- 
     The idle speed of the gas generator (N1) expressed as a percentage of maximum N1 RPM. 
     In turboprop engines like the PT6A-27, N1 refers to the gas generator speed, 
     which includes the compressor and turbine stages driving the compressor.
    -->
-  <idlen1>                       60.0   </idlen1>
+  <idlen1>60.0</idlen1>
 
   <!-- The maximum allowable gas generator speed (N1) as a percentage of maximum N1 RPM. -->
-  <maxn1>                       100.0   </maxn1>
+  <maxn1>100.0</maxn1>
 
   <!-- The maximum shaft horsepower (shp) the engine can produce. This value of 620shp is easily verifiable online. -->
-  <maxpower unit="HP">          620.0   </maxpower>
+  <maxpower unit="HP">620.0</maxpower>
 
   <!-- Power Specific Fuel Consumption (PSFC), measured in pounds of fuel burned per hour per horsepower produced. -->
-  <psfc unit="LBS/HR/HP">         0.590 </psfc>
+  <psfc unit="LBS/HR/HP">0.612</psfc>
 
   <!-- The maximum delay (in seconds) for N1 to reach idle speed during engine start-up. -->
-  <n1idle_max_delay>              1     </n1idle_max_delay>
+  <n1idle_max_delay>1</n1idle_max_delay>
 
   <!-- The maximum allowable time (in seconds) for the engine to start. -->
-  <maxstartingtime>              20     </maxstartingtime>
-  <startern1>                    20     </startern1>
-  <ielumaxtorque unit="FT*LB"> 1578.4   </ielumaxtorque>
-  <itt_delay>                     0.05  </itt_delay>
-  <betarangeend>                 64     </betarangeend>
-  <reversemaxpower>              60     </reversemaxpower>
+  <maxstartingtime>20</maxstartingtime>
+  <startern1>20</startern1>
+  <ielumaxtorque unit="FT*LB">1578.4</ielumaxtorque>
+  <itt_delay>0.05</itt_delay>
+  <betarangeend>64</betarangeend>
+  <reversemaxpower>60</reversemaxpower>
 
   <function name="EnginePowerVC">
     <table>
