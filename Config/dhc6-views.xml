@@ -239,7 +239,7 @@
     </view>
 
     <view n="107">
-        <name>Overhead Panel</name>
+        <name>Fwd Overhead Panel</name>
         <enabled type="bool">true</enabled>
         <type>lookfrom</type>
         <internal type="bool">true</internal>
@@ -259,14 +259,44 @@
             <right-direction-deg type="double">270</right-direction-deg>
             <front-right-direction-deg type="double">315</front-right-direction-deg>
             <dynamic-view type="bool">false</dynamic-view>
-            <x-offset-m type="double">-0.02</x-offset-m>
-            <y-offset-m type="double">0.55</y-offset-m>
-            <z-offset-m type="double">-2.97</z-offset-m>
-            <pitch-offset-deg>85</pitch-offset-deg>
+            <x-offset-m type="double">0</x-offset-m>
+            <y-offset-m type="double">0.3</y-offset-m>
+            <z-offset-m type="double">-3.285</z-offset-m>
+            <pitch-offset-deg>75</pitch-offset-deg>
+            <field-of-view type="double">60</field-of-view>f
         </config>
     </view>
 
     <view n="108">
+        <name>Aft Overhead Panel</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">85</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">false</dynamic-view>
+            <x-offset-m type="double">0</x-offset-m>
+            <y-offset-m type="double">0.35</y-offset-m>
+            <z-offset-m type="double">-3.04</z-offset-m>
+            <pitch-offset-deg>90</pitch-offset-deg>
+            <field-of-view type="double">60</field-of-view>f
+        </config>
+    </view>
+
+    <view n="109">
         <name>Trim Console</name>
         <enabled type="bool">true</enabled>
         <type>lookfrom</type>
