@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1879.9999"
+   height="816"
+   viewBox="0 0 497.41664 215.9"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="flap_icing_warning_panel.svg"
+   inkscape:export-filename="flap_icing_warning_panel.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.56228783"
+     inkscape:cx="969.25448"
+     inkscape:cy="231.19832"
+     inkscape:window-width="2190"
+     inkscape:window-height="1435"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath11">
+      <rect
+         style="fill:#ffff00;fill-opacity:1;stroke-width:2.01083"
+         id="rect12"
+         width="497.41663"
+         height="215.89999"
+         x="-29.322231"
+         y="40.557697" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.9569361,-40.557697)">
+    <rect
+       style="display:inline;fill:#dabc28;fill-opacity:1;stroke-width:2.01083"
+       id="rect1"
+       width="497.41663"
+       height="215.89999"
+       x="2.9569361"
+       y="40.557697"
+       inkscape:label="background" />
+    <g
+       id="g11"
+       transform="translate(32.279167)"
+       clip-path="url(#clipPath11)"
+       inkscape:label="stripes"
+       style="display:inline">
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect2"
+         width="20.139853"
+         height="370.41666"
+         x="38.478745"
+         y="-46.000713"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect3"
+         width="20.139853"
+         height="370.41666"
+         x="92.710411"
+         y="-91.893723"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect4"
+         width="20.139853"
+         height="370.41666"
+         x="142.48987"
+         y="-142.23895"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect5"
+         width="20.139853"
+         height="370.41666"
+         x="193.86679"
+         y="-190.98671"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect6"
+         width="20.139853"
+         height="370.41666"
+         x="246.24213"
+         y="-238.73604"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect7"
+         width="20.139853"
+         height="370.41666"
+         x="299.21466"
+         y="-285.88815"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect8"
+         width="20.139853"
+         height="370.41666"
+         x="353.66821"
+         y="-331.55933"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect9"
+         width="20.139853"
+         height="370.41666"
+         x="405.99731"
+         y="-379.35486"
+         transform="rotate(45)" />
+      <rect
+         style="fill:#262626;fill-opacity:1;stroke-width:0.489327"
+         id="rect10"
+         width="20.139853"
+         height="370.41666"
+         x="456.05966"
+         y="-429.41721"
+         transform="rotate(45)" />
+    </g>
+    <g
+       id="g16"
+       transform="translate(0,28.477072)"
+       inkscape:label="content box">
+      <rect
+         style="fill:#dabc28;fill-opacity:1;stroke-width:1.55616"
+         id="rect13"
+         width="384.94641"
+         height="167.08313"
+         x="59.192043"
+         y="32.420418"
+         inkscape:label="box" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.61458px;font-family:Poppins;-inkscape-font-specification:'Poppins, Normal';fill:#262626;fill-opacity:1;stroke-width:0.502708"
+         x="193.25798"
+         y="99.348511"
+         id="text13"
+         inkscape:label="caution"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.4px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#262626;fill-opacity:1;stroke-width:0.502708"
+           x="193.25798"
+           y="99.348511"
+           id="tspan14">CAUTION</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.2073px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#262626;fill-opacity:1;stroke-width:0.577383"
+         x="251.88406"
+         y="144.24519"
+         id="text15"
+         inkscape:label="flap warning"><tspan
+           sodipodi:role="line"
+           id="tspan15"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.2073px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#262626;fill-opacity:1;stroke-width:0.577383"
+           x="251.88406"
+           y="144.24519">FLAP EXTENSION MUST NOT EXCEED 15 </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.2073px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#262626;fill-opacity:1;stroke-width:0.577383"
+           x="251.88408"
+           y="164.50432"
+           id="tspan16">AFTER ENCOUNTERING ANY ICING CONDITIONS</tspan></text>
+    </g>
+  </g>
+</svg>
